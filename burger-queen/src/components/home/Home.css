@@ -1,0 +1,75 @@
+.headerImg{
+    display: flex;
+    width: 101%;
+    height: 175px;
+}
+
+.imgRest{
+    width: 1400px;
+    height: 177px;
+}
+
+.welcomeContainer{
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap-reverse;
+    width: 99vw;
+    height: 67vh;
+}
+
+.welcomeSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+}
+
+.welcomeTitle{
+    display: flex;
+    width: 263px;
+    height: fit-content;
+    font-size: 60px;
+    font-family: sans-serif;
+    color: brown;
+    margin-top: unset;
+}
+
+.buttonsArea{
+    display: flex;
+    justify-content: space-around;
+    width: 740px;
+    height: 320px;
+}
+
+.welcomeButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    border-radius: 20px;
+    background-color: #7ED090;
+    height: 150px;
+    width: 180px;
+    font-size: 25px;
+    font-family: revert;
+}
+
+.welcomeButtons:hover {
+    background-color: #6DAE7B;
+  }
+
+  .iconsButtons{
+    width: 45px;
+  }
+
+  .logOutButton{
+    margin-top: 25px;
+    margin-left: 13px;
+    background-color: #EDD479;
+    width: 60px;
+    border-radius: 30px;
+  }
+
+  .iconLogOut{
+      width: 45px;
+  }

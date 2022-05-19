@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext, useState } from 'react';
-import { UserContext } from '../database/UserProvider';
+import { UserContext } from '../../database/UserProvider';
 // import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
