@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { UserContext } from "../../database/UserProvider";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import styles from "./login.module.css";
+import imgRestaurant from "../../img/imgRestaurant.jpg";
 
 const Login = () => {
   const {
@@ -35,16 +37,21 @@ const Login = () => {
   };
 
   return (
-    <React.Fragment>
-      <h1>Iniciar sesión</h1>
-      <br />
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input
-          type={"email"}
-          placeholder="E-mail"
-          className="inputLogin"
-          id="inputEmail"
-          {...register("email", {
+    <>
+    <div className={styles.headerImg}>
+        <img alt="imagen header" className={styles.imgRest} src={imgRestaurant} />
+    </div>
+    <section className={styles.containerLoginArea}>
+      <section className={styles.loginArea}>
+        <h1 className={styles.loginTitle}>Iniciar sesión</h1>
+        <br />
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input
+            type={"email"}
+            placeholder="E-mail"
+            className={styles.inputLogin}
+            id="inputEmail"
+ {...register("email", {
             required: { value: true, message: "This field is required" },
             pattern: {
               value:
@@ -54,13 +61,14 @@ const Login = () => {
           })}
         />
         {errors.email && <p>{errors.email.message}</p>}
-        <br />
-        <input
-          type={"password"}
-          placeholder="Password"
-          className="inputLogin"
-          id="inputPassword"
-          {...register("password", {
+          <br/>
+          <br/>
+          <input
+            type={"password"}
+            placeholder="Password"
+            className={styles.inputLogin}
+            id="inputPassword"
+{...register("password", {
             setValueAs: (v) => v.trim(),
             minLength: {
               value: 6,
@@ -75,12 +83,15 @@ const Login = () => {
           })}
         />
         {errors.password && <p>{errors.password.message}</p>}
-        <br />
-        <button type="submit" id="buttonContinue">
-          Login
-        </button>
-      </form>
-    </React.Fragment>
+          <br/>
+          <br />
+          <button type="submit" className={styles.loginButton} id="buttonContinue">
+            Login
+          </button>
+        </form>
+      </section>
+    </section>
+    </>
   );
 };
 
