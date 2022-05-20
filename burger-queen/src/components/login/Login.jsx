@@ -1,26 +1,38 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { UserContext } from "../../database/UserProvider";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import styles from "./login.module.css";
 import imgRestaurant from "../../img/imgRestaurant.jpg";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setError,
+  } = useForm();
 
   const navigate = useNavigate();
 
   const { loginUser } = useContext(UserContext);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
+    console.log(data);
     try {
-      let dataLoginUser = await loginUser(email, password, username);
-      console.log(dataLoginUser.user.email);
+      await loginUser(data.email, data.password);
       navigate("/home");
     } catch (error) {
-      console.log(error);
+      console.log(error.code);
+      switch (error.code) {
+        case "auth/user-not-found":
+          setError("email", {
+            message: "User not found",
+          });
+          break;
+        default:
+          console.log("Ocurrió un error");
+      }
     }
   };
 
@@ -33,29 +45,48 @@ const Login = () => {
       <section className={styles.loginArea}>
         <h1 className={styles.loginTitle}>Iniciar sesión</h1>
         <br />
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <input
             type={"email"}
-            placeholder="Ingresa tu correo"
+            placeholder="E-mail"
             className={styles.inputLogin}
             id="inputEmail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+ {...register("email", {
+            required: { value: true, message: "This field is required" },
+            pattern: {
+              value:
+                /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/,
+              message: "Wrong email format",
+            },
+          })}
+        />
+        {errors.email && <p>{errors.email.message}</p>}
           <br/>
           <br/>
           <input
             type={"password"}
-            placeholder="Ingresa tu contraseña"
+            placeholder="Password"
             className={styles.inputLogin}
             id="inputPassword"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+{...register("password", {
+            setValueAs: (v) => v.trim(),
+            minLength: {
+              value: 6,
+              message: "Min 6 characters",
+            },
+            validate: {
+              trim: (v) => {
+                if (!v.trim()) return "Enter letters, characters or numbers";
+                return true;
+              },
+            },
+          })}
+        />
+        {errors.password && <p>{errors.password.message}</p>}
           <br/>
           <br />
           <button type="submit" className={styles.loginButton} id="buttonContinue">
-            Ingresar
+            Login
           </button>
         </form>
       </section>

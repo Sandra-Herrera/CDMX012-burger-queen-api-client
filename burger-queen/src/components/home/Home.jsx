@@ -16,7 +16,7 @@ const Home = () => {
   const handleClickLogout = async () => {
     try {
       await logOut();
-      console.log("cerró sesión");
+      console.log('cerró sesión');
       navigate("/");
     } catch (error) {
       console.log(error);
