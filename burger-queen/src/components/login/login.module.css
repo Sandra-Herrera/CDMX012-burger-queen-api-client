@@ -1,0 +1,42 @@
+.containerLoginArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99vw;
+    height: 36vh;
+    margin-top: 25px;
+}
+
+.loginArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 325px;
+}
+
+.loginTitle{
+    font-size: 45px;
+    font-family: sans-serif;
+    color: brown;
+}
+
+.inputLogin{
+    display: flex;
+    border-radius: 8px;
+    border: solid 2px;
+    font-size: 20px;
+    font-family: revert;
+    width: 320px;
+    height: 45px;
+}
+
+.loginButton{
+    border-radius: 20px;
+    background-color: #7ED090;
+    width: 100px;
+    height: 20px;
+    font-size: 15px;
+    font-family: revert;
+}

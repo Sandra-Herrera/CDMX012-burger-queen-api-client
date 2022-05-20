@@ -37,8 +37,8 @@
 .buttonsArea{
     display: flex;
     justify-content: space-around;
-    width: 740px;
-    height: 320px;
+    width: 950px;
+    height: auto;
 }
 
 .welcomeButtons{

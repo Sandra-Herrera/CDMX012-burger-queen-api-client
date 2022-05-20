@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../../database/UserProvider";
 import { useNavigate } from "react-router-dom";
-import "./Login.css";
+import styles from "./login.module.css";
+import imgRestaurant from "../../img/imgRestaurant.jpg";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -25,35 +26,40 @@ const Login = () => {
 
   return (
     <>
-     <section class="loginArea">
-      <h1>Iniciar sesión</h1>
-      <br />
-      <form onSubmit={handleSubmit}>
-        <input
-          type={"email"}
-          placeholder="Ingresa tu correo"
-          className="inputLogin"
-          id="inputEmail"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+    <div className={styles.headerImg}>
+        <img alt="imagen header" className={styles.imgRest} src={imgRestaurant} />
+    </div>
+    <section className={styles.containerLoginArea}>
+      <section className={styles.loginArea}>
+        <h1 className={styles.loginTitle}>Iniciar sesión</h1>
         <br />
-        <input
-          type={"password"}
-          placeholder="Ingresa tu contraseña"
-          className="inputLogin"
-          id="inputPassword"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <br />
-        {/* <input type={'text'} placeholder='Username' className='inputLogin' id='inputUsername' value={username} onChange={(e) => setUsername(e.target.value)}/> */}
-        <br />
-        <button type="submit" id="buttonContinue">
-          Ingresar
-        </button>
-      </form>
+        <form onSubmit={handleSubmit}>
+          <input
+            type={"email"}
+            placeholder="Ingresa tu correo"
+            className={styles.inputLogin}
+            id="inputEmail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <br/>
+          <br/>
+          <input
+            type={"password"}
+            placeholder="Ingresa tu contraseña"
+            className={styles.inputLogin}
+            id="inputPassword"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <br/>
+          <br />
+          <button type="submit" className={styles.loginButton} id="buttonContinue">
+            Ingresar
+          </button>
+        </form>
       </section>
+    </section>
     </>
   );
 };
