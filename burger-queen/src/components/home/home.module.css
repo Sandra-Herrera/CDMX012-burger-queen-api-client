@@ -1,75 +1,81 @@
-.headerImg{
+.headerImg {
     display: flex;
+    background-size: cover;
     width: 101%;
     height: 175px;
+    height: 27vh;
 }
 
-.imgRest{
-    width: 1400px;
+.imgRest {
+    width: inherit;
     height: 177px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
-.welcomeContainer{
+.welcomeContainer {
     display: flex;
     justify-content: center;
-    flex-flow: wrap-reverse;
     width: 99vw;
-    height: 67vh;
+    height: 68vh;
 }
 
-.welcomeSection{
+.welcomeSection {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 1000px;
 }
 
-.welcomeTitle{
+.welcomeTitle {
     display: flex;
-    width: 263px;
-    height: fit-content;
+    height: 70px;
     font-size: 60px;
     font-family: sans-serif;
     color: brown;
     margin-top: unset;
+    margin-bottom: unset;
 }
 
-.buttonsArea{
-    display: flex;
-    justify-content: space-around;
-    width: 950px;
-    height: auto;
+.buttonsArea {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    column-gap: 5rem;
+    row-gap: 2rem;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
 }
 
-.welcomeButtons{
+.welcomeButtons {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
     border-radius: 20px;
     background-color: #7ED090;
-    height: 150px;
-    width: 180px;
-    font-size: 25px;
+    font-size: 35px;
     font-family: revert;
 }
 
 .welcomeButtons:hover {
     background-color: #6DAE7B;
-  }
+}
 
-  .iconsButtons{
+.iconsButtons {
     width: 45px;
-  }
+}
 
-  .logOutButton{
+.logOutButton {
+    position: absolute;
     margin-top: 25px;
     margin-left: 13px;
     background-color: #EDD479;
     width: 60px;
     border-radius: 30px;
-  }
+}
 
-  .iconLogOut{
-      width: 45px;
-  }
+.iconLogOut {
+    width: 45px;
+}

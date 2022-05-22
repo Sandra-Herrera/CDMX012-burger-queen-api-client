@@ -1,3 +1,13 @@
+.headerImg {
+    display: flex;
+    width: 101%;
+    height: 175px;
+}
+
+.imgRest {
+    width: inherit;
+    height: 177px;
+}
 .containerLoginArea{
     display: flex;
     justify-content: center;

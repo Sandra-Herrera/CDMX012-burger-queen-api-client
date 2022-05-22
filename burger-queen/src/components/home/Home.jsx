@@ -27,10 +27,10 @@ const Home = () => {
     <>
       <div className={styles.headerImg}>
         <img alt="imagen header" className={styles.imgRest} src={imgRestaurant} />
-      </div>
-      <button className={styles.logOutButton} onClick={handleClickLogout}>
+        <button className={styles.logOutButton} onClick={handleClickLogout}>
         <img alt="imageLogOut" className={styles.iconLogOut} src={logOutIcon} />
       </button>
+      </div>
       <section className={styles.welcomeContainer}>
         <section className={styles.welcomeSection}>
           <h1 className={styles.welcomeTitle}>Welcome</h1>
