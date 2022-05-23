@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../database/UserProvider";
 import styles from "./home.module.css";
-import imgRestaurant from "../../img/imgRestaurant.jpg";
+import imgRestaurant from "../../img/imgRestaurant.png";
 import chefIcon from "../../img/chefIcon.png";
 import orderIcon from "../../img/orderIcon.png";
 import productsIcon from "../../img/productsIcon.png";
