@@ -8,15 +8,18 @@ import "./App.css";
 
 function App() {
   const { user } = useContext(UserContext);
-  //const userRole = user.photoURL;
-  // console.log(userRole)
+  let userRole = null;
+  if(user?.photoURL){
+  userRole = user.photoURL
+}
 
   return (
     <Routes>
       <Route exact path="/" element={<Login />} />
-      {/* {userRole === "administrador" && ( */}
+      {user && <Route exact path="/home" element={<Home />} />}
+      {userRole === "administrador" && (
       <Route exact path="/signup" element={<Signup />} />
-      {/* )} */};{user && <Route exact path="/home" element={<Home />} />}
+      )};
     </Routes>
   );
 }
