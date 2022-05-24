@@ -17,19 +17,6 @@
     display: grid;
     justify-content: center;
     width: 100%;
-    margin-top: 25px;
-}
-
-.loginArea{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
-    height: 350px;
-    background-color: #EDD479;
-    border-radius: 12px;
-    border: solid 1px;
 }
 
 .formContainer{
@@ -41,9 +28,9 @@
     display: grid;
     row-gap: 6px;
     justify-content: center;
-    margin-top: 25px;
     border-radius: 12px;
     border: solid 1px;
+    padding: 10px;
 }
 
 .loginTitle{

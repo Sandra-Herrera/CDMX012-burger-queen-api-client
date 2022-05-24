@@ -42,7 +42,7 @@ const Login = () => {
         <img alt="imagen header" className={styles.imgRest} src={imgRestaurant}/>
       </div>
       <section className={styles.containerLoginArea}>
-        <section className={styles.loginArea}>
+        {/* <section className={styles.loginArea}> */}
           <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)}>
             <h1 className={styles.loginTitle}>Login</h1>
             <br />
@@ -94,7 +94,7 @@ const Login = () => {
               Login
             </button>
           </form>
-        </section>
+        {/* </section> */}
       </section>
     </>
   );

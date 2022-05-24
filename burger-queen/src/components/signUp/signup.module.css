@@ -14,6 +14,33 @@
     top: 0;
 }
 
+.containerSignUpArea {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.signUpTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    font-family: sans-serif;
+    color: brown;
+    margin-top: unset;
+    margin-bottom: unset;
+}
+
+.inputSignUp {
+    display: flex;
+    border-radius: 8px;
+    border: solid 2px;
+    font-size: 20px;
+    font-family: revert;
+    width: 320px;
+    height: 45px;
+}
+
 .welcomeContainer {
     display: flex;
     justify-content: center;
@@ -28,35 +55,6 @@
     width: 1000px;
 }
 
-.buttonsArea {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    column-gap: 5rem;
-    row-gap: 2rem;
-    justify-content: center;
-    width: 70%;
-    height: 100%;
-    margin-top: 30px;
-}
-
-.welcomeButtons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-    border-radius: 20px;
-    background-color: #7ED090;
-    font-size: 35px;
-    font-family: revert;
-}
-
-.welcomeButtons:hover {
-    background-color: #6DAE7B;
-}
-
-.iconsButtons {
-    width: 45px;
-}
 
 .logOutButton {
     position: absolute;

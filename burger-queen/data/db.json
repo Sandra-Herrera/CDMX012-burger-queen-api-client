@@ -1,0 +1,18 @@
+{
+    "Desayuno": [
+        { "id": 1, "nombre": "Huevos revueltos", "costo": "25" },
+        { "id": 2, "nombre": "Jugo de naranja", "costo": "15" },
+        { "id": 3, "nombre": "Café americano ", "costo": "15" },
+        { "id": 4, "nombre": "Pan dulce ", "costo": "10" }
+    ],
+    "ComidaCena": [
+        { "id": 1, "nombre": "Pasta a la bolognesa", "costo": "25" },
+        { "id": 2, "nombre": "Baguette de pollo", "costo": "20" },
+        { "id": 3, "nombre": "Pizza de peperoni", "costo": "30" },
+        { "id": 4, "nombre": "Cheesecake", "costo": "15" },
+        { "id": 5, "nombre": "Tarta de red velvet", "costo": "15" },
+        { "id": 6, "nombre": "Refresco de 500 mL", "costo": "15" },
+        { "id": 7, "nombre": "Agua mineral de 100 mL", "costo": "10" },
+        { "id": 8, "nombre": "Agua natural 100 mL", "costo": "10" }
+    ]
+  }
