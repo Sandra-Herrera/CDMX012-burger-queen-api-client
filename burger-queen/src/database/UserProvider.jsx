@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 import { auth } from "./firebase-config";
 import { createContext, useEffect } from "react";
+import { async } from "@firebase/util";
 
 export const UserContext = createContext();
 
@@ -26,6 +27,16 @@ const UserProvider = ({ children }) => {
     });
     return () => userData();
   }, []);
+
+  // useEffect(() => {
+  //   const authState = async ()=>{
+  //   onAuthStateChanged(auth, (userId) => {
+  //     console.log(userId);
+  //      setUser(userId);
+  //    });
+  //   }
+  //   return () => authState();
+  // }, []);
 
   const logOut = () => signOut(auth);
 
