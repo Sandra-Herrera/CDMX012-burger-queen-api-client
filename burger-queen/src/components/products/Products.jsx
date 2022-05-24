@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../database/UserProvider";
 import styles from "./products.module.css";
@@ -20,9 +20,14 @@ const Products = () => {
         }
       };
 
-      fetch('http://localhost:3004/ComidaCena')
-      .then(response => response.json())
-      .then(data => console.log(data));
+
+      const [products,setProducts] = useState([]);
+      useEffect(()=>{
+        fetch('http://localhost:3004/Products')
+        .then(response => response.json())
+        .then(data => setProducts(data));
+      },[]);
+
 
       return (
         <>
@@ -35,23 +40,24 @@ const Products = () => {
           <section>
             <div className={styles.productsTable}>
               <div className={styles.titleTable}>PRODUCTS</div>
-              <div className={styles.headerTable}>2</div>
-              <div className={styles.headerTable}>3</div>
-              <div className={styles.headerTable}>4</div>
-              <div className={styles.headerTable}>5</div>
-              <div className={styles.headerTable}>6</div>
-              <div className={styles.itemTable}>7</div>
-              <div className={styles.itemTable}>8</div>
-              <div className={styles.itemTable}>9</div>
-              <div className={styles.itemTable}>10</div>
-              <div className={styles.itemTable}>11</div>
-              <div className={styles.itemTable}>12</div>
-              <div className={styles.itemTable}>13</div>
-              <div className={styles.itemTable}>14</div>
-              <div className={styles.itemTable}>15</div>
-              <div className={styles.itemTable}>16</div>
-              <div className={styles.itemTable}>17</div>
-              <div className={styles.itemTable}>18</div>
+              <div className={styles.headerTable}>Nombre</div>
+              <div className={styles.headerTable}>Costo</div>
+              <div className={styles.headerTable}>Categoria</div>
+              <div className={styles.headerTable}>Editar</div>
+              <div className={styles.headerTable}>Borrar</div>
+              {
+                products.map(product=>{
+                    return(
+                        <>
+                            <div className={styles.itemTable}>{product.name}</div>
+                            <div className={styles.itemTable}>{product.cost}</div>
+                            <div className={styles.itemTable}>{product.category}</div>
+                            <div className={styles.itemTable}>10</div>
+                            <div className={styles.itemTable}>11</div>
+                        </>
+                    )
+                })
+              }
             </div>
            </section>
           
