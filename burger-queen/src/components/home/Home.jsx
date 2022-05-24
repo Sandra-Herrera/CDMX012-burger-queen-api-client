@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../database/UserProvider";
 import styles from "./home.module.css";
-import imgRestaurant from "../../img/imgRestaurant.jpg";
+import imgRestaurant from "../../img/imgRestaurant.png";
 import chefIcon from "../../img/chefIcon.png";
 import orderIcon from "../../img/orderIcon.png";
 import productsIcon from "../../img/productsIcon.png";
@@ -28,17 +28,18 @@ const Home = () => {
     }
   };
 
+
   return (
     <>
       <div className={styles.headerImg}>
         <img alt="imagen header" className={styles.imgRest} src={imgRestaurant} />
-      </div>
-      <button className={styles.logOutButton} onClick={handleClickLogout}>
+        <button className={styles.logOutButton} onClick={handleClickLogout}>Log Out
         <img alt="imageLogOut" className={styles.iconLogOut} src={logOutIcon} />
       </button>
+      </div>
       <section className={styles.welcomeContainer}>
         <section className={styles.welcomeSection}>
-          <h1 className={styles.welcomeTitle}>Welcome</h1>
+          {/* <h1 className={styles.welcomeTitle}>Welcome</h1> */}
           <section className={styles.buttonsArea}>
             <button className={styles.welcomeButtons}>
               Kitchen

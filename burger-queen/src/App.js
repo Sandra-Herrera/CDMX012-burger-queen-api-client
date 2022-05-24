@@ -5,12 +5,13 @@ import Login from "./components/login/Login";
 import Signup from "./components/signUp/Signup";
 import Home from "./components/home/Home";
 import "./App.css";
+import Products from "./components/products/Products";
 
 function App() {
   const { user } = useContext(UserContext);
   let userRole = null;
   if(user?.photoURL){
-  userRole = user.photoURL
+  userRole = user.photoURL;
 }
 
   return (
@@ -19,6 +20,7 @@ function App() {
       {user && <Route exact path="/home" element={<Home />} />}
       {userRole === "administrador" && (
       <Route exact path="/signup" element={<Signup />} />
+      <Route exact path="/products" element={<Products/>} />
       )};
     </Routes>
   );
