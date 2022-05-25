@@ -6,6 +6,7 @@ import imgRestaurant from "../../img/imgRestaurant.png";
 import logOutIcon from "../../img/logOutIcon.png";
 import imgDelete from "../../img/imgDelete.png";
 import imgEdit from "../../img/imgEdit.png";
+import addIcon from "../../img/addIcon.png";
 
 
 const Products = () => {
@@ -52,12 +53,16 @@ const Products = () => {
           <section>
         <div className={styles.productsTable}>
           <div>
-            <div className={styles.titleTable}>PRODUCTS</div>
+            <div className={styles.titleTable}>PRODUCTS 
+            <button className={styles.addButton}>Add
+            <img alt="imageAddButton" className={styles.iconAdd} src={addIcon} />
+            </button>
+          </div>
           </div>
           <div className={styles.mainHeaderTable}>
-            <div className={styles.headerTable}>Nombre</div>
-            <div className={styles.headerTable}>Costo</div>
-            <div className={styles.headerTable}>Categoria</div>
+            <div className={styles.headerTable}>Name</div>
+            <div className={styles.headerTable}>Cost</div>
+            <div className={styles.headerTable}>Category</div>
             {/* <div className={styles.headerTable}>Editar</div>
             <div className={styles.headerTable}>Borrar</div> */}
           </div>
@@ -84,8 +89,6 @@ const Products = () => {
           })}
         </div>
       </section>
-
-          
         </>
       );
     };

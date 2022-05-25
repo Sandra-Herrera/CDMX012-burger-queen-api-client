@@ -38,10 +38,35 @@
     border: solid 4px;
     border-color: coral;
 }
+
+.addButton{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    right: 460px;
+    background-color: unset;
+    border: solid 4px;
+    border-color: #FBA121;
+    color: #ffff;
+    background-color: brown;
+    font-weight: bold;
+    font-size: .4em;
+    width: 90px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+.iconAdd{
+    width: 30px;
+}
+
 .mainHeaderTable{
     display: grid;
     grid-template-columns: repeat(5,20%);
 }
+
 .headerTable{
     display: flex;
     justify-content: center;
@@ -59,6 +84,7 @@
     display: grid;
     grid-template-columns: repeat(5,20%);
 }
+
 .itemTable{
     display: flex;
     justify-content: center;
@@ -94,7 +120,17 @@
     border-color: coral;
 
 }
+.itemAlignStart{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    padding: 10px;
+    border: solid 1px;
+    border-color: coral;
 
+}
 
 .logOutButton {
     position: absolute;

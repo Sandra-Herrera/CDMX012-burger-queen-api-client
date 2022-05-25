@@ -10,9 +10,9 @@ import Products from "./components/products/Products";
 function App() {
   const { user } = useContext(UserContext);
   let userRole = null;
-  if(user?.photoURL){
-  userRole = user.photoURL;
-}
+  if (user?.photoURL) {
+    userRole = user.photoURL;
+  }
 
   return (
     <Routes>
