@@ -3,7 +3,7 @@
     background-size: cover;
     width: 101%;
     height: 175px;
-    height: 27vh;
+    /* height: 27vh; */
 }
 
 .imgRest {
@@ -15,12 +15,13 @@
 }
 
 .productsTable{
-    display: grid;
+    display: flex;
+    flex-flow: column;
     width: 90%;
     margin: 50px auto;
     background-color: antiquewhite;
-    grid-template-columns: repeat(5,20%);
-    grid-auto-rows: 50px;
+    /* grid-template-columns: repeat(5,20%);
+    grid-auto-rows: 50px; */
     box-shadow: 0 0 15px #333;
 }
 
@@ -37,7 +38,10 @@
     border: solid 4px;
     border-color: coral;
 }
-
+.mainHeaderTable{
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+}
 .headerTable{
     display: flex;
     justify-content: center;
@@ -51,9 +55,24 @@
     background-color: coral;
 }
 
+.containerItems{
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+}
 .itemTable{
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    padding: 10px;
+    border: solid 1px;
+    border-color: coral;
+
+}
+.itemAlignStart{
+    display: flex;
+    justify-content: start;
     align-items: center;
     font-family: sans-serif;
     font-size: 1.5em;
@@ -70,7 +89,7 @@
     flex-flow: column;
     align-items: center;
     margin-top: 2px;
-    margin-left: 1215px;
+    right: 21px;
     background-color: un;
     background-color: unset;
     border: solid 4px;

@@ -45,21 +45,25 @@ const Products = () => {
       </div>
       <section>
         <div className={styles.productsTable}>
-          <div className={styles.titleTable}>PRODUCTS</div>
-          <div className={styles.headerTable}>Nombre</div>
-          <div className={styles.headerTable}>Costo</div>
-          <div className={styles.headerTable}>Categoria</div>
-          <div className={styles.headerTable}>Editar</div>
-          <div className={styles.headerTable}>Borrar</div>
+          <div>
+            <div className={styles.titleTable}>PRODUCTS</div>
+          </div>
+          <div className={styles.mainHeaderTable}>
+            <div className={styles.headerTable}>Nombre</div>
+            <div className={styles.headerTable}>Costo</div>
+            <div className={styles.headerTable}>Categoria</div>
+            <div className={styles.headerTable}>Editar</div>
+            <div className={styles.headerTable}>Borrar</div>
+          </div>
           {products.map((product) => {
             return (
-              <>
-                  <div  className={styles.itemTable}>{product.name}</div>
+              <div key={product.id} className={styles.containerItems}>
+                  <div  className={styles.itemAlignStart}>{product.name}</div>
                   <div  className={styles.itemTable}>{product.cost}</div>
                   <div  className={styles.itemTable}>{product.category}</div>
                   <div  className={styles.itemTable}>10</div>
                   <div  className={styles.itemTable}>11</div>
-              </>
+              </div>
             );
           })}
         </div>
