@@ -19,9 +19,11 @@ function App() {
       <Route exact path="/" element={<Login />} />
       {user && <Route exact path="/home" element={<Home />} />}
       {userRole === "administrador" && (
-        <Route exact path="/signup" element={<Signup />} />
+      <Route exact path="/signup" element={<Signup />} />
       )};
-      <Route exact path="/products" element={<Products />} />
+       {userRole === "administrador" && (
+       <Route exact path="/products" element={<Products/>} />
+      )};
     </Routes>
   );
 }

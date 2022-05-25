@@ -62,7 +62,6 @@
     width: 30px;
 }
 
-
 .mainHeaderTable{
     display: grid;
     grid-template-columns: repeat(5,20%);
@@ -89,6 +88,30 @@
 .itemTable{
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    padding: 10px;
+    border: solid 1px;
+    border-color: coral;
+}
+
+.btnEditAndDelete{
+    border: none;
+    background: none;
+}
+
+.imgEdit{
+    width: 40px;
+}
+
+.imgDelete{
+    width: 25px;
+}
+
+.itemAlignStart{
+    display: flex;
+    justify-content: start;
     align-items: center;
     font-family: sans-serif;
     font-size: 1.5em;
