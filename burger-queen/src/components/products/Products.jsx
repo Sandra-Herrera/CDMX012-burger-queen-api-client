@@ -4,6 +4,7 @@ import { UserContext } from "../../database/UserProvider";
 import styles from "./products.module.css";
 import imgRestaurant from "../../img/imgRestaurant.png";
 import logOutIcon from "../../img/logOutIcon.png";
+import addIcon from "../../img/addIcon.png";
 
 const Products = () => {
   const { logOut } = useContext(UserContext);
@@ -46,18 +47,23 @@ const Products = () => {
       <section>
         <div className={styles.productsTable}>
           <div>
-            <div className={styles.titleTable}>PRODUCTS</div>
+            <div className={styles.titleTable}>PRODUCTS 
+            <button className={styles.addButton}>Add
+            <img alt="imageAddButton" className={styles.iconAdd} src={addIcon} />
+            </button>
+            </div>
           </div>
           <div className={styles.mainHeaderTable}>
-            <div className={styles.headerTable}>Nombre</div>
-            <div className={styles.headerTable}>Costo</div>
-            <div className={styles.headerTable}>Categoria</div>
-            <div className={styles.headerTable}>Editar</div>
-            <div className={styles.headerTable}>Borrar</div>
+            <div className={styles.headerTable}>Name</div>
+            <div className={styles.headerTable}>Cost</div>
+            <div className={styles.headerTable}>Category</div>
+            <div className={styles.headerTable}>Edit</div>
+            <div className={styles.headerTable}>Delete</div>
           </div>
           {products.map((product) => {
             return (
               <div key={product.id} className={styles.containerItems}>
+           {console.log(product.id)}
                   <div  className={styles.itemAlignStart}>{product.name}</div>
                   <div  className={styles.itemTable}>{product.cost}</div>
                   <div  className={styles.itemTable}>{product.category}</div>

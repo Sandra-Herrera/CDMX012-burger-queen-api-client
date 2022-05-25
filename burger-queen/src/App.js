@@ -10,18 +10,18 @@ import Products from "./components/products/Products";
 function App() {
   const { user } = useContext(UserContext);
   let userRole = null;
-  if(user?.photoURL){
-  userRole = user.photoURL;
-}
+  if (user?.photoURL) {
+    userRole = user.photoURL;
+  }
 
   return (
     <Routes>
       <Route exact path="/" element={<Login />} />
       {user && <Route exact path="/home" element={<Home />} />}
       {userRole === "administrador" && (
-      <Route exact path="/signup" element={<Signup />} />
-      <Route exact path="/products" element={<Products/>} />
+        <Route exact path="/signup" element={<Signup />} />
       )};
+      <Route exact path="/products" element={<Products />} />
     </Routes>
   );
 }
