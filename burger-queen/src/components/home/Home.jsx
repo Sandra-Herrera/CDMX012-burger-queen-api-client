@@ -28,6 +28,14 @@ const Home = () => {
     }
   };
 
+  const redirectProduct = () =>{
+    navigate("/products");
+  }
+
+  const redirectSignup = () =>{
+    navigate("/signup");
+  }
+
 
   return (
     <>
@@ -49,11 +57,11 @@ const Home = () => {
               Order
               <img alt="imageOrder" className={styles.iconsButtons} src={orderIcon} />
             </button>
-            <button className={styles.welcomeButtons}>
+            <button className={styles.welcomeButtons} onClick={redirectProduct}>
               Product
               <img alt="imageProduct" className={styles.iconsButtons} src={productsIcon} />
             </button>
-            <button className={styles.welcomeButtons}>
+            <button className={styles.welcomeButtons} onClick={redirectSignup}>
               Team
               <img alt="imageTeam" className={styles.iconsButtons} src={teamIcon} />
             </button>
