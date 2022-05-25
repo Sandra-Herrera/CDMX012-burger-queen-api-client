@@ -4,10 +4,13 @@ import { UserContext } from "../../database/UserProvider";
 import styles from "./products.module.css";
 import imgRestaurant from "../../img/imgRestaurant.png";
 import logOutIcon from "../../img/logOutIcon.png";
+import imgDelete from "../../img/imgDelete.png";
+import imgEdit from "../../img/imgEdit.png";
 
 
 const Products = () => {
-    const { logOut } = useContext(UserContext);
+  const [products,setProducts] = useState([]);  
+  const { logOut } = useContext(UserContext);
     const navigate = useNavigate();
 
     const handleClickLogout = async () => {
@@ -20,13 +23,22 @@ const Products = () => {
         }
       };
 
-
-      const [products,setProducts] = useState([]);
       useEffect(()=>{
         fetch('http://localhost:3004/Products')
         .then(response => response.json())
         .then(data => setProducts(data));
       },[]);
+
+      const deleteProducts = (id) =>{
+          alert(id)
+          // delete products.id
+          // const productDelete = products.filter((item) => item.id !== id)
+          // setProducts(productDelete)
+      }
+
+      const editProducts = (id) =>{
+        alert(id)
+    }
 
 
       return (
@@ -38,28 +50,41 @@ const Products = () => {
             </button>
           </div>
           <section>
-            <div className={styles.productsTable}>
-              <div className={styles.titleTable}>PRODUCTS</div>
-              <div className={styles.headerTable}>Nombre</div>
-              <div className={styles.headerTable}>Costo</div>
-              <div className={styles.headerTable}>Categoria</div>
-              <div className={styles.headerTable}>Editar</div>
-              <div className={styles.headerTable}>Borrar</div>
-              {
-                products.map(product=>{
-                    return(
-                        <>
-                            <div className={styles.itemTable}>{product.name}</div>
-                            <div className={styles.itemTable}>{product.cost}</div>
-                            <div className={styles.itemTable}>{product.category}</div>
-                            <div className={styles.itemTable}>10</div>
-                            <div className={styles.itemTable}>11</div>
-                        </>
-                    )
-                })
-              }
-            </div>
-           </section>
+        <div className={styles.productsTable}>
+          <div>
+            <div className={styles.titleTable}>PRODUCTS</div>
+          </div>
+          <div className={styles.mainHeaderTable}>
+            <div className={styles.headerTable}>Nombre</div>
+            <div className={styles.headerTable}>Costo</div>
+            <div className={styles.headerTable}>Categoria</div>
+            {/* <div className={styles.headerTable}>Editar</div>
+            <div className={styles.headerTable}>Borrar</div> */}
+          </div>
+
+           {products.map((product) => {
+            return (
+              <div key={product.id} className={styles.containerItems}>
+          {/* {console.log(product.id)} */}
+                  <div  className={styles.itemAlignStart}>{product.name}</div>
+                  <div  className={styles.itemTable}>{product.cost}</div>
+                  <div  className={styles.itemTable}>{product.category}</div>
+                  <div  className={styles.itemTable}>
+                  <button className={styles.btnEditAndDelete} onClick={() => editProducts(product.id)}>
+                  <img alt="imgEdit" className={styles.imgEdit} src={imgEdit}></img>
+                  </button>
+                  </div>
+                  <div  className={styles.itemTable}>
+                  <button className={styles.btnEditAndDelete} onClick={() => deleteProducts(product.id)}>
+                    <img alt="imgDelete" className={styles.imgDelete} src={imgDelete}></img>
+                  </button>
+                  </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
           
         </>
       );
