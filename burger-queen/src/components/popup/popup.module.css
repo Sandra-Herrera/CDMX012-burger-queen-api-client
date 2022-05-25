@@ -1,0 +1,116 @@
+/* The Modal (background) */
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modalContent {
+    background-color: #E9DEBA;
+    margin: auto;
+    padding: 20px;
+    border: 10px solid #FC7117;
+    border-radius: 12px;
+    width: 50%;
+    height: 70%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #9c7e29;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .buttonEdit{
+    background-color: black;
+    border: solid 2px;
+    border-color: #7ED090;
+    border-radius: 10px;
+    width: -4px;
+    width: 40px;
+    height: 40px;
+    margin-right: 208px;
+    padding: 0px;
+    transition-duration: 0.4s;
+  }
+
+  .buttonEdit:hover{
+    border-color: #4b8d59;
+}
+  .editionImg{
+    width: 32px;
+    height: 30px;
+  }
+
+  /* .writeNoteModal{
+    display: flex;
+    margin-top: 2%;
+    text-align: justify;
+    width: 95%;
+    height: 318px;
+    border: solid 3px;
+    border-radius: 8px;
+    border-color: #717171;
+    background-color: #E9DEBA;
+    color: #FFFF;
+    font-family: Roboto Condensed;
+    font-size: 20px;
+  } */
+
+  .titleModal{
+    display: flex;
+    margin-top: 2%;
+    width: 95%;
+    height: 33px;
+    border: solid 3px;
+    border-radius: 8px;
+    border-color: #717171;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-family: revert Condensed;
+    font-size: 20px;
+  }
+
+  .saveEditButton{
+    width: 105px;
+    height: 40px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-family: revert;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 18px;
+    border: solid 3px;
+    background-color: #7ED090;
+    border-color: #717171;
+    transition-duration: 0.4s;
+  }
+
+  .saveEditButton:hover{
+    background-color: #52bb69;
+    color: #FFFF; 
+}
+
+.areaSaveButton{
+  display: flex;
+  justify-content: end;
+  margin-top: 13px;
+}

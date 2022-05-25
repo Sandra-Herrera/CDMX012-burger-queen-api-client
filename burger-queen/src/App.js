@@ -6,6 +6,8 @@ import Signup from "./components/signUp/Signup";
 import Home from "./components/home/Home";
 import "./App.css";
 import Products from "./components/products/Products";
+import Error from "./components/error/Error";
+
 
 function App() {
   const { user } = useContext(UserContext);
@@ -24,6 +26,7 @@ function App() {
        {userRole === "administrador" && (
        <Route exact path="/products" element={<Products/>} />
       )};
+      <Route path='*' element={<Error />}/>
     </Routes>
   );
 }

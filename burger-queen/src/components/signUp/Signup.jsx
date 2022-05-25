@@ -68,7 +68,7 @@ const Signup = () => {
         </button>
       </div>
       <section className={styles.containerSignUpArea}>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)}>
          <h1 className={styles.signUpTitle}>Sign Up</h1>
          <br />
           <input

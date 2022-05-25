@@ -1,16 +1,16 @@
 {
     "Products": [
-        { "id": "1", "name": "Huevos revueltos", "cost": "25", "category": "Desayuno" },
-        { "id": "2", "name": "Jugo de naranja", "cost": "15", "category": "Desayuno" },
-        { "id": "3", "name": "Café americano ", "cost": "15", "category": "Desayuno" },
-        { "id": "4", "name": "Pan dulce ", "cost": "10", "category": "Desayuno" },
-        { "id": "5", "name": "Pasta a la bolognesa", "cost": "25", "category": "Comida/Cena"},
-        { "id": "6", "name": "Baguette de pollo", "cost": "20", "category": "Comida/Cena"},
-        { "id": "7", "name": "Pizza de peperoni", "cost": "30", "category": "Comida/Cena"},
-        { "id": "8", "name": "Cheesecake", "cost": "15", "category": "Comida/Cena"},
-        { "id": "9", "name": "Tarta de red velvet", "cost": "15", "category": "Comida/Cena"},
-        { "id": "10", "name": "Refresco de 500 mL", "cost": "15", "category": "Comida/Cena"},
-        { "id": "11", "name": "Agua mineral de 100 mL", "cost": "10", "category": "Comida/Cena"},
-        { "id": "12", "name": "Agua natural 100 mL", "cost": "10", "category": "Comida/Cena"}
+        { "id": "1", "name": "Scrambled eggs", "price": "25", "category": "Breakfast" },
+        { "id": "2", "name": "Orange juice", "price": "15", "category": "Breakfast" },
+        { "id": "3", "name": "American coffee", "price": "15", "category": "Breakfast" },
+        { "id": "4", "name": "Frapuchino coffee", "price": "15", "category": "Breakfast" },
+        { "id": "5", "name": "Pasta bolognese", "price": "25", "category": "Lunch/Dinner"},
+        { "id": "6", "name": "Chicken baguette", "price": "20", "category": "Lunch/Dinner"},
+        { "id": "7", "name": "Pepperoni pizza", "price": "30", "category": "Lunch/Dinner"},
+        { "id": "8", "name": "Cheesecake", "price": "15", "category": "Lunch/Dinner"},
+        { "id": "9", "name": "Red velvet cake", "price": "15", "category": "Lunch/Dinner"},
+        { "id": "10", "name": "Soda 500 mL", "price": "15", "category": "Lunch/Dinner"},
+        { "id": "11", "name": "Mineral water de 100 mL", "price": "10", "category": "Lunch/Dinner"},
+        { "id": "12", "name": "Natural water 100 mL", "price": "10", "category": "Lunch/Dinner"}
     ]
   }

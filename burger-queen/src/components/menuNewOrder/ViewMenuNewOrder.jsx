@@ -1,12 +1,12 @@
-import styles from "./viewMenuNewOrder.modules.css";
+// import styles from "./viewMenuNewOrder.modules.css";
 
 
 
-export default function Login(){
-    return (
-    <div className="loginContainer">
-        <ImageLogin/>
-        <LoginData/>
-    </div>
-    );
-}
+// export default function Login(){
+//     return (
+//     <div className="loginContainer">
+//         <ImageLogin/>
+//         <LoginData/>
+//     </div>
+//     );
+// }
