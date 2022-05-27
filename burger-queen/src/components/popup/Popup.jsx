@@ -5,32 +5,26 @@ import styles from "./popup.module.css";
 export function Popup(props) {
 
     const initialStateValues = {
-        product: '',
-        cost:'',
-        Category:'',
+        name: '',
+        price:'',
+        category:'',
     };
 
     const [values, setValues] = useState(initialStateValues);
     
     const areaEditChange = e =>{
         const {id, value} = e.target;
-        let today = new Date().toISOString()
-        const newValue = {...values, [id]: value, "date":today};
+        const newValue = {...values, [id]: value};
         setValues(newValue);
     }
 
 
     const saveProduct =product => async (e) => {
         e.preventDefault();
-        let docRef;
         if(product && product.id){
-            // const upDoc = doc(db, "note", product.id);
-            // docRef = await updateDoc(upDoc, values);
-            // props.onClickCloseModal();
+            // Hacer PUT
         }else{
-            // docRef = await addDoc(collection(db, "note"),values);
-            // setValues({...values, noteId:docRef.id});
-            // props.onClickCloseModal();
+            // Hacer POST
         }  
     }
 
@@ -43,12 +37,12 @@ export function Popup(props) {
                 {/* <!-- Modal content --> */}
                 <div className={styles.modalContent}>
                     <span className={styles.close} onClick={props.onClickCloseModal}>&times;</span>
-                    <input className={styles.titleModal} id="title" onChange={areaEditChange} placeholder="Product Name" defaultValue={props.attrNote?.title}></input>
-                    <input className={styles.titleModal} id="title" onChange={areaEditChange} placeholder="Price" defaultValue={props.attrNote?.title}></input>
-                    <input className={styles.titleModal} id="title" onChange={areaEditChange} placeholder="Category" defaultValue={props.attrNote?.title}></input>
-                    {/* <textarea className={styles.writeNoteModal} id="noteText" onChange={areaEditChange} placeholder="Escribe una nota..." defaultValue={props.attrNote?.noteText}></textarea> */}
-                    <section className={styles.reaSaveButton}>
-                        <button className={styles.saveEditButton} onClick={saveProduct(props.attrNote)} > 
+                    <section className={styles.titleModal}>New product</section>
+                    <input className={styles.inputModal} id="name" onChange={areaEditChange} placeholder="Product Name" defaultValue={props.attrProduct?.name}></input>
+                    <input className={styles.inputModal} id="price" onChange={areaEditChange} placeholder="Price" defaultValue={props.attrProduct?.price}></input>
+                    <input className={styles.inputModal} id="category" onChange={areaEditChange} placeholder="Category" defaultValue={props.attrProduct?.category}></input>
+                    <section className={styles.areaSaveButton}>
+                        <button className={styles.saveEditButton} onClick={saveProduct(props.attrProduct)} > 
                             Save
                         </button>
                     </section>

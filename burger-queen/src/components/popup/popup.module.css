@@ -15,6 +15,8 @@
   
   /* Modal Content */
   .modalContent {
+    display: flex;
+    flex-direction: column;
     background-color: #E9DEBA;
     margin: auto;
     padding: 20px;
@@ -39,6 +41,11 @@
     cursor: pointer;
   }
 
+  .titleModal{
+    font-family: revert;
+
+  }
+
   .buttonEdit{
     background-color: black;
     border: solid 2px;
@@ -60,22 +67,7 @@
     height: 30px;
   }
 
-  /* .writeNoteModal{
-    display: flex;
-    margin-top: 2%;
-    text-align: justify;
-    width: 95%;
-    height: 318px;
-    border: solid 3px;
-    border-radius: 8px;
-    border-color: #717171;
-    background-color: #E9DEBA;
-    color: #FFFF;
-    font-family: Roboto Condensed;
-    font-size: 20px;
-  } */
-
-  .titleModal{
+  .inputModal{
     display: flex;
     margin-top: 2%;
     width: 95%;
@@ -85,7 +77,7 @@
     border-color: #717171;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    font-family: revert Condensed;
+    font-family: revert;
     font-size: 20px;
   }
 

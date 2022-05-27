@@ -38,8 +38,9 @@ const Products = () => {
           // setProducts(productDelete)
       }
 
-      const editProducts = (id) =>{
-        alert(id)
+      const editProducts = (popupProduct) =>{
+        alert(popupProduct.id)
+        setPopup({visibility:true, popupProduct})
       }
 
       const [objPopup, setPopup] = useState({visibility:false});
@@ -53,7 +54,7 @@ const Products = () => {
 
       return (
         <>
-          <Popup onClickCloseModal={onClickHide} visible={objPopup.visibility}></Popup>
+          <Popup onClickCloseModal={onClickHide} visible={objPopup.visibility} attrProduct={objPopup.popupProduct}></Popup>
           <div className={styles.headerImg}>
             <img alt="imagen header" className={styles.imgRest} src={imgRestaurant} />
             <button className={styles.logOutButton} onClick={handleClickLogout}>Log Out 
@@ -86,12 +87,12 @@ const Products = () => {
                   <div  className={styles.itemTable}>{product.price}</div>
                   <div  className={styles.itemTable}>{product.category}</div>
                   <div  className={styles.itemTable}>
-                  <button className={styles.btnEditAndDelete} onClick={() => editProducts(product.id)}>
+                  <button className={styles.btnEditAndDelete} onClick={() => editProducts(product)}>
                   <img alt="imgEdit" className={styles.imgEdit} src={imgEdit}></img>
                   </button>
                   </div>
                   <div  className={styles.itemTable}>
-                  <button className={styles.btnEditAndDelete} onClick={() => deleteProducts(product.id)}>
+                  <button className={styles.btnEditAndDelete} onClick={() => deleteProducts(product)}>
                     <img alt="imgDelete" className={styles.imgDelete} src={imgDelete}></img>
                   </button>
                   </div>
