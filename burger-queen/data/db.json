@@ -1,16 +1,76 @@
 {
-    "Products": [
-        { "id": "1", "name": "Scrambled eggs", "price": "25", "category": "Breakfast" },
-        { "id": "2", "name": "Orange juice", "price": "15", "category": "Breakfast" },
-        { "id": "3", "name": "American coffee", "price": "15", "category": "Breakfast" },
-        { "id": "4", "name": "Frapuchino coffee", "price": "15", "category": "Breakfast" },
-        { "id": "5", "name": "Pasta bolognese", "price": "25", "category": "Lunch/Dinner"},
-        { "id": "6", "name": "Chicken baguette", "price": "20", "category": "Lunch/Dinner"},
-        { "id": "7", "name": "Pepperoni pizza", "price": "30", "category": "Lunch/Dinner"},
-        { "id": "8", "name": "Cheesecake", "price": "15", "category": "Lunch/Dinner"},
-        { "id": "9", "name": "Red velvet cake", "price": "15", "category": "Lunch/Dinner"},
-        { "id": "10", "name": "Soda 500 mL", "price": "15", "category": "Lunch/Dinner"},
-        { "id": "11", "name": "Mineral water de 100 mL", "price": "10", "category": "Lunch/Dinner"},
-        { "id": "12", "name": "Natural water 100 mL", "price": "10", "category": "Lunch/Dinner"}
-    ]
-  }
+  "Products": [
+    {
+      "name": "Scrambled eggs",
+      "price": "24",
+      "category": "Breakfast",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Orange juice",
+      "price": "15",
+      "category": "Breakfast"
+    },
+    {
+      "id": "3",
+      "name": "American coffee",
+      "price": "15",
+      "category": "Breakfast"
+    },
+    {
+      "id": "4",
+      "name": "Frapuchino coffee",
+      "price": "15",
+      "category": "Breakfast"
+    },
+    {
+      "id": "5",
+      "name": "Pasta bolognese",
+      "price": "25",
+      "category": "Lunch/Dinner"
+    },
+    {
+      "id": "6",
+      "name": "Chicken baguette",
+      "price": "20",
+      "category": "Lunch/Dinner"
+    },
+    {
+      "id": "7",
+      "name": "Pepperoni pizza",
+      "price": "30",
+      "category": "Lunch/Dinner"
+    },
+    {
+      "id": "8",
+      "name": "Cheesecake",
+      "price": "15",
+      "category": "Lunch/Dinner"
+    },
+    {
+      "id": "9",
+      "name": "Red velvet cake",
+      "price": "15",
+      "category": "Lunch/Dinner"
+    },
+    {
+      "id": "10",
+      "name": "Soda 500 mL",
+      "price": "15",
+      "category": "Lunch/Dinner"
+    },
+    {
+      "id": "11",
+      "name": "Mineral water de 100 mL",
+      "price": "10",
+      "category": "Lunch/Dinner"
+    },
+    {
+      "id": "12",
+      "name": "Natural water 100 mL",
+      "price": "10",
+      "category": "Lunch/Dinner"
+    }
+  ]
+}

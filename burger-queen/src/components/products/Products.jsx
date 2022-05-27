@@ -25,31 +25,44 @@ const Products = () => {
         }
       };
 
-      useEffect(()=>{
+      const getAllProduct = () =>{
         fetch('http://localhost:3004/Products')
         .then(response => response.json())
-        .then(data => setProducts(data));
+        .then(products => setProducts(products));
+      }
+
+      useEffect(()=>{
+        getAllProduct();
       },[]);
 
-      const deleteProducts = (id) =>{
-          alert(id)
+      const deleteProducts = (product) =>{
+        fetch(`http://localhost:3004/Products/${product.id}`,{
+                method: 'DELETE'
+            })
+            .then(response => response.json())
+            .then(deletedProduct => {
+                console.log(deletedProduct)
+                getAllProduct();
+            });
+          // alert(id)
           // delete products.id
           // const productDelete = products.filter((item) => item.id !== id)
           // setProducts(productDelete)
       }
 
+      const [objPopup, setPopup] = useState({visibility:false});
+
       const editProducts = (popupProduct) =>{
-        alert(popupProduct.id)
+        // alert(popupProduct.id)
         setPopup({visibility:true, popupProduct})
       }
 
-      const [objPopup, setPopup] = useState({visibility:false});
-
       const onAdd  = () =>{
-          setPopup({visibility:true});
+        setPopup({visibility:true});
       }
       const onClickHide = ()=> {
-          setPopup({visibility:false});
+        getAllProduct();
+        setPopup({visibility:false});
       }
 
       return (
@@ -87,8 +100,8 @@ const Products = () => {
                   <div  className={styles.itemTable}>{product.price}</div>
                   <div  className={styles.itemTable}>{product.category}</div>
                   <div  className={styles.itemTable}>
-                  <button className={styles.btnEditAndDelete} onClick={() => editProducts(product)}>
-                  <img alt="imgEdit" className={styles.imgEdit} src={imgEdit}></img>
+                  <button className={styles.btnEditAndDelete}>
+                  <img alt="imgEdit" className={styles.imgEdit} src={imgEdit} onClick={() => editProducts(product)}></img>
                   </button>
                   </div>
                   <div  className={styles.itemTable}>

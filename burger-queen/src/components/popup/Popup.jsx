@@ -14,7 +14,7 @@ export function Popup(props) {
     
     const areaEditChange = e =>{
         const {id, value} = e.target;
-        const newValue = {...values, [id]: value};
+        const newValue = {...props.attrProduct, [id]: value};
         setValues(newValue);
     }
 
@@ -23,8 +23,33 @@ export function Popup(props) {
         e.preventDefault();
         if(product && product.id){
             // Hacer PUT
+            fetch(`http://localhost:3004/Products/${product.id}`,{
+                method: 'PUT',
+                headers: { 
+                    'content-type': 'application/json',
+                },
+                body:JSON.stringify(values)
+            })
+            .then(response => response.json())
+            .then(addedProduct => {
+                console.log(addedProduct)
+                props.onClickCloseModal();
+            });
         }else{
             // Hacer POST
+            product = values;
+            fetch('http://localhost:3004/Products',{
+                method: 'POST',
+                headers: { 
+                    'content-type': 'application/json',
+                },
+                body:JSON.stringify(product)
+            })
+            .then(response => response.json())
+            .then(addedProduct => {
+                console.log(addedProduct)
+                props.onClickCloseModal();
+            });
         }  
     }
 
