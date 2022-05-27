@@ -1,16 +1,100 @@
 {
-    "Products": [
-        { "id": "1", "name": "Huevos revueltos", "cost": "25", "category": "Desayuno" },
-        { "id": "2", "name": "Jugo de naranja", "cost": "15", "category": "Desayuno" },
-        { "id": "3", "name": "Café americano ", "cost": "15", "category": "Desayuno" },
-        { "id": "4", "name": "Pan dulce ", "cost": "10", "category": "Desayuno" },
-        { "id": "5", "name": "Pasta a la bolognesa", "cost": "25", "category": "Comida/Cena"},
-        { "id": "6", "name": "Baguette de pollo", "cost": "20", "category": "Comida/Cena"},
-        { "id": "7", "name": "Pizza de peperoni", "cost": "30", "category": "Comida/Cena"},
-        { "id": "8", "name": "Cheesecake", "cost": "15", "category": "Comida/Cena"},
-        { "id": "9", "name": "Tarta de red velvet", "cost": "15", "category": "Comida/Cena"},
-        { "id": "10", "name": "Refresco de 500 mL", "cost": "15", "category": "Comida/Cena"},
-        { "id": "11", "name": "Agua mineral de 100 mL", "cost": "10", "category": "Comida/Cena"},
-        { "id": "12", "name": "Agua natural 100 mL", "cost": "10", "category": "Comida/Cena"}
-    ]
-  }
+  "Products": [
+    {
+      "id": "1",
+      "name": "Huevos revueltos",
+      "cost": "25",
+      "category": "Desayuno"
+    },
+    {
+      "id": "2",
+      "name": "Jugo de naranja",
+      "cost": "15",
+      "category": "Desayuno"
+    },
+    {
+      "id": "3",
+      "name": "Café americano ",
+      "cost": "15",
+      "category": "Desayuno"
+    },
+    {
+      "id": "4",
+      "name": "Pan dulce ",
+      "cost": "10",
+      "category": "Desayuno"
+    },
+    {
+      "id": "5",
+      "name": "Pasta a la bolognesa",
+      "cost": "25",
+      "category": "Comida/Cena"
+    },
+    {
+      "id": "6",
+      "name": "Baguette de pollo",
+      "cost": "20",
+      "category": "Comida/Cena"
+    },
+    {
+      "id": "7",
+      "name": "Pizza de peperoni",
+      "cost": "30",
+      "category": "Comida/Cena"
+    },
+    {
+      "id": "8",
+      "name": "Cheesecake",
+      "cost": "15",
+      "category": "Comida/Cena"
+    },
+    {
+      "id": "9",
+      "name": "Tarta de red velvet",
+      "cost": "15",
+      "category": "Comida/Cena"
+    },
+    {
+      "id": "10",
+      "name": "Refresco de 500 mL",
+      "cost": "15",
+      "category": "Comida/Cena"
+    },
+    {
+      "id": "11",
+      "name": "Agua mineral de 100 mL",
+      "cost": "10",
+      "category": "Comida/Cena"
+    },
+    {
+      "id": "12",
+      "name": "Agua natural 100 mL",
+      "cost": "10",
+      "category": "Comida/Cena"
+    },
+    {
+      "name": "rr",
+      "cost": "pp",
+      "category": "kk",
+      "id": 1653600616441
+    },
+    {
+      "name": "Prueba",
+      "cost": "mil",
+      "category": "ochomil",
+      "id": 1653600986140
+    },
+    {
+      "name": "Mel",
+      "cost": "80",
+      "category": "p",
+      "id": 1653607351522
+    },
+    {
+      "name": "Sandy",
+      "cost": "prueba",
+      "category": "pruebita",
+      "id": 1653609980147
+    }
+  ]
+}

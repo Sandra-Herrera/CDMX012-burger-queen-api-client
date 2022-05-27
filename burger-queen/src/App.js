@@ -4,6 +4,7 @@ import { UserContext } from "./database/UserProvider";
 import Login from "./components/login/Login";
 import Signup from "./components/signUp/Signup";
 import Home from "./components/home/Home";
+import Error from "./components/error/Error";
 import "./App.css";
 import Products from "./components/products/Products";
 
@@ -24,6 +25,7 @@ function App() {
        {userRole === "administrador" && (
        <Route exact path="/products" element={<Products/>} />
       )};
+      <Route path='*' element={<Error />}/>
     </Routes>
   );
 }

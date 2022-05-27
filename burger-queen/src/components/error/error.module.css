@@ -1,0 +1,10 @@
+.errorMessage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6%;
+}
+
+.apple{
+    width: 30%;
+}
