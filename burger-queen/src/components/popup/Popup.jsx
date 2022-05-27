@@ -1,21 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./popup.module.css";
 
 
 export function Popup(props) {
+    const { attrProduct } = props;
+    //const myVariable = props.attrProduct;
 
-    const initialStateValues = {
-        name: '',
-        price:'',
-        category:'',
-    };
-
-    const [values, setValues] = useState(initialStateValues);
+    const [inputsModal, setInputsModal] = useState(attrProduct);
+    useEffect(() => {
+        setInputsModal(attrProduct);
+    }, [attrProduct]);
     
     const areaEditChange = e =>{
         const {id, value} = e.target;
-        const newValue = {...props.attrProduct, [id]: value};
-        setValues(newValue);
+        const newValue = {...inputsModal, [id]: value};
+        setInputsModal(newValue);
     }
 
 
@@ -28,7 +27,7 @@ export function Popup(props) {
                 headers: { 
                     'content-type': 'application/json',
                 },
-                body:JSON.stringify(values)
+                body:JSON.stringify(inputsModal)
             })
             .then(response => response.json())
             .then(addedProduct => {
@@ -37,7 +36,7 @@ export function Popup(props) {
             });
         }else{
             // Hacer POST
-            product = values;
+            product = inputsModal;
             fetch('http://localhost:3004/Products',{
                 method: 'POST',
                 headers: { 
