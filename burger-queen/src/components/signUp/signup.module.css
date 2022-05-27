@@ -14,6 +14,20 @@
     top: 0;
 }
 
+.formContainer{
+    display: grid;
+    row-gap: 6px;
+    justify-content: center;
+    width: 110%;
+    background-color: #EDD479;
+    display: grid;
+    row-gap: 6px;
+    justify-content: center;
+    border-radius: 12px;
+    border: solid 1px;
+    padding: 10px;
+}
+
 .containerSignUpArea {
     display: grid;
     justify-content: center;

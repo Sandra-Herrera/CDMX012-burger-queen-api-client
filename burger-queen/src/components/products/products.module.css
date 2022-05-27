@@ -40,12 +40,9 @@
 }
 
 .addButton{
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2px;
-    right: 460px;
     background-color: unset;
     border: solid 4px;
     border-color: #FBA121;
@@ -56,6 +53,10 @@
     width: 90px;
     height: 40px;
     border-radius: 30px;
+}
+
+.addButton:hover{
+    border-color: rgb(163, 69, 69);
 }
 
 .iconAdd{
@@ -150,6 +151,10 @@
     width: 106px;
     height: 58px;
     border-radius: 30px;
+}
+
+.logOutButton:hover{
+    border-color: rgb(163, 69, 69);
 }
 
 .iconLogOut {

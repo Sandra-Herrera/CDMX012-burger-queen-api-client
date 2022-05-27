@@ -12,5 +12,4 @@ function Error(){
         </React.Fragment>
     );
 }
-
 export default Error;

@@ -7,6 +7,8 @@ import Home from "./components/home/Home";
 import Error from "./components/error/Error";
 import "./App.css";
 import Products from "./components/products/Products";
+import Error from "./components/error/Error";
+
 
 function App() {
   const { user } = useContext(UserContext);
