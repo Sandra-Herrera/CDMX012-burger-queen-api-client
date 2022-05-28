@@ -1,6 +1,12 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./popup.module.css";
+import PropTypes from 'prop-types';
 
+Popup.propTypes = {
+    attrProduct: PropTypes.object.isRequired,
+    onClickCloseModal: PropTypes.func.isRequired,
+    visible: PropTypes.bool.isRequired
+};
 
 export function Popup(props) {
     const { attrProduct } = props;
