@@ -7,7 +7,7 @@ import {
 } from "firebase/auth";
 import { auth } from "./firebase-config";
 import { createContext, useEffect } from "react";
-import { async } from "@firebase/util";
+import PropTypes from "prop-types";
 
 export const UserContext = createContext();
 
@@ -28,16 +28,6 @@ const UserProvider = ({ children }) => {
     return () => userData();
   }, []);
 
-  // useEffect(() => {
-  //   const authState = async ()=>{
-  //   onAuthStateChanged(auth, (userId) => {
-  //     console.log(userId);
-  //      setUser(userId);
-  //    });
-  //   }
-  //   return () => authState();
-  // }, []);
-
   const logOut = () => signOut(auth);
 
   return (
@@ -45,6 +35,10 @@ const UserProvider = ({ children }) => {
       {children}
     </UserContext.Provider>
   );
+};
+
+UserProvider.propTypes = {
+  children: PropTypes.element.isRequired,
 };
 
 export default UserProvider;

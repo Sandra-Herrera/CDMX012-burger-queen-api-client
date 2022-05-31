@@ -1,12 +1,20 @@
-// import styles from "./viewMenuNewOrder.modules.css";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Menu from "./Menu";
 
+const ViewMenuNewOrder = () => {
+  const navigate = useNavigate();
 
+  const redirectHome = () => {
+    navigate("/home");
+  };
 
-// export default function Login(){
-//     return (
-//     <div className="loginContainer">
-//         <ImageLogin/>
-//         <LoginData/>
-//     </div>
-//     );
-// }
+  return (
+    <>
+      <button onClick={redirectHome}>Back</button>
+      <Menu />
+    </>
+  );
+};
+
+export default ViewMenuNewOrder;

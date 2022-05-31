@@ -7,7 +7,7 @@ import Home from "./components/home/Home";
 import "./App.css";
 import Products from "./components/products/Products";
 import Error from "./components/error/Error";
-
+import ViewMenuNewOrder from "./components/menuNewOrder/ViewMenuNewOrder";
 
 function App() {
   const { user } = useContext(UserContext);
@@ -21,12 +21,22 @@ function App() {
       <Route exact path="/" element={<Login />} />
       {user && <Route exact path="/home" element={<Home />} />}
       {userRole === "administrador" && (
-      <Route exact path="/signup" element={<Signup />} />
-      )};
-       {userRole === "administrador" && (
-       <Route exact path="/products" element={<Products/>} />
-      )};
-      <Route path='*' element={<Error />}/>
+        <Route exact path="/signup" element={<Signup />} />
+      )}
+      ;
+      {userRole === "administrador" && (
+        <Route exact path="/products" element={<Products />} />
+      )}
+      ;
+      {userRole === "mesero" && (
+        <Route exact path="/order" element={<ViewMenuNewOrder />} />
+      )}
+      ;
+      {userRole === "administrador" && (
+        <Route exact path="/order" element={<ViewMenuNewOrder />} />
+      )}
+      ;
+      <Route path="*" element={<Error />} />
     </Routes>
   );
 }
