@@ -7,6 +7,7 @@ import Home from "./components/home/Home";
 import "./App.css";
 import Products from "./components/products/Products";
 import Error from "./components/error/Error";
+import NewOrder from "./components/menuNewOrder/NewOrder";
 
 
 function App() {
@@ -21,12 +22,15 @@ function App() {
       <Route exact path="/" element={<Login />} />
       {user && <Route exact path="/home" element={<Home />} />}
       {userRole === "administrador" && (
-      <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/signup" element={<Signup />} />
       )};
-       {userRole === "administrador" && (
-       <Route exact path="/products" element={<Products/>} />
+      {userRole === "administrador" && (
+        <Route exact path="/products" element={<Products />} />
       )};
-      <Route path='*' element={<Error />}/>
+      {userRole === "administrador" && (
+        <Route exact path="/NewOrder" element={<NewOrder />} />
+      )};
+      <Route path='*' element={<Error />} />
     </Routes>
   );
 }

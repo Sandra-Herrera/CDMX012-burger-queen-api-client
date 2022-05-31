@@ -44,16 +44,11 @@ const Products = () => {
                 console.log(deletedProduct)
                 getAllProduct();
             });
-          // alert(id)
-          // delete products.id
-          // const productDelete = products.filter((item) => item.id !== id)
-          // setProducts(productDelete)
       }
 
       const [objPopup, setPopup] = useState({visibility:false});
 
       const editProducts = (popupProduct) =>{
-        // alert(popupProduct.id)
         setPopup({visibility:true, popupProduct})
       }
 

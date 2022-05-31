@@ -17,6 +17,7 @@
   .modalContent {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: #E9DEBA;
     margin: auto;
     padding: 20px;
@@ -42,7 +43,10 @@
   }
 
   .titleModal{
-    font-family: revert;
+    color: brown;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: sans-serif;
 
   }
 

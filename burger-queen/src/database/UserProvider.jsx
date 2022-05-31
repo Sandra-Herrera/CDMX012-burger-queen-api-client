@@ -7,7 +7,10 @@ import {
 } from "firebase/auth";
 import { auth } from "./firebase-config";
 import { createContext, useEffect } from "react";
-import { async } from "@firebase/util";
+import PropTypes from "prop-types";
+// import { async } from "@firebase/util";
+
+
 
 export const UserContext = createContext();
 
@@ -45,6 +48,10 @@ const UserProvider = ({ children }) => {
       {children}
     </UserContext.Provider>
   );
+};
+
+UserProvider.propTypes = {
+  children: PropTypes.element.isRequired
 };
 
 export default UserProvider;

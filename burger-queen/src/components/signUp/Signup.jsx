@@ -144,9 +144,9 @@ const Signup = () => {
             })}
           >
             <option value="">Choose a role</option>
-            <option value="mesero">Mesero</option>
-            <option value="cocina">Cocina</option>
-            <option value="administrador">Administrador</option>
+            <option value="Waiter">Waiter</option>
+            <option value="Kitchen">Kitchen</option>
+            <option value="Administrator">Administrator</option>
           </select>
           {errors.rol && <p>{errors.rol.message}</p>}
           <br />

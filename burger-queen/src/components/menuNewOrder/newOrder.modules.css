@@ -1,0 +1,13 @@
+.titleNewOrder{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 4px;
+    border-color: coral;
+}
