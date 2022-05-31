@@ -31,16 +31,6 @@ const UserProvider = ({ children }) => {
     return () => userData();
   }, []);
 
-  // useEffect(() => {
-  //   const authState = async ()=>{
-  //   onAuthStateChanged(auth, (userId) => {
-  //     console.log(userId);
-  //      setUser(userId);
-  //    });
-  //   }
-  //   return () => authState();
-  // }, []);
-
   const logOut = () => signOut(auth);
 
   return (
@@ -51,7 +41,7 @@ const UserProvider = ({ children }) => {
 };
 
 UserProvider.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired,
 };
 
 export default UserProvider;

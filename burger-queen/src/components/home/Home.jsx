@@ -13,37 +13,48 @@ const Home = () => {
   const { logOut } = useContext(UserContext);
   const navigate = useNavigate();
 
-  fetch('http://localhost:3004/ComidaCena')
-  .then(response => response.json())
-  .then(data => console.log(data));
-
+  fetch("http://localhost:3004/ComidaCena")
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 
   const handleClickLogout = async () => {
     try {
       await logOut();
-      console.log('cerró sesión');
+      console.log("cerró sesión");
       navigate("/");
     } catch (error) {
       console.log(error);
     }
   };
 
-  const redirectProduct = () =>{
+  const redirectProduct = () => {
     navigate("/products");
-  }
+  };
 
-  const redirectSignup = () =>{
+  const redirectSignup = () => {
     navigate("/signup");
-  }
+  };
 
+  const redirectOrder = () => {
+    navigate("/order");
+  };
 
   return (
     <>
       <div className={styles.headerImg}>
-        <img alt="imagen header" className={styles.imgRest} src={imgRestaurant} />
-        <button className={styles.logOutButton} onClick={handleClickLogout}>Log Out
-        <img alt="imageLogOut" className={styles.iconLogOut} src={logOutIcon} />
-      </button>
+        <img
+          alt="imagen header"
+          className={styles.imgRest}
+          src={imgRestaurant}
+        />
+        <button className={styles.logOutButton} onClick={handleClickLogout}>
+          Log Out
+          <img
+            alt="imageLogOut"
+            className={styles.iconLogOut}
+            src={logOutIcon}
+          />
+        </button>
       </div>
       <section className={styles.welcomeContainer}>
         <section className={styles.welcomeSection}>
@@ -51,19 +62,35 @@ const Home = () => {
           <section className={styles.buttonsArea}>
             <button className={styles.welcomeButtons}>
               Kitchen
-              <img alt="imageChef" className={styles.iconsButtons} src={chefIcon} />
+              <img
+                alt="imageChef"
+                className={styles.iconsButtons}
+                src={chefIcon}
+              />
             </button>
-            <button className={styles.welcomeButtons}>
+            <button className={styles.welcomeButtons} onClick={redirectOrder}>
               Order
-              <img alt="imageOrder" className={styles.iconsButtons} src={orderIcon} />
+              <img
+                alt="imageOrder"
+                className={styles.iconsButtons}
+                src={orderIcon}
+              />
             </button>
             <button className={styles.welcomeButtons} onClick={redirectProduct}>
               Product
-              <img alt="imageProduct" className={styles.iconsButtons} src={productsIcon} />
+              <img
+                alt="imageProduct"
+                className={styles.iconsButtons}
+                src={productsIcon}
+              />
             </button>
             <button className={styles.welcomeButtons} onClick={redirectSignup}>
               Team
-              <img alt="imageTeam" className={styles.iconsButtons} src={teamIcon} />
+              <img
+                alt="imageTeam"
+                className={styles.iconsButtons}
+                src={teamIcon}
+              />
             </button>
           </section>
         </section>

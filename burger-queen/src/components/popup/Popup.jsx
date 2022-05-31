@@ -3,7 +3,7 @@ import styles from "./popup.module.css";
 import PropTypes from "prop-types";
 
 Popup.propTypes = {
-  attrProduct: PropTypes.object.isRequired,
+  attrProduct: PropTypes.object,
   onClickCloseModal: PropTypes.func.isRequired,
   visible: PropTypes.bool.isRequired,
 };
