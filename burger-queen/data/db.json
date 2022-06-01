@@ -73,21 +73,10 @@
       "category": "Lunch/Dinner"
     },
     {
-      "name": "test",
-      "id": "8ekN54d",
-      "category": "Breakfast"
-    },
-    {
-      "name": "test2",
-      "price": "123",
-      "category": "Lunch/Dinner",
+      "name": "Apple",
+      "price": "12",
+      "category": "Breakfast",
       "id": "xObUfTx"
-    },
-    {
-      "name": "funciona?? hihi",
-      "price": "maldito",
-      "category": "slint",
-      "id": "gjraSNh"
     }
   ]
 }

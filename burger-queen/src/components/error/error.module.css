@@ -2,9 +2,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 6%;
+    margin-top: 9%;
 }
 
 .apple{
     width: 30%;
+}
+
+.redirect{
+    margin-top: 5%;
+    border-radius: 9px;
+    border: solid 1px;
+    padding: 5px 8px 5px 8px;
+    background-color: #3ed15e;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.redirect:hover{
+    background-color: #7ED090;
 }
