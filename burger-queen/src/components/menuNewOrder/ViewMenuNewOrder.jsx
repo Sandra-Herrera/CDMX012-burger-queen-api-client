@@ -4,7 +4,7 @@ import Menu from "./Menu";
 import styles from "./viewMenuNewOrder.module.css";
 import imgRestaurant from "../../img/imgRestaurant.png";
 import backIcon from "../../img/backIcon.png";
-// import OrderContextProvider from "../context/OrderContext";
+import {OrderContextProvider} from "../context/OrderContext";
 
 const ViewMenuNewOrder = () => {
   const navigate = useNavigate();
@@ -22,9 +22,9 @@ const ViewMenuNewOrder = () => {
         </button>
       </div>
 
-      {/* <OrderContextProvider> */}
+      <OrderContextProvider>
         <Menu />
-      {/* </OrderContextProvider> */}
+      </OrderContextProvider>
     </>
   );
 };
