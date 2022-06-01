@@ -1,26 +1,26 @@
-import React, { useContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../database/UserProvider";
+import React, {  useState, useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
+// import { UserContext } from "../../database/UserProvider";
 import styles from "./newOrder.module.css";
-import imgRestaurant from "../../img/imgRestaurant.png";
-import logOutIcon from "../../img/logOutIcon.png";
+// import imgRestaurant from "../../img/imgRestaurant.png";
+// import logOutIcon from "../../img/logOutIcon.png";
 import imgDelete from "../../img/imgDelete.png";
 import imgMinus from "../../img/imgMinus.png";
 import imgPlus from "../../img/imgPlus.png";
 
 const NewOrder = () => {
   const [newOrder, setNewOrder] = useState([]);
-  const { logOut } = useContext(UserContext);
-  const navigate = useNavigate();
+  // const { logOut } = useContext(UserContext);
+  // const navigate = useNavigate();
 
-  const handleClickLogout = async () => {
-    try {
-      await logOut();
-      navigate("/");
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const handleClickLogout = async () => {
+  //   try {
+  //     await logOut();
+  //     navigate("/");
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   const getAllProduct = () => {
     fetch("http://localhost:3004/Products")
@@ -54,22 +54,7 @@ const NewOrder = () => {
 
   return (
     <>
-      <div className={styles.headerImg}>
-        <img
-          alt="imagen header"
-          className={styles.imgRest}
-          src={imgRestaurant}
-        />
-        <button className={styles.logOutButton} onClick={handleClickLogout}>
-          Log Out
-          <img
-            alt="imageLogOut"
-            className={styles.iconLogOut}
-            src={logOutIcon}
-          />
-        </button>
-      </div>
-      <section>
+      <section className={styles.containerNewOrder}>
         <div className={styles.newOrderSection}>
           <div>
             <div className={styles.titleNewOrder}>

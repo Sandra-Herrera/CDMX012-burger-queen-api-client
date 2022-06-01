@@ -8,10 +8,15 @@
     height: 15vh;
 }
 
+.containerViewMenuNewOrder{
+    display: flex;
+    height: 82vh;
+}
+
 .headerImg {
     width: inherit;
     /* height: 177px; */
-    height: 100px;
+    height: inherit;
     position: absolute;
     left: 0;
     top: 0;
