@@ -33,10 +33,14 @@ const Menu = () => {
   };
 
   // let order = [];
+  // const addProducts = (product) => {
+  //   order.push(product);
+  //   console.log(product);
+  // }
+
   const addProducts = (product) => {
     sendContextOrder(product);
-    // console.log(order);
-  }
+  };
 
   return (
     <section className={styles.menuContainerDad}>
@@ -64,7 +68,10 @@ const Menu = () => {
           {breakfastMenu.map((product) => {
             return (
               <li className={styles.breakfastAndLunch} key={product.id}>
-                <button className={styles.buttonBreakfast} onClick={() => addProducts(product)}>
+                <button
+                  className={styles.buttonBreakfast}
+                  onClick={() => addProducts(product)}
+                >
                   {product.name} <br /> {product.price}
                 </button>
               </li>
