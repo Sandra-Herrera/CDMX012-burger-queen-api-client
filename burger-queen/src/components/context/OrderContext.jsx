@@ -1,24 +1,27 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-
 
 const OrderContext = React.createContext();
 
-OrderContextProvider.propTypes = {
-    children: PropTypes.element.isRequired
-}
+export const OrderContextProvider = (props) => {
+  const [order, setOrder] = useState([]);
 
-export const OrderContextProvider = (props) =>{
-    const[order, setOrder] = useState([]);
+  const sendContextOrder = (meal) => {
+    let food = order;
+    food.push(meal);
+    setOrder(food);
+    console.log(order);
+  };
 
-    const sendContextOrder = (meal)=>{
-        setOrder(meal);
-    }
-    return(
-        <OrderContext.Provider value={{order,sendContextOrder}}>
-            {props.children}
-        </OrderContext.Provider>
-    )
-}
+  return (
+    <OrderContext.Provider value={{ order, sendContextOrder }}>
+      {props.children}
+    </OrderContext.Provider>
+  );
+};
 
 export default OrderContext;
+
+OrderContextProvider.propTypes = {
+  children: PropTypes.element.isRequired,
+};

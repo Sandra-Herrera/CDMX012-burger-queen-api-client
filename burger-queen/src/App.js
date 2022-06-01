@@ -9,6 +9,7 @@ import Products from "./components/products/Products";
 import Error from "./components/error/Error";
 import NewOrder from "./components/menuNewOrder/NewOrder";
 import ViewMenuNewOrder from "./components/menuNewOrder/ViewMenuNewOrder";
+// import OrderContextProvider from "./components/context/OrderContext";
 
 function App() {
   const { user } = useContext(UserContext);
@@ -18,6 +19,7 @@ function App() {
   }
 
   return (
+    // <OrderContextProvider>
     <Routes>
       <Route exact path="/" element={<Login />} />
       {user && <Route exact path="/home" element={<Home />} />}
@@ -43,6 +45,7 @@ function App() {
       ;
       <Route path="*" element={<Error />} />
     </Routes>
+    // </OrderContextProvider>
   );
 }
 

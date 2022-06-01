@@ -64,8 +64,8 @@
     flex-flow: column;
     align-items: center;
     margin-top: 2px;
-    margin-left: 1215px;
-    background-color: un;
+    /* margin-left: 1215px; */
+    margin-left: 85%;
     background-color: unset;
     border: solid 4px;
     border-color: #FBA121;

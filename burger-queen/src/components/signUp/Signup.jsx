@@ -33,7 +33,7 @@ const Signup = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data);
+    // console.log(data);
     try {
       await createUser(data.email, data.password, data.username, data.rol);
 
