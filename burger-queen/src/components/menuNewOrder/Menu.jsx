@@ -32,12 +32,6 @@ const Menu = () => {
     setLunchMenu(menuLunch);
   };
 
-  // let order = [];
-  // const addProducts = (product) => {
-  //   order.push(product);
-  //   console.log(product);
-  // }
-
   const addProducts = (product) => {
     sendContextOrder(product);
   };
@@ -83,7 +77,10 @@ const Menu = () => {
           {lunchMenu.map((product) => {
             return (
               <li className={styles.breakfastAndLunch} key={product.id}>
-                <button className={styles.buttonLunch}>
+                <button
+                  className={styles.buttonLunch}
+                  onClick={() => addProducts(product)}
+                >
                   {product.name} <br /> {product.price}
                 </button>
               </li>
