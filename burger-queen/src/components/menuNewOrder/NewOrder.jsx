@@ -115,9 +115,9 @@ const NewOrder = () => {
               );
             })}
           </section>
-          <section>
-            <button>Orders</button>
-            <button>Send</button>
+          <section className={styles.bottonAreabtn}>
+            <button className={styles.bottonButtons}>Orders</button>
+            <button className={styles.bottonButtons}>Send</button>
           </section>
         </div>
        </section>

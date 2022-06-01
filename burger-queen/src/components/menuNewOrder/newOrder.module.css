@@ -90,3 +90,24 @@
 .imgIcon{
     width: 25px;
 }
+
+.bottonAreabtn{
+    display: flex;
+    justify-content: end;
+    height: 50px;
+    align-items: center;
+}
+
+.bottonButtons{
+    border-radius: 20px;
+    background-color: #7ED090;
+    width: 97px;
+    height: 35px;
+    font-size: 15px;
+    font-family: revert;
+    margin-left: 115px;
+}
+
+.bottonButtons:hover{
+    background-color: #4b8d59;
+}
