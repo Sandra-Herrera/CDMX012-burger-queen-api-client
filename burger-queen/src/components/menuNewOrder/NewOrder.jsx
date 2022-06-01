@@ -1,95 +1,129 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../database/UserProvider";
-import styles from "./products.module.css";
+import styles from "./newOrder.module.css";
 import imgRestaurant from "../../img/imgRestaurant.png";
 import logOutIcon from "../../img/logOutIcon.png";
 import imgDelete from "../../img/imgDelete.png";
-import imgEdit from "../../img/imgEdit.png";
-import addIcon from "../../img/addIcon.png";
-
+import imgMinus from "../../img/imgMinus.png";
+import imgPlus from "../../img/imgPlus.png";
 
 const NewOrder = () => {
-    const [newOrder,setNewOrder] = useState([]);  
-    const { logOut } = useContext(UserContext);
-      const navigate = useNavigate();
-  
-      const handleClickLogout = async () => {
-          try {
-            await logOut();
-            navigate("/");
-          } catch (error) {
-            console.log(error);
-          }
-        };
+  const [newOrder, setNewOrder] = useState([]);
+  const { logOut } = useContext(UserContext);
+  const navigate = useNavigate();
 
-        const getAllProduct = () =>{
-            fetch('http://localhost:3004/Products')
-            .then(response => response.json())
-            .then(products => setNewOrder(products));
-          }
+  const handleClickLogout = async () => {
+    try {
+      await logOut();
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-        useEffect(()=>{
-            getAllProduct();
-          },[]);
-    
-          const deleteProducts = (product) =>{
-            fetch(`http://localhost:3004/Products/${product.id}`,{
-                    method: 'DELETE'
-                })
-                .then(response => response.json())
-                .then(deletedProduct => {
-                    console.log(deletedProduct)
-                    getAllProduct();
-                });
-          }
+  const getAllProduct = () => {
+    fetch("http://localhost:3004/Products")
+      .then((response) => response.json())
+      .then((products) => setNewOrder(products));
+  };
 
-        return (
-            <>
-              <div className={styles.headerImg}>
-                <img alt="imagen header" className={styles.imgRest} src={imgRestaurant} />
-                <button className={styles.logOutButton} onClick={handleClickLogout}>Log Out 
-                <img alt="imageLogOut" className={styles.iconLogOut} src={logOutIcon} />
-                </button>
-              </div>
-              <section>
-            <div className={styles.newOrderSection}>
-              <div>
-                <div className={styles.titleNewOrder}>NEW ORDER 
-                {/* <button className={styles.addButton} onClick={onAdd}>
+  useEffect(() => {
+    getAllProduct();
+  }, []);
+
+  const minusProducts = () => {
+
+  }
+
+  const plusProducts = () => {
+
+  }
+
+  const deleteProducts = (product) => {
+    return product //quitarlo
+    // fetch(`http://localhost:3004/Products/${product.id}`, {
+    //   method: "DELETE",
+    // })
+    //   .then((response) => response.json())
+    //   .then((deletedProduct) => {
+    //     console.log(deletedProduct);
+    //     getAllProduct();
+    //   });
+  };
+
+  return (
+    <>
+      <div className={styles.headerImg}>
+        <img
+          alt="imagen header"
+          className={styles.imgRest}
+          src={imgRestaurant}
+        />
+        <button className={styles.logOutButton} onClick={handleClickLogout}>
+          Log Out
+          <img
+            alt="imageLogOut"
+            className={styles.iconLogOut}
+            src={logOutIcon}
+          />
+        </button>
+      </div>
+      <section>
+        <div className={styles.newOrderSection}>
+          <div>
+            <div className={styles.titleNewOrder}>
+              NEW ORDER
+              {/* <button className={styles.addButton} onClick={onAdd}>
                   Add
                   <img alt="imageAddButton" className={styles.iconAdd} src={addIcon} />
                  </button> */}
-                </div>
-              </div>
-              <div className={styles.inputsOrder}>
-                <input className={styles.nameCustomer}>Name</input>
-                <input className={styles.numTable}>Table number</input>
-              </div>
-    
-               {newOrder.map((product) => {
-                return (
-                  <div key={product.id} className={styles.containerItems}>
-                      <div  className={styles.itemAlignStart}>{product.name}</div>
-                      <div  className={styles.itemTable}>{product.price}</div>
-                      <div  className={styles.itemTable}>{product.category}</div>
-                      <div  className={styles.itemTable}>
-                      {/* <button className={styles.btnEditAndDelete}>
-                      <img alt="imgEdit" className={styles.imgEdit} src={imgEdit} onClick={() => editProducts(product)}></img>
-                      </button> */}
-                      </div>
-                      <div  className={styles.itemTable}>
-                      <button className={styles.btnEditAndDelete} onClick={() => deleteProducts(product)}>
-                        <img alt="imgDelete" className={styles.imgDelete} src={imgDelete}></img>
-                      </button>
-                      </div>
-                  </div>
-                );
-              })}
             </div>
+          </div>
+          <div className={styles.inputsOrder}>
+            <p>
+              Customer name<input className={styles.nameCustomer}></input>
+            </p>
+            <p>
+              Table number<input className={styles.numTable}></input>
+            </p>
+          </div>
+          <section className={styles.containerOrder}>
+            {newOrder.map((product) => {
+              return (
+                <div key={product.id} className={styles.productRow}>
+                  <div className={styles.itemAlignStart}>{product.name}</div>
+                  <div className={styles.itemTable}>
+                    <button className={styles.btnIcons} onClick={() => minusProducts(product)}>
+                      <img alt="iconMinus" className={styles.imgIcon} src={imgMinus}></img>
+                    </button>
+                  </div>
+                  <div className={styles.itemTable}>
+                    <input className={styles.inputCounter} type= "text" />
+                  </div>
+                  <div className={styles.itemTable}>
+                    <button className={styles.btnIcons} onClick={() => plusProducts(product)}>
+                      <img alt="iconPlus" className={styles.imgIcon} src={imgPlus}></img>
+                    </button>
+                  </div>
+                  <div className={styles.itemTable}>
+                    <button className={styles.btnIcons} onClick={() => deleteProducts(product)}>
+                      <img alt="iconDelete" className={styles.imgIcon} src={imgDelete}></img>
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
           </section>
-            </>
-          );
-        };
-        
-        export default NewOrder;
+          <section>
+            <button>Orders</button>
+            <button>Send</button>
+          </section>
+        </div>
+       </section>
+
+    </>
+  );
+};
+
+export default NewOrder;

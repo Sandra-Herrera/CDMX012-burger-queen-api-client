@@ -1,0 +1,92 @@
+.headerImg {
+    display: flex;
+    background-size: cover;
+    width: 101%;
+    height: 175px;
+    height: 27vh;
+}
+
+.imgRest {
+    width: inherit;
+    height: 177px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.logOutButton {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 2px;
+    margin-left: 1215px;
+    background-color: un;
+    background-color: unset;
+    border: solid 4px;
+    border-color: #FBA121;
+    color: #ffff;
+    background-color: brown;
+    font-weight: bold;
+    font-size: 1em;
+    width: 106px;
+    height: 58px;
+    border-radius: 30px;
+}
+
+.iconLogOut {
+    width: 30px;
+}
+
+.newOrderSection{
+    background-color: #EDD479;
+}
+
+.titleNewOrder{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 4px;
+    border-color: coral;
+}
+
+.containerOrder{
+    height: 30vh;
+    overflow-y: scroll;
+
+}
+
+.productRow{
+    display: grid;
+    grid-template-columns: repeat(1,40%) repeat(4,15%);
+    
+}
+
+.itemTable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    padding: 10px;
+
+}
+
+.inputCounter{
+    width: 20px;
+}
+
+.btnIcons{
+    border: none;
+    background: none;
+}
+
+.imgIcon{
+    width: 25px;
+}

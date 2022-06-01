@@ -11,6 +11,13 @@ const ViewMenuNewOrder = () => {
 
   return (
     <>
+    {/* <div className={styles.headerImg}>
+        <img alt="imagen header" className={styles.imgRest} src={imgRestaurant}/>
+        <button className={styles.logOutButton} onClick={handleClickLogout}>
+          Log Out
+          <img alt="imageLogOut" className={styles.iconLogOut} src={logOutIcon}/>
+        </button>
+      </div> */}
       <button onClick={redirectHome}>Back</button>
       <Menu />
     </>
