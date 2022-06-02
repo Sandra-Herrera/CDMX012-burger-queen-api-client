@@ -53,6 +53,10 @@
     height: 45px;
 }
 
+.inputLogin:focus{
+    background-color: rgb(222, 218, 218);
+}
+
 .loginButton{
     border-radius: 20px;
     background-color: #7ED090;
@@ -61,4 +65,10 @@
     font-size: 15px;
     font-family: revert;
     margin-left: 115px;
+    cursor: pointer;
+}
+
+.loginButton:hover{
+    background-color: #33bc50;
+    border-color: #33bc50;
 }

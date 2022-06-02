@@ -1,27 +1,47 @@
 .headerImg {
     display: flex;
     background-size: cover;
-    width: 101%;
-    height: 175px;
-    height: 27vh;
+    width: 100%;
+    height: 15vh;
 }
 
 .imgRest {
     width: inherit;
-    height: 177px;
+    height: 100px;
     position: absolute;
     left: 0;
     top: 0;
 }
 
+.backButton {
+    position: absolute;
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    margin-left: 2%;
+    border: solid 4px;
+    border-color: #FBA121;
+    background-color: #EDD479;
+    font-weight: bold;
+    font-size: 1em;
+    width: 40px;
+    height: 35px;
+    border-radius: 30px;
+    color: #97617A;
+    cursor: pointer;
+}
+
+.imgBack {
+    width: 25px;
+}
+
 .formContainer{
     display: grid;
     row-gap: 6px;
-    justify-content: center;
     width: 110%;
     background-color: #EDD479;
-    display: grid;
-    row-gap: 6px;
     justify-content: center;
     border-radius: 12px;
     border: solid 1px;
@@ -45,51 +65,69 @@
     margin-bottom: unset;
 }
 
+.inputContainer{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 1em;
+    justify-content: center;
+}
+
 .inputSignUp {
-    display: flex;
+    /* display: flex; */
     border-radius: 8px;
     border: solid 2px;
-    font-size: 20px;
+    font-size: 15px;
     font-family: revert;
-    width: 320px;
-    height: 45px;
+    height: 35px;
+    /* flex-wrap: wrap */
 }
 
-.welcomeContainer {
-    display: flex;
+.inputSignUp:hover{
+border-color: #FBA121;
+}
+
+.inputSignUp:focus{
+    background-color: rgb(222, 218, 218);
+    }
+
+.rol{
+    /* display: flex; */
     justify-content: center;
-    width: 99vw;
-    height: 68vh;
+    border-radius: 8px;
+    border: solid 2px;
+    font-size: 15px;
+    font-family: revert;
+    width: 49%;
+    height: 35px;
+    margin-left: 25%;
+    margin-top: 3%;
+    cursor: pointer;
 }
 
-.welcomeSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 1000px;
-}
-
-
-.logOutButton {
-    position: absolute;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin-top: 2px;
-    margin-left: 1215px;
-    background-color: un;
-    background-color: unset;
-    border: solid 4px;
+.rol:hover{
     border-color: #FBA121;
-    color: #ffff;
-    background-color: brown;
-    font-weight: bold;
-    font-size: 1em;
-    width: 106px;
-    height: 58px;
-    border-radius: 30px;
 }
 
-.iconLogOut {
-    width: 30px;
+.rol:focus{
+    border-color: #FBA121;
+}
+
+.continueBtn{
+    /* display: flex; */
+    justify-content: center;
+    border-radius: 15px;
+    border: solid 2px;
+    font-size: 16px;
+    font-family: revert;
+    width: 20%;
+    height: 30px;
+    margin-left: 39%;
+    background-color: #7ED090;
+    border: #6bcf81;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.continueBtn:hover{
+    background-color: #199634;
 }

@@ -48,7 +48,6 @@ const Home = () => {
           src={imgRestaurant}
         />
         <button className={styles.logOutButton} onClick={handleClickLogout}>
-          Log Out
           <img
             alt="imageLogOut"
             className={styles.iconLogOut}

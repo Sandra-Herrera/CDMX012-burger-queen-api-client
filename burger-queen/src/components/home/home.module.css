@@ -48,6 +48,7 @@
     background-color: #7ED090;
     font-size: 35px;
     font-family: revert;
+    cursor: pointer;
 }
 
 .welcomeButtons:hover {
@@ -63,19 +64,19 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    justify-content: center;
     margin-top: 2px;
-    /* margin-left: 1215px; */
     margin-left: 85%;
-    background-color: unset;
     border: solid 4px;
     border-color: #FBA121;
     color: #ffff;
     background-color: brown;
     font-weight: bold;
     font-size: 1em;
-    width: 106px;
-    height: 58px;
+    width: 60px;
+    height: 45px;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 .iconLogOut {
