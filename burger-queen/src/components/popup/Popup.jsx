@@ -10,7 +10,6 @@ Popup.propTypes = {
 
 export function Popup(props) {
   const { attrProduct } = props;
-  //const myVariable = props.attrProduct;
 
   const [inputsModal, setInputsModal] = useState(attrProduct);
   useEffect(() => {

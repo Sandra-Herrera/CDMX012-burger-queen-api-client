@@ -9,23 +9,27 @@
     flex-direction: column;
     background-color: #EDD479;
     width: 95%;
-    height: 785px;
-    min-height: 785px;
-    max-height: 1300px;
+    height: 100%;
 }
 
 .textMenu{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: brown;
     display: flex;
     justify-content: center;
-    font-size: 350%;
-    margin-top: 2%;
+    align-items: center;
+    margin: 2%;
 }
 
 .buttonsMenu{
    display: flex;
    flex-direction: row;
    justify-content: space-around;
-   margin-top: -4%;
+   margin: 15px;
 }
 
 .menuOne{
@@ -38,7 +42,6 @@
     border-radius: 56px;
     background-color: #B0BD17;
     border: none;
-    
 }
 
 .menuOne:focus{
@@ -72,6 +75,12 @@
 
 .imgLine{
     width: 90%; 
+}
+
+.scrollMenu{
+    height: 60vh;
+    overflow: auto;
+
 }
 
 .allMenu{

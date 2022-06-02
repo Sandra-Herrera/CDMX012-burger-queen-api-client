@@ -68,12 +68,13 @@ const NewOrder = () => {
             </div>
           </div>
           <div className={styles.inputsOrder}>
-            <p>
+            {/* <p>
               Customer name<input className={styles.nameCustomer}></input>
-            </p>
-            <p>
+            </p> */}
+            <p className={styles.titleTable}>
               Table number<input className={styles.numTable}></input>
             </p>
+            <hr></hr>
           </div>
           <section className={styles.containerOrder}>
             {order.map((product) => {
