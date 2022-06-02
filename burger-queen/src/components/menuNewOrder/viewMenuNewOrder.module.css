@@ -3,8 +3,6 @@
     background-size: cover;
     width: 100%;
     height: 100%;
-    /* height: 175px; */
-    /* height: 27vh; */
     height: 15vh;
 }
 
@@ -15,7 +13,6 @@
 
 .headerImg {
     width: inherit;
-    /* height: 177px; */
     height: inherit;
     position: absolute;
     left: 0;
@@ -26,18 +23,14 @@
     position: absolute;
     display: flex;
     flex-flow: column-reverse;
-    /* align-items: center; */
     justify-content: center;
     margin-top: 2px;
     margin-left: 2%;
-    /* margin-left: 1215px; */
-    /* background-color: unset; */
     border: solid 4px;
     border-color: #FBA121;
     background-color: #EDD479;
     font-weight: bold;
     font-size: 1em;
-    /* width: 106px; */
     width: 5%;
     height: 35px;
     border-radius: 30px;

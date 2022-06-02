@@ -1,38 +1,13 @@
 import React, {  useContext } from "react";
-// import { useNavigate } from "react-router-dom";
-// import { UserContext } from "../../database/UserProvider";
 import styles from "./newOrder.module.css";
-// import imgRestaurant from "../../img/imgRestaurant.png";
-// import logOutIcon from "../../img/logOutIcon.png";
 import imgDelete from "../../img/imgDelete.png";
 import imgMinus from "../../img/imgMinus.png";
 import imgPlus from "../../img/imgPlus.png";
 import OrderContext from "../context/OrderContext"
 
 const NewOrder = () => {
-  //const [newOrder, setNewOrder] = useState([]);
   const { order } = useContext(OrderContext);
-  // const { logOut } = useContext(UserContext);
-  // const navigate = useNavigate();
 
-  // const handleClickLogout = async () => {
-  //   try {
-  //     await logOut();
-  //     navigate("/");
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // const getAllProduct = () => {
-  //   fetch("http://localhost:3004/Products")
-  //     .then((response) => response.json())
-  //     .then((products) => setNewOrder(products));
-  // };
-
-  // useEffect(() => {
-  //   getAllProduct();
-  // }, []);
 
   const minusProducts = () => {
 
@@ -44,14 +19,7 @@ const NewOrder = () => {
 
   const deleteProducts = (product) => {
     return product //quitarlo
-    // fetch(`http://localhost:3004/Products/${product.id}`, {
-    //   method: "DELETE",
-    // })
-    //   .then((response) => response.json())
-    //   .then((deletedProduct) => {
-    //     console.log(deletedProduct);
-    //     getAllProduct();
-    //   });
+
   };
 
   return (
@@ -61,16 +29,9 @@ const NewOrder = () => {
           <div>
             <div className={styles.titleNewOrder}>
               NEW ORDER
-              {/* <button className={styles.addButton} onClick={onAdd}>
-                  Add
-                  <img alt="imageAddButton" className={styles.iconAdd} src={addIcon} />
-                 </button> */}
             </div>
           </div>
           <div className={styles.inputsOrder}>
-            {/* <p>
-              Customer name<input className={styles.nameCustomer}></input>
-            </p> */}
             <p className={styles.titleTable}>
               Table number<input className={styles.numTable}></input>
             </p>
