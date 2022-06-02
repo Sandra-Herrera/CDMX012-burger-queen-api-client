@@ -67,16 +67,10 @@
       "category": "Lunch/Dinner"
     },
     {
-      "id": "12",
       "name": "Natural water 100 mL",
-      "price": "10",
-      "category": "Lunch/Dinner"
-    },
-    {
-      "name": "Apple",
       "price": "12",
-      "category": "Breakfast",
-      "id": "xObUfTx"
+      "category": "Lunch/Dinner",
+      "id": "t1Ov93y"
     }
   ]
 }

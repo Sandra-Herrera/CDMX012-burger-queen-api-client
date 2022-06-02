@@ -65,13 +65,13 @@ export function Popup(props) {
           <span className={styles.close} onClick={props.onClickCloseModal}>
             &times;
           </span>
-          <h1 className={styles.titleModal}>Product</h1>
-          <form>
+          <section className={styles.titleModal}>Product</section>
+          <section className={styles.AllInputs}>
             <input
-              placeholder="Product Name"
               className={styles.inputModal}
               id="name"
               onChange={areaEditChange}
+              placeholder="Product Name"
               defaultValue={props.attrProduct?.name}
             ></input>
             <input
@@ -81,22 +81,25 @@ export function Popup(props) {
               placeholder="Price"
               defaultValue={props.attrProduct?.price}
             ></input>
-            <input
-              className={styles.inputModal}
+            <select
+              className={styles.selectModal}
               id="category"
               onChange={areaEditChange}
-              placeholder="Category"
               defaultValue={props.attrProduct?.category}
-            ></input>
-            <section className={styles.areaSaveButton}>
-              <button
-                className={styles.saveEditButton}
-                onClick={saveProduct(props.attrProduct)}
-              >
-                Save
-              </button>
-            </section>
-          </form>
+            >
+              <option value="">Category</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch/Dinner">Lunch/Dinner</option>
+            </select>
+          </section>
+          <section className={styles.areaSaveButton}>
+            <button
+              className={styles.saveEditButton}
+              onClick={saveProduct(props.attrProduct)}
+            >
+              Save
+            </button>
+          </section>
         </div>
       </div>
     </>

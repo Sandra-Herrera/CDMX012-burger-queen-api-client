@@ -38,10 +38,16 @@
     align-items: center;
     width: 200px;
     height: 60px;
+}
+
+.menuOne{
+    padding: 2%;
+    width: 25%;
     font-size: 25px;
     border-radius: 56px;
     background-color: #B0BD17;
     border: none;
+    cursor: pointer;
 }
 
 .menuOne:focus{
@@ -59,7 +65,7 @@
     border-radius: 56px;
     background-color: #B0BD17;
     border: none;
-    
+    cursor: pointer;
 }
 
 .menuTwo:focus{
@@ -106,6 +112,7 @@
     min-height: 100px;
     max-height: 150px;
     font-size: 140%;
+    cursor: pointer;
 }
 
 .buttonLunch{
@@ -117,4 +124,5 @@
     min-height: 100px;
     max-height: 150px;
     font-size: 140%;
+    cursor: pointer;
 }
