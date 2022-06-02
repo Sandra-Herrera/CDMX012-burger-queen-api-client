@@ -67,33 +67,38 @@ export function Popup(props) {
             &times;
           </span>
           <section className={styles.titleModal}>New product</section>
-          <input
-            className={styles.inputModal}
-            id="name"
-            onChange={areaEditChange}
-            placeholder="Product Name"
-            defaultValue={props.attrProduct?.name}
-          ></input>
-          <input
-            className={styles.inputModal}
-            id="price"
-            onChange={areaEditChange}
-            placeholder="Price"
-            defaultValue={props.attrProduct?.price}
-          ></input>
-          <input
-            className={styles.inputModal}
-            id="category"
-            onChange={areaEditChange}
-            placeholder="Category"
-            defaultValue={props.attrProduct?.category}
-          ></input>
+          <section className={styles.AllInputs}>
+            <input
+              className={styles.inputModal}
+              id="name"
+              onChange={areaEditChange}
+              placeholder="Product Name"
+              defaultValue={props.attrProduct?.name}
+            ></input>
+            <input
+              className={styles.inputModal}
+              id="price"
+              onChange={areaEditChange}
+              placeholder="Price"
+              defaultValue={props.attrProduct?.price}
+            ></input>
+            <select
+              className={styles.selectModal}
+              id="category"
+              onChange={areaEditChange}
+              defaultValue={props.attrProduct?.category}
+            >
+              <option value="">Category</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch/Dinner">Lunch/Dinner</option>
+            </select>
+          </section>
           <section className={styles.areaSaveButton}>
             <button
               className={styles.saveEditButton}
               onClick={saveProduct(props.attrProduct)}
             >
-              Save
+              Add
             </button>
           </section>
         </div>
