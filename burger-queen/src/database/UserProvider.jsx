@@ -8,6 +8,9 @@ import {
 import { auth } from "./firebase-config";
 import { createContext, useEffect } from "react";
 import PropTypes from "prop-types";
+// import { async } from "@firebase/util";
+
+
 
 export const UserContext = createContext();
 

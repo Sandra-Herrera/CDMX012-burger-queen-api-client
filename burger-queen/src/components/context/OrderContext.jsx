@@ -6,10 +6,8 @@ const OrderContext = React.createContext();
 export const OrderContextProvider = (props) => {
   const [order, setOrder] = useState([]);
 
-  const sendContextOrder = (meal) => {
-    let food = order;
-    food.push(meal);
-    setOrder(food);
+  const sendContextOrder = (meals) => {
+    setOrder(meals);
     console.log(order);
   };
 

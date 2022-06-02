@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import styles from "./menu.module.css";
-import line from "../../img/line.png";
+// import line from "../../img/line.png";
 import OrderContext from "../context/OrderContext";
 
 const Menu = () => {
@@ -8,7 +8,7 @@ const Menu = () => {
   const [breakfastMenu, setBreakfastMenu] = useState([]);
   const [lunchMenu, setLunchMenu] = useState([]);
 
-  const { sendContextOrder } = useContext(OrderContext);
+  const { order, sendContextOrder } = useContext(OrderContext);
 
   const getAllProduct = () => {
     fetch("http://localhost:3004/Products")
@@ -33,13 +33,13 @@ const Menu = () => {
   };
 
   const addProducts = (product) => {
-    sendContextOrder(product);
+    sendContextOrder([...order,product]);
   };
 
   return (
     <section className={styles.menuContainerDad}>
       <section className={styles.menuContainer}>
-        <h1 className={styles.textMenu}>Menu</h1>
+        <h1 className={styles.textMenu}>MENU</h1>
         <section className={styles.buttonsMenu}>
           <button
             className={styles.menuOne}
@@ -54,11 +54,12 @@ const Menu = () => {
             Lunch/Dinner
           </button>
         </section>
-        <section className={styles.line}>
+        <hr></hr>
+        {/* <section className={styles.line}>
           <img alt="line" className={styles.imgLine} src={line} />
-        </section>
-
-        <section className={styles.allMenu}>
+        </section> */}
+        <section className={styles.scrollMenu}>
+         <section className={styles.allMenu}>
           {breakfastMenu.map((product) => {
             return (
               <li className={styles.breakfastAndLunch} key={product.id}>
@@ -71,9 +72,9 @@ const Menu = () => {
               </li>
             );
           })}
-        </section>
+         </section>
 
-        <section className={styles.allMenu}>
+         <section className={styles.allMenu}>
           {lunchMenu.map((product) => {
             return (
               <li className={styles.breakfastAndLunch} key={product.id}>
@@ -86,6 +87,7 @@ const Menu = () => {
               </li>
             );
           })}
+         </section>
         </section>
       </section>
     </section>

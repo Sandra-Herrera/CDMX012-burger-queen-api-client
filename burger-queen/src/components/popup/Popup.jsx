@@ -10,7 +10,6 @@ Popup.propTypes = {
 
 export function Popup(props) {
   const { attrProduct } = props;
-  //const myVariable = props.attrProduct;
 
   const [inputsModal, setInputsModal] = useState(attrProduct);
   useEffect(() => {
@@ -66,7 +65,7 @@ export function Popup(props) {
           <span className={styles.close} onClick={props.onClickCloseModal}>
             &times;
           </span>
-          <section className={styles.titleModal}>New product</section>
+          <section className={styles.titleModal}>Product</section>
           <section className={styles.AllInputs}>
             <input
               className={styles.inputModal}
@@ -98,7 +97,7 @@ export function Popup(props) {
               className={styles.saveEditButton}
               onClick={saveProduct(props.attrProduct)}
             >
-              Add
+              Save
             </button>
           </section>
         </div>

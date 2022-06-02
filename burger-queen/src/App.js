@@ -7,6 +7,7 @@ import Home from "./components/home/Home";
 import "./App.css";
 import Products from "./components/products/Products";
 import Error from "./components/error/Error";
+import NewOrder from "./components/menuNewOrder/NewOrder";
 import ViewMenuNewOrder from "./components/menuNewOrder/ViewMenuNewOrder";
 // import OrderContextProvider from "./components/context/OrderContext";
 
@@ -36,6 +37,10 @@ function App() {
       ;
       {userRole === "administrador" && (
         <Route exact path="/order" element={<ViewMenuNewOrder />} />
+      )}
+      ;
+      {userRole === "administrador" && (
+        <Route exact path="/NewOrder" element={<NewOrder />} />
       )}
       ;
       <Route path="*" element={<Error />} />
