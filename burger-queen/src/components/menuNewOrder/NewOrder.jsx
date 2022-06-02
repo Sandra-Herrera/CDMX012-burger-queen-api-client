@@ -1,4 +1,4 @@
-import React, {  useState, useEffect } from "react";
+import React, {  useContext } from "react";
 // import { useNavigate } from "react-router-dom";
 // import { UserContext } from "../../database/UserProvider";
 import styles from "./newOrder.module.css";
@@ -7,9 +7,11 @@ import styles from "./newOrder.module.css";
 import imgDelete from "../../img/imgDelete.png";
 import imgMinus from "../../img/imgMinus.png";
 import imgPlus from "../../img/imgPlus.png";
+import OrderContext from "../context/OrderContext"
 
 const NewOrder = () => {
-  const [newOrder, setNewOrder] = useState([]);
+  //const [newOrder, setNewOrder] = useState([]);
+  const { order } = useContext(OrderContext);
   // const { logOut } = useContext(UserContext);
   // const navigate = useNavigate();
 
@@ -22,15 +24,15 @@ const NewOrder = () => {
   //   }
   // };
 
-  const getAllProduct = () => {
-    fetch("http://localhost:3004/Products")
-      .then((response) => response.json())
-      .then((products) => setNewOrder(products));
-  };
+  // const getAllProduct = () => {
+  //   fetch("http://localhost:3004/Products")
+  //     .then((response) => response.json())
+  //     .then((products) => setNewOrder(products));
+  // };
 
-  useEffect(() => {
-    getAllProduct();
-  }, []);
+  // useEffect(() => {
+  //   getAllProduct();
+  // }, []);
 
   const minusProducts = () => {
 
@@ -74,7 +76,7 @@ const NewOrder = () => {
             </p>
           </div>
           <section className={styles.containerOrder}>
-            {newOrder.map((product) => {
+            {order.map((product) => {
               return (
                 <div key={product.id} className={styles.productRow}>
                   <div className={styles.itemAlignStart}>{product.name}</div>

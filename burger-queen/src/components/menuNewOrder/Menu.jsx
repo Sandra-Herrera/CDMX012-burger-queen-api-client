@@ -8,7 +8,7 @@ const Menu = () => {
   const [breakfastMenu, setBreakfastMenu] = useState([]);
   const [lunchMenu, setLunchMenu] = useState([]);
 
-  const { sendContextOrder } = useContext(OrderContext);
+  const { order, sendContextOrder } = useContext(OrderContext);
 
   const getAllProduct = () => {
     fetch("http://localhost:3004/Products")
@@ -33,7 +33,7 @@ const Menu = () => {
   };
 
   const addProducts = (product) => {
-    sendContextOrder(product);
+    sendContextOrder([...order,product]);
   };
 
   return (

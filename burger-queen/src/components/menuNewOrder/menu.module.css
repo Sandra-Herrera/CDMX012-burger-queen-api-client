@@ -29,9 +29,12 @@
 }
 
 .menuOne{
-    padding: 2%;
-    width: 30%;
-    font-size: 160%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
     border-radius: 56px;
     background-color: #B0BD17;
     border: none;
@@ -44,9 +47,12 @@
 }
 
 .menuTwo{
-    padding: 2%;
-    width: 30%;
-    font-size: 160%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
     border-radius: 56px;
     background-color: #B0BD17;
     border: none;
