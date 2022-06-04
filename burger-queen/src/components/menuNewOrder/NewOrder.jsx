@@ -6,20 +6,36 @@ import imgPlus from "../../img/imgPlus.png";
 import OrderContext from "../context/OrderContext"
 
 const NewOrder = () => {
-  const { order } = useContext(OrderContext);
+  const { order , sendContextOrder} = useContext(OrderContext);
 
 
-  const minusProducts = () => {
-
+  const minusProducts = (product) => {
+    let productExist = order.find((itemOrder) => {
+      return itemOrder.id === product.id;
+    });
+    if (productExist) {
+      product = { ...productExist, qty: productExist.qty - 1 };
+      if(product.qty <= 0){
+        deleteProducts(product);
+      }else{
+        sendContextOrder(order.map(item => (item.id === product.id ? {...item, qty:product.qty} : item)));
+      }
+    }
   }
 
-  const plusProducts = () => {
-
+  const plusProducts = (product) => {
+    let productExist = order.find((itemOrder) => {
+      return itemOrder.id === product.id;
+    });
+    if (productExist) {
+      product = { ...productExist, qty: productExist.qty + 1 };
+      sendContextOrder(order.map(item => (item.id === product.id ? {...item, qty:product.qty} : item)));
+    }
   }
 
   const deleteProducts = (product) => {
-    return product //quitarlo
-
+    //preguntar si desea eliminar
+    sendContextOrder(order.filter(item => (item.id !== product.id )));
   };
 
   return (
@@ -48,7 +64,7 @@ const NewOrder = () => {
                     </button>
                   </div>
                   <div className={styles.itemTable}>
-                    <input className={styles.inputCounter} type= "text" />
+                    <input className={styles.inputCounter} type= "text" value={product.qty} disabled/>
                   </div>
                   <div className={styles.itemTable}>
                     <button className={styles.btnIcons} onClick={() => plusProducts(product)}>
