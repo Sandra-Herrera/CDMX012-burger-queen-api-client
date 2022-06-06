@@ -84,6 +84,7 @@
 .containerOrder{
     height: 60vh;
     overflow-y: scroll;
+    margin-left: 8px;
 
 }
 
@@ -94,7 +95,9 @@ hr{
 .productRow{
     display: grid;
     grid-template-columns: repeat(1,40%) repeat(4,15%);
-    
+    font-family: sans-serif;
+    font-size: 22px;
+    align-items: center;
 }
 
 .itemTable{
@@ -108,16 +111,22 @@ hr{
 }
 
 .inputCounter{
-    width: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    text-align: center;
+    font-size: 20px;
 }
 
 .btnIcons{
     border: none;
     background: none;
+    cursor: pointer;
 }
 
 .imgIcon{
-    width: 25px;
+    width: 35px;
+    height: 35px;
 }
 
 .bottonAreabtn{
@@ -132,11 +141,12 @@ hr{
 .bottonButtons{
     border-radius: 20px;
     background-color: #7ED090;
-    width: 97px;
+    width: 155px;
     height: 35px;
     font-size: 20px;
     font-family: sans-serif;
     margin-left: 115px;
+    cursor: pointer;
 }
 
 .bottonButtons:hover{

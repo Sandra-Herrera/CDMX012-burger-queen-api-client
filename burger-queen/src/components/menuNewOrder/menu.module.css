@@ -79,18 +79,16 @@
 }
 
 .scrollMenu{
-    height: 60vh;
-    overflow: auto;
-
+    height: 57vh;
+    overflow-y: scroll;
 }
 
 .allMenu{
     display: grid;
-    grid-template-columns: 250px 250px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    column-gap: 1.2rem;
+    row-gap: 1.2rem;
     justify-content: center;
-    gap: 25px 10%;
-    margin-top: 1%;
-    
 }
 
 .breakfastAndLunch{
@@ -102,7 +100,7 @@
     background-color: #FC814D;
     border: none;
     border-radius: 13px;
-    width: 100%;
+    width: 80%;
     height: 100%;
     min-height: 100px;
     max-height: 150px;
@@ -110,14 +108,22 @@
     cursor: pointer;
 }
 
+.buttonBreakfast:hover{
+    background-color: #db6c3d;
+}
+
 .buttonLunch{
     background-color: #FC7117;
     border: none;
     border-radius: 13px;
-    width: 100%;
+    width: 80%;
     height: 100%;
     min-height: 100px;
     max-height: 150px;
     font-size: 140%;
     cursor: pointer;
+}
+
+.buttonLunch:hover{
+    background-color: #da6619;
 }
