@@ -45,7 +45,7 @@ const Login = () => {
         {/* <section className={styles.loginArea}> */}
           <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)}>
             <h1 className={styles.loginTitle}>Login</h1>
-            <br />
+            <div>
             <input
               type={"email"}
               placeholder="E-mail"
@@ -60,9 +60,9 @@ const Login = () => {
                 },
               })}
             />
-            {errors.email && <p>{errors.email.message}</p>}
-            <br />
-            <br />
+            {errors.email && <p className={styles.errorMessage}>{errors.email.message}</p>}
+            </div>
+            <div>
             <input
               type={"password"}
               placeholder="Password"
@@ -83,9 +83,8 @@ const Login = () => {
                 },
               })}
             />
-            {errors.password && <p>{errors.password.message}</p>}
-            <br />
-            <br />
+            {errors.password && <p className={styles.errorMessage}>{errors.password.message}</p>}
+            </div>
             <button
               type="submit"
               className={styles.loginButton}

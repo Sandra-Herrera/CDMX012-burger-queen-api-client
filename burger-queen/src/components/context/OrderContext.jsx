@@ -8,7 +8,6 @@ export const OrderContextProvider = (props) => {
 
   const sendContextOrder = (meals) => {
     setOrder(meals);
-    console.log(order);
   };
 
   return (

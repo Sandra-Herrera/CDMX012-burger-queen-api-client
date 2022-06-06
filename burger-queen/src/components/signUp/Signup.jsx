@@ -67,6 +67,7 @@ const Signup = () => {
           <h1 className={styles.signUpTitle}>Register a new user here</h1>
           <br />
           <section className={styles.inputContainer}>
+            <div>
             <input
               type={"email"}
               placeholder="E-mail"
@@ -81,7 +82,9 @@ const Signup = () => {
                 },
               })}
             />
-            {errors.email && <p>{errors.email.message}</p>}
+            {errors.email && <p className={styles.errorMessage}>{errors.email.message}</p>}
+            </div>
+            <div>
             <input
               type={"text"}
               placeholder="Username"
@@ -98,7 +101,9 @@ const Signup = () => {
                 },
               })}
             />
-            {errors.username && <p>{errors.username.message}</p>}
+            {errors.username && <p className={styles.errorMessage}>{errors.username.message}</p>}
+            </div>
+            <div>
             <input
               type={"password"}
               placeholder="Password"
@@ -119,7 +124,9 @@ const Signup = () => {
                 },
               })}
             />
-            {errors.password && <p>{errors.password.message}</p>}
+            {errors.password && <p className={styles.errorMessage}>{errors.password.message}</p>}
+            </div>
+            <div className={styles.errorMessage}>
             <input
               type={"password"}
               placeholder="Validate password"
@@ -132,8 +139,10 @@ const Signup = () => {
                 },
               })}
             />
-            {errors.passwordAgain && <p>{errors.passwordAgain.message}</p>}
+            {errors.passwordAgain && <p className={styles.errorMessage}>{errors.passwordAgain.message}</p>}
+            </div>
           </section>
+          <div>
           <select
             className={styles.rol}
             {...register("rol", {
@@ -145,8 +154,8 @@ const Signup = () => {
             <option value="Kitchen">Kitchen</option>
             <option value="Administrator">Administrator</option>
           </select>
-          {errors.rol && <p>{errors.rol.message}</p>}
-          <br />
+          {errors.rol && <p className={styles.errorMessage}>{errors.rol.message}</p>}
+          </div>
           <button
             type="submit"
             id="buttonContinue"
