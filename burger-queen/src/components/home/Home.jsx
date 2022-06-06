@@ -27,6 +27,10 @@ const Home = () => {
     }
   };
 
+  const redirectKitchen = () => {
+    navigate("/kitchen");
+  }
+
   const redirectProduct = () => {
     navigate("/products");
   };
@@ -59,7 +63,7 @@ const Home = () => {
         <section className={styles.welcomeSection}>
           {/* <h1 className={styles.welcomeTitle}>Welcome</h1> */}
           <section className={styles.buttonsArea}>
-            <button className={styles.welcomeButtons}>
+            <button className={styles.welcomeButtons} onClick={redirectKitchen}>
               Kitchen
               <img
                 alt="imageChef"

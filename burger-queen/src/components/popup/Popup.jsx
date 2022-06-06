@@ -27,6 +27,7 @@ export function Popup(props) {
     if (product && product.id) {
       // Hacer PUT
       fetch(`http://localhost:3004/Products/${product.id}`, {
+        //actualizar todos y cada uno de los elementos
         method: "PUT",
         headers: {
           "content-type": "application/json",

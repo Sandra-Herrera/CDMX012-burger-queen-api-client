@@ -72,5 +72,24 @@
       "category": "Lunch/Dinner",
       "id": "t1Ov93y"
     }
+  ],
+
+  "chosenProduct": [
+    {
+      "product": "Scrambled eggs",
+      "qty": "1",
+      "table": "1",
+      "id": "13",
+      "dateCreated": "2022-06-02T13:48:00.000Z",
+      "dateDone": "2022-06-02T13:59:00.000Z"
+    },
+    {
+      "product": "Eggs",
+      "qty": "1",
+      "table": "2",
+      "id": "14",
+      "dateCreated": "2022-06-02T14:48:00.000Z",
+      "dateDone": ""
+    }
   ]
 }

@@ -2,14 +2,15 @@ import React, { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import { UserContext } from "./database/UserProvider";
 import Login from "./components/login/Login";
+import Kitchen from "./components/kitchen/Kitchen";
 import Signup from "./components/signUp/Signup";
 import Home from "./components/home/Home";
 import "./App.css";
 import Products from "./components/products/Products";
 import Error from "./components/error/Error";
+import ErrorWithoutUser from "./components/error/ErrorWithoutUser";
 import NewOrder from "./components/menuNewOrder/NewOrder";
 import ViewMenuNewOrder from "./components/menuNewOrder/ViewMenuNewOrder";
-// import OrderContextProvider from "./components/context/OrderContext";
 
 function App() {
   const { user } = useContext(UserContext);
@@ -19,10 +20,18 @@ function App() {
   }
 
   return (
-    // <OrderContextProvider>
     <Routes>
-      <Route exact path="/" element={<Login />} />
+      <Route exact path="/" element={<Login />} />;
+      {userRole === "cocina" && (
+        <Route exact path="/kitchen" element={<Kitchen />} />
+      )}
+      ;
+      {userRole === "administrador" && (
+        <Route exact path="/kitchen" element={<Kitchen />} />
+      )}
+      ;
       {user && <Route exact path="/home" element={<Home />} />}
+
       {userRole === "administrador" && (
         <Route exact path="/signup" element={<Signup />} />
       )}
@@ -42,10 +51,9 @@ function App() {
       {userRole === "administrador" && (
         <Route exact path="/NewOrder" element={<NewOrder />} />
       )}
-      ;
-      <Route path="*" element={<Error />} />
+      ;{!user && <Route path="*" element={<ErrorWithoutUser />} />};
+      <Route path="*" element={<Error />} />;
     </Routes>
-    // </OrderContextProvider>
   );
 }
 
