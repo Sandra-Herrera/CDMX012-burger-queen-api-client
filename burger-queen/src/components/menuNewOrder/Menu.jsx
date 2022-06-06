@@ -33,7 +33,18 @@ const Menu = () => {
   };
 
   const addProducts = (product) => {
-    sendContextOrder([...order,product]);
+    product["qty"] = 1;
+    let productExist = order.find((itemOrder) => {
+      return itemOrder.id === product.id;
+    });
+
+    if (productExist) {
+      product = { ...productExist, qty: productExist.qty + 1 };
+      sendContextOrder(order.map(item => (item.id === product.id ? {...item, qty:product.qty} : item)));
+    }
+    else{
+      sendContextOrder([...order, product]);
+    }
   };
 
   return (
@@ -59,35 +70,35 @@ const Menu = () => {
           <img alt="line" className={styles.imgLine} src={line} />
         </section> */}
         <section className={styles.scrollMenu}>
-         <section className={styles.allMenu}>
-          {breakfastMenu.map((product) => {
-            return (
-              <li className={styles.breakfastAndLunch} key={product.id}>
-                <button
-                  className={styles.buttonBreakfast}
-                  onClick={() => addProducts(product)}
-                >
-                  {product.name} <br /> {product.price}
-                </button>
-              </li>
-            );
-          })}
-         </section>
+          <section className={styles.allMenu}>
+            {breakfastMenu.map((product) => {
+              return (
+                <li className={styles.breakfastAndLunch} key={product.id}>
+                  <button
+                    className={styles.buttonBreakfast}
+                    onClick={() => addProducts(product)}
+                  >
+                    {product.name} <br /> {product.price}
+                  </button>
+                </li>
+              );
+            })}
+          </section>
 
-         <section className={styles.allMenu}>
-          {lunchMenu.map((product) => {
-            return (
-              <li className={styles.breakfastAndLunch} key={product.id}>
-                <button
-                  className={styles.buttonLunch}
-                  onClick={() => addProducts(product)}
-                >
-                  {product.name} <br /> {product.price}
-                </button>
-              </li>
-            );
-          })}
-         </section>
+          <section className={styles.allMenu}>
+            {lunchMenu.map((product) => {
+              return (
+                <li className={styles.breakfastAndLunch} key={product.id}>
+                  <button
+                    className={styles.buttonLunch}
+                    onClick={() => addProducts(product)}
+                  >
+                    {product.name} <br /> {product.price}
+                  </button>
+                </li>
+              );
+            })}
+          </section>
         </section>
       </section>
     </section>

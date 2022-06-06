@@ -62,7 +62,7 @@
     },
     {
       "id": "11",
-      "name": "Mineral water de 100 mL",
+      "name": "Mineral water 100 mL",
       "price": "10",
       "category": "Lunch/Dinner"
     },
@@ -76,20 +76,74 @@
 
   "chosenProduct": [
     {
-      "product": "Scrambled eggs",
-      "qty": "1",
-      "table": "1",
-      "id": "13",
-      "dateCreated": "2022-06-02T13:48:00.000Z",
-      "dateDone": "2022-06-02T13:59:00.000Z"
+      "product": "Pasta bolognese",
+      "qty": 2,
+      "table": "6",
+      "dateCreated": "2022-06-06T22:53:23.112Z",
+      "dateDone": "",
+      "id": "owZJJrB"
     },
     {
-      "product": "Eggs",
-      "qty": "1",
+      "product": "Chicken baguette",
+      "qty": 2,
+      "table": "6",
+      "dateCreated": "2022-06-06T22:53:23.112Z",
+      "dateDone": "",
+      "id": "yJYVeuw"
+    },
+    {
+      "product": "Pepperoni pizza",
+      "qty": 2,
+      "table": "6",
+      "dateCreated": "2022-06-06T22:53:23.112Z",
+      "dateDone": "",
+      "id": "jrUiVNW"
+    },
+    {
+      "product": "Cheesecake",
+      "qty": 1,
+      "table": "6",
+      "dateCreated": "2022-06-06T22:53:23.112Z",
+      "dateDone": "",
+      "id": "0Y81vvf"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 1,
+      "dateCreated": "2022-06-06T23:06:38.259Z",
+      "dateDone": "",
+      "id": "2YIy4cO"
+    },
+    {
+      "product": "Chicken baguette",
+      "qty": 1,
+      "dateCreated": "2022-06-06T23:06:38.259Z",
+      "dateDone": "",
+      "id": "AbkuHdU"
+    },
+    {
+      "product": "Pepperoni pizza",
+      "qty": 1,
       "table": "2",
-      "id": "14",
-      "dateCreated": "2022-06-02T14:48:00.000Z",
-      "dateDone": ""
+      "dateCreated": "2022-06-06T23:10:27.951Z",
+      "dateDone": "",
+      "id": "iR37MsA"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-06T23:10:27.950Z",
+      "dateDone": "",
+      "id": "DZK79W_"
+    },
+    {
+      "product": "Chicken baguette",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-06T23:10:27.951Z",
+      "dateDone": "",
+      "id": "sU25WPZ"
     }
   ]
 }
