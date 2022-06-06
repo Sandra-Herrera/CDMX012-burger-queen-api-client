@@ -52,7 +52,7 @@
     display: grid;
     justify-content: center;
     width: 100%;
-    margin-top: 25px;
+    margin-top: 55px;
 }
 
 .signUpTitle {
@@ -79,6 +79,7 @@
     font-size: 15px;
     font-family: revert;
     height: 35px;
+    width: 250px;
     /* flex-wrap: wrap */
 }
 
@@ -97,7 +98,7 @@ border-color: #FBA121;
     border: solid 2px;
     font-size: 15px;
     font-family: revert;
-    width: 49%;
+    width: 250px;
     height: 35px;
     margin-left: 25%;
     margin-top: 3%;
@@ -126,8 +127,16 @@ border-color: #FBA121;
     border: #6bcf81;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .continueBtn:hover{
     background-color: #199634;
+}
+
+.errorMessage{
+    display: flex;
+    color: red;
+    justify-content: center;
+    font-weight: bold;
 }
