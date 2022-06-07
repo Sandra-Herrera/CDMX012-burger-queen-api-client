@@ -6,13 +6,14 @@ import imgPlus from "../../img/imgPlus.png";
 import OrderContext from "../context/OrderContext";
 
 const NewOrder = () => {
-  const { order, sendContextOrder } = useContext(OrderContext);
+  const { order, sendContextOrder, amount, sendContextAmount } = useContext(OrderContext);
 
   const minusProducts = (product) => {
     let productExist = order.find((itemOrder) => {
       return itemOrder.id === product.id;
     });
     if (productExist) {
+      sendContextAmount(parseFloat(amount) - parseFloat(product.price));
       product = { ...productExist, qty: productExist.qty - 1 };
       if (product.qty <= 0) {
         deleteProducts(product);
@@ -31,6 +32,7 @@ const NewOrder = () => {
       return itemOrder.id === product.id;
     });
     if (productExist) {
+      sendContextAmount(parseFloat(amount) + parseFloat(product.price));
       product = { ...productExist, qty: productExist.qty + 1 };
       sendContextOrder(
         order.map((item) =>
@@ -42,6 +44,7 @@ const NewOrder = () => {
 
   const deleteProducts = (product) => {
     //preguntar si desea eliminar
+    sendContextAmount(parseFloat(amount) - (parseFloat(product.price) *  parseInt(product.qty)));
     sendContextOrder(order.filter((item) => item.id !== product.id));
   };
 
@@ -54,14 +57,14 @@ const NewOrder = () => {
     );
   };
 
-  const InputAccountChange = (e) => {
-    let { value } = e.target;
-    sendContextOrder(
-      order.map((itemOrder) =>
-        Object.assign({}, { ...itemOrder, table: value })
-      )
-    );
-  };
+  // const InputAccountChange = (e) => {
+  //   let { value } = e.target;
+  //   sendContextOrder(
+  //     order.map((itemOrder) =>
+  //       Object.assign({}, { ...itemOrder, table: value })
+  //     )
+  //   );
+  // };
 
   const sendToKitchen = () => async (e) => {
     e.preventDefault();
@@ -120,8 +123,9 @@ const NewOrder = () => {
                 Account total $
                 <input
                   id="inputAccount"
-                  onChange={InputAccountChange}
                   className={styles.account}
+                  value={amount}
+                  disabled
                 ></input>
               </p>
             </section>

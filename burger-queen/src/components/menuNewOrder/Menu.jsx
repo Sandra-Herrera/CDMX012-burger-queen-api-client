@@ -8,7 +8,7 @@ const Menu = () => {
   const [breakfastMenu, setBreakfastMenu] = useState([]);
   const [lunchMenu, setLunchMenu] = useState([]);
 
-  const { order, sendContextOrder } = useContext(OrderContext);
+  const { order, sendContextOrder, amount, sendContextAmount } = useContext(OrderContext);
 
   const getAllProduct = () => {
     fetch("http://localhost:3004/Products")
@@ -37,7 +37,7 @@ const Menu = () => {
     let productExist = order.find((itemOrder) => {
       return itemOrder.id === product.id;
     });
-
+    sendContextAmount(parseFloat(amount) + parseFloat(product.price));
     if (productExist) {
       product = { ...productExist, qty: productExist.qty + 1 };
       sendContextOrder(order.map(item => (item.id === product.id ? {...item, qty:product.qty} : item)));
