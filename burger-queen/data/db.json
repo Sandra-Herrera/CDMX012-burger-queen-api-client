@@ -73,7 +73,6 @@
       "id": "t1Ov93y"
     }
   ],
-
   "chosenProduct": [
     {
       "product": "Pasta bolognese",
@@ -106,20 +105,6 @@
       "dateCreated": "2022-06-06T22:53:23.112Z",
       "dateDone": "",
       "id": "0Y81vvf"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "dateCreated": "2022-06-06T23:06:38.259Z",
-      "dateDone": "",
-      "id": "2YIy4cO"
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "dateCreated": "2022-06-06T23:06:38.259Z",
-      "dateDone": "",
-      "id": "AbkuHdU"
     },
     {
       "product": "Pepperoni pizza",

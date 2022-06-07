@@ -45,19 +45,44 @@ const NewOrder = () => {
     sendContextOrder(order.filter((item) => item.id !== product.id));
   };
 
-  
-  const onInputTableChange = (e) =>{
+  const onInputTableChange = (e) => {
     let { value } = e.target;
-    sendContextOrder(order.map(itemOrder => Object.assign({}, {...itemOrder, table: value} )));
-  }
+    sendContextOrder(
+      order.map((itemOrder) =>
+        Object.assign({}, { ...itemOrder, table: value })
+      )
+    );
+  };
+
+  const InputAccountChange = (e) => {
+    let { value } = e.target;
+    sendContextOrder(
+      order.map((itemOrder) =>
+        Object.assign({}, { ...itemOrder, table: value })
+      )
+    );
+  };
 
   const sendToKitchen = () => async (e) => {
     e.preventDefault();
-    let tableNumber = document.getElementById('inputNumberTable').value;
-    sendContextOrder(order.map(itemOrder => Object.assign({}, {...itemOrder, table: tableNumber} )));
+    let tableNumber = document.getElementById("inputNumberTable").value;
+    sendContextOrder(
+      order.map((itemOrder) =>
+        Object.assign({}, { ...itemOrder, table: tableNumber })
+      )
+    );
 
-    let sendChosenProduct = order.map(itemOrder => 
-      Object.assign({}, {product:itemOrder.name, qty:itemOrder.qty, table:itemOrder.table,dateCreated:new Date().toISOString(),dateDone:""})
+    let sendChosenProduct = order.map((itemOrder) =>
+      Object.assign(
+        {},
+        {
+          product: itemOrder.name,
+          qty: itemOrder.qty,
+          table: itemOrder.table,
+          dateCreated: new Date().toISOString(),
+          dateDone: "",
+        }
+      )
     );
     sendChosenProduct.forEach((ChosenProduct) => {
       fetch("http://localhost:3004/chosenProduct", {
@@ -81,10 +106,25 @@ const NewOrder = () => {
           <div>
             <div className={styles.titleNewOrder}>NEW ORDER</div>
           </div>
-          <div className={styles.inputsOrder}>
-            <p className={styles.titleTable}>
-              Table number<input id="inputNumberTable" onChange={onInputTableChange} className={styles.numTable}></input>
-            </p>
+          <div>
+            <section className={styles.inputsOrder}>
+              <p className={styles.titleTable}>
+                Table number
+                <input
+                  id="inputNumberTable"
+                  onChange={onInputTableChange}
+                  className={styles.numTable}
+                ></input>
+              </p>
+              <p className={styles.titleAccount}>
+                Account total $
+                <input
+                  id="inputAccount"
+                  onChange={InputAccountChange}
+                  className={styles.account}
+                ></input>
+              </p>
+            </section>
             <hr></hr>
           </div>
           <section className={styles.containerOrder}>
