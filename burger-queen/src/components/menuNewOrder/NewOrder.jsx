@@ -44,7 +44,9 @@ const NewOrder = () => {
 
   const deleteProducts = (product) => {
     //preguntar si desea eliminar
-    sendContextAmount(parseFloat(amount) - (parseFloat(product.price) *  parseInt(product.qty)));
+    if(product.qty>0){
+      sendContextAmount(parseFloat(amount) - (parseFloat(product.price) *  parseInt(product.qty)));
+    }
     sendContextOrder(order.filter((item) => item.id !== product.id));
   };
 
