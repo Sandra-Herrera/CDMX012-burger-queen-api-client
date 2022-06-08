@@ -10,6 +10,7 @@ import logOutIcon from "../../img/logOutIcon.png";
 const Kitchen = () => {
   const navigate = useNavigate();
   const [chosenProduct, setChosenProduct] = useState([]);
+  const [check, setCheck] = useState(false);
   // const [timer, setTimer] = useState();
   const { logOut } = useContext(UserContext);
 
@@ -26,16 +27,51 @@ const Kitchen = () => {
   const getAllProduct = () => {
     fetch("http://localhost:3004/chosenProduct")
       .then((response) => response.json())
-      .then((chosenProduct) => setChosenProduct(chosenProduct));
-      // console.log(chosenProduct.dateCreated.getUTCMinutes());
+      .then((chosenProduct) => {
+        setChosenProduct(chosenProduct);
+        let checkStates = chosenProduct.map((choseProd) => {
+          if (choseProd.dateDone !== "") {
+            return true;
+          } else {
+            return false;
+          }
+        });
+        console.log(checkStates);
+        setCheck(checkStates);
+      })
+      .catch((error) => console.log(error));
   };
 
   useEffect(() => {
     getAllProduct();
   }, []);
 
+  const saveDate = (chosenProd) => {
+    fetch(`http://localhost:3004/chosenProduct/${chosenProd.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ dateDone: new Date().toISOString() }),
+    })
+      .then((response) => {
+        console.log(response.status);
+        return response.json();
+      })
+      .then((data) => console.log(data));
+  };
+
   const redirectHome = () => {
     navigate("/home");
+  };
+
+  const handleChange = (position, chosenProd) => async () => {
+    saveDate(chosenProd);
+    const updatedCheckedState = check.map((item, index) => {
+      return index === position ? !item : item;
+    });
+    console.log(updatedCheckedState);
+    setCheck(updatedCheckedState);
   };
 
   return (
@@ -59,7 +95,7 @@ const Kitchen = () => {
       </div>
 
       {/* <section><Chronometer  setTimer={setTimer}/></section>
-      {console.log(timer)} */}
+          {console.log(timer)} */}
 
       <section>
         <div className={styles.productsTable}>
@@ -73,15 +109,25 @@ const Kitchen = () => {
             <div className={styles.headerTable}>Timer</div>
             <div className={styles.headerTable}>Order check</div>
           </div>
-          {chosenProduct.map((product) => {
+          {chosenProduct.map((chosenProd, index) => {
             return (
-              <div key={product.id} className={styles.containerItems}>
-                <div className={styles.itemAlignStart}>{product.product}</div>
-                <div className={styles.itemTable}>{product.qty}</div>
-                <div className={styles.itemTable}>{product.table}</div>
-                <div className={styles.itemTable}>{product.dateCreated}</div>
+              <div key={chosenProd.id} className={styles.containerItems}>
+                <div className={styles.itemAlignStart}>
+                  {chosenProd.product}
+                </div>
+                <div className={styles.itemTable}>{chosenProd.qty}</div>
+                <div className={styles.itemTable}>{chosenProd.table}</div>
+                <div className={styles.itemTable}>{}</div>
                 <div className={styles.itemTable}>
-                  <button>x</button>
+                  <input
+                    type="checkbox"
+                    value="check"
+                    onChange={handleChange(index, chosenProd)}
+                    checked={check[index]}
+                    className={styles.checkbox}
+                    disabled={check[index]}
+                    //onClick={saveDate(chosenProd)}
+                  />
                 </div>
               </div>
             );

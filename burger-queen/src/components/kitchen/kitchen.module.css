@@ -131,3 +131,9 @@
     border: solid 1px;
     border-color: coral;
   }
+
+  .checkbox{
+    width: 25px;
+    height: 25px;
+    background-color: #97617a;
+  }
