@@ -10,6 +10,7 @@ import logOutIcon from "../../img/logOutIcon.png";
 const Kitchen = () => {
   const navigate = useNavigate();
   const [chosenProduct, setChosenProduct] = useState([]);
+  const [check, setCheck] = useState(false);
   // const [timer, setTimer] = useState();
   const { logOut } = useContext(UserContext);
 
@@ -26,7 +27,18 @@ const Kitchen = () => {
   const getAllProduct = () => {
     fetch("http://localhost:3004/chosenProduct")
       .then((response) => response.json())
-      .then((chosenProduct) => setChosenProduct(chosenProduct))
+      .then((chosenProduct) => {
+        setChosenProduct(chosenProduct);
+        let checkStates = chosenProduct.map((choseProd) => {
+          if (choseProd.dateDone !== "") {
+            return true;
+          } else {
+            return false;
+          }
+        });
+        console.log(checkStates);
+        setCheck(checkStates);
+      })
       .catch((error) => console.log(error));
   };
 
@@ -34,26 +46,32 @@ const Kitchen = () => {
     getAllProduct();
   }, []);
 
-  const saveDate = (chosenProd) => async (e) => {
-    e.preventDefault();
-
-  
-      fetch(`http://localhost:3004/chosenProduct/${chosenProd.id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({ dateDone: new Date().toISOString() }),
+  const saveDate = (chosenProd) => {
+    fetch(`http://localhost:3004/chosenProduct/${chosenProd.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ dateDone: new Date().toISOString() }),
+    })
+      .then((response) => {
+        console.log(response.status);
+        return response.json();
       })
-        .then((response) => {
-          console.log(response.status);
-          return response.json();
-        })
-        .then((data) => console.log(data));
+      .then((data) => console.log(data));
   };
 
   const redirectHome = () => {
     navigate("/home");
+  };
+
+  const handleChange = (position, chosenProd) => async () => {
+    saveDate(chosenProd);
+    const updatedCheckedState = check.map((item, index) => {
+      return index === position ? !item : item;
+    });
+    console.log(updatedCheckedState);
+    setCheck(updatedCheckedState);
   };
 
   return (
@@ -77,7 +95,7 @@ const Kitchen = () => {
       </div>
 
       {/* <section><Chronometer  setTimer={setTimer}/></section>
-      {console.log(timer)} */}
+          {console.log(timer)} */}
 
       <section>
         <div className={styles.productsTable}>
@@ -91,15 +109,25 @@ const Kitchen = () => {
             <div className={styles.headerTable}>Timer</div>
             <div className={styles.headerTable}>Order check</div>
           </div>
-          {chosenProduct.map((chosenProd) => {
+          {chosenProduct.map((chosenProd, index) => {
             return (
               <div key={chosenProd.id} className={styles.containerItems}>
-                <div className={styles.itemAlignStart}>{chosenProd.product}</div>
+                <div className={styles.itemAlignStart}>
+                  {chosenProd.product}
+                </div>
                 <div className={styles.itemTable}>{chosenProd.qty}</div>
                 <div className={styles.itemTable}>{chosenProd.table}</div>
-                <div className={styles.itemTable}>{chosenProd.dateCreated}</div>
+                <div className={styles.itemTable}>{}</div>
                 <div className={styles.itemTable}>
-                  <button onClick={saveDate(chosenProd)}>x</button>
+                  <input
+                    type="checkbox"
+                    value="check"
+                    onChange={handleChange(index, chosenProd)}
+                    checked={check[index]}
+                    className={styles.checkbox}
+                    disabled={check[index]}
+                    //onClick={saveDate(chosenProd)}
+                  />
                 </div>
               </div>
             );

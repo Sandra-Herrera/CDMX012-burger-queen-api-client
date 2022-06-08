@@ -6,7 +6,8 @@ import imgPlus from "../../img/imgPlus.png";
 import OrderContext from "../context/OrderContext";
 
 const NewOrder = () => {
-  const { order, sendContextOrder, amount, sendContextAmount } = useContext(OrderContext);
+  const { order, sendContextOrder, amount, sendContextAmount } =
+    useContext(OrderContext);
 
   const minusProducts = (product) => {
     let productExist = order.find((itemOrder) => {
@@ -44,8 +45,10 @@ const NewOrder = () => {
 
   const deleteProducts = (product) => {
     //preguntar si desea eliminar
-    if(product.qty>0){
-      sendContextAmount(parseFloat(amount) - (parseFloat(product.price) *  parseInt(product.qty)));
+    if (product.qty > 0) {
+      sendContextAmount(
+        parseFloat(amount) - parseFloat(product.price) * parseInt(product.qty)
+      );
     }
     sendContextOrder(order.filter((item) => item.id !== product.id));
   };
@@ -58,7 +61,6 @@ const NewOrder = () => {
       )
     );
   };
-
 
   const sendToKitchen = () => async (e) => {
     e.preventDefault();

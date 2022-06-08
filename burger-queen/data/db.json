@@ -79,7 +79,7 @@
       "qty": 2,
       "table": "6",
       "dateCreated": "2022-06-07T19:18:09.038Z",
-      "dateDone": "2022-06-07T23:48:44.227Z",
+      "dateDone": "2022-06-08T03:22:30.867Z",
       "id": "owZJJrB"
     },
     {
@@ -87,7 +87,7 @@
       "qty": 2,
       "table": "6",
       "dateCreated": "2022-06-07T19:18:09.039Z",
-      "dateDone": "2022-06-07T23:48:48.991Z",
+      "dateDone": "",
       "id": "yJYVeuw"
     },
     {
@@ -95,7 +95,7 @@
       "qty": 2,
       "table": "6",
       "dateCreated": "2022-06-07T19:18:09.039Z",
-      "dateDone": "2022-06-07T23:48:48.339Z",
+      "dateDone": "",
       "id": "jrUiVNW"
     },
     {
@@ -103,7 +103,7 @@
       "qty": 1,
       "table": "6",
       "dateCreated": "2022-06-07T19:18:09.041Z",
-      "dateDone": "2022-06-07T23:48:47.335Z",
+      "dateDone": "",
       "id": "0Y81vvf"
     },
     {
@@ -111,7 +111,7 @@
       "qty": 1,
       "table": "2",
       "dateCreated": "2022-06-07T19:18:09.042Z",
-      "dateDone": "2022-06-07T23:42:38.432Z",
+      "dateDone": "",
       "id": "iR37MsA"
     },
     {
@@ -119,7 +119,7 @@
       "qty": 1,
       "table": "2",
       "dateCreated": "2022-06-07T19:18:09.042Z",
-      "dateDone": "2022-06-07T23:42:38.433Z",
+      "dateDone": "",
       "id": "DZK79W_"
     },
     {
@@ -127,7 +127,7 @@
       "qty": 1,
       "table": "2",
       "dateCreated": "2022-06-07T19:18:09.043Z",
-      "dateDone": "2022-06-07T23:42:38.433Z",
+      "dateDone": "",
       "id": "sU25WPZ"
     },
     {
@@ -141,14 +141,14 @@
       "product": "Chicken baguette",
       "qty": 1,
       "dateCreated": "2022-06-07T19:18:09.045Z",
-      "dateDone": "2022-06-07T23:48:39.057Z",
+      "dateDone": "",
       "id": "KDaf2nh"
     },
     {
       "product": "Pepperoni pizza",
       "qty": 1,
       "dateCreated": "2022-06-07T19:18:09.045Z",
-      "dateDone": "2022-06-07T23:48:39.985Z",
+      "dateDone": "",
       "id": "nAZesZZ"
     },
     {
