@@ -114,8 +114,22 @@ border-color: #FBA121;
 }
 
 .continueBtn{
-    /* display: flex; */
+    width: 20%;
+    margin-left: 39%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    border-radius: 20px;
+    background-color: #7ED090;
+    height: 100%;
+    max-width: 180px;
+    font-size: 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+
+    /* display: flex; */
+    /* justify-content: center;
     border-radius: 15px;
     border: solid 2px;
     font-size: 16px;
@@ -127,11 +141,12 @@ border-color: #FBA121;
     border: #6bcf81;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 15px; */
 }
 
 .continueBtn:hover{
-    background-color: #199634;
+    background-color: #4b8d59;
+    /* background-color: #199634; */
 }
 
 .errorMessage{

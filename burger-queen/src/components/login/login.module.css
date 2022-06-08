@@ -70,8 +70,8 @@
     background-color: #7ED090;
     width: 97px;
     height: 35px;
-    font-size: 15px;
-    font-family: revert;
+    font-size: 20px;
+    font-family: sans-serif;
     margin-left: 115px;
     cursor: pointer;
     margin-top: 15px;
@@ -79,5 +79,5 @@
 
 .loginButton:hover{
     background-color: #33bc50;
-    border-color: #33bc50;
+    /* border-color: #33bc50; */
 }

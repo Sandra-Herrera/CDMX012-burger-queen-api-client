@@ -92,6 +92,11 @@
   background-color: coral;
 }
 
+.scrollProduct{
+  height: 70vh;
+  overflow-y: auto;
+}
+
 .containerItems {
   display: grid;
   grid-template-columns: repeat(5, 20%);
