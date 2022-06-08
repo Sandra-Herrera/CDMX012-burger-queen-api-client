@@ -73,77 +73,22 @@
       "id": "t1Ov93y"
     }
   ],
-
   "chosenProduct": [
     {
       "product": "Pasta bolognese",
       "qty": 2,
       "table": "6",
-      "dateCreated": "2022-06-06T22:53:23.112Z",
-      "dateDone": "",
+      "dateCreated": "2022-06-07T23:11:12.371Z",
+      "dateDone": "2022-06-08T03:11:03.364Z",
       "id": "owZJJrB"
     },
     {
       "product": "Chicken baguette",
       "qty": 2,
       "table": "6",
-      "dateCreated": "2022-06-06T22:53:23.112Z",
+      "dateCreated": "2022-06-07T23:11:12.374Z",
       "dateDone": "",
       "id": "yJYVeuw"
-    },
-    {
-      "product": "Pepperoni pizza",
-      "qty": 2,
-      "table": "6",
-      "dateCreated": "2022-06-06T22:53:23.112Z",
-      "dateDone": "",
-      "id": "jrUiVNW"
-    },
-    {
-      "product": "Cheesecake",
-      "qty": 1,
-      "table": "6",
-      "dateCreated": "2022-06-06T22:53:23.112Z",
-      "dateDone": "",
-      "id": "0Y81vvf"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "dateCreated": "2022-06-06T23:06:38.259Z",
-      "dateDone": "",
-      "id": "2YIy4cO"
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "dateCreated": "2022-06-06T23:06:38.259Z",
-      "dateDone": "",
-      "id": "AbkuHdU"
-    },
-    {
-      "product": "Pepperoni pizza",
-      "qty": 1,
-      "table": "2",
-      "dateCreated": "2022-06-06T23:10:27.951Z",
-      "dateDone": "",
-      "id": "iR37MsA"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "table": "2",
-      "dateCreated": "2022-06-06T23:10:27.950Z",
-      "dateDone": "",
-      "id": "DZK79W_"
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "table": "2",
-      "dateCreated": "2022-06-06T23:10:27.951Z",
-      "dateDone": "",
-      "id": "sU25WPZ"
     }
   ]
 }
