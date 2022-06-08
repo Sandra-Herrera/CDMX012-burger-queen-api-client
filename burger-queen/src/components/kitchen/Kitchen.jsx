@@ -26,13 +26,31 @@ const Kitchen = () => {
   const getAllProduct = () => {
     fetch("http://localhost:3004/chosenProduct")
       .then((response) => response.json())
-      .then((chosenProduct) => setChosenProduct(chosenProduct));
-      // console.log(chosenProduct.dateCreated.getUTCMinutes());
+      .then((chosenProduct) => setChosenProduct(chosenProduct))
+      .catch((error) => console.log(error));
   };
 
   useEffect(() => {
     getAllProduct();
   }, []);
+
+  const saveDate = (chosenProd) => async (e) => {
+    e.preventDefault();
+
+  
+      fetch(`http://localhost:3004/chosenProduct/${chosenProd.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ dateDone: new Date().toISOString() }),
+      })
+        .then((response) => {
+          console.log(response.status);
+          return response.json();
+        })
+        .then((data) => console.log(data));
+  };
 
   const redirectHome = () => {
     navigate("/home");
@@ -73,15 +91,15 @@ const Kitchen = () => {
             <div className={styles.headerTable}>Timer</div>
             <div className={styles.headerTable}>Order check</div>
           </div>
-          {chosenProduct.map((product) => {
+          {chosenProduct.map((chosenProd) => {
             return (
-              <div key={product.id} className={styles.containerItems}>
-                <div className={styles.itemAlignStart}>{product.product}</div>
-                <div className={styles.itemTable}>{product.qty}</div>
-                <div className={styles.itemTable}>{product.table}</div>
-                <div className={styles.itemTable}>{product.dateCreated}</div>
+              <div key={chosenProd.id} className={styles.containerItems}>
+                <div className={styles.itemAlignStart}>{chosenProd.product}</div>
+                <div className={styles.itemTable}>{chosenProd.qty}</div>
+                <div className={styles.itemTable}>{chosenProd.table}</div>
+                <div className={styles.itemTable}>{chosenProd.dateCreated}</div>
                 <div className={styles.itemTable}>
-                  <button>x</button>
+                  <button onClick={saveDate(chosenProd)}>x</button>
                 </div>
               </div>
             );

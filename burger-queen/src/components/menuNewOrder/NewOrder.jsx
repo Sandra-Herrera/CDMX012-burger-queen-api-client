@@ -59,14 +59,6 @@ const NewOrder = () => {
     );
   };
 
-  // const InputAccountChange = (e) => {
-  //   let { value } = e.target;
-  //   sendContextOrder(
-  //     order.map((itemOrder) =>
-  //       Object.assign({}, { ...itemOrder, table: value })
-  //     )
-  //   );
-  // };
 
   const sendToKitchen = () => async (e) => {
     e.preventDefault();

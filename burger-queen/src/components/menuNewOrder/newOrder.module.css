@@ -64,6 +64,7 @@
 
 .inputsOrder{
     display:flex;
+    justify-content: start;
     
 
 }
@@ -97,7 +98,10 @@
 }
 
 .account{
-    width: 110px;
+    display: flex;
+    /* width: 110px; */
+    width: 100%;
+    max-width: 90px;
     height: 45px;
     display: flex;
     margin-left: 20px;
@@ -156,7 +160,7 @@ hr{
 
 .bottonAreabtn{
     display: flex;
-    justify-content: end;
+    justify-content: space-around;
     height: 50px;
     align-items: center;
     margin: 10px 5px;
@@ -164,13 +168,19 @@ hr{
 }
 
 .bottonButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 20px;
     background-color: #7ED090;
-    width: 155px;
-    height: 35px;
+    width: 35%;
+    height: 100%;
+    max-width: 180px;
+    /* width: 180px;
+    height: 50px; */
     font-size: 20px;
     font-family: sans-serif;
-    margin-left: 115px;
+    /* margin-left: 115px; */
     cursor: pointer;
 }
 
