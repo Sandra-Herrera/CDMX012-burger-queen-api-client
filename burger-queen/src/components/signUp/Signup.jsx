@@ -6,7 +6,7 @@ import { updateProfile } from "firebase/auth";
 import { auth } from "../../database/firebase-config";
 import { useNavigate } from "react-router-dom";
 import styles from "./signup.module.css";
-import imgRestaurant from "../../img/imgRestaurant.png";
+import imgHeaderInto from "../../img/imgHeaderInto.png";
 import backIcon from "../../img/backIcon.png";
 
 const Signup = () => {
@@ -53,7 +53,7 @@ const Signup = () => {
         <img
           alt="imagen header"
           className={styles.imgRest}
-          src={imgRestaurant}
+          src={imgHeaderInto}
         />
         <button className={styles.backButton} onClick={redirectHome}>
           <img alt="iconBack" className={styles.imgBack} src={backIcon} />

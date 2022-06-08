@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./products.module.css";
-import imgRestaurant from "../../img/imgRestaurant.png";
 import imgDelete from "../../img/imgDelete.png";
 import imgEdit from "../../img/imgEdit.png";
 import addIcon from "../../img/addIcon.png";
 import backIcon from "../../img/backIcon.png";
 import { Popup } from "../popup/Popup";
+import imgHeaderInto from "../../img/imgHeaderInto.png";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -74,7 +74,7 @@ const Products = () => {
         <img
           alt="imagen header"
           className={styles.imgRest}
-          src={imgRestaurant}
+          src={imgHeaderInto}
         />
         <button className={styles.backButton} onClick={redirectHome}>
           <img alt="iconBack" className={styles.imgBack} src={backIcon} />
@@ -101,6 +101,7 @@ const Products = () => {
             <div className={styles.headerTable}>Edit</div>
             <div className={styles.headerTable}>Delete</div>
           </div>
+          <div className={styles.scrollProduct}>
           {products.map((product) => {
             return (
               <div key={product.id} className={styles.containerItems}>
@@ -132,6 +133,7 @@ const Products = () => {
               </div>
             );
           })}
+          </div>
         </div>
       </section>
       {modalDelete && (

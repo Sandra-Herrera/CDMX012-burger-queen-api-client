@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import styles from "./kitchen.module.css";
-import imgRestaurant from "../../img/imgRestaurant.png";
+// import imgRestaurant from "../../img/imgRestaurant.png";
 import backIcon from "../../img/backIcon.png";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../database/UserProvider";
 import logOutIcon from "../../img/logOutIcon.png";
+import imgHeaderInto from "../../img/imgHeaderInto.png";
 // import Chronometer from "../chronometer/Chronometer";
 
 const Kitchen = () => {
@@ -80,7 +81,7 @@ const Kitchen = () => {
         <img
           alt="imagen header"
           className={styles.imgRest}
-          src={imgRestaurant}
+          src={imgHeaderInto}
         />
         <button className={styles.backButton} onClick={redirectHome}>
           <img alt="iconBack" className={styles.imgBack} src={backIcon} />
@@ -109,6 +110,7 @@ const Kitchen = () => {
             <div className={styles.headerTable}>Timer</div>
             <div className={styles.headerTable}>Order check</div>
           </div>
+          <div className={styles.scrollKitchen}>
           {chosenProduct.map((chosenProd, index) => {
             return (
               <div key={chosenProd.id} className={styles.containerItems}>
@@ -132,6 +134,7 @@ const Kitchen = () => {
               </div>
             );
           })}
+          </div>
         </div>
       </section>
     </>
