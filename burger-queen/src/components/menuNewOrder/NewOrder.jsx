@@ -6,13 +6,15 @@ import imgPlus from "../../img/imgPlus.png";
 import OrderContext from "../context/OrderContext";
 
 const NewOrder = () => {
-  const { order, sendContextOrder } = useContext(OrderContext);
+  const { order, sendContextOrder, amount, sendContextAmount } =
+    useContext(OrderContext);
 
   const minusProducts = (product) => {
     let productExist = order.find((itemOrder) => {
       return itemOrder.id === product.id;
     });
     if (productExist) {
+      sendContextAmount(parseFloat(amount) - parseFloat(product.price));
       product = { ...productExist, qty: productExist.qty - 1 };
       if (product.qty <= 0) {
         deleteProducts(product);
@@ -31,6 +33,7 @@ const NewOrder = () => {
       return itemOrder.id === product.id;
     });
     if (productExist) {
+      sendContextAmount(parseFloat(amount) + parseFloat(product.price));
       product = { ...productExist, qty: productExist.qty + 1 };
       sendContextOrder(
         order.map((item) =>
@@ -42,22 +45,43 @@ const NewOrder = () => {
 
   const deleteProducts = (product) => {
     //preguntar si desea eliminar
+    if (product.qty > 0) {
+      sendContextAmount(
+        parseFloat(amount) - parseFloat(product.price) * parseInt(product.qty)
+      );
+    }
     sendContextOrder(order.filter((item) => item.id !== product.id));
   };
 
-  
-  const onInputTableChange = (e) =>{
+  const onInputTableChange = (e) => {
     let { value } = e.target;
-    sendContextOrder(order.map(itemOrder => Object.assign({}, {...itemOrder, table: value} )));
-  }
+    sendContextOrder(
+      order.map((itemOrder) =>
+        Object.assign({}, { ...itemOrder, table: value })
+      )
+    );
+  };
 
   const sendToKitchen = () => async (e) => {
     e.preventDefault();
-    let tableNumber = document.getElementById('inputNumberTable').value;
-    sendContextOrder(order.map(itemOrder => Object.assign({}, {...itemOrder, table: tableNumber} )));
+    let tableNumber = document.getElementById("inputNumberTable").value;
+    sendContextOrder(
+      order.map((itemOrder) =>
+        Object.assign({}, { ...itemOrder, table: tableNumber })
+      )
+    );
 
-    let sendChosenProduct = order.map(itemOrder => 
-      Object.assign({}, {product:itemOrder.name, qty:itemOrder.qty, table:itemOrder.table,dateCreated:new Date().toISOString(),dateDone:""})
+    let sendChosenProduct = order.map((itemOrder) =>
+      Object.assign(
+        {},
+        {
+          product: itemOrder.name,
+          qty: itemOrder.qty,
+          table: itemOrder.table,
+          dateCreated: new Date().toISOString(),
+          dateDone: "",
+        }
+      )
     );
     sendChosenProduct.forEach((ChosenProduct) => {
       fetch("http://localhost:3004/chosenProduct", {
@@ -81,10 +105,26 @@ const NewOrder = () => {
           <div>
             <div className={styles.titleNewOrder}>NEW ORDER</div>
           </div>
-          <div className={styles.inputsOrder}>
-            <p className={styles.titleTable}>
-              Table number<input id="inputNumberTable" onChange={onInputTableChange} className={styles.numTable}></input>
-            </p>
+          <div>
+            <section className={styles.inputsOrder}>
+              <p className={styles.titleTable}>
+                Table number
+                <input
+                  id="inputNumberTable"
+                  onChange={onInputTableChange}
+                  className={styles.numTable}
+                ></input>
+              </p>
+              <p className={styles.titleAccount}>
+                Account total $
+                <input
+                  id="inputAccount"
+                  className={styles.account}
+                  value={amount}
+                  disabled
+                ></input>
+              </p>
+            </section>
             <hr></hr>
           </div>
           <section className={styles.containerOrder}>
