@@ -149,8 +149,14 @@
       "qty": 2,
       "table": "6",
       "dateCreated": "2022-06-08T07:31:54.152Z",
-      "dateDone": "",
-      "id": "3MBLIM0"
+      "dateDone": "2022-06-09T23:27:16.108Z",
+      "id": "3MBLIM0",
+      "time": {
+        "ms": 52,
+        "s": 1,
+        "m": 0,
+        "h": 0
+      }
     },
     {
       "product": "Scrambled eggs",

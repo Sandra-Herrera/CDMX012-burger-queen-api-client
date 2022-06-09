@@ -6,7 +6,6 @@ import { UserContext } from "../../database/UserProvider";
 import logOutIcon from "../../img/logOutIcon.png";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
 import Chronometer from "../chronometer/Chronometer";
-// import Product from "./Product";
 
 const Kitchen = () => {
   const navigate = useNavigate();
@@ -116,15 +115,6 @@ const Kitchen = () => {
           <div className={styles.scrollKitchen}>
             {chosenProduct.map((chosenProd, index) => {
               return (
-                // <>
-                //   <Product
-                //     chosenProd={chosenProd}
-                //     index={index}
-                //     check={check}
-                //     handleChange={handleChange}
-                //     setSaveTime={setSaveTime}
-                //   />
-                // </>
                 <div key={chosenProd.id} className={styles.containerItems}>
                   <div className={styles.itemAlignStart}>
                     {chosenProd.product}
@@ -132,7 +122,6 @@ const Kitchen = () => {
                   <div className={styles.itemTable}>{chosenProd.qty}</div>
                   <div className={styles.itemTable}>{chosenProd.table}</div>
                   <div className={styles.itemTable}>{<Chronometer setSaveTime={setSaveTime}/>}</div>
-                   {/* <div className={styles.itemTable}>{<Chronometer />}</div> */}
                   <div className={styles.itemTable}>
                     <input
                       type="checkbox"
