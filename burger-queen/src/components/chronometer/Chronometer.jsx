@@ -1,68 +1,94 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+// import PropTypes from "prop-types";
 import styles from "./chronometer.module.css";
-import PropTypes from "prop-types";
 
-const Chronometer = (props) => {
-  const [diff, setDiff] = useState(null);
-  const [initial, setInitial] = useState(null);
-  const { setTimer} = props;
-
-  const tick = () => {
-    setDiff(new Date(+new Date() - initial));
-  };
+// function Chronometer(props) {
+function Chronometer() {
+  const [time, setTime] = useState({ ms: 0, s: 0, m: 0, h: 0 });
+  const [interv, setInterv] = useState();
+  const [status, setStatus] = useState(0);
+  // const { setStopTimer} = props;
+  // Not started = 0
+  // started = 1
+  // stopped = 2
 
   const start = () => {
-    setInitial(+new Date());
+    run();
+    setStatus(1);
+    setInterv(setInterval(run, 10));
+  };
+
+  var updatedMs = time.ms,
+    updatedS = time.s,
+    updatedM = time.m,
+    updatedH = time.h;
+
+  const run = () => {
+    if (updatedM === 60) {
+      updatedH++;
+      updatedM = 0;
+    }
+    if (updatedS === 60) {
+      updatedM++;
+      updatedS = 0;
+    }
+    if (updatedMs === 100) {
+      updatedS++;
+      updatedMs = 0;
+    }
+    updatedMs++;
+    return setTime({ ms: updatedMs, s: updatedS, m: updatedM, h: updatedH });
   };
 
   const stop = () => {
-    setTimer(timeFormat(diff));
-    setInitial(timeFormat());
+    clearInterval(interv);
+    setStatus(2);
   };
 
-  useEffect(() => {
-    if (initial) {
-      requestAnimationFrame(tick);
-    }
-  }, [initial]);
+  // setStopTimer(stop())
 
-  useEffect(() => {
-    if (diff) {
-      requestAnimationFrame(tick);
+  const h = () => {
+    if (time.h === 0) {
+      return "";
+    } else {
+      return <span>{time.h >= 10 ? time.h : "0" + time.h}</span>;
     }
-  }, [diff]);
+  };
 
   return (
     <>
-      <section className={styles.chronometer}>
-        <div className={styles.App} onClick={start}>
-          <h1 className={styles.timer}>{timeFormat(diff)}</h1>
-        </div>
-        <button className={styles.stop} onClick={stop}>
-          Stop
+      <div className={styles.timeAndStop}>
+        {status != 0 && (
+          <div className={styles.time}>
+            {h()}&nbsp;&nbsp;
+            <span>{time.m >= 10 ? time.m : "0" + time.m}</span>&nbsp;:&nbsp;
+            <span>{time.s >= 10 ? time.s : "0" + time.s}</span>&nbsp;:&nbsp;
+            <span>{time.ms >= 10 ? time.ms : "0" + time.ms}</span>
+          </div>
+        )}
+        {status === 1 ? (
+          <div>
+            <button className={styles.stopwatch} onClick={stop}>
+              Stop
+            </button>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
+      {status === 0 ? (
+        <button className={styles.chronometer} onClick={start}>
+          Start
         </button>
-      </section>
+      ) : (
+        ""
+      )}
     </>
   );
-};
-
-const timeFormat = (date) => {
-  if (!date) return "00:00:00";
-
-  let mm = date.getUTCMinutes();
-  let ss = date.getSeconds();
-  let cm = Math.round(date.getMilliseconds() / 10);
-
-  mm = mm < 10 ? "0" + mm : mm;
-  ss = ss < 10 ? "0" + ss : ss;
-  cm = cm < 10 ? "0" + cm : cm;
-
-  return `${mm}:${ss}:${cm}`;
-};
+}
 
 export default Chronometer;
 
-Chronometer.propTypes = {
-  setTimer: PropTypes.func,
-  setStop: PropTypes.func,
-};
+// Chronometer.propTypes = {
+//   setStopTimer: PropTypes.func,
+//   };
