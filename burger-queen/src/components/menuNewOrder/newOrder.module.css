@@ -187,3 +187,10 @@ hr{
 .bottonButtons:hover{
     background-color: #4b8d59;
 }
+
+.errorMessage{
+    display: flex;
+    color: red;
+    justify-content: center;
+    font-weight: bold;
+}

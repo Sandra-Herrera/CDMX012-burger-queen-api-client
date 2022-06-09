@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useForm } from "react-hook-form";
 import styles from "./newOrder.module.css";
 import imgDelete from "../../img/imgDelete.png";
 import imgMinus from "../../img/imgMinus.png";
@@ -9,7 +10,16 @@ const NewOrder = () => {
   const { order, sendContextOrder, amount, sendContextAmount } =
     useContext(OrderContext);
 
-  const minusProducts = (product) => {
+    const {
+      register,
+      handleSubmit,
+      formState: { errors },
+      // getValues,
+      // setError,
+    } = useForm();
+
+  const minusProducts = (product) => (e) => {
+    e.preventDefault();
     let productExist = order.find((itemOrder) => {
       return itemOrder.id === product.id;
     });
@@ -17,7 +27,7 @@ const NewOrder = () => {
       sendContextAmount(parseFloat(amount) - parseFloat(product.price));
       product = { ...productExist, qty: productExist.qty - 1 };
       if (product.qty <= 0) {
-        deleteProducts(product);
+        sendContextOrder(order.filter((item) => item.id !== product.id));
       } else {
         sendContextOrder(
           order.map((item) =>
@@ -28,7 +38,8 @@ const NewOrder = () => {
     }
   };
 
-  const plusProducts = (product) => {
+  const plusProducts = (product) => (e)=> {
+    e.preventDefault();
     let productExist = order.find((itemOrder) => {
       return itemOrder.id === product.id;
     });
@@ -43,7 +54,8 @@ const NewOrder = () => {
     }
   };
 
-  const deleteProducts = (product) => {
+  const deleteProducts = (product) => (e) => {
+    e.preventDefault();
     //preguntar si desea eliminar
     if (product.qty > 0) {
       sendContextAmount(
@@ -62,8 +74,11 @@ const NewOrder = () => {
     );
   };
 
-  const sendToKitchen = () => async (e) => {
-    e.preventDefault();
+  const onSubmit = async () => {
+    sendToKitchen();
+  };
+
+  const sendToKitchen = () => {
     let tableNumber = document.getElementById("inputNumberTable").value;
     sendContextOrder(
       order.map((itemOrder) =>
@@ -101,7 +116,7 @@ const NewOrder = () => {
   return (
     <>
       <section className={styles.containerNewOrder}>
-        <div className={styles.newOrderSection}>
+        <form className={styles.newOrderSection} onSubmit={handleSubmit(onSubmit)}>
           <div>
             <div className={styles.titleNewOrder}>NEW ORDER</div>
           </div>
@@ -109,11 +124,24 @@ const NewOrder = () => {
             <section className={styles.inputsOrder}>
               <p className={styles.titleTable}>
                 Table number
-                <input
+                <select
                   id="inputNumberTable"
                   onChange={onInputTableChange}
                   className={styles.numTable}
-                ></input>
+                  {...register("table", {
+                    required: {
+                      value: true,
+                      message: "This field is required",
+                    },
+                  })}
+                >
+                  <option value=""></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                {errors.table && <p className={styles.errorMessage}>{errors.table.message}</p>}
               </p>
               <p className={styles.titleAccount}>
                 Account total $
@@ -135,7 +163,7 @@ const NewOrder = () => {
                   <div className={styles.itemTable}>
                     <button
                       className={styles.btnIcons}
-                      onClick={() => minusProducts(product)}
+                      onClick={minusProducts(product)}
                     >
                       <img
                         alt="iconMinus"
@@ -155,7 +183,7 @@ const NewOrder = () => {
                   <div className={styles.itemTable}>
                     <button
                       className={styles.btnIcons}
-                      onClick={() => plusProducts(product)}
+                      onClick={plusProducts(product)}
                     >
                       <img
                         alt="iconPlus"
@@ -167,7 +195,7 @@ const NewOrder = () => {
                   <div className={styles.itemTable}>
                     <button
                       className={styles.btnIcons}
-                      onClick={() => deleteProducts(product)}
+                      onClick={deleteProducts(product)}
                     >
                       <img
                         alt="iconDelete"
@@ -182,11 +210,15 @@ const NewOrder = () => {
           </section>
           <section className={styles.bottonAreabtn}>
             <button className={styles.bottonButtons}>Orders ready</button>
-            <button onClick={sendToKitchen()} className={styles.bottonButtons}>
+            <button
+              type="submit"
+              // onClick={sendToKitchen()}
+              className={styles.bottonButtons}
+            >
               Send to kitchen
             </button>
           </section>
-        </div>
+        </form>
       </section>
     </>
   );
