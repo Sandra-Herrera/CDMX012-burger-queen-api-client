@@ -159,33 +159,6 @@
       }
     },
     {
-      "product": "Scrambled eggs",
-      "qty": 2,
-      "table": "1",
-      "dateCreated": "2022-06-08T07:44:06.300Z",
-      "dateDone": "2022-06-09T23:21:48.273Z",
-      "id": "4PB1BJ0",
-      "time": {
-        "ms": 59,
-        "s": 3,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "dateCreated": "2022-06-08T17:59:14.640Z",
-      "dateDone": "2022-06-09T22:46:12.557Z",
-      "id": "iCBPlBc",
-      "time": {
-        "ms": 15,
-        "s": 3,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
       "product": "Chicken baguette",
       "qty": 1,
       "dateCreated": "2022-06-08T17:59:14.640Z",
