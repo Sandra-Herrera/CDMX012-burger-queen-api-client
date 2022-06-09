@@ -14,8 +14,6 @@ const NewOrder = () => {
       register,
       handleSubmit,
       formState: { errors },
-      // getValues,
-      // setError,
     } = useForm();
 
   const minusProducts = (product) => (e) => {
@@ -212,7 +210,6 @@ const NewOrder = () => {
             <button className={styles.bottonButtons}>Orders ready</button>
             <button
               type="submit"
-              // onClick={sendToKitchen()}
               className={styles.bottonButtons}
             >
               Send to kitchen

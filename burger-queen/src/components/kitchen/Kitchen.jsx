@@ -1,18 +1,16 @@
 import React, { useState, useEffect, useContext } from "react";
 import styles from "./kitchen.module.css";
-// import imgRestaurant from "../../img/imgRestaurant.png";
 import backIcon from "../../img/backIcon.png";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../database/UserProvider";
 import logOutIcon from "../../img/logOutIcon.png";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
-// import Chronometer from "../chronometer/Chronometer";
+
 
 const Kitchen = () => {
   const navigate = useNavigate();
   const [chosenProduct, setChosenProduct] = useState([]);
   const [check, setCheck] = useState(false);
-  // const [timer, setTimer] = useState();
   const { logOut } = useContext(UserContext);
 
   const handleClickLogout = async () => {
