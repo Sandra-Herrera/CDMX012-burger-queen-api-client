@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import styles from "./chronometer.module.css";
 
 // function Chronometer(props) {
-function Chronometer() {
+function Chronometer(props) {
   const [time, setTime] = useState({ ms: 0, s: 0, m: 0, h: 0 });
   const [interv, setInterv] = useState();
   const [status, setStatus] = useState(0);
+  const { setSaveTime } = props;
   // const { setStopTimer} = props;
   // Not started = 0
   // started = 1
@@ -43,6 +44,7 @@ function Chronometer() {
   const stop = () => {
     clearInterval(interv);
     setStatus(2);
+    setSaveTime(time);
   };
 
   // setStopTimer(stop())
@@ -89,6 +91,7 @@ function Chronometer() {
 
 export default Chronometer;
 
-// Chronometer.propTypes = {
-//   setStopTimer: PropTypes.func,
-//   };
+Chronometer.propTypes = {
+ setSaveTime: PropTypes.func,
+ setStopTimer: PropTypes.func,
+};

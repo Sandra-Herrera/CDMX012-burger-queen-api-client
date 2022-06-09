@@ -135,8 +135,14 @@
       "qty": 3,
       "table": "6",
       "dateCreated": "2022-06-08T07:31:54.152Z",
-      "dateDone": "",
-      "id": "vW_iEtO"
+      "dateDone": "2022-06-09T22:29:40.935Z",
+      "id": "vW_iEtO",
+      "time": {
+        "ms": 83,
+        "s": 1,
+        "m": 0,
+        "h": 0
+      }
     },
     {
       "product": "Mineral water 100 mL",
@@ -151,22 +157,40 @@
       "qty": 2,
       "table": "1",
       "dateCreated": "2022-06-08T07:44:06.300Z",
-      "dateDone": "",
-      "id": "4PB1BJ0"
+      "dateDone": "2022-06-09T23:21:48.273Z",
+      "id": "4PB1BJ0",
+      "time": {
+        "ms": 59,
+        "s": 3,
+        "m": 0,
+        "h": 0
+      }
     },
     {
       "product": "Pasta bolognese",
       "qty": 1,
       "dateCreated": "2022-06-08T17:59:14.640Z",
-      "dateDone": "",
-      "id": "iCBPlBc"
+      "dateDone": "2022-06-09T22:46:12.557Z",
+      "id": "iCBPlBc",
+      "time": {
+        "ms": 15,
+        "s": 3,
+        "m": 0,
+        "h": 0
+      }
     },
     {
       "product": "Chicken baguette",
       "qty": 1,
       "dateCreated": "2022-06-08T17:59:14.640Z",
-      "dateDone": "",
-      "id": "X2736kC"
+      "dateDone": "2022-06-09T22:43:01.617Z",
+      "id": "X2736kC",
+      "time": {
+        "ms": 60,
+        "s": 3,
+        "m": 0,
+        "h": 0
+      }
     }
   ]
 }
