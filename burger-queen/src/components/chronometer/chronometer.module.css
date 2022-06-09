@@ -1,19 +1,26 @@
 .chronometer{
+    background-color: darksalmon;
+    border-color: rgb(230, 127, 93);
+    /* font-weight: bold; */
+    border-radius: 5px;
+  }
+
+  .chronometer:hover{
+    background-color: coral;
+  }
+
+  .timeAndStop{
     display: flex;
-    justify-content: center;
-    /* flex-direction: column; */
-    flex-direction: row;
-}
+    flex-direction: column;
+    align-items: center;
+  }
 
-.timer{
-    text-align: center;
-    color: black;
-    /* text-shadow: 3px 1px #d22d65; */
-    font-size: 50px;
-}
+  .time{
+    font-weight: bold;
+  }
 
-.stop{
-    align-content: center;
-    width: 40px;
-    height: 30px;
-}
+  .stopwatch{
+    background-color: rgb(163, 62, 62);
+    border-color: brown;
+    border-radius: 5px;
+  }

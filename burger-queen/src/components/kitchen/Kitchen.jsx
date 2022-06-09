@@ -5,12 +5,14 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../database/UserProvider";
 import logOutIcon from "../../img/logOutIcon.png";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
-
+import Chronometer from "../chronometer/Chronometer";
 
 const Kitchen = () => {
   const navigate = useNavigate();
   const [chosenProduct, setChosenProduct] = useState([]);
   const [check, setCheck] = useState(false);
+  const [saveTime, setSaveTime] = useState();
+  // const [stopTimer, setStopTimer] = useState();
   const { logOut } = useContext(UserContext);
 
   const handleClickLogout = async () => {
@@ -51,10 +53,13 @@ const Kitchen = () => {
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify({ dateDone: new Date().toISOString() }),
+      body: JSON.stringify({
+        dateDone: new Date().toISOString(),
+        time: saveTime,
+      }),
     })
       .then((response) => {
-        console.log(response.status);
+        // console.log(response.status);
         return response.json();
       })
       .then((data) => console.log(data));
@@ -63,6 +68,7 @@ const Kitchen = () => {
   const redirectHome = () => {
     navigate("/home");
   };
+  console.log(saveTime);
 
   const handleChange = (position, chosenProd) => async () => {
     saveDate(chosenProd);
@@ -71,6 +77,7 @@ const Kitchen = () => {
     });
     console.log(updatedCheckedState);
     setCheck(updatedCheckedState);
+    //stopTimer
   };
 
   return (
@@ -93,9 +100,6 @@ const Kitchen = () => {
         </button>
       </div>
 
-      {/* <section><Chronometer  setTimer={setTimer}/></section>
-          {console.log(timer)} */}
-
       <section>
         <div className={styles.productsTable}>
           <div>
@@ -109,29 +113,28 @@ const Kitchen = () => {
             <div className={styles.headerTable}>Order check</div>
           </div>
           <div className={styles.scrollKitchen}>
-          {chosenProduct.map((chosenProd, index) => {
-            return (
-              <div key={chosenProd.id} className={styles.containerItems}>
-                <div className={styles.itemAlignStart}>
-                  {chosenProd.product}
+            {chosenProduct.map((chosenProd, index) => {
+              return (
+                <div key={chosenProd.id} className={styles.containerItems}>
+                  <div className={styles.itemAlignStart}>
+                    {chosenProd.product}
+                  </div>
+                  <div className={styles.itemTable}>{chosenProd.qty}</div>
+                  <div className={styles.itemTable}>{chosenProd.table}</div>
+                  <div className={styles.itemTable}>{<Chronometer setSaveTime={setSaveTime}/>}</div>
+                  <div className={styles.itemTable}>
+                    <input
+                      type="checkbox"
+                      value="check"
+                      onChange={handleChange(index, chosenProd)}
+                      checked={check[index]}
+                      className={styles.checkbox}
+                      disabled={check[index]}
+                    />
+                  </div>
                 </div>
-                <div className={styles.itemTable}>{chosenProd.qty}</div>
-                <div className={styles.itemTable}>{chosenProd.table}</div>
-                <div className={styles.itemTable}>{}</div>
-                <div className={styles.itemTable}>
-                  <input
-                    type="checkbox"
-                    value="check"
-                    onChange={handleChange(index, chosenProd)}
-                    checked={check[index]}
-                    className={styles.checkbox}
-                    disabled={check[index]}
-                    //onClick={saveDate(chosenProd)}
-                  />
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
           </div>
         </div>
       </section>

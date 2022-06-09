@@ -103,7 +103,7 @@
       "qty": 1,
       "table": "4",
       "dateCreated": "2022-06-08T03:41:52.903Z",
-      "dateDone": "",
+      "dateDone": "2022-06-08T18:18:45.084Z",
       "id": "hqm_17a"
     },
     {
@@ -111,7 +111,7 @@
       "qty": 1,
       "table": "3",
       "dateCreated": "2022-06-08T03:41:52.903Z",
-      "dateDone": "",
+      "dateDone": "2022-06-08T18:36:16.848Z",
       "id": "BAlbVt-"
     },
     {
@@ -119,7 +119,7 @@
       "qty": 1,
       "table": "6",
       "dateCreated": "2022-06-08T07:31:54.152Z",
-      "dateDone": "",
+      "dateDone": "2022-06-08T18:45:25.143Z",
       "id": "XVdsH1V"
     },
     {
@@ -127,7 +127,7 @@
       "qty": 4,
       "table": "6",
       "dateCreated": "2022-06-08T07:31:54.152Z",
-      "dateDone": "",
+      "dateDone": "2022-06-08T18:41:15.870Z",
       "id": "oQriAYf"
     },
     {
@@ -135,223 +135,41 @@
       "qty": 3,
       "table": "6",
       "dateCreated": "2022-06-08T07:31:54.152Z",
-      "dateDone": "",
-      "id": "vW_iEtO"
+      "dateDone": "2022-06-09T22:29:40.935Z",
+      "id": "vW_iEtO",
+      "time": {
+        "ms": 83,
+        "s": 1,
+        "m": 0,
+        "h": 0
+      }
     },
     {
       "product": "Mineral water 100 mL",
       "qty": 2,
       "table": "6",
       "dateCreated": "2022-06-08T07:31:54.152Z",
-      "dateDone": "",
-      "id": "3MBLIM0"
-    },
-    {
-      "product": "Scrambled eggs",
-      "qty": 2,
-      "table": "1",
-      "dateCreated": "2022-06-08T07:44:06.300Z",
-      "dateDone": "",
-      "id": "4PB1BJ0"
-    },
-    {
-      "product": "Red velvet cake",
-      "qty": 5,
-      "table": "4",
-      "dateCreated": "2022-06-09T00:23:42.688Z",
-      "dateDone": "",
-      "id": "rFouOAP"
+      "dateDone": "2022-06-09T23:27:16.108Z",
+      "id": "3MBLIM0",
+      "time": {
+        "ms": 52,
+        "s": 1,
+        "m": 0,
+        "h": 0
+      }
     },
     {
       "product": "Chicken baguette",
       "qty": 1,
-      "dateCreated": "2022-06-09T01:34:42.199Z",
-      "dateDone": "",
-      "id": "NjS3fwC"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "dateCreated": "2022-06-09T01:34:42.200Z",
-      "dateDone": "",
-      "id": "QpTYRnW"
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "dateCreated": "2022-06-09T01:35:23.673Z",
-      "dateDone": "",
-      "id": "EPaDl_R"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "dateCreated": "2022-06-09T01:35:23.674Z",
-      "dateDone": "",
-      "id": "LVKRwNf"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "dateCreated": "2022-06-09T01:42:05.365Z",
-      "dateDone": "",
-      "id": "6p_EE1d"
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "dateCreated": "2022-06-09T01:42:05.365Z",
-      "dateDone": "",
-      "id": "A51uM0H"
-    },
-    {
-      "product": "Pepperoni pizza",
-      "qty": 1,
-      "dateCreated": "2022-06-09T01:42:05.365Z",
-      "dateDone": "",
-      "id": "TJps41z"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "dateCreated": "2022-06-09T01:46:41.203Z",
-      "dateDone": "",
-      "id": "zQ29v9D"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 2,
-      "table": "1",
-      "dateCreated": "2022-06-09T01:46:57.854Z",
-      "dateDone": "",
-      "id": "QeNCoKR"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 3,
-      "table": "1",
-      "dateCreated": "2022-06-09T01:47:36.738Z",
-      "dateDone": "",
-      "id": "4kXgQyY"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 2,
-      "dateCreated": "2022-06-09T01:49:52.881Z",
-      "dateDone": "",
-      "id": "tuze2gs"
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "dateCreated": "2022-06-09T01:49:52.881Z",
-      "dateDone": "",
-      "id": "OmTcy_v"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 2,
-      "table": "1",
-      "dateCreated": "2022-06-09T01:50:16.470Z",
-      "dateDone": "",
-      "id": "tOiyRF-"
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "table": "1",
-      "dateCreated": "2022-06-09T01:50:16.470Z",
-      "dateDone": "",
-      "id": "HUyFBgN"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 2,
-      "table": "1",
-      "dateCreated": "2022-06-09T01:50:22.872Z",
-      "dateDone": "",
-      "id": "nLAjdEs"
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "table": "1",
-      "dateCreated": "2022-06-09T01:50:22.872Z",
-      "dateDone": "",
-      "id": "ijySrNZ"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "dateCreated": "2022-06-09T01:52:40.083Z",
-      "dateDone": "",
-      "id": "6OmRWJd"
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "dateCreated": "2022-06-09T01:52:40.083Z",
-      "dateDone": "",
-      "id": "xw9Dbuw"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 3,
-      "dateCreated": "2022-06-09T01:53:06.214Z",
-      "dateDone": "",
-      "id": "KEj0IIc"
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "dateCreated": "2022-06-09T01:53:06.214Z",
-      "dateDone": "",
-      "id": "q9d6P3w"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 3,
-      "table": "1",
-      "dateCreated": "2022-06-09T01:54:48.909Z",
-      "dateDone": "",
-      "id": "MSHmrIQ"
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "table": "1",
-      "dateCreated": "2022-06-09T01:54:48.909Z",
-      "dateDone": "",
-      "id": "MRAxPZg"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "dateCreated": "2022-06-09T02:03:24.926Z",
-      "dateDone": "",
-      "id": "EmYwGI_"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "table": "1",
-      "dateCreated": "2022-06-09T02:03:26.690Z",
-      "dateDone": "",
-      "id": "HLQDvvF"
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "dateCreated": "2022-06-09T02:03:50.285Z",
-      "dateDone": "",
-      "id": "zUrza_u"
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "dateCreated": "2022-06-09T02:03:50.285Z",
-      "dateDone": "",
-      "id": "scOT7TI"
+      "dateCreated": "2022-06-08T17:59:14.640Z",
+      "dateDone": "2022-06-09T22:43:01.617Z",
+      "id": "X2736kC",
+      "time": {
+        "ms": 60,
+        "s": 3,
+        "m": 0,
+        "h": 0
+      }
     }
   ]
 }
