@@ -121,7 +121,7 @@ const Kitchen = () => {
                   </div>
                   <div className={styles.itemTable}>{chosenProd.qty}</div>
                   <div className={styles.itemTable}>{chosenProd.table}</div>
-                  <div className={styles.itemTable}>{<Chronometer setSaveTime={setSaveTime}/>}</div>
+                  <div className={styles.itemTable}>{<Chronometer timeFromChosenProd={{ms:chosenProd?.time?.ms, s: chosenProd?.time?.s, m: chosenProd?.time?.m, h:chosenProd?.time?.h}} isStopped={check[index]} setSaveTime={setSaveTime}/>}</div>
                   <div className={styles.itemTable}>
                     <input
                       type="checkbox"

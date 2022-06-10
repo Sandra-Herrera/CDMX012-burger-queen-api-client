@@ -129,7 +129,7 @@ const NewOrder = () => {
                   {...register("table", {
                     required: {
                       value: true,
-                      message: "This field is required",
+                      message: "Required",
                     },
                   })}
                 >

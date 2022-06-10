@@ -192,5 +192,6 @@ hr{
     display: flex;
     color: red;
     justify-content: center;
-    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 20px;
 }
