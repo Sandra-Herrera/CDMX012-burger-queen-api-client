@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { useContext } from "react";
+// import { useContext } from "react";
 import { UserContext } from "../../database/UserProvider";
 import { updateProfile } from "firebase/auth";
 import { auth } from "../../database/firebase-config";
@@ -10,6 +10,7 @@ import imgHeaderInto from "../../img/imgHeaderInto.png";
 import backIcon from "../../img/backIcon.png";
 
 const Signup = () => {
+  // const [team, setTeam] = useState({});
   const { createUser } = useContext(UserContext);
   const navigate = useNavigate();
 
@@ -22,6 +23,7 @@ const Signup = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
+    // setTeam(data)
     try {
       await createUser(data.email, data.password, data.username, data.rol);
 
@@ -29,6 +31,7 @@ const Signup = () => {
         displayName: data.username,
         photoURL: data.rol,
       });
+      saveEmployee(data)
     } catch (error) {
       console.log(error.code);
       switch (error.code) {
@@ -42,9 +45,51 @@ const Signup = () => {
       }
     }
   };
+  // console.log(team)
 
-  const redirectHome = () => {
-    navigate("/home");
+  const redirectTeam = () => {
+    navigate("/team");
+  };
+
+
+
+  // const [employees, setEmployee] = useState([]);
+
+  // const getAllTeam = () => {
+  //   fetch("http://localhost:3004/team")
+  //     .then((response) => response.json())
+  //     .then((employee) => setEmployee(employee));
+  // };
+
+  // useEffect(() => {
+  //   getAllTeam();
+  // }, []);
+
+  const saveEmployee = (dataTeam) => {
+    // let sendEmployee = employees.map(() =>
+     let employee =  Object.assign(
+        {},
+        {
+          email: dataTeam.email,
+          name: dataTeam.username,
+          role: dataTeam.rol,
+          password: dataTeam.password,
+        }
+      )
+    // );
+    // sendEmployee.forEach((employee) => {
+      fetch("http://localhost:3004/team", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(employee),
+      })
+        .then((response) => response.json())
+        .then((addedEmployee) => {
+          console.log(addedEmployee);
+        });
+    // });
   };
 
   return (
@@ -55,7 +100,7 @@ const Signup = () => {
           className={styles.imgRest}
           src={imgHeaderInto}
         />
-        <button className={styles.backButton} onClick={redirectHome}>
+        <button className={styles.backButton} onClick={redirectTeam}>
           <img alt="iconBack" className={styles.imgBack} src={backIcon} />
         </button>
       </div>

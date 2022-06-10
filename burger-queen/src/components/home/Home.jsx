@@ -29,14 +29,14 @@ const Home = () => {
 
   const redirectKitchen = () => {
     navigate("/kitchen");
-  }
+  };
 
   const redirectProduct = () => {
     navigate("/products");
   };
 
-  const redirectSignup = () => {
-    navigate("/signup");
+  const redirectTeam = () => {
+    navigate("/team");
   };
 
   const redirectOrder = () => {
@@ -87,7 +87,7 @@ const Home = () => {
                 src={productsIcon}
               />
             </button>
-            <button className={styles.welcomeButtons} onClick={redirectSignup}>
+            <button className={styles.welcomeButtons} onClick={redirectTeam}>
               Team
               <img
                 alt="imageTeam"

@@ -68,7 +68,6 @@ const Kitchen = () => {
   const redirectHome = () => {
     navigate("/home");
   };
-  console.log(saveTime);
 
   const handleChange = (position, chosenProd) => async () => {
     saveDate(chosenProd);
@@ -121,7 +120,9 @@ const Kitchen = () => {
                   </div>
                   <div className={styles.itemTable}>{chosenProd.qty}</div>
                   <div className={styles.itemTable}>{chosenProd.table}</div>
-                  <div className={styles.itemTable}>{<Chronometer setSaveTime={setSaveTime}/>}</div>
+                  <div className={styles.itemTable}>
+                    {<Chronometer setSaveTime={setSaveTime} />}
+                  </div>
                   <div className={styles.itemTable}>
                     <input
                       type="checkbox"
