@@ -1,17 +1,30 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./chronometer.module.css";
+import { useEffect } from "react";
 
 function Chronometer(props) {
   const [time, setTime] = useState({ ms: 0, s: 0, m: 0, h: 0 });
   const [interv, setInterv] = useState();
   const [status, setStatus] = useState(0);
-  const { setSaveTime } = props;
+  const { isStopped ,setSaveTime } = props;
   // const { setStopTimer} = props;
   // Not started = 0
   // started = 1
   // stopped = 2
+  useEffect(() => {
+    if(!isStopped){
+      start();
+    }else{
+      setTime(props.timeFromChosenProd);
+    }
+  }, []);
 
+  useEffect(() => {
+    stop();
+  }, [isStopped]);
+
+  
   const start = () => {
     run();
     setStatus(1);
@@ -91,6 +104,8 @@ function Chronometer(props) {
 export default Chronometer;
 
 Chronometer.propTypes = {
+ isStopped: PropTypes.bool,
+ timeFromChosenProd: PropTypes.object
   setSaveTime: PropTypes.func,
   //  setStopTimer: PropTypes.func,
 };
