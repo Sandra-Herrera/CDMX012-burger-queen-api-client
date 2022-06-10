@@ -104,8 +104,8 @@ function Chronometer(props) {
 export default Chronometer;
 
 Chronometer.propTypes = {
- setSaveTime: PropTypes.func,
  isStopped: PropTypes.bool,
  timeFromChosenProd: PropTypes.object
-//  setStopTimer: PropTypes.func,
+  setSaveTime: PropTypes.func,
+  //  setStopTimer: PropTypes.func,
 };

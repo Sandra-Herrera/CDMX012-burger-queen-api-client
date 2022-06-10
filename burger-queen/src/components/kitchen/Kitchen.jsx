@@ -68,7 +68,6 @@ const Kitchen = () => {
   const redirectHome = () => {
     navigate("/home");
   };
-  console.log(saveTime);
 
   const handleChange = (position, chosenProd) => async () => {
     saveDate(chosenProd);

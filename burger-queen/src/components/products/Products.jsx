@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "./products.module.css";
 import imgDelete from "../../img/imgDelete.png";
 import imgEdit from "../../img/imgEdit.png";
 import addIcon from "../../img/addIcon.png";
-import backIcon from "../../img/backIcon.png";
 import { Popup } from "../popup/Popup";
-import imgHeaderInto from "../../img/imgHeaderInto.png";
+import Header from "../header/Header";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [modalDelete, setModalDelete] = useState(false);
   const [idDeletedProduct, setIdDeletedProduct] = useState("");
-  const navigate = useNavigate();
 
   const getAllProduct = () => {
     fetch("http://localhost:3004/Products")
@@ -59,10 +56,6 @@ const Products = () => {
     setPopup({ visibility: false });
   };
 
-  const redirectHome = () => {
-    navigate("/home");
-  };
-
   return (
     <>
       <Popup
@@ -70,16 +63,9 @@ const Products = () => {
         visible={objPopup.visibility}
         attrProduct={objPopup.popupProduct}
       ></Popup>
-      <div className={styles.headerImg}>
-        <img
-          alt="imagen header"
-          className={styles.imgRest}
-          src={imgHeaderInto}
-        />
-        <button className={styles.backButton} onClick={redirectHome}>
-          <img alt="iconBack" className={styles.imgBack} src={backIcon} />
-        </button>
-      </div>
+
+      <Header />
+
       <section>
         <div className={styles.productsTable}>
           <div>
@@ -102,37 +88,37 @@ const Products = () => {
             <div className={styles.headerTable}>Delete</div>
           </div>
           <div className={styles.scrollProduct}>
-          {products.map((product) => {
-            return (
-              <div key={product.id} className={styles.containerItems}>
-                <div className={styles.itemAlignStart}>{product.name}</div>
-                <div className={styles.itemTable}>{product.price}</div>
-                <div className={styles.itemTable}>{product.category}</div>
-                <div className={styles.itemTable}>
-                  <button className={styles.btnEditAndDelete}>
-                    <img
-                      alt="imgEdit"
-                      className={styles.imgEdit}
-                      src={imgEdit}
-                      onClick={() => editProducts(product)}
-                    ></img>
-                  </button>
+            {products.map((product) => {
+              return (
+                <div key={product.id} className={styles.containerItems}>
+                  <div className={styles.itemAlignStart}>{product.name}</div>
+                  <div className={styles.itemTable}>{product.price}</div>
+                  <div className={styles.itemTable}>{product.category}</div>
+                  <div className={styles.itemTable}>
+                    <button className={styles.btnEditAndDelete}>
+                      <img
+                        alt="imgEdit"
+                        className={styles.imgEdit}
+                        src={imgEdit}
+                        onClick={() => editProducts(product)}
+                      ></img>
+                    </button>
+                  </div>
+                  <div className={styles.itemTable}>
+                    <button
+                      className={styles.btnEditAndDelete}
+                      onClick={() => deleteMeal(product)}
+                    >
+                      <img
+                        alt="imgDelete"
+                        className={styles.imgDelete}
+                        src={imgDelete}
+                      ></img>
+                    </button>
+                  </div>
                 </div>
-                <div className={styles.itemTable}>
-                  <button
-                    className={styles.btnEditAndDelete}
-                    onClick={() => deleteMeal(product)}
-                  >
-                    <img
-                      alt="imgDelete"
-                      className={styles.imgDelete}
-                      src={imgDelete}
-                    ></img>
-                  </button>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
           </div>
         </div>
       </section>
