@@ -49,8 +49,7 @@ const Products = () => {
   };
 
   const onAdd = () => {
-    let popupProduct={};
-    setPopup({ visibility: true, popupProduct });
+    setPopup({ visibility: true });
   };
   const onClickHide = () => {
     getAllProduct();
