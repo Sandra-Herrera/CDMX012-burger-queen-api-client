@@ -7,7 +7,7 @@ function Chronometer(props) {
   const [time, setTime] = useState({ ms: 0, s: 0, m: 0, h: 0 });
   const [interv, setInterv] = useState();
   const [status, setStatus] = useState(0);
-  const { isStopped ,setSaveTime } = props;
+  const { isStopped , saveDate, chosenProd } = props;
   // const { setStopTimer} = props;
   // Not started = 0
   // started = 1
@@ -22,6 +22,9 @@ function Chronometer(props) {
 
   useEffect(() => {
     stop();
+    if(isStopped && !chosenProd.dateDone){
+      saveDate({...chosenProd,time:time});
+    }
   }, [isStopped]);
 
   
@@ -56,7 +59,6 @@ function Chronometer(props) {
   const stop = () => {
     clearInterval(interv);
     setStatus(2);
-    setSaveTime(time);
   };
 
   // setStopTimer(stop())
@@ -104,8 +106,10 @@ function Chronometer(props) {
 export default Chronometer;
 
 Chronometer.propTypes = {
- isStopped: PropTypes.bool,
- timeFromChosenProd: PropTypes.object
   setSaveTime: PropTypes.func,
+  isStopped: PropTypes.bool,
+  timeFromChosenProd: PropTypes.object,
+  saveDate: PropTypes.func,
+  chosenProd: PropTypes.object
   //  setStopTimer: PropTypes.func,
 };
