@@ -86,7 +86,7 @@ function Chronometer(props) {
       <div className={styles.timeAndStop}>
         {status != 0 && (
           <div className={styles.time}>
-            {h()}&nbsp;&nbsp;
+            {h()}&nbsp;:&nbsp;
             <span>{time.m >= 10 ? time.m : "0" + time.m}</span>&nbsp;:&nbsp;
             <span>{time.s >= 10 ? time.s : "0" + time.s}</span>&nbsp;:&nbsp;
             <span>{time.ms >= 10 ? time.ms : "0" + time.ms}</span>
