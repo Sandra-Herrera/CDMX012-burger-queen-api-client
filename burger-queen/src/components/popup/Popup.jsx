@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from "./popup.module.css";
 import PropTypes from "prop-types";
+import { useForm } from "react-hook-form";
 
 Popup.propTypes = {
   attrProduct: PropTypes.object,
@@ -11,19 +12,30 @@ Popup.propTypes = {
 export function Popup(props) {
   const { attrProduct } = props;
 
-  const [inputsModal, setInputsModal] = useState(attrProduct);
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm();
+
   useEffect(() => {
-    setInputsModal(attrProduct);
+    setValue("productName", attrProduct?.name);
+    setValue("price", attrProduct?.price);
+    setValue("category", attrProduct?.category);
   }, [attrProduct]);
 
-  const areaEditChange = (e) => {
-    const { id, value } = e.target;
-    const newValue = { ...inputsModal, [id]: value };
-    setInputsModal(newValue);
+  // const areaEditChange = (e) => {
+  //   const { id, value } = e.target;
+  //   const newValue = { ...inputsModal, [id]: value };
+  //   setInputsModal(newValue);
+  // };
+
+  const onSubmit = async (data) => {
+    saveProduct({...attrProduct, name:data.productName,price:data.price,category:data.category});
   };
 
-  const saveProduct = (product) => async (e) => {
-    e.preventDefault();
+  const saveProduct = (product) => {
     if (product && product.id) {
       // Hacer PUT
       fetch(`http://localhost:3004/Products/${product.id}`, {
@@ -32,7 +44,7 @@ export function Popup(props) {
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify(inputsModal),
+        body: JSON.stringify(product),
       })
         .then((response) => response.json())
         .then((addedProduct) => {
@@ -41,7 +53,6 @@ export function Popup(props) {
         });
     } else {
       // Hacer POST
-      product = inputsModal;
       fetch("http://localhost:3004/Products", {
         method: "POST",
         headers: {
@@ -67,44 +78,62 @@ export function Popup(props) {
             &times;
           </span>
           <section className={styles.titleModal}>Product</section>
-          <section className={styles.AllInputs}>
-            <input
-              className={styles.inputModal}
-              id="name"
-              onChange={areaEditChange}
-              placeholder="Product Name"
-              defaultValue={props.attrProduct?.name}
-            ></input>
-            <input
-              className={styles.inputModal}
-              id="price"
-              onChange={areaEditChange}
-              placeholder="Price"
-              defaultValue={props.attrProduct?.price}
-            ></input>
-            <select
-              className={styles.selectModal}
-              id="category"
-              onChange={areaEditChange}
-              defaultValue={props.attrProduct?.category}
-            >
-              <option value="">Category</option>
-              <option value="Breakfast">Breakfast</option>
-              <option value="Lunch/Dinner">Lunch/Dinner</option>
-            </select>
-          </section>
-          <section className={styles.areaSaveButton}>
-            <button
-              className={styles.saveEditButton}
-              onClick={saveProduct(props.attrProduct)}
-            >
-              Save
-            </button>
-          </section>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <section className={styles.AllInputs}>
+              <input
+                type={"text"}
+                className={styles.inputModal}
+                id="name"
+                placeholder="Product Name"
+                {...register("productName", {
+                  required: {
+                    value: true,
+                    message: "Required",
+                  },
+                })}
+              ></input>
+              {errors.productName && <p className={styles.errorMessage}>{errors.productName.message}</p>}
+              <input
+                type={"text"}
+                className={styles.inputModal}
+                id="price"
+                placeholder="Price"
+                {...register("price", {
+                  defaultValue: props.attrProduct?.name,
+                  required: {
+                    value: true,
+                    message: "Required",
+                  },
+                })}
+              ></input>
+              {errors.price && <p className={styles.errorMessage}>{errors.price.message}</p>}
+              <select
+                className={styles.selectModal}
+                id="category"
+                {...register("category", {
+                  required: {
+                    value: true,
+                    message: "Required",
+                  },
+                })}
+              >
+                <option value="">Category</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch/Dinner">Lunch/Dinner</option>
+              </select>
+              {errors.category && <p className={styles.errorMessage}>{errors.category.message}</p>}
+            </section>
+            <section className={styles.areaSaveButton}>
+              <button
+                type="submit"
+                className={styles.saveEditButton}
+              >
+                Save
+              </button>
+            </section>
+          </form>
         </div>
       </div>
     </>
   ) : null;
 }
-
-
