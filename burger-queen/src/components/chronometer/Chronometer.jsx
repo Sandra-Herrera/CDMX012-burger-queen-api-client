@@ -34,26 +34,36 @@ function Chronometer(props) {
     setInterv(setInterval(run, 10));
   };
 
-  var updatedMs = time.ms,
-    updatedS = time.s,
-    updatedM = time.m,
-    updatedH = time.h;
+  // var updatedMs = time.ms,
+  //   updatedS = time.s,
+  //   updatedM = time.m,
+  //   updatedH = time.h;
 
+  const formatZero = (t) => (t<10 ? '0':'') + t;
   const run = () => {
-    if (updatedM === 60) {
-      updatedH++;
-      updatedM = 0;
-    }
-    if (updatedS === 60) {
-      updatedM++;
-      updatedS = 0;
-    }
-    if (updatedMs === 100) {
-      updatedS++;
-      updatedMs = 0;
-    }
-    updatedMs++;
-    return setTime({ ms: updatedMs, s: updatedS, m: updatedM, h: updatedH });
+    let dCreate = new Date(chosenProd.dateCreated)
+    let dDone = new Date();
+    let secs = (dDone-dCreate)/(1000);
+
+    let H=(secs/3600 |0);
+    let M=parseInt(formatZero((secs%3600) / 60 |0)) 
+    let S=parseInt(formatZero((secs%60) | 0))
+    let MS= (secs*1000) - (H*3600*1000) - (M*60*1000) - (S*1000)
+    //console.log(`${H}:${M}:${S}:${MS}`);
+    // if (updatedM === 60) {
+    //   updatedH++;
+    //   updatedM = 0;
+    // }
+    // if (updatedS === 60) {
+    //   updatedM++;
+    //   updatedS = 0;
+    // }
+    // if (updatedMs === 100) {
+    //   updatedS++;
+    //   updatedMs = 0;
+    // }
+    // updatedMs++;
+    return setTime({ ms: MS, s: S, m:M, h: H });
   };
 
   const stop = () => {

@@ -121,39 +121,39 @@
       "qty": 2,
       "table": "6",
       "dateCreated": "2022-06-07T19:18:09.038Z",
-      "dateDone": "",
+      "dateDone": "2022-06-11T04:51:38.049Z",
       "id": "owZJJrB",
       "time": {
-        "ms": 11,
-        "s": 2,
-        "m": 0,
-        "h": 0
+        "ms": 20,
+        "s": 25,
+        "m": 33,
+        "h": 81
       }
     },
     {
       "product": "Pasta bolognese",
       "qty": 1,
       "dateCreated": "2022-06-10T22:46:48.552Z",
-      "dateDone": "",
+      "dateDone": "2022-06-11T04:52:13.905Z",
       "id": "Y4JRKub",
       "time": {
-        "ms": 83,
-        "s": 40,
-        "m": 41,
-        "h": 0
+        "ms": 771,
+        "s": 21,
+        "m": 5,
+        "h": 6
       }
     },
     {
       "product": "Chicken baguette",
       "qty": 1,
       "dateCreated": "2022-06-10T22:46:48.552Z",
-      "dateDone": "",
+      "dateDone": "2022-06-11T04:52:17.076Z",
       "id": "7usdM-7",
       "time": {
-        "ms": 36,
-        "s": 6,
-        "m": 0,
-        "h": 0
+        "ms": 511,
+        "s": 28,
+        "m": 5,
+        "h": 6
       }
     },
     {
@@ -185,7 +185,7 @@
     {
       "product": "Red velvet cake",
       "qty": 1,
-      "dateCreated": "2022-06-10T22:46:48.552Z",
+      "dateCreated": "2022-06-10T23:46:48.552Z",
       "dateDone": "",
       "id": "taE9-ct",
       "time": {
@@ -233,6 +233,20 @@
         "m": 0,
         "h": 0
       }
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 1,
+      "dateCreated": "2022-06-11T04:54:12.704Z",
+      "dateDone": "",
+      "id": "qz0UACs"
+    },
+    {
+      "product": "Chicken baguette",
+      "qty": 1,
+      "dateCreated": "2022-06-11T04:54:12.704Z",
+      "dateDone": "",
+      "id": "-di2WfN"
     }
   ],
   "team": [
