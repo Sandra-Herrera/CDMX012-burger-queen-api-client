@@ -46,9 +46,9 @@ function Chronometer(props) {
     let secs = (dDone-dCreate)/(1000);
 
     let H=(secs/3600 |0);
-    let M=parseInt(formatZero((secs%3600) / 60 |0)) 
-    let S=parseInt(formatZero((secs%60) | 0))
-    let MS= (secs*1000) - (H*3600*1000) - (M*60*1000) - (S*1000)
+    let M=parseInt(formatZero((secs%3600) / 60 |0));
+    let S=parseInt(formatZero((secs%60) | 0));
+    let MS= parseInt((secs*1000) - (H*3600*1000) - (M*60*1000) - (S*1000));
     //console.log(`${H}:${M}:${S}:${MS}`);
     // if (updatedM === 60) {
     //   updatedH++;
