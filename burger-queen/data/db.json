@@ -160,13 +160,13 @@
       "product": "Pepperoni pizza",
       "qty": 1,
       "dateCreated": "2022-06-10T22:46:48.552Z",
-      "dateDone": "",
+      "dateDone": "2022-06-11T09:10:35.146Z",
       "id": "PCDPBdw",
       "time": {
-        "ms": 98,
-        "s": 2,
-        "m": 0,
-        "h": 0
+        "ms": 584,
+        "s": 46,
+        "m": 23,
+        "h": 10
       }
     },
     {
