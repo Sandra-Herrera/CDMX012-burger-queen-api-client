@@ -11,7 +11,7 @@ const Kitchen = () => {
   const navigate = useNavigate();
   const [chosenProduct, setChosenProduct] = useState([]);
   const [check, setCheck] = useState(false);
-  const [saveTime, setSaveTime] = useState();
+  // const [saveTime, setSaveTime] = useState();
   // const [stopTimer, setStopTimer] = useState();
   const { logOut } = useContext(UserContext);
 
@@ -55,7 +55,7 @@ const Kitchen = () => {
       },
       body: JSON.stringify({
         dateDone: new Date().toISOString(),
-        time: saveTime,
+        time: chosenProd.time,
       }),
     })
       .then((response) => {
@@ -69,8 +69,7 @@ const Kitchen = () => {
     navigate("/home");
   };
 
-  const handleChange = (position, chosenProd) => async () => {
-    saveDate(chosenProd);
+  const handleChange = (position) => async () => {
     const updatedCheckedState = check.map((item, index) => {
       return index === position ? !item : item;
     });
@@ -120,7 +119,7 @@ const Kitchen = () => {
                   </div>
                   <div className={styles.itemTable}>{chosenProd.qty}</div>
                   <div className={styles.itemTable}>{chosenProd.table}</div>
-                  <div className={styles.itemTable}>{<Chronometer timeFromChosenProd={{ms:chosenProd?.time?.ms, s: chosenProd?.time?.s, m: chosenProd?.time?.m, h:chosenProd?.time?.h}} isStopped={check[index]} setSaveTime={setSaveTime}/>}</div>
+                  <div className={styles.itemTable}>{<Chronometer timeFromChosenProd={{ms:chosenProd?.time?.ms, s: chosenProd?.time?.s, m: chosenProd?.time?.m, h:chosenProd?.time?.h}} isStopped={check[index]} saveDate={saveDate} chosenProd={chosenProd}/>}</div>
                   <div className={styles.itemTable}>
                     <input
                       type="checkbox"
