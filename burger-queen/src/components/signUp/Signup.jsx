@@ -22,8 +22,36 @@ const Signup = () => {
     setError,
   } = useForm();
 
+  // const onSubmit = async (data) => {
+  //   // setTeam(data)
+  //   try {
+  //     await createUser(data.email, data.password, data.username, data.rol);
+
+  //     updateProfile(auth.currentUser, {
+  //       displayName: data.username,
+  //       photoURL: data.rol,
+  //     });
+  //     saveEmployee(data)
+  //   } catch (error) {
+  //     console.log(error.code);
+  //     switch (error.code) {
+  //       case "auth/email-already-in-use":
+  //         setError("email", {
+  //           message: "email already in use",
+  //         });
+  //         break;
+  //       default:
+  //         console.log("Ocurrió un error");
+  //     }
+  //   }
+  // };
+  // console.log(team)
+
+  const redirectTeam = () => {
+    navigate("/team");
+  };
+
   const onSubmit = async (data) => {
-    // setTeam(data)
     try {
       await createUser(data.email, data.password, data.username, data.rol);
 
@@ -31,7 +59,36 @@ const Signup = () => {
         displayName: data.username,
         photoURL: data.rol,
       });
-      saveEmployee(data)
+      const user = auth.currentUser;
+      if (user !== null) {
+        const displayName = data.username;
+        const email = user.email;
+        const role = data.rol;
+        const uid = user.uid;
+
+     let employee =  Object.assign(
+      {},
+      {
+        email: email,
+        name: displayName,
+        role: role,
+        password: data.password,
+        uidFirebase: uid,
+      }
+    )
+    fetch("http://localhost:3004/team", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(employee),
+    })
+      .then((response) => response.json())
+      .then((addedEmployee) => {
+        console.log(addedEmployee);
+      });
+    }
+
     } catch (error) {
       console.log(error.code);
       switch (error.code) {
@@ -45,52 +102,29 @@ const Signup = () => {
       }
     }
   };
-  // console.log(team)
 
-  const redirectTeam = () => {
-    navigate("/team");
-  };
-
-
-
-  // const [employees, setEmployee] = useState([]);
-
-  // const getAllTeam = () => {
-  //   fetch("http://localhost:3004/team")
-  //     .then((response) => response.json())
-  //     .then((employee) => setEmployee(employee));
+  // const saveEmployee = (dataTeam) => {
+    //  let employee =  Object.assign(
+    //     {},
+    //     {
+    //       email: dataTeam.email,
+    //       name: dataTeam.username,
+    //       role: dataTeam.rol,
+    //       password: dataTeam.password,
+    //     }
+    //   )
+    //   fetch("http://localhost:3004/team", {
+    //     method: "POST",
+    //     headers: {
+    //       "content-type": "application/json",
+    //     },
+    //     body: JSON.stringify(employee),
+    //   })
+    //     .then((response) => response.json())
+    //     .then((addedEmployee) => {
+    //       console.log(addedEmployee);
+    //     });
   // };
-
-  // useEffect(() => {
-  //   getAllTeam();
-  // }, []);
-
-  const saveEmployee = (dataTeam) => {
-    // let sendEmployee = employees.map(() =>
-     let employee =  Object.assign(
-        {},
-        {
-          email: dataTeam.email,
-          name: dataTeam.username,
-          role: dataTeam.rol,
-          password: dataTeam.password,
-        }
-      )
-    // );
-    // sendEmployee.forEach((employee) => {
-      fetch("http://localhost:3004/team", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(employee),
-      })
-        .then((response) => response.json())
-        .then((addedEmployee) => {
-          console.log(addedEmployee);
-        });
-    // });
-  };
 
   return (
     <>
@@ -195,9 +229,9 @@ const Signup = () => {
             })}
           >
             <option value="">Choose a role</option>
-            <option value="Waiter">Waiter</option>
-            <option value="Kitchen">Kitchen</option>
-            <option value="Administrator">Administrator</option>
+            <option value="waiter">Waiter</option>
+            <option value="kitchen">Kitchen</option>
+            <option value="administrator">Administrator</option>
           </select>
           {errors.rol && <p className={styles.errorMessage}>{errors.rol.message}</p>}
           </div>
