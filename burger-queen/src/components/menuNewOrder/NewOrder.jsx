@@ -72,15 +72,10 @@ const NewOrder = () => {
     );
   };
 
-  const onSubmit = async () => {
-    sendToKitchen();
-  };
-
-  const sendToKitchen = () => {
-    let tableNumber = document.getElementById("inputNumberTable").value;
+  const sendToKitchen = (data) => {
     sendContextOrder(
       order.map((itemOrder) =>
-        Object.assign({}, { ...itemOrder, table: tableNumber })
+        Object.assign({}, { ...itemOrder, table: data.table })
       )
     );
 
@@ -90,7 +85,7 @@ const NewOrder = () => {
         {
           product: itemOrder.name,
           qty: itemOrder.qty,
-          table: itemOrder.table,
+          table: data.table,
           dateCreated: new Date().toISOString(),
           dateDone: "",
         }
@@ -114,7 +109,7 @@ const NewOrder = () => {
   return (
     <>
       <section className={styles.containerNewOrder}>
-        <form className={styles.newOrderSection} onSubmit={handleSubmit(onSubmit)}>
+        <form className={styles.newOrderSection} onSubmit={handleSubmit(sendToKitchen)}>
           <div>
             <div className={styles.titleNewOrder}>NEW ORDER</div>
           </div>

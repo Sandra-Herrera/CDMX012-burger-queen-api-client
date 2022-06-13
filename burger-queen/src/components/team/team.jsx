@@ -1,14 +1,18 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./team.module.css";
-import Header from '../header/Header'
+import Header from "../header/Header";
 import addIcon from "../../img/addIcon.png";
 import imgEdit from "../../img/imgEdit.png";
 import imgDelete from "../../img/imgDelete.png";
+import { EditEmployee } from "../popup/EditEmployee";
 
 const Team = () => {
   const navigate = useNavigate();
   const [team, setTeam] = useState([]);
+  const [objModal, setModal] = useState({ visibility: false });
+  const [modalDelete, setModalDelete] = useState(false);
+  const [idDeletedEmployee, setIdDeletedEmployee] = useState("");
 
   const redirecSignup = () => {
     navigate("/signup");
@@ -24,11 +28,47 @@ const Team = () => {
     getAllTeam();
   }, []);
 
+  const editEmployee = (popupProduct) => {
+    setModal({ visibility: true, popupProduct });
+  };
+
+  const onClickHide = () => {
+    getAllTeam();
+    setModal({ visibility: false });
+  };
+
+  const toggleModalDelete = () => {
+    setModalDelete(!modalDelete);
+  };
+
+  const deletePerson = (id) => {
+    setIdDeletedEmployee(id);
+    toggleModalDelete();
+  };
+
+  const deleteEmployee = (employee) => {
+    fetch(`http://localhost:3004/Team/${employee.id}`, {
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((deletedEmployee) => {
+        console.log(deletedEmployee);
+        getAllTeam();
+      });
+    toggleModalDelete();
+  };
+
   return (
     <>
-    <Header/>
+      <EditEmployee
+        onClickCloseModal={onClickHide}
+        visible={objModal.visibility}
+        attrProduct={objModal.popupProduct}
+      />
 
-    <section>
+      <Header />
+
+      <section>
         <div className={styles.productsTable}>
           <div>
             <div className={styles.titleTable}>
@@ -54,24 +94,36 @@ const Team = () => {
             {team.map((employee) => {
               return (
                 <div key={employee.id} className={styles.containerItems}>
-                  <div className={styles.itemAlignStart}> <p className={styles.text}>{employee.email}</p> </div>
-                  <div className={styles.itemTable}> <p className={styles.text}>{employee.name}</p> </div>
-                  <div className={styles.itemTable}> <p>{employee.role}</p> </div>
-                  <div className={styles.itemTable}> <p className={styles.text}>{employee.password}</p> </div>
+                  <div className={styles.itemAlignStart}>
+                    {" "}
+                    <p className={styles.text}>{employee.email}</p>{" "}
+                  </div>
+                  <div className={styles.itemTable}>
+                    {" "}
+                    <p className={styles.text}>{employee.name}</p>{" "}
+                  </div>
+                  <div className={styles.itemTable}>
+                    {" "}
+                    <p>{employee.role}</p>{" "}
+                  </div>
+                  <div className={styles.itemTable}>
+                    {" "}
+                    <p className={styles.text}>{employee.password}</p>{" "}
+                  </div>
                   <div className={styles.itemTable}>
                     <button className={styles.btnEditAndDelete}>
                       <img
                         alt="imgEdit"
                         className={styles.imgEdit}
                         src={imgEdit}
-                        // onClick={() => editProducts(product)}
+                        onClick={() => editEmployee(employee)}
                       ></img>
                     </button>
                   </div>
                   <div className={styles.itemTable}>
                     <button
                       className={styles.btnEditAndDelete}
-                      // onClick={() => deleteMeal(product)}
+                      onClick={() => deletePerson(employee)}
                     >
                       <img
                         alt="imgDelete"
@@ -86,8 +138,34 @@ const Team = () => {
           </div>
         </div>
       </section>
-    </>
-  )
-}
 
-export default Team
+      {modalDelete && (
+        <section className={styles.modalDelete}>
+          <section className={styles.overlayDelete}></section>
+          <section className={styles.modalContentDelete}>
+            <h2 className={styles.deleteOrCancel}>
+              Are you sure you want to delete this person?
+            </h2>
+            <section className={styles.deleteAndCancel}>
+              <button
+                className={styles.deleteYes}
+                onClick={() => deleteEmployee(idDeletedEmployee)}
+              >
+                Delete
+              </button>
+              <button
+                type="submit"
+                className={styles.cancel}
+                onClick={toggleModalDelete}
+              >
+                Cancel
+              </button>
+            </section>
+          </section>
+        </section>
+      )}
+    </>
+  );
+};
+
+export default Team;
