@@ -1,91 +1,141 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import styles from "./editEmployee.module.css";
+import styles from "./popup.module.css";
+import { useForm } from "react-hook-form";
 
 export const EditEmployee = (props) => {
-  const { attrProduct } = props;
-  const [inputsModal, setInputsModal] = useState(attrProduct);
+  const { attrProduct, onClickCloseModal, visible } = props;
+
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm();
 
   useEffect(() => {
-    setInputsModal(attrProduct);
+    setValue("email", attrProduct?.email);
+    setValue("name", attrProduct?.name);
+    setValue("role", attrProduct?.role);
   }, [attrProduct]);
 
-  const areaEditChange = (e) => {
-    const { id, value } = e.target;
-    const newValue = { ...inputsModal, [id]: value };
-    setInputsModal(newValue);
+  const onSubmit = async (data) => {
+    saveDataEmployee({
+      ...attrProduct,
+      email: data.email,
+      name: data.name,
+      role: data.role,
+    });
   };
 
-  const saveDataEmployee = (employee) => async (e) => {
-    e.preventDefault();
+  const saveDataEmployee = (employee) => {
     if (employee && employee.id) {
       // Hacer PUT
-      fetch(`http://localhost:3004/Team/${employee.id}`, {
+      fetch(`http://localhost:3004/team/${employee.id}`, {
         //actualizar todos y cada uno de los elementos
         method: "PUT",
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify(inputsModal),
+        body: JSON.stringify(employee),
       })
         .then((response) => response.json())
         .then((addedEmployee) => {
           console.log(addedEmployee);
-          props.onClickCloseModal();
+          onClickCloseModal();
         });
     }
   };
 
-  return props.visible ? (
+  return visible ? (
     <>
-      {/* <!-- The Modal --> */}
       <div id="myModal" className={styles.modal}>
-        {/* <!-- Modal content --> */}
         <div className={styles.modalContent}>
-          <span className={styles.close} onClick={props.onClickCloseModal}>
+          <span className={styles.close} onClick={onClickCloseModal}>
             &times;
           </span>
           <section className={styles.titleModal}>Employee</section>
-          <section className={styles.AllInputs}>
-            <input
-              className={styles.inputModal}
-              id="email"
-              onChange={areaEditChange}
-              placeholder="email"
-              defaultValue={props.attrProduct?.email}
-            ></input>
-            <input
-              className={styles.inputModal}
-              id="name"
-              onChange={areaEditChange}
-              placeholder="Full name"
-              defaultValue={props.attrProduct?.name}
-            ></input>
-            <select
-              className={styles.selectModal}
-              id="role"
-              onChange={areaEditChange}
-              defaultValue={props.attrProduct?.role}
-            >
-              <option value="">Choose a role</option>
-              <option value="waiter">Waiter</option>
-              <option value="kitchen">Kitchen</option>
-              <option value="administrator">Administrator</option>
-            </select>
-          </section>
-          <section className={styles.areaSaveButton}>
-            <button
-              className={styles.saveEditButton}
-              onClick={saveDataEmployee(props.attrProduct)}
-            >
-              Save
-            </button>
-          </section>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <section className={styles.AllInputs}>
+              <div>
+                <input
+                  type={"text"}
+                  className={styles.inputModal}
+                  id="email"
+                  placeholder="email"
+                  {...register("email", {
+                    required: {
+                      value: true,
+                      message: "This field is required",
+                    },
+                    pattern: {
+                      value:
+                        /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/,
+                      message: "Wrong email format",
+                    },
+                  })}
+                />
+                {errors.email && (
+                  <p className={styles.errorMessage}>{errors.email.message}</p>
+                )}
+              </div>
+              <div>
+                <input
+                  type={"text"}
+                  className={styles.inputModal}
+                  id="name"
+                  placeholder="Full name"
+                  {...register("name", {
+                    required: {
+                      value: true,
+                      message: "This field is required",
+                    },
+                    validate: {
+                      trim: (v) => {
+                        if (!v.trim())
+                          return "Enter letters, characters or numbers";
+                        return true;
+                      },
+                    },
+                  })}
+                />
+                {errors.name && (
+                  <p className={styles.errorMessage}>{errors.name.message}</p>
+                )}
+              </div>
+              <div>
+                <select
+                  className={styles.selectModal}
+                  id="role"
+                  {...register("role", {
+                    required: {
+                      value: true,
+                      message: "This field is required",
+                    },
+                  })}
+                >
+                  <option value="">Choose a role</option>
+                  <option value="waiter">Waiter</option>
+                  <option value="kitchen">Kitchen</option>
+                  <option value="administrator">Administrator</option>
+                </select>
+                {errors.role && (
+                  <p className={styles.errorMessage}>{errors.role.message}</p>
+                )}
+              </div>
+            </section>
+            <section className={styles.areaSaveButton}>
+              <button type="submit" className={styles.saveEditButton}>
+                Save
+              </button>
+            </section>
+          </form>
         </div>
       </div>
     </>
   ) : null;
 };
+// }
 
 EditEmployee.propTypes = {
   attrProduct: PropTypes.object,
