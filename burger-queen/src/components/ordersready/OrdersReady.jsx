@@ -5,6 +5,7 @@ import Header from "../header/Header";
 const OrdersReady = () => {
   const [deliveredOrders, setDeliveredOrders] = useState([]);
   const [check, setCheck] = useState(false);
+  const [isDelivered, setIsDelivered] = useState(false);
   //const { logOut } = useContext(UserContext);
 
   // const handleClickLogout = async () => {
@@ -16,16 +17,23 @@ const OrdersReady = () => {
   //     console.log(error);
   //   }
   // };
+  useEffect(()=>{
+    if(isDelivered){
+      setTimeout(()=>{
+        getAllProduct();
+        setIsDelivered(false);
+      },3000);
+    }
+  },[isDelivered]);
 
   const getAllProduct = () => {
     fetch("http://localhost:3004/chosenProduct")
       .then((response) => response.json())
       .then((deliveredOrders) => {
-        
-        let filteredDeliveryOrders = deliveredOrders.filter((deliveryOrder)=>deliveryOrder.dateDone !== "");
+        let filteredDeliveryOrders = deliveredOrders.filter(
+          (deliveryOrder) => deliveryOrder.dateDone !== "" && !deliveryOrder.delivered
+        );
         setDeliveredOrders(filteredDeliveryOrders);
-
-
 
         // let checkStates = deliveredOrders.map((choseProd) => {
         //   if (choseProd.dateDone !== "") {
@@ -35,24 +43,42 @@ const OrdersReady = () => {
         //   }
         // });
         // console.log(checkStates);
-        // setCheck(checkStates);
-
-        
+        setCheck(filteredDeliveryOrders.map(()=>false));
       })
       .catch((error) => console.log(error));
-    }
+  };
 
-      useEffect(() => {
-        getAllProduct();
-      }, []);
+  useEffect(() => {
+    getAllProduct();
+  }, []);
 
-      const handleChange = (position) => async () => {
-        const updatedCheckedState = check.map((item, index) => {
-          return index === position ? !item : item;
-        });
-        console.log(updatedCheckedState);
-        setCheck(updatedCheckedState);
-      };
+  const handleChange = (position, chosenProd) => async () => {
+    const updatedCheckedState = check.map((item, index) => {
+      return index === position ? !item : item;
+    });
+    console.log(updatedCheckedState);
+    setCheck(updatedCheckedState);
+    saveDelivery(chosenProd);
+  };
+
+  const saveDelivery = (chosenProd) => {
+    fetch(`http://localhost:3004/chosenProduct/${chosenProd.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({
+        delivered: true
+      }),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setIsDelivered(true);
+        console.log(data)
+      });
+  };
 
   return (
     <>
@@ -72,7 +98,7 @@ const OrdersReady = () => {
           <div className={styles.scrollKitchen}>
             {deliveredOrders.map((chosenProd, index) => {
               return (
-                <div key={chosenProd.id} className={styles.containerItems}>
+                <div key={chosenProd.id} className={`${styles.containerItems}  ${check[index] ? styles.fadeOut : ''}`}>
                   <div className={styles.itemAlignStart}>
                     {chosenProd.product}
                   </div>
