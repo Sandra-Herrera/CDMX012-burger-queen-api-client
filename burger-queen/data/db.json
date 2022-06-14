@@ -75,33 +75,6 @@
   ],
   "chosenProduct": [
     {
-      "product": "Pasta bolognese",
-      "qty": 2,
-      "table": "6",
-      "dateCreated": "2022-06-07T19:18:09.038Z",
-      "dateDone": "2022-06-10T01:52:25.149Z",
-      "id": "owZJJrB",
-      "time": {
-        "ms": 0,
-        "s": 0,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 4,
-      "dateCreated": "2022-06-10T02:06:08.943Z",
-      "dateDone": "2022-06-10T02:06:23.744Z",
-      "id": "ftRRUMp",
-      "time": {
-        "ms": 0,
-        "s": 0,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
       "product": "Chicken baguette",
       "qty": 3,
       "dateCreated": "2022-06-10T02:06:08.943Z",
@@ -110,32 +83,6 @@
       "time": {
         "ms": 61,
         "s": 2,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Pepperoni pizza",
-      "qty": 1,
-      "dateCreated": "2022-06-10T02:06:08.943Z",
-      "dateDone": "2022-06-10T02:12:03.554Z",
-      "id": "9R7drjN",
-      "time": {
-        "ms": 0,
-        "s": 0,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 3,
-      "dateCreated": "2022-06-10T02:12:44.359Z",
-      "dateDone": "2022-06-10T02:12:57.508Z",
-      "id": "v5mgGtU",
-      "time": {
-        "ms": 0,
-        "s": 0,
         "m": 0,
         "h": 0
       }
@@ -219,19 +166,6 @@
       }
     },
     {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "dateCreated": "2022-06-10T03:36:05.459Z",
-      "dateDone": "2022-06-10T15:45:07.118Z",
-      "id": "MBUVryH",
-      "time": {
-        "ms": 0,
-        "s": 0,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
       "product": "Pepperoni pizza",
       "qty": 1,
       "dateCreated": "2022-06-10T16:01:43.575Z",
@@ -240,62 +174,6 @@
       "time": {
         "ms": 82,
         "s": 5,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Orange juice",
-      "qty": 1,
-      "table": "1",
-      "dateCreated": "2022-06-10T16:04:04.376Z",
-      "dateDone": "2022-06-10T16:31:48.149Z",
-      "id": "75fs20o",
-      "time": {
-        "ms": 0,
-        "s": 0,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Frapuchino coffee",
-      "qty": 1,
-      "table": "3",
-      "dateCreated": "2022-06-10T16:11:52.646Z",
-      "dateDone": "2022-06-10T16:12:27.460Z",
-      "id": "8M5yZbd",
-      "time": {
-        "ms": 0,
-        "s": 0,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "American coffee",
-      "qty": 1,
-      "table": "2",
-      "dateCreated": "2022-06-10T16:14:38.988Z",
-      "dateDone": "2022-06-10T16:16:39.574Z",
-      "id": "QnfI_05",
-      "time": {
-        "ms": 0,
-        "s": 0,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Scrambled eggs",
-      "qty": 1,
-      "table": "1",
-      "dateCreated": "2022-06-10T16:38:03.157Z",
-      "dateDone": "2022-06-10T16:38:14.527Z",
-      "id": "gWCZSxP",
-      "time": {
-        "ms": 0,
-        "s": 0,
         "m": 0,
         "h": 0
       }
@@ -310,34 +188,6 @@
       "time": {
         "ms": 60,
         "s": 12,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 1,
-      "table": "2",
-      "dateCreated": "2022-06-10T16:47:08.162Z",
-      "dateDone": "2022-06-10T16:51:23.875Z",
-      "id": "vgNH-xo",
-      "time": {
-        "ms": 0,
-        "s": 0,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Pepperoni pizza",
-      "qty": 1,
-      "table": "2",
-      "dateCreated": "2022-06-10T16:47:08.162Z",
-      "dateDone": "2022-06-10T16:51:36.650Z",
-      "id": "PsnehL3",
-      "time": {
-        "ms": 0,
-        "s": 0,
         "m": 0,
         "h": 0
       }
@@ -425,168 +275,6 @@
   ],
   "team": [
     {
-      "email": "meli@gmail.com",
-      "name": "Meli",
-      "role": "kitchen",
-      "password": "123456",
-      "id": "9JNVsaw"
-    },
-    {
-      "email": "sandy@gmail.com",
-      "name": "sandy",
-      "role": "Administrator",
-      "password": "123456",
-      "id": "0fD6CCl"
-    },
-    {
-      "email": "adrian@gmail.com",
-      "name": "adrian",
-      "role": "Kitchen",
-      "password": "123456",
-      "id": "oS6u6eb"
-    },
-    {
-      "email": "enrique@gmail.com",
-      "name": "enrique",
-      "role": "Waiter",
-      "password": "123456",
-      "id": "_OOSlvm"
-    },
-    {
-      "email": "sandy@gmail.com",
-      "name": "sandy",
-      "role": "Administrator",
-      "password": "123456",
-      "id": "pvJB-pA"
-    },
-    {
-      "email": "ppp@k.com",
-      "name": null,
-      "role": null,
-      "password": "123456",
-      "id": "6WUF6Jm"
-    },
-    {
-      "email": "mm@m.com",
-      "name": "mm",
-      "role": "waiter",
-      "password": "123456",
-      "id": "xzn7T7V"
-    },
-    {
-      "email": "kar@k.com",
-      "name": "Kar",
-      "role": "kitchen",
-      "password": "123456",
-      "uid": "GtXcZ691WwbTOsVuA6o9tBPQ0ho2",
-      "emailVerified": false,
-      "id": "fQsP1Ka"
-    },
-    {
-      "email": "88@gmail.com",
-      "name": "ocho",
-      "role": "waiter",
-      "password": "123456",
-      "uid": "ikpFseh0eUZMgC2oOlm7EGe66ok2",
-      "id": "9zi05tw"
-    },
-    {
-      "email": "xdf@gmail.com",
-      "name": "xdf",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "EPZi37vSmhRRhLg9r5QrvmTeuPn2",
-      "id": "jEns3yx"
-    },
-    {
-      "email": "dany@d.com",
-      "name": "dany",
-      "role": "kitchen",
-      "password": "123456",
-      "uidFirebase": "oRNfX4tPiNSN2439MggLogV3w0e2",
-      "id": "l6CWIur"
-    },
-    {
-      "email": "sandy@gmail.com",
-      "name": "pruebi",
-      "role": "kitchen",
-      "password": "123456",
-      "uidFirebase": "UTpYAVe5HuaEUhWaEzW56XWZkEW2",
-      "id": "8EJiWM9"
-    },
-    {
-      "email": "melissa@gmail.com",
-      "name": "ooo",
-      "role": "kitchen",
-      "password": "123456",
-      "uidFirebase": "KpuRKHuwrHTDi7QrOwkRjrgtPTS2",
-      "id": "V_2eBTi"
-    },
-    {
-      "email": "daniela@g.com",
-      "name": "daniela",
-      "role": "administrator",
-      "password": "123456",
-      "uidFirebase": "uUIEzxkxC1TLat0mAFyAOsvuPp03",
-      "id": "mKkmI5Q"
-    },
-    {
-      "email": "lll@g.com",
-      "name": "lll",
-      "role": "kitchen",
-      "password": "123456",
-      "uidFirebase": "zvgAKckCUPdJ8oKuqjkpzSGWIOw1",
-      "id": "MSYwGwn"
-    },
-    {
-      "email": "fff@gmail.com",
-      "name": "fff",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "NqlbKNwzgmUtDvLKJXwE17JtTvu1",
-      "id": "ve20v7L"
-    },
-    {
-      "email": "pruebamilochomil@g.com",
-      "name": "pruebamilochomil",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "YHFFvb7EA4V7k4mZsjgBetgMufb2",
-      "id": "DJQvZUW"
-    },
-    {
-      "email": "99@g.com",
-      "name": "99",
-      "role": "kitchen",
-      "password": "123456",
-      "uidFirebase": "gjvu1dbf4kRcsq3ZdIJcUZ4Ot3k1",
-      "id": "V4d7IJD"
-    },
-    {
-      "email": "holi@g.com",
-      "name": "holi",
-      "role": "kitchen",
-      "password": "123456",
-      "uidFirebase": "V0LuzpQnsIUAgN3zbTGAhAVIED53",
-      "id": "DBJjdKE"
-    },
-    {
-      "email": "n@g.com",
-      "name": "n",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "6SNqOja8Had8O8vZwApSQrqY98a2",
-      "id": "ZmJ3dTP"
-    },
-    {
-      "email": "ooee@gmail.com",
-      "name": "ooee",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "umlkvOOG3GUIP8MJN4U07mQ5LsF3",
-      "id": "todd3Br"
-    },
-    {
       "email": "sandy@gmail.com",
       "name": "sandy",
       "role": "administrator",
@@ -595,83 +283,25 @@
       "id": "jAPHY5w"
     },
     {
-      "email": "tt@g.com",
-      "name": "tt",
-      "role": "waiter",
+      "email": "melissa@gmail.com",
+      "name": "Melissa Bracamonte",
+      "role": "administrator",
       "password": "123456",
-      "uidFirebase": "AIDK4uOP4ETUu5MXTGgFoIMvVyu1",
-      "id": "o2haXXD"
+      "id": "eAi9pdo"
     },
     {
-      "email": "salya@g.com",
-      "name": "salya",
+      "email": "enrique@gmail.com",
+      "name": "Enrique Mesas",
       "role": "waiter",
       "password": "123456",
-      "uidFirebase": "RZub1MYXWxVRL6R9jS2YLCizDoN2",
-      "id": "Ft5vMPE"
+      "id": "e3H7Wg8"
     },
     {
-      "email": "ahorasi@g.com",
-      "name": "ahorasi",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "tEAdm8QAG1Nh4qS1hAp8ghMPFc82",
-      "id": "0rDGb7s"
-    },
-    {
-      "email": "porfis@g.com",
-      "name": "porfis",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "xlXtzMFDwTMDErzxUldr3RBOrrf2",
-      "id": "nQ0OzhS"
-    },
-    {
-      "email": "seraqueya@g.com",
-      "name": "seraqueya",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "EdFvoXDkZ1XaiI5ujFQZGXgW9F63",
-      "id": "CoIiWxE"
-    },
-    {
-      "email": "porfaqueya@g.com",
-      "name": "porfaqueya",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "KrTYB6Yh4cNkg68NLRQkIpTVz6P2",
-      "id": "imSh0lK"
-    },
-    {
-      "email": "sisiyaya@g.com",
-      "name": "sisiyaya",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "w9JifcvbJRfchhXXlO2wLIcKtyi2",
-      "id": "uiQzCeK"
-    },
-    {
-      "email": "jiji@gmail.com",
-      "name": "jiji",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "JUJvXGd6IcUZACJFgkqm3kvvPE72",
-      "id": "vkMvBhu"
-    },
-    {
-      "email": "pruebasandyjiji@g.com",
-      "name": "pruebasandyjiji",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "1Zswn84wOqfOzXvu1DZqJsM9gsj1",
-      "id": "PQpMMHy"
-    },
-    {
-      "email": "hilijijipruebita@g.com",
-      "name": "hilijijipruebita",
+      "email": "tinto@gmail.com",
+      "name": "Tinto Flores",
       "role": "kitchen",
       "password": "123456",
-      "id": "LdKSzx2"
+      "id": "EuaVkH9"
     }
   ]
 }

@@ -61,7 +61,27 @@ const Signup = () => {
         displayName: data.username,
         photoURL: data.rol,
       });
-      saveEmployee(data);
+      // saveEmployee(data);
+      let employee =  Object.assign(
+        {},
+        {
+          email: data.email,
+          name: data.username,
+          role: data.rol,
+          password: data.password,
+        }
+      )
+      fetch("http://localhost:3004/team", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(employee),
+      })
+        .then((response) => response.json())
+        .then((addedEmployee) => {
+          console.log(addedEmployee);
+        });
       navigate("/team");
     } catch (error) {
       console.log(error.code);
@@ -109,28 +129,28 @@ const Signup = () => {
   //   }
   // };
 
-  const saveEmployee = (dataTeam) => {
-   let employee =  Object.assign(
-      {},
-      {
-        email: dataTeam.email,
-        name: dataTeam.username,
-        role: dataTeam.rol,
-        password: dataTeam.password,
-      }
-    )
-    fetch("http://localhost:3004/team", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(employee),
-    })
-      .then((response) => response.json())
-      .then((addedEmployee) => {
-        console.log(addedEmployee);
-      });
-  };
+  // const saveEmployee = (dataTeam) => {
+  //  let employee =  Object.assign(
+  //     {},
+  //     {
+  //       email: dataTeam.email,
+  //       name: dataTeam.username,
+  //       role: dataTeam.rol,
+  //       password: dataTeam.password,
+  //     }
+  //   )
+  //   fetch("http://localhost:3004/team", {
+  //     method: "POST",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //     body: JSON.stringify(employee),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((addedEmployee) => {
+  //       console.log(addedEmployee);
+  //     });
+  // };
 
   return (
     <>
