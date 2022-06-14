@@ -24,7 +24,6 @@
   border-radius: 12px;
   width: 500px;
   height: fit-content;
-  /* height: 360px; */
 }
 
 /* The Close Button */
@@ -106,7 +105,7 @@
 .selectModal{
   display: flex;
   margin-top: 2%;
-  width: 98%;
+  width: 93%;
   height: 38px;
   border: solid 3px;
   border-radius: 8px;
@@ -153,11 +152,4 @@
   display: flex;
   justify-content: center;
   margin-top: 30px;
-}
-
-.errorMessage{
-  display: flex;
-  color: red;
-  justify-content: center;
-  font-weight: bold;
 }

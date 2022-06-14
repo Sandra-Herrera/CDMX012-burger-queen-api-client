@@ -12,6 +12,7 @@ import Error from "./components/error/Error";
 import ErrorWithoutUser from "./components/error/ErrorWithoutUser";
 import NewOrder from "./components/menuNewOrder/NewOrder";
 import ViewMenuNewOrder from "./components/menuNewOrder/ViewMenuNewOrder";
+import OrdersReady from "./components/ordersready/OrdersReady";
 
 function App() {
   const { user } = useContext(UserContext);
@@ -49,6 +50,10 @@ function App() {
       ;
       {userRole?.toLowerCase() === "Administrator".toLowerCase() && (
         <Route exact path="/order" element={<ViewMenuNewOrder />} />
+      )}
+      ;
+      {userRole?.toLowerCase() === "Administrator".toLowerCase() && (
+        <Route exact path="/ordersReady" element={<OrdersReady />} />
       )}
       ;
       {userRole?.toLowerCase() === "Administrator".toLowerCase() && (
