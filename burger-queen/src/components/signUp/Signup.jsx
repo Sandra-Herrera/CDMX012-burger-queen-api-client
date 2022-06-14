@@ -55,40 +55,34 @@ const Signup = () => {
     try {
       await createUser(data.email, data.password, data.username, data.rol);
 
+      // const user = auth.currentUser;
+
       updateProfile(auth.currentUser, {
         displayName: data.username,
         photoURL: data.rol,
       });
-      const user = auth.currentUser;
-      if (user !== null) {
-        const displayName = data.username;
-        const email = user.email;
-        const role = data.rol;
-        const uid = user.uid;
-
-     let employee =  Object.assign(
-      {},
-      {
-        email: email,
-        name: displayName,
-        role: role,
-        password: data.password,
-        uidFirebase: uid,
-      }
-    )
-    fetch("http://localhost:3004/team", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(employee),
-    })
-      .then((response) => response.json())
-      .then((addedEmployee) => {
-        console.log(addedEmployee);
-      });
-    }
-
+      // saveEmployee(data);
+      let employee =  Object.assign(
+        {},
+        {
+          email: data.email,
+          name: data.username,
+          role: data.rol,
+          password: data.password,
+        }
+      )
+      fetch("http://localhost:3004/team", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(employee),
+      })
+        .then((response) => response.json())
+        .then((addedEmployee) => {
+          console.log(addedEmployee);
+        });
+      navigate("/team");
     } catch (error) {
       console.log(error.code);
       switch (error.code) {
@@ -104,26 +98,58 @@ const Signup = () => {
   };
 
   // const saveEmployee = (dataTeam) => {
-    //  let employee =  Object.assign(
-    //     {},
-    //     {
-    //       email: dataTeam.email,
-    //       name: dataTeam.username,
-    //       role: dataTeam.rol,
-    //       password: dataTeam.password,
-    //     }
-    //   )
-    //   fetch("http://localhost:3004/team", {
-    //     method: "POST",
-    //     headers: {
-    //       "content-type": "application/json",
-    //     },
-    //     body: JSON.stringify(employee),
-    //   })
-    //     .then((response) => response.json())
-    //     .then((addedEmployee) => {
-    //       console.log(addedEmployee);
-    //     });
+  //   const user = auth.currentUser;
+  //   if (user !== null) {
+  //     const displayName = dataTeam.username;
+  //     const email = user.email;
+  //     const role = dataTeam.rol;
+  //     const uid = user.uid;
+
+  //     let employee = Object.assign(
+  //       {},
+  //       {
+  //         email: email,
+  //         name: displayName,
+  //         role: role,
+  //         password: dataTeam.password,
+  //         uidFirebase: uid,
+  //       }
+  //     );
+  //     fetch("http://localhost:3004/team", {
+  //       method: "POST",
+  //       headers: {
+  //         "content-type": "application/json",
+  //       },
+  //       body: JSON.stringify(employee),
+  //     })
+  //       .then((response) => response.json())
+  //       .then((addedEmployee) => {
+  //         console.log(addedEmployee);
+  //       });
+  //   }
+  // };
+
+  // const saveEmployee = (dataTeam) => {
+  //  let employee =  Object.assign(
+  //     {},
+  //     {
+  //       email: dataTeam.email,
+  //       name: dataTeam.username,
+  //       role: dataTeam.rol,
+  //       password: dataTeam.password,
+  //     }
+  //   )
+  //   fetch("http://localhost:3004/team", {
+  //     method: "POST",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //     body: JSON.stringify(employee),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((addedEmployee) => {
+  //       console.log(addedEmployee);
+  //     });
   // };
 
   return (
@@ -147,93 +173,105 @@ const Signup = () => {
           <br />
           <section className={styles.inputContainer}>
             <div>
-            <input
-              type={"email"}
-              placeholder="E-mail"
-              className={styles.inputSignUp}
-              id="inputEmail"
-              {...register("email", {
-                required: { value: true, message: "This field is required" },
-                pattern: {
-                  value:
-                    /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/,
-                  message: "Wrong email format",
-                },
-              })}
-            />
-            {errors.email && <p className={styles.errorMessage}>{errors.email.message}</p>}
+              <input
+                type={"email"}
+                placeholder="E-mail"
+                className={styles.inputSignUp}
+                id="inputEmail"
+                {...register("email", {
+                  required: { value: true, message: "This field is required" },
+                  pattern: {
+                    value:
+                      /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/,
+                    message: "Wrong email format",
+                  },
+                })}
+              />
+              {errors.email && (
+                <p className={styles.errorMessage}>{errors.email.message}</p>
+              )}
             </div>
             <div>
-            <input
-              type={"text"}
-              placeholder="Username"
-              className={styles.inputSignUp}
-              id="inputUsername"
-              {...register("username", {
-                required: { value: true, message: "This field is required" },
-                validate: {
-                  trim: (v) => {
-                    if (!v.trim())
-                      return "Enter letters, characters or numbers";
-                    return true;
+              <input
+                type={"text"}
+                placeholder="Username"
+                className={styles.inputSignUp}
+                id="inputUsername"
+                {...register("username", {
+                  required: { value: true, message: "This field is required" },
+                  validate: {
+                    trim: (v) => {
+                      if (!v.trim())
+                        return "Enter letters, characters or numbers";
+                      return true;
+                    },
                   },
-                },
-              })}
-            />
-            {errors.username && <p className={styles.errorMessage}>{errors.username.message}</p>}
+                })}
+              />
+              {errors.username && (
+                <p className={styles.errorMessage}>{errors.username.message}</p>
+              )}
             </div>
             <div>
-            <input
-              type={"password"}
-              placeholder="Password"
-              className={styles.inputSignUp}
-              id="inputPassword"
-              {...register("password", {
-                setValueAs: (v) => v.trim(),
-                minLength: {
-                  value: 6,
-                  message: "Min 6 characters",
-                },
-                validate: {
-                  trim: (v) => {
-                    if (!v.trim())
-                      return "Enter letters, characters or numbers";
-                    return true;
+              <input
+                type={"password"}
+                placeholder="Password"
+                className={styles.inputSignUp}
+                id="inputPassword"
+                {...register("password", {
+                  setValueAs: (v) => v.trim(),
+                  minLength: {
+                    value: 6,
+                    message: "Min 6 characters",
                   },
-                },
-              })}
-            />
-            {errors.password && <p className={styles.errorMessage}>{errors.password.message}</p>}
+                  validate: {
+                    trim: (v) => {
+                      if (!v.trim())
+                        return "Enter letters, characters or numbers";
+                      return true;
+                    },
+                  },
+                })}
+              />
+              {errors.password && (
+                <p className={styles.errorMessage}>{errors.password.message}</p>
+              )}
             </div>
             <div className={styles.errorMessage}>
-            <input
-              type={"password"}
-              placeholder="Validate password"
-              className={styles.inputSignUp}
-              id="inputPasswordTwo"
-              {...register("passwordAgain", {
-                validate: {
-                  equals: (v) =>
-                    v === getValues("password") || "Passwords do not match",
-                },
-              })}
-            />
-            {errors.passwordAgain && <p className={styles.errorMessage}>{errors.passwordAgain.message}</p>}
+              <input
+                type={"password"}
+                placeholder="Validate password"
+                className={styles.inputSignUp}
+                id="inputPasswordTwo"
+                {...register("passwordAgain", {
+                  validate: {
+                    equals: (v) =>
+                      v === getValues("password") || "Passwords do not match",
+                  },
+                })}
+              />
+              {errors.passwordAgain && (
+                <p className={styles.errorMessage}>
+                  {errors.passwordAgain.message}
+                </p>
+              )}
             </div>
           </section>
           <div>
-          <select
-            className={styles.rol}
-            {...register("rol", {
-              required: { value: true, message: "This field is required" },
-            })}
-          >
-            <option value="">Choose a role</option>
-            <option value="waiter">Waiter</option>
-            <option value="kitchen">Kitchen</option>
-            <option value="administrator">Administrator</option>
-          </select>
-          {errors.rol && <p className={styles.errorMessage}>{errors.rol.message}</p>}
+            <select
+              className={styles.rol}
+              {...register("rol", {
+                required: { value: true, message: "This field is required" },
+              })}
+            >
+              <option value="">Choose a role</option>
+              <option value="waiter">Waiter</option>
+              <option value="kitchen">Kitchen</option>
+              <option value="administrator">Administrator</option>
+            </select>
+            {errors.rol && (
+              <p className={styles.errorMessage}>{errors.rol.message}</p>
+            )}
           </div>
           <button
             type="submit"

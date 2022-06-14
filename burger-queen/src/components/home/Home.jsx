@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../database/UserProvider";
 import styles from "./home.module.css";
-import imgRestaurant from "../../img/imgRestaurant.png";
+// import imgRestaurant from "../../img/imgRestaurant.png";
+import imgHeaderInto from "../../img/imgHeaderInto.png";
 import chefIcon from "../../img/chefIcon.png";
 import orderIcon from "../../img/orderIcon.png";
 import productsIcon from "../../img/productsIcon.png";
@@ -49,7 +50,7 @@ const Home = () => {
         <img
           alt="imagen header"
           className={styles.imgRest}
-          src={imgRestaurant}
+          src={imgHeaderInto}
         />
         <button className={styles.logOutButton} onClick={handleClickLogout}>
           <img
