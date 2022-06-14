@@ -73,46 +73,16 @@
       "id": "t1Ov93y"
     },
     {
-      "name": "a",
-      "price": "b2",
-      "category": "Lunch/Dinner",
-      "id": "k3SW1GX"
-    },
-    {
-      "name": "20",
-      "price": "49",
-      "category": "Lunch/Dinner",
-      "id": "vBsHGFm"
-    },
-    {
-      "name": "p1",
-      "price": "p",
-      "category": "Breakfast",
-      "id": "VtsgmhZ"
-    },
-    {
-      "name": "1a",
-      "price": "2",
-      "category": "Breakfast",
-      "id": "EdW7d4r"
-    },
-    {
       "name": "a1",
       "price": "b4",
       "category": "Lunch/Dinner",
       "id": "xjx8l5a"
     },
     {
-      "name": "4",
-      "price": "7",
+      "name": "1",
+      "price": "123",
       "category": "Lunch/Dinner",
-      "id": "FiVs1lI"
-    },
-    {
-      "name": "5",
-      "price": "2",
-      "category": "Breakfast",
-      "id": "2_I9xbR"
+      "id": "A7wGWa2"
     }
   ],
   "chosenProduct": [
@@ -173,26 +143,26 @@
       "product": "Cheesecake",
       "qty": 1,
       "dateCreated": "2022-06-10T22:46:48.552Z",
-      "dateDone": "",
+      "dateDone": "2022-06-13T15:44:00.425Z",
       "id": "57zcwv_",
       "time": {
-        "ms": 0,
-        "s": 0,
-        "m": 0,
-        "h": 0
+        "ms": 857,
+        "s": 11,
+        "m": 57,
+        "h": 64
       }
     },
     {
       "product": "Red velvet cake",
       "qty": 1,
       "dateCreated": "2022-06-10T23:46:48.552Z",
-      "dateDone": "",
+      "dateDone": "2022-06-13T15:44:07.970Z",
       "id": "taE9-ct",
       "time": {
-        "ms": 201,
-        "s": 0,
-        "m": 13,
-        "h": 9
+        "ms": 397,
+        "s": 19,
+        "m": 57,
+        "h": 63
       }
     },
     {
@@ -346,6 +316,30 @@
         "h": 0
       }
     },
+    {
+      "product": "Orange juice",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-13T15:44:28.736Z",
+      "dateDone": "",
+      "id": "zON8A3G"
+    },
+    {
+      "product": "Frapuchino coffee",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-13T15:44:28.736Z",
+      "dateDone": "",
+      "id": "pnR63V0"
+    },
+    {
+      "product": "Scrambled eggs",
+      "qty": 3,
+      "table": "2",
+      "dateCreated": "2022-06-13T15:44:28.736Z",
+      "dateDone": "",
+      "id": "zwG4g3H"
+    }
   ],
   "team": [
     {

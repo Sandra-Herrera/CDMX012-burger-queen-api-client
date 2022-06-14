@@ -23,7 +23,7 @@
   border: 10px solid #fc7117;
   border-radius: 12px;
   width: 500px;
-  height: 360px;
+  height: fit-content;
 }
 
 /* The Close Button */
