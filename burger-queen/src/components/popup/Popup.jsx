@@ -32,7 +32,12 @@ export function Popup(props) {
   // };
 
   const onSubmit = async (data) => {
-    saveProduct({...attrProduct, name:data.productName,price:data.price,category:data.category});
+    saveProduct({
+      ...attrProduct,
+      name: data.productName,
+      price: data.price,
+      category: data.category,
+    });
   };
 
   const saveProduct = (product) => {
@@ -80,19 +85,26 @@ export function Popup(props) {
           <section className={styles.titleModal}>Product</section>
           <form onSubmit={handleSubmit(onSubmit)}>
             <section className={styles.AllInputs}>
-              <input
-                type={"text"}
-                className={styles.inputModal}
-                id="name"
-                placeholder="Product Name"
-                {...register("productName", {
-                  required: {
-                    value: true,
-                    message: "Required",
-                  },
-                })}
-              ></input>
-              {errors.productName && <p className={styles.errorMessage}>{errors.productName.message}</p>}
+              <div>
+                <input
+                  type={"text"}
+                  className={styles.inputModal}
+                  id="name"
+                  placeholder="Product Name"
+                  {...register("productName", {
+                    required: {
+                      value: true,
+                      message: "Required",
+                    },
+                  })}
+                ></input>
+                {errors.productName && (
+                  <p className={styles.errorMessage}>
+                    {errors.productName.message}
+                  </p>
+                )}
+              </div>
+              <div>
               <input
                 type={"text"}
                 className={styles.inputModal}
@@ -106,7 +118,11 @@ export function Popup(props) {
                   },
                 })}
               ></input>
-              {errors.price && <p className={styles.errorMessage}>{errors.price.message}</p>}
+              {errors.price && (
+                <p className={styles.errorMessage}>{errors.price.message}</p>
+              )}
+              </div>
+              <div>
               <select
                 className={styles.selectModal}
                 id="category"
@@ -121,13 +137,13 @@ export function Popup(props) {
                 <option value="Breakfast">Breakfast</option>
                 <option value="Lunch/Dinner">Lunch/Dinner</option>
               </select>
-              {errors.category && <p className={styles.errorMessage}>{errors.category.message}</p>}
+              {errors.category && (
+                <p className={styles.errorMessage}>{errors.category.message}</p>
+              )}
+              </div>
             </section>
             <section className={styles.areaSaveButton}>
-              <button
-                type="submit"
-                className={styles.saveEditButton}
-              >
+              <button type="submit" className={styles.saveEditButton}>
                 Save
               </button>
             </section>

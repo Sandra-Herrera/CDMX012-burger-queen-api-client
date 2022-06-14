@@ -68,8 +68,8 @@
     },
     {
       "name": "Natural water 100 mL",
-      "price": "12",
-      "category": "Lunch/Dinner",
+      "price": "20",
+      "category": "Breakfast",
       "id": "t1Ov93y"
     }
   ],
@@ -105,7 +105,7 @@
       "delivered": true
     },
     {
-      "product": "Orange juice",
+      "product": "Soda 500 mL",
       "qty": 1,
       "table": "2",
       "dateCreated": "2022-06-13T15:44:28.736Z",
@@ -134,10 +134,10 @@
       }
     },
     {
-      "product": "Scrambled eggs",
-      "qty": 3,
+      "product": "Pasta bolognese",
+      "qty": 1,
       "table": "2",
-      "dateCreated": "2022-06-13T15:44:28.736Z",
+      "dateCreated": "2022-06-13T19:40:20.836Z",
       "dateDone": "",
       "id": "zwG4g3H"
     },
@@ -224,57 +224,30 @@
   ],
   "team": [
     {
-      "email": "melissa@gmail.com",
-      "name": "Melissa",
-      "role": "Administrator",
-      "password": "123456",
-      "id": "9JNVsaw"
-    },
-    {
       "email": "sandy@gmail.com",
       "name": "sandy",
-      "role": "Administrator",
+      "role": "administrator",
       "password": "123456",
-      "id": "0fD6CCl"
+      "uidFirebase": "lyE6YFq6MogpLlNiSLZTIPLaQv22",
+      "id": "jAPHY5w"
     },
     {
-      "email": "adrian@gmail.com",
-      "name": "adrian",
-      "role": "Kitchen",
+      "email": "melissa@gmail.com",
+      "name": "Melissa Bracamonte",
+      "role": "administrator",
       "password": "123456",
-      "id": "oS6u6eb"
+      "id": "eAi9pdo"
     },
     {
       "email": "enrique@gmail.com",
-      "name": "enrique",
-      "role": "Waiter",
-      "password": "123456",
-      "id": "_OOSlvm"
-    },
-    {
-      "email": "sandy@gmail.com",
-      "name": "sandy",
-      "role": "Administrator",
-      "password": "123456",
-      "id": "pvJB-pA"
-    },
-    {
-      "email": "ppp@k.com",
-      "name": null,
-      "role": null,
-      "password": "123456",
-      "id": "6WUF6Jm"
-    },
-    {
-      "email": "mm@m.com",
-      "name": "mm",
+      "name": "Enrique Mesas",
       "role": "waiter",
       "password": "123456",
-      "id": "xzn7T7V"
+      "id": "e3H7Wg8"
     },
     {
-      "email": "kar@k.com",
-      "name": "Kar",
+      "email": "tinto@gmail.com",
+      "name": "Tinto Flores",
       "role": "kitchen",
       "password": "123456",
       "uid": "GtXcZ691WwbTOsVuA6o9tBPQ0ho2",
