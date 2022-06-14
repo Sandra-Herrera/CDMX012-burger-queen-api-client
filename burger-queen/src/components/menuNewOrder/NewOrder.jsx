@@ -5,8 +5,10 @@ import imgDelete from "../../img/imgDelete.png";
 import imgMinus from "../../img/imgMinus.png";
 import imgPlus from "../../img/imgPlus.png";
 import OrderContext from "../context/OrderContext";
+import { useNavigate } from "react-router-dom";
 
 const NewOrder = () => {
+  const navigate = useNavigate();
   const { order, sendContextOrder, amount, sendContextAmount } =
     useContext(OrderContext);
 
@@ -72,6 +74,11 @@ const NewOrder = () => {
     );
   };
 
+  const sendToOrdersReady = (e) =>{
+    e.preventDefault();
+    navigate('/ordersReady');
+  }
+
   const sendToKitchen = (data) => {
     sendContextOrder(
       order.map((itemOrder) =>
@@ -104,6 +111,7 @@ const NewOrder = () => {
           console.log(addedProduct);
         });
     });
+    setTimeout(()=>window.location.reload(),1000);
   };
 
   return (
@@ -202,7 +210,7 @@ const NewOrder = () => {
             })}
           </section>
           <section className={styles.bottonAreabtn}>
-            <button className={styles.bottonButtons}>Orders ready</button>
+            <button className={styles.bottonButtons} onClick={sendToOrdersReady}>Orders ready</button>
             <button
               type="submit"
               className={styles.bottonButtons}
