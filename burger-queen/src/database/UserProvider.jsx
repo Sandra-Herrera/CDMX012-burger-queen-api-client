@@ -8,29 +8,25 @@ import React, { useState } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut,
+  signOut
 } from "firebase/auth";
 import { auth } from "./firebase-config";
 import { createContext } from "react";
 import PropTypes from "prop-types";
 
-
-
 export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState();
 
   const createUser = (email, password, displayName) =>(
     createUserWithEmailAndPassword(auth, email, password, displayName)
   )
 
-
   const loginUser = (email, password) =>{
     signInWithEmailAndPassword(auth, email, password).then(()=>{setUser(auth.currentUser)})
-
   }
-  console.log({user})
+  // console.log({user})
 
   // useEffect(() => {
   //   const userData = onAuthStateChanged(auth, (userId) => {
@@ -40,8 +36,12 @@ const UserProvider = ({ children }) => {
   //   return () => userData();
   // }, []);
 
-  // const logOut = () => signOut(auth);
-  const logOut = () => signOut(auth).then(()=>{console.log("cerrado")});
+  // useEffect(()=>{
+  //   console.log(auth.currentUser, user)
+  // },[])
+
+  const logOut = () => signOut(auth);
+  // const logOut = () => signOut(auth).then(()=>{console.log("cerrado")});
 
   return (
     <UserContext.Provider value={{ createUser, loginUser, user, logOut }}>

@@ -5,16 +5,17 @@ import imgDelete from "../../img/imgDelete.png";
 import imgMinus from "../../img/imgMinus.png";
 import imgPlus from "../../img/imgPlus.png";
 import OrderContext from "../context/OrderContext";
+import Swal from "sweetalert2";
 
 const NewOrder = () => {
   const { order, sendContextOrder, amount, sendContextAmount } =
     useContext(OrderContext);
 
-    const {
-      register,
-      handleSubmit,
-      formState: { errors },
-    } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const minusProducts = (product) => (e) => {
     e.preventDefault();
@@ -36,11 +37,12 @@ const NewOrder = () => {
     }
   };
 
-  const plusProducts = (product) => (e)=> {
+  const plusProducts = (product) => (e) => {
     e.preventDefault();
     let productExist = order.find((itemOrder) => {
       return itemOrder.id === product.id;
     });
+
     if (productExist) {
       sendContextAmount(parseFloat(amount) + parseFloat(product.price));
       product = { ...productExist, qty: productExist.qty + 1 };
@@ -104,12 +106,22 @@ const NewOrder = () => {
           console.log(addedProduct);
         });
     });
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Order send",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   return (
     <>
       <section className={styles.containerNewOrder}>
-        <form className={styles.newOrderSection} onSubmit={handleSubmit(sendToKitchen)}>
+        <form
+          className={styles.newOrderSection}
+          onSubmit={handleSubmit(sendToKitchen)}
+        >
           <div>
             <div className={styles.titleNewOrder}>NEW ORDER</div>
           </div>
@@ -134,7 +146,9 @@ const NewOrder = () => {
                   <option value="3">3</option>
                   <option value="4">4</option>
                 </select>
-                {errors.table && <p className={styles.errorMessage}>{errors.table.message}</p>}
+                {errors.table && (
+                  <p className={styles.errorMessage}>{errors.table.message}</p>
+                )}
               </p>
               <p className={styles.titleAccount}>
                 Account total $
@@ -148,6 +162,7 @@ const NewOrder = () => {
             </section>
             <hr></hr>
           </div>
+          {/* {status === 0 ? ( */}
           <section className={styles.containerOrder}>
             {order.map((product) => {
               return (
@@ -201,12 +216,12 @@ const NewOrder = () => {
               );
             })}
           </section>
+          {/* ) : (
+            ""
+         )} */}
           <section className={styles.bottonAreabtn}>
             <button className={styles.bottonButtons}>Orders ready</button>
-            <button
-              type="submit"
-              className={styles.bottonButtons}
-            >
+            <button type="submit" className={styles.bottonButtons}>
               Send to kitchen
             </button>
           </section>

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./popup.module.css";
 import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
+import Swal from 'sweetalert2'
 
 Popup.propTypes = {
   attrProduct: PropTypes.object,
@@ -71,6 +72,13 @@ export function Popup(props) {
           props.onClickCloseModal();
         });
     }
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Added product',
+      showConfirmButton: false,
+      timer: 1500
+    })
   };
 
   return props.visible ? (
