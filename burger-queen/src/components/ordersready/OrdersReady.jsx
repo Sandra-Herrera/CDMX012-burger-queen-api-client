@@ -3,6 +3,7 @@ import styles from "./ordersReady.module.css";
 // import Header from "../header/Header";
 import { useNavigate } from "react-router-dom";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
+import backIcon from "../../img/backIcon.png";
 
 const OrdersReady = () => {
   const navigate = useNavigate();
@@ -83,6 +84,10 @@ const OrdersReady = () => {
       });
   };
 
+  const redirectHome = () => {
+    navigate("/home");
+  };
+
   const redirectNewOrder = () => {
     navigate("/order");
   };
@@ -96,6 +101,9 @@ const OrdersReady = () => {
           className={styles.imgRest}
           src={imgHeaderInto}
         />
+                <button className={styles.backButton} onClick={redirectHome}>
+          <img alt="iconBack" className={styles.imgBack} src={backIcon} />
+        </button>
 <button className={styles.btnNewOrder} onClick={redirectNewOrder}>New order</button>
       </div>
 
