@@ -677,50 +677,18 @@
       "id": "e3H7Wg8"
     },
     {
-      "email": "88@gmail.com",
-      "name": "ocho",
-      "role": "waiter",
-      "password": "123456",
-      "uid": "ikpFseh0eUZMgC2oOlm7EGe66ok2",
-      "id": "9zi05tw"
-    },
-    {
-      "email": "pipo@gmail.com",
-      "name": "pipo",
-      "role": "waiter",
-      "password": "123456",
-      "uidFirebase": "NJt3jsn2soXy9CAlJ6NFX3qc5Fe2",
-      "id": "fAfQICB"
-    },
-    {
-      "email": "prueba@gmail.com",
-      "name": "Prueba1",
+      "email": "tinto@gmail.com",
+      "name": "Tinto Casas",
       "role": "kitchen",
       "password": "123456",
-      "uidFirebase": "OHkmN8s7pgQrerSoU2XAqr35gnk2",
-      "id": "8cM5jZH"
+      "id": "UjKw2gl"
     },
     {
-      "email": "nuevo@g.com",
-      "name": "Nuevo 1",
-      "role": "kitchen",
-      "password": "123456",
-      "uidFirebase": "6xZfjteS0AOrLOrbr2k4v4genNl2",
-      "id": "QhJEgNj"
-    },
-    {
-      "email": "gg@g.com",
-      "name": "gg",
+      "email": "luis@gmail.com",
+      "name": "luis",
       "role": "waiter",
       "password": "123456",
-      "id": "n2gvNKk"
-    },
-    {
-      "email": "san@gmail.com",
-      "name": "san",
-      "role": "waiter",
-      "password": "123456",
-      "id": "I0NVzBv"
+      "id": "WImzvgs"
     }
   ]
 }
