@@ -64,6 +64,10 @@ function App() {
         <Route exact path="/ordersReady" element={<OrdersReady />} />
       )}
       ;
+      {userRole?.toLowerCase() === "Waiter".toLowerCase() && (
+        <Route exact path="/ordersReady" element={<OrdersReady />} />
+      )}
+      ;
       {userRole?.toLowerCase() === "Administrator".toLowerCase() && (
         <Route exact path="/NewOrder" element={<NewOrder />} />
       )}

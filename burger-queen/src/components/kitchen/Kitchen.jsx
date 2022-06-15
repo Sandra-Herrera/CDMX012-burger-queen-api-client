@@ -11,8 +11,8 @@ const Kitchen = () => {
   const navigate = useNavigate();
   const [chosenProduct, setChosenProduct] = useState([]);
   const [check, setCheck] = useState(false);
-  // const [saveTime, setSaveTime] = useState();
-  // const [stopTimer, setStopTimer] = useState();
+  // const [deliveredOrders, setDeliveredOrders] = useState([]);
+  const [isDelivered, setIsDelivered] = useState(false);
   const { logOut } = useContext(UserContext);
 
   const handleClickLogout = async () => {
@@ -25,20 +25,35 @@ const Kitchen = () => {
     }
   };
 
+  useEffect(() => {
+    if (isDelivered) {
+      setTimeout(() => {
+        getAllProduct();
+        setIsDelivered(false);
+      }, 3000);
+    }
+  }, [isDelivered]);
+
   const getAllProduct = () => {
     fetch("http://localhost:3004/chosenProduct")
       .then((response) => response.json())
       .then((chosenProduct) => {
-        setChosenProduct(chosenProduct);
-        let checkStates = chosenProduct.map((choseProd) => {
-          if (choseProd.dateDone !== "") {
-            return true;
-          } else {
-            return false;
-          }
-        });
-        console.log(checkStates);
-        setCheck(checkStates);
+        // let checkStates = chosenProduct.map((choseProd) => {
+        //   if (choseProd.dateDone !== "") {
+        //     return true;
+        //   } else {
+        //     return false;
+        //   }
+        // });
+        // console.log(checkStates);
+        // setCheck(checkStates);
+        let filteredOrdersReady = chosenProduct.filter(
+          (ordersReady) => ordersReady.dateDone === ""
+        );
+        setChosenProduct(filteredOrdersReady);
+
+        // setChosenProduct(chosenProduct);
+        setCheck(filteredOrdersReady.map(() => false));
       })
       .catch((error) => console.log(error));
   };
@@ -62,7 +77,10 @@ const Kitchen = () => {
         // console.log(response.status);
         return response.json();
       })
-      .then((data) => console.log(data));
+      .then((data) => {
+        setIsDelivered(true);
+        console.log(data)
+      });
   };
 
   const redirectHome = () => {
@@ -113,13 +131,32 @@ const Kitchen = () => {
           <div className={styles.scrollKitchen}>
             {chosenProduct.map((chosenProd, index) => {
               return (
-                <div key={chosenProd.id} className={styles.containerItems}>
+                <div
+                  key={chosenProd.id}
+                  className={`${styles.containerItems}  ${
+                    check[index] ? styles.fadeOut : ""
+                  }`}
+                >
                   <div className={styles.itemAlignStart}>
                     {chosenProd.product}
                   </div>
                   <div className={styles.itemTable}>{chosenProd.qty}</div>
                   <div className={styles.itemTable}>{chosenProd.table}</div>
-                  <div className={styles.itemTable}>{<Chronometer timeFromChosenProd={{ms:chosenProd?.time?.ms, s: chosenProd?.time?.s, m: chosenProd?.time?.m, h:chosenProd?.time?.h}} isStopped={check[index]} saveDate={saveDate} chosenProd={chosenProd}/>}</div>
+                  <div className={styles.itemTable}>
+                    {
+                      <Chronometer
+                        timeFromChosenProd={{
+                          ms: chosenProd?.time?.ms,
+                          s: chosenProd?.time?.s,
+                          m: chosenProd?.time?.m,
+                          h: chosenProd?.time?.h,
+                        }}
+                        isStopped={check[index]}
+                        saveDate={saveDate}
+                        chosenProd={chosenProd}
+                      />
+                    }
+                  </div>
                   <div className={styles.itemTable}>
                     <input
                       type="checkbox"

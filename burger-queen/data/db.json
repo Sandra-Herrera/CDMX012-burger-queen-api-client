@@ -96,7 +96,7 @@
       "dateCreated": "2022-06-10T16:47:08.162Z",
       "dateDone": "",
       "id": "ksZeZ3k"
-    }
+       }
   ],
   "team": [
     {
@@ -120,6 +120,20 @@
       "role": "waiter",
       "password": "123456",
       "id": "e3H7Wg8"
+    },
+    {
+      "email": "tinto@gmail.com",
+      "name": "Tinto Casas",
+      "role": "kitchen",
+      "password": "123456",
+      "id": "UjKw2gl"
+    },
+    {
+      "email": "luis@gmail.com",
+      "name": "luis",
+      "role": "waiter",
+      "password": "123456",
+      "id": "WImzvgs"
     }
   ]
 }

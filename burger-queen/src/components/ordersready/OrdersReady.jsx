@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ordersReady.module.css";
-import Header from "../header/Header";
+// import Header from "../header/Header";
+import { useNavigate } from "react-router-dom";
+import imgHeaderInto from "../../img/imgHeaderInto.png";
 
 const OrdersReady = () => {
+  const navigate = useNavigate();
   const [deliveredOrders, setDeliveredOrders] = useState([]);
   const [check, setCheck] = useState(false);
   const [isDelivered, setIsDelivered] = useState(false);
@@ -80,14 +83,27 @@ const OrdersReady = () => {
       });
   };
 
+  const redirectNewOrder = () => {
+    navigate("/order");
+  };
+
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <div className={styles.headerImg}>
+        <img
+          alt="imagen header"
+          className={styles.imgRest}
+          src={imgHeaderInto}
+        />
+<button className={styles.btnNewOrder} onClick={redirectNewOrder}>New order</button>
+      </div>
 
       <section>
         <div className={styles.productsTable}>
           <div>
             <div className={styles.titleTable}>ORDERS READY</div>
+            {/* <button className={styles.btnNewOrder} onClick={redirectNewOrder}>New order</button> */}
           </div>
           <div className={styles.mainHeaderTable}>
             <div className={styles.headerTable}>Product</div>
