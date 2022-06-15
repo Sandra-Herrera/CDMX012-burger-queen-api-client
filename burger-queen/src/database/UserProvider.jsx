@@ -26,6 +26,10 @@ const UserProvider = ({ children }) => {
   const loginUser = (email, password) =>{
     signInWithEmailAndPassword(auth, email, password).then(()=>{setUser(auth.currentUser)})
   }
+
+  // const setContextUser = (localStorageUser) =>{
+  //   setUser(localStorageUser);
+  // }
   // console.log({user})
 
   // useEffect(() => {
@@ -44,7 +48,8 @@ const UserProvider = ({ children }) => {
   // const logOut = () => signOut(auth).then(()=>{console.log("cerrado")});
 
   return (
-    <UserContext.Provider value={{ createUser, loginUser, user, logOut }}>
+    // <UserContext.Provider value={{ createUser, loginUser, user, logOut, setContextUser }}>
+    <UserContext.Provider value={{ createUser, loginUser, user, logOut }}>  
       {children}
     </UserContext.Provider>
   );

@@ -2,7 +2,7 @@
   "Products": [
     {
       "name": "Scrambled eggs",
-      "price": "24",
+      "price": "22",
       "category": "Breakfast",
       "id": "1"
     },
@@ -81,110 +81,6 @@
   ],
   "chosenProduct": [
     {
-      "product": "Chicken baguette",
-      "qty": 3,
-      "dateCreated": "2022-06-10T02:06:08.943Z",
-      "dateDone": "2022-06-10T02:06:59.126Z",
-      "id": "i6teL4p",
-      "time": {
-        "ms": 61,
-        "s": 2,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 2,
-      "dateCreated": "2022-06-10T02:12:44.359Z",
-      "dateDone": "2022-06-10T02:12:58.703Z",
-      "id": "h-wgNeg",
-      "time": {
-        "ms": 69,
-        "s": 1,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Pepperoni pizza",
-      "qty": 4,
-      "dateCreated": "2022-06-10T02:12:44.359Z",
-      "dateDone": "2022-06-10T02:12:59.797Z",
-      "id": "VP3VGMB",
-      "time": {
-        "ms": 89,
-        "s": 2,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 3,
-      "dateCreated": "2022-06-10T00:06:02.345Z",
-      "dateDone": "2022-06-10T03:34:41.970Z",
-      "id": "wT454TX",
-      "time": {
-        "ms": 62,
-        "s": 13,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Chicken baguette",
-      "qty": 2,
-      "dateCreated": "2022-06-10T00:06:02.345Z",
-      "dateDone": "2022-06-10T16:26:08.770Z",
-      "id": "c5ai1dF",
-      "time": {
-        "ms": 40,
-        "s": 9,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 1,
-      "dateCreated": "2022-06-10T01:55:31.351Z",
-      "dateDone": "2022-06-10T15:46:43.169Z",
-      "id": "5NvCCg0",
-      "time": {
-        "ms": 53,
-        "s": 24,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Pasta bolognese",
-      "qty": 2,
-      "dateCreated": "2022-06-10T03:36:05.459Z",
-      "dateDone": "2022-06-10T15:45:58.097Z",
-      "id": "hRXpV0l",
-      "time": {
-        "ms": 44,
-        "s": 12,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
-      "product": "Pepperoni pizza",
-      "qty": 1,
-      "dateCreated": "2022-06-10T16:01:43.575Z",
-      "dateDone": "2022-06-10T16:31:33.329Z",
-      "id": "oNZiMyO",
-      "time": {
-        "ms": 82,
-        "s": 5,
-        "m": 0,
-        "h": 0
-      }
-    },
-    {
       "product": "Pasta bolognese",
       "qty": 1,
       "table": "2",
@@ -216,59 +112,213 @@
       "product": "Soda 500 mL",
       "qty": 1,
       "table": "2",
-      "dateCreated": "2022-06-10T16:47:08.162Z",
-      "dateDone": "2022-06-13T15:59:30.804Z",
-      "id": "fbsGMC8",
+      "dateCreated": "2022-06-13T15:44:28.736Z",
+      "dateDone": "2022-06-14T02:31:48.542Z",
+      "id": "zON8A3G",
       "time": {
-        "ms": 634,
-        "s": 22,
-        "m": 12,
-        "h": 71
+        "ms": 791,
+        "s": 19,
+        "m": 47,
+        "h": 10
       }
+    },
+    {
+      "product": "Frapuchino coffee",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-13T15:44:28.736Z",
+      "dateDone": "2022-06-14T02:31:50.306Z",
+      "id": "pnR63V0",
+      "time": {
+        "ms": 560,
+        "s": 21,
+        "m": 47,
+        "h": 10
+      }
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-13T19:40:20.836Z",
+      "dateDone": "",
+      "id": "zwG4g3H"
+    },
+    {
+      "product": "Chicken baguette",
+      "qty": 5,
+      "table": "2",
+      "dateCreated": "2022-06-14T06:36:00.849Z",
+      "dateDone": "",
+      "id": "o3XaVhq"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 4,
+      "table": "2",
+      "dateCreated": "2022-06-14T06:42:52.780Z",
+      "dateDone": "",
+      "id": "CW6prHj"
+    },
+    {
+      "product": "Chicken baguette",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-14T06:45:09.629Z",
+      "dateDone": "",
+      "id": "mYlXhEr"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-14T06:45:09.629Z",
+      "dateDone": "",
+      "id": "m-cwxtq"
+    },
+    {
+      "product": "Pepperoni pizza",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-14T06:45:09.629Z",
+      "dateDone": "",
+      "id": "NhcSBhR"
+    },
+    {
+      "product": "Chicken baguette",
+      "qty": 3,
+      "table": "4",
+      "dateCreated": "2022-06-14T23:28:40.185Z",
+      "dateDone": "",
+      "id": "nW3d4Py"
+    },
+    {
+      "product": "Cheesecake",
+      "qty": 1,
+      "table": "4",
+      "dateCreated": "2022-06-14T23:28:40.185Z",
+      "dateDone": "",
+      "id": "zab-PVp"
+    },
+    {
+      "product": "Soda 500 mL",
+      "qty": 1,
+      "table": "4",
+      "dateCreated": "2022-06-14T23:28:40.185Z",
+      "dateDone": "",
+      "id": "QkfSJZx"
+    },
+    {
+      "product": "Chicken baguette",
+      "qty": 3,
+      "table": "4",
+      "dateCreated": "2022-06-14T23:38:55.646Z",
+      "dateDone": "",
+      "id": "TcxsvjG"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 1,
+      "table": "4",
+      "dateCreated": "2022-06-14T23:38:55.646Z",
+      "dateDone": "",
+      "id": "-ENpT74"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-15T00:01:35.542Z",
+      "dateDone": "",
+      "id": "0BU4LiQ"
+    },
+    {
+      "product": "Chicken baguette",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-15T00:01:35.542Z",
+      "dateDone": "",
+      "id": "5b2VJEs"
+    },
+    {
+      "product": "Pepperoni pizza",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-15T00:01:35.542Z",
+      "dateDone": "",
+      "id": "tEp5x71"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-15T00:05:19.744Z",
+      "dateDone": "",
+      "id": "aHt9Up5"
+    },
+    {
+      "product": "Chicken baguette",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-15T00:05:19.744Z",
+      "dateDone": "",
+      "id": "dRhsOmz"
+    },
+    {
+      "product": "Cheesecake",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-15T00:05:19.744Z",
+      "dateDone": "",
+      "id": "bPrK2hH"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 1,
+      "table": "3",
+      "dateCreated": "2022-06-15T00:28:20.416Z",
+      "dateDone": "",
+      "id": "VdoyN3I"
+    },
+    {
+      "product": "Chicken baguette",
+      "qty": 1,
+      "table": "3",
+      "dateCreated": "2022-06-15T00:28:20.416Z",
+      "dateDone": "",
+      "id": "mcO-k-Q"
     },
     {
       "product": "Scrambled eggs",
       "qty": 1,
-      "table": "1",
-      "dateCreated": "2022-06-13T15:59:52.989Z",
-      "dateDone": "2022-06-13T16:00:39.831Z",
-      "id": "oUeeecS",
-      "time": {
-        "ms": 827,
-        "s": 46,
-        "m": 0,
-        "h": 0
-      }
+      "table": "3",
+      "dateCreated": "2022-06-15T00:59:12.749Z",
+      "dateDone": "",
+      "id": "ZdtLPUJ"
     },
     {
       "product": "Orange juice",
       "qty": 1,
-      "table": "1",
-      "dateCreated": "2022-06-13T15:59:52.989Z",
-      "dateDone": "2022-06-13T19:40:04.802Z",
-      "id": "lYIQtqu",
-      "time": {
-        "ms": 792,
-        "s": 11,
-        "m": 40,
-        "h": 3
-      }
+      "table": "3",
+      "dateCreated": "2022-06-15T00:59:12.749Z",
+      "dateDone": "",
+      "id": "-s3iVUO"
     },
     {
       "product": "American coffee",
       "qty": 1,
       "table": "1",
-      "dateCreated": "2022-06-13T15:59:52.989Z",
+      "dateCreated": "2022-06-15T00:59:39.456Z",
       "dateDone": "",
-      "id": "5mXYBMA"
+      "id": "ygCU--p"
     },
     {
       "product": "Frapuchino coffee",
       "qty": 1,
       "table": "1",
-      "dateCreated": "2022-06-13T15:59:52.989Z",
+      "dateCreated": "2022-06-15T00:59:39.456Z",
       "dateDone": "",
-      "id": "9LKEIuT"
+      "id": "rcLpjjJ"
     },
     {
       "product": "Pasta bolognese",
@@ -551,11 +601,36 @@
       "id": "e3H7Wg8"
     },
     {
-      "email": "tinto@gmail.com",
-      "name": "Tinto Flores",
+      "email": "88@gmail.com",
+      "name": "ocho",
+      "role": "waiter",
+      "password": "123456",
+      "uid": "ikpFseh0eUZMgC2oOlm7EGe66ok2",
+      "id": "9zi05tw"
+    },
+    {
+      "email": "pipo@gmail.com",
+      "name": "pipo",
+      "role": "waiter",
+      "password": "123456",
+      "uidFirebase": "NJt3jsn2soXy9CAlJ6NFX3qc5Fe2",
+      "id": "fAfQICB"
+    },
+    {
+      "email": "prueba@gmail.com",
+      "name": "Prueba1",
       "role": "kitchen",
       "password": "123456",
-      "id": "EuaVkH9"
+      "uidFirebase": "OHkmN8s7pgQrerSoU2XAqr35gnk2",
+      "id": "8cM5jZH"
+    },
+    {
+      "email": "nuevo@g.com",
+      "name": "Nuevo 1",
+      "role": "kitchen",
+      "password": "123456",
+      "uidFirebase": "6xZfjteS0AOrLOrbr2k4v4genNl2",
+      "id": "QhJEgNj"
     },
     {
       "email": "gg@g.com",
