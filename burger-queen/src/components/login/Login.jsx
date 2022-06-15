@@ -3,7 +3,7 @@ import { UserContext } from "../../database/UserProvider";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import styles from "./login.module.css";
-import imgRestaurant from "../../img/imgRestaurant.png";
+import imgHeaderInto from "../../img/imgHeaderInto.png";
 
 const Login = () => {
   const {
@@ -39,7 +39,7 @@ const Login = () => {
   return (
     <>
       <div className={styles.headerImg}>
-        <img alt="imagen header" className={styles.imgRest} src={imgRestaurant}/>
+        <img alt="imagen header" className={styles.imgRest} src={imgHeaderInto}/>
       </div>
       <section className={styles.containerLoginArea}>
         {/* <section className={styles.loginArea}> */}
