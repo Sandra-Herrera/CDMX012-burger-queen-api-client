@@ -21,6 +21,7 @@ function App() {
   if (user?.photoURL) {
     userRole = user.photoURL;
   }
+  console.log(user)
 
   //revisar el local storage en el key 'userLocalStorage'
   //if(valor de local storage)

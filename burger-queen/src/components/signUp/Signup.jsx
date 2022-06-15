@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./signup.module.css";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
 import backIcon from "../../img/backIcon.png";
+import Swal from 'sweetalert2'
 
 const Signup = () => {
   // const [team, setTeam] = useState({});
@@ -55,14 +56,11 @@ const Signup = () => {
     try {
       await createUser(data.email, data.password, data.username, data.rol);
 
-      // const user = auth.currentUser;
-
       updateProfile(auth.currentUser, {
         displayName: data.username,
         photoURL: data.rol,
       });
-      // saveEmployee(data);
-      let employee =  Object.assign(
+      let employee = Object.assign(
         {},
         {
           email: data.email,
@@ -70,7 +68,8 @@ const Signup = () => {
           role: data.rol,
           password: data.password,
         }
-      )
+      );
+      
       fetch("http://localhost:3004/team", {
         method: "POST",
         headers: {
@@ -82,6 +81,13 @@ const Signup = () => {
         .then((addedEmployee) => {
           console.log(addedEmployee);
         });
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Added employee',
+          showConfirmButton: false,
+          timer: 1500
+        })
       navigate("/team");
     } catch (error) {
       console.log(error.code);

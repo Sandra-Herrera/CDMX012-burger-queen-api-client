@@ -6,11 +6,13 @@ import imgMinus from "../../img/imgMinus.png";
 import imgPlus from "../../img/imgPlus.png";
 import OrderContext from "../context/OrderContext";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const NewOrder = () => {
   const navigate = useNavigate();
   const { order, sendContextOrder, amount, sendContextAmount } =
     useContext(OrderContext);
+
   const {
     register,
     handleSubmit,
@@ -42,6 +44,7 @@ const NewOrder = () => {
     let productExist = order.find((itemOrder) => {
       return itemOrder.id === product.id;
     });
+
     if (productExist) {
       sendContextAmount(parseFloat(amount) + parseFloat(product.price));
       product = { ...productExist, qty: productExist.qty + 1 };
@@ -115,6 +118,13 @@ const NewOrder = () => {
           selectInput.value = "";
         });
     });
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Order send",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   return (
@@ -164,6 +174,7 @@ const NewOrder = () => {
             </section>
             <hr></hr>
           </div>
+          {/* {status === 0 ? ( */}
           <section className={styles.containerOrder}>
             {order.map((product) => {
               return (
@@ -217,6 +228,9 @@ const NewOrder = () => {
               );
             })}
           </section>
+          {/* ) : (
+            ""
+         )} */}
           <section className={styles.bottonAreabtn}>
             <button
               className={styles.bottonButtons}
