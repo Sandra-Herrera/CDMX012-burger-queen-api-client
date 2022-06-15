@@ -86,8 +86,7 @@
         "s": 12,
         "m": 0,
         "h": 0
-      },
-      "delivered": true
+      }
     },
     {
       "product": "Red velvet cake",
@@ -115,8 +114,7 @@
         "s": 19,
         "m": 47,
         "h": 10
-      },
-      "delivered": false
+      }
     },
     {
       "product": "Frapuchino coffee",
@@ -283,6 +281,38 @@
       "dateCreated": "2022-06-15T00:28:20.416Z",
       "dateDone": "",
       "id": "mcO-k-Q"
+    },
+    {
+      "product": "Scrambled eggs",
+      "qty": 1,
+      "table": "3",
+      "dateCreated": "2022-06-15T00:59:12.749Z",
+      "dateDone": "",
+      "id": "ZdtLPUJ"
+    },
+    {
+      "product": "Orange juice",
+      "qty": 1,
+      "table": "3",
+      "dateCreated": "2022-06-15T00:59:12.749Z",
+      "dateDone": "",
+      "id": "-s3iVUO"
+    },
+    {
+      "product": "American coffee",
+      "qty": 1,
+      "table": "1",
+      "dateCreated": "2022-06-15T00:59:39.456Z",
+      "dateDone": "",
+      "id": "ygCU--p"
+    },
+    {
+      "product": "Frapuchino coffee",
+      "qty": 1,
+      "table": "1",
+      "dateCreated": "2022-06-15T00:59:39.456Z",
+      "dateDone": "",
+      "id": "rcLpjjJ"
     }
   ],
   "team": [
@@ -348,6 +378,13 @@
       "password": "123456",
       "uidFirebase": "6xZfjteS0AOrLOrbr2k4v4genNl2",
       "id": "QhJEgNj"
+    },
+    {
+      "email": "a@a.com",
+      "name": "a",
+      "role": "kitchen",
+      "password": "123456",
+      "id": "kKxphKB"
     }
   ]
 }
