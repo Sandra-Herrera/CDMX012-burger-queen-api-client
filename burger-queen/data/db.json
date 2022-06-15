@@ -92,7 +92,8 @@
         "s": 12,
         "m": 0,
         "h": 0
-      }
+      },
+      "delivered": true
     },
     {
       "product": "Red velvet cake",
@@ -141,16 +142,28 @@
       "qty": 1,
       "table": "2",
       "dateCreated": "2022-06-13T19:40:20.836Z",
-      "dateDone": "",
-      "id": "zwG4g3H"
+      "dateDone": "2022-06-15T02:22:29.980Z",
+      "id": "zwG4g3H",
+      "time": {
+        "ms": 126,
+        "s": 9,
+        "m": 42,
+        "h": 30
+      }
     },
     {
       "product": "Chicken baguette",
       "qty": 5,
       "table": "2",
       "dateCreated": "2022-06-14T06:36:00.849Z",
-      "dateDone": "",
-      "id": "o3XaVhq"
+      "dateDone": "2022-06-15T03:27:35.465Z",
+      "id": "o3XaVhq",
+      "time": {
+        "ms": 582,
+        "s": 34,
+        "m": 51,
+        "h": 20
+      }
     },
     {
       "product": "Pasta bolognese",
@@ -575,6 +588,69 @@
       "dateCreated": "2022-06-15T01:05:25.952Z",
       "dateDone": "",
       "id": "yijrQzH"
+    },
+    {
+      "product": "Scrambled eggs",
+      "qty": 1,
+      "table": "1",
+      "dateCreated": "2022-06-15T02:21:41.765Z",
+      "dateDone": "",
+      "id": "rnAM9A4"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 1,
+      "table": "1",
+      "dateCreated": "2022-06-15T02:22:08.168Z",
+      "dateDone": "",
+      "id": "41yR27K"
+    },
+    {
+      "product": "Soda 500 mL",
+      "qty": 1,
+      "table": "1",
+      "dateCreated": "2022-06-15T02:55:09.189Z",
+      "dateDone": "",
+      "id": "k9K1u5p"
+    },
+    {
+      "product": "Mineral water 100 mL",
+      "qty": 1,
+      "table": "4",
+      "dateCreated": "2022-06-15T02:55:51.661Z",
+      "dateDone": "",
+      "id": "iZY8dbM"
+    },
+    {
+      "product": "ii",
+      "qty": 1,
+      "table": "1",
+      "dateCreated": "2022-06-15T02:59:30.963Z",
+      "dateDone": "",
+      "id": "HQEetKC"
+    },
+    {
+      "product": "Pepperoni pizza",
+      "qty": 1,
+      "table": "1",
+      "dateCreated": "2022-06-15T03:21:25.903Z",
+      "dateDone": "",
+      "id": "AE3V4dV"
+    },
+    {
+      "product": "ii",
+      "qty": 1,
+      "table": "1",
+      "dateCreated": "2022-06-15T03:28:02.359Z",
+      "dateDone": "2022-06-15T03:28:24.331Z",
+      "id": "zubYrYx",
+      "time": {
+        "ms": 942,
+        "s": 21,
+        "m": 0,
+        "h": 0
+      },
+      "delivered": true
     }
   ],
   "team": [
@@ -640,18 +716,11 @@
       "id": "n2gvNKk"
     },
     {
-      "email": "iii@gmail.com",
-      "name": "iii",
-      "role": "kitchen",
-      "password": "123456",
-      "id": "5S8kqk8"
-    },
-    {
-      "email": "jijo@g.com",
-      "name": "jijo",
+      "email": "san@gmail.com",
+      "name": "san",
       "role": "waiter",
       "password": "123456",
-      "id": "aS0DjWN"
+      "id": "I0NVzBv"
     }
   ]
 }

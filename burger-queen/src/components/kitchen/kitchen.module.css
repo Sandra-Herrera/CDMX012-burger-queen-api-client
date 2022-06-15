@@ -113,6 +113,15 @@
     display: grid;
     grid-template-columns: repeat(5, 20%);
   }
+
+  .fadeOut{
+    animation: 3s both diminish;
+  }
+  
+  @keyframes diminish {
+    from { width: 100%; opacity: 1;}
+    to { width: 0%; opacity: 0;}
+  }
   
   .itemTable {
     display: flex;
@@ -135,6 +144,9 @@
     padding: 10px;
     border: solid 1px;
     border-color: coral;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .checkbox{
