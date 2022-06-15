@@ -11,12 +11,11 @@ const NewOrder = () => {
   const navigate = useNavigate();
   const { order, sendContextOrder, amount, sendContextAmount } =
     useContext(OrderContext);
-
-    const {
-      register,
-      handleSubmit,
-      formState: { errors },
-    } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const minusProducts = (product) => (e) => {
     e.preventDefault();
@@ -38,7 +37,7 @@ const NewOrder = () => {
     }
   };
 
-  const plusProducts = (product) => (e)=> {
+  const plusProducts = (product) => (e) => {
     e.preventDefault();
     let productExist = order.find((itemOrder) => {
       return itemOrder.id === product.id;
@@ -74,10 +73,10 @@ const NewOrder = () => {
     );
   };
 
-  const sendToOrdersReady = (e) =>{
+  const sendToOrdersReady = (e) => {
     e.preventDefault();
-    navigate('/ordersReady');
-  }
+    navigate("/ordersReady");
+  };
 
   const sendToKitchen = (data) => {
     sendContextOrder(
@@ -109,15 +108,22 @@ const NewOrder = () => {
         .then((response) => response.json())
         .then((addedProduct) => {
           console.log(addedProduct);
+
+          sendContextOrder([]);
+          sendContextAmount(0);
+          let selectInput = document.getElementById("inputNumberTable");
+          selectInput.value = "";
         });
     });
-    setTimeout(()=>window.location.reload(),1000);
   };
 
   return (
     <>
       <section className={styles.containerNewOrder}>
-        <form className={styles.newOrderSection} onSubmit={handleSubmit(sendToKitchen)}>
+        <form
+          className={styles.newOrderSection}
+          onSubmit={handleSubmit(sendToKitchen)}
+        >
           <div>
             <div className={styles.titleNewOrder}>NEW ORDER</div>
           </div>
@@ -142,7 +148,9 @@ const NewOrder = () => {
                   <option value="3">3</option>
                   <option value="4">4</option>
                 </select>
-                {errors.table && <p className={styles.errorMessage}>{errors.table.message}</p>}
+                {errors.table && (
+                  <p className={styles.errorMessage}>{errors.table.message}</p>
+                )}
               </p>
               <p className={styles.titleAccount}>
                 Account total $
@@ -210,11 +218,13 @@ const NewOrder = () => {
             })}
           </section>
           <section className={styles.bottonAreabtn}>
-            <button className={styles.bottonButtons} onClick={sendToOrdersReady}>Orders ready</button>
             <button
-              type="submit"
               className={styles.bottonButtons}
+              onClick={sendToOrdersReady}
             >
+              Orders ready
+            </button>
+            <button type="submit" className={styles.bottonButtons}>
               Send to kitchen
             </button>
           </section>
