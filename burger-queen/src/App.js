@@ -20,6 +20,7 @@ function App() {
   if (user?.photoURL) {
     userRole = user.photoURL;
   }
+  console.log(user)
 
   return (
     <Routes>

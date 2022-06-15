@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import styles from "./popup.module.css";
 import { useForm } from "react-hook-form";
+import Swal from 'sweetalert2'
 
 export const EditEmployee = (props) => {
   const { attrProduct, onClickCloseModal, visible } = props;
@@ -45,6 +46,13 @@ export const EditEmployee = (props) => {
           onClickCloseModal();
         });
     }
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Employee saved',
+      showConfirmButton: false,
+      timer: 1500
+    })
   };
 
   return visible ? (
