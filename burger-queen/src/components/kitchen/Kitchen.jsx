@@ -11,14 +11,12 @@ const Kitchen = () => {
   const navigate = useNavigate();
   const [chosenProduct, setChosenProduct] = useState([]);
   const [check, setCheck] = useState(false);
-  // const [deliveredOrders, setDeliveredOrders] = useState([]);
   const [isDelivered, setIsDelivered] = useState(false);
   const { logOut } = useContext(UserContext);
 
   const handleClickLogout = async () => {
     try {
       await logOut();
-      console.log("cerró sesión");
       navigate("/");
     } catch (error) {
       console.log(error);
@@ -38,21 +36,10 @@ const Kitchen = () => {
     fetch("http://localhost:3004/chosenProduct")
       .then((response) => response.json())
       .then((chosenProduct) => {
-        // let checkStates = chosenProduct.map((choseProd) => {
-        //   if (choseProd.dateDone !== "") {
-        //     return true;
-        //   } else {
-        //     return false;
-        //   }
-        // });
-        // console.log(checkStates);
-        // setCheck(checkStates);
         let filteredOrdersReady = chosenProduct.filter(
           (ordersReady) => ordersReady.dateDone === ""
         );
         setChosenProduct(filteredOrdersReady);
-
-        // setChosenProduct(chosenProduct);
         setCheck(filteredOrdersReady.map(() => false));
       })
       .catch((error) => console.log(error));
@@ -74,12 +61,11 @@ const Kitchen = () => {
       }),
     })
       .then((response) => {
-        // console.log(response.status);
         return response.json();
       })
       .then((data) => {
         setIsDelivered(true);
-        console.log(data)
+        console.log(data);
       });
   };
 
@@ -91,9 +77,7 @@ const Kitchen = () => {
     const updatedCheckedState = check.map((item, index) => {
       return index === position ? !item : item;
     });
-    console.log(updatedCheckedState);
     setCheck(updatedCheckedState);
-    //stopTimer
   };
 
   return (

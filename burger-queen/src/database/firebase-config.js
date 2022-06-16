@@ -7,7 +7,7 @@ const firebaseConfig = {
   projectId: "burger-queen-api-client-b4715",
   storageBucket: "burger-queen-api-client-b4715.appspot.com",
   messagingSenderId: "35299945202",
-  appId: "1:35299945202:web:3fecba7e21c956e6787e6b"
+  appId: "1:35299945202:web:3fecba7e21c956e6787e6b",
 };
 
 // Initialize Firebase

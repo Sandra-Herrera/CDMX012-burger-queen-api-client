@@ -15,19 +15,22 @@ import ViewMenuNewOrder from "./components/menuNewOrder/ViewMenuNewOrder";
 import OrdersReady from "./components/ordersready/OrdersReady";
 
 function App() {
-  // const { user, setContextUser } = useContext(UserContext);
-  const { user } = useContext(UserContext);
-  let userRole = null;
-  if (user?.photoURL) {
-    userRole = user.photoURL;
-  }
-  console.log(user)
+  const { user, setContextUser } = useContext(UserContext);
 
-  //revisar el local storage en el key 'userLocalStorage'
-  //if(valor de local storage)
-    //entonces enviarlo por medio del context el usuario
-    //setContextUser('valor que encontraste en el local storage');
-  //si no existe no se asigna
+  if (setContextUser) {
+    setContextUser(window.localStorage.getItem("user"));
+  }
+
+  let userRole = null;
+  // useEffect(() => {
+  if (user) {
+    const data = JSON.parse(user);
+    if (data?.photoURL) {
+      console.log(data);
+      userRole = data.photoURL;
+    }
+  }
+  // },[user])
 
   return (
     <Routes>

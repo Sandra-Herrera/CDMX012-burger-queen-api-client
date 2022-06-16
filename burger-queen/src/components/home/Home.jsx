@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../database/UserProvider";
 import styles from "./home.module.css";
-// import imgRestaurant from "../../img/imgRestaurant.png";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
 import chefIcon from "../../img/chefIcon.png";
 import orderIcon from "../../img/orderIcon.png";
@@ -14,14 +13,13 @@ const Home = () => {
   const { logOut } = useContext(UserContext);
   const navigate = useNavigate();
 
-  fetch("http://localhost:3004/ComidaCena")
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+  // fetch("http://localhost:3004/ComidaCena")
+  //   .then((response) => response.json())
+  //   .then((data) => console.log(data));
 
   const handleClickLogout = async () => {
     try {
       await logOut();
-      console.log("cerró sesión");
       navigate("/");
     } catch (error) {
       console.log(error);
@@ -62,7 +60,6 @@ const Home = () => {
       </div>
       <section className={styles.welcomeContainer}>
         <section className={styles.welcomeSection}>
-          {/* <h1 className={styles.welcomeTitle}>Welcome</h1> */}
           <section className={styles.buttonsArea}>
             <button className={styles.welcomeButtons} onClick={redirectKitchen}>
               Kitchen

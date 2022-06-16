@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./popup.module.css";
 import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 Popup.propTypes = {
   attrProduct: PropTypes.object,
@@ -25,12 +25,6 @@ export function Popup(props) {
     setValue("price", attrProduct?.price);
     setValue("category", attrProduct?.category);
   }, [attrProduct]);
-
-  // const areaEditChange = (e) => {
-  //   const { id, value } = e.target;
-  //   const newValue = { ...inputsModal, [id]: value };
-  //   setInputsModal(newValue);
-  // };
 
   const onSubmit = async (data) => {
     saveProduct({
@@ -73,19 +67,17 @@ export function Popup(props) {
         });
     }
     Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Added product',
+      position: "center",
+      icon: "success",
+      title: "Added product",
       showConfirmButton: false,
-      timer: 1500
-    })
+      timer: 1500,
+    });
   };
 
   return props.visible ? (
     <>
-      {/* <!-- The Modal --> */}
       <div id="myModal" className={styles.modal}>
-        {/* <!-- Modal content --> */}
         <div className={styles.modalContent}>
           <span className={styles.close} onClick={props.onClickCloseModal}>
             &times;
@@ -113,41 +105,43 @@ export function Popup(props) {
                 )}
               </div>
               <div>
-              <input
-                type={"text"}
-                className={styles.inputModal}
-                id="price"
-                placeholder="Price"
-                {...register("price", {
-                  defaultValue: props.attrProduct?.name,
-                  required: {
-                    value: true,
-                    message: "Required",
-                  },
-                })}
-              ></input>
-              {errors.price && (
-                <p className={styles.errorMessage}>{errors.price.message}</p>
-              )}
+                <input
+                  type={"text"}
+                  className={styles.inputModal}
+                  id="price"
+                  placeholder="Price"
+                  {...register("price", {
+                    defaultValue: props.attrProduct?.name,
+                    required: {
+                      value: true,
+                      message: "Required",
+                    },
+                  })}
+                ></input>
+                {errors.price && (
+                  <p className={styles.errorMessage}>{errors.price.message}</p>
+                )}
               </div>
               <div>
-              <select
-                className={styles.selectModal}
-                id="category"
-                {...register("category", {
-                  required: {
-                    value: true,
-                    message: "Required",
-                  },
-                })}
-              >
-                <option value="">Category</option>
-                <option value="Breakfast">Breakfast</option>
-                <option value="Lunch/Dinner">Lunch/Dinner</option>
-              </select>
-              {errors.category && (
-                <p className={styles.errorMessage}>{errors.category.message}</p>
-              )}
+                <select
+                  className={styles.selectModal}
+                  id="category"
+                  {...register("category", {
+                    required: {
+                      value: true,
+                      message: "Required",
+                    },
+                  })}
+                >
+                  <option value="">Category</option>
+                  <option value="Breakfast">Breakfast</option>
+                  <option value="Lunch/Dinner">Lunch/Dinner</option>
+                </select>
+                {errors.category && (
+                  <p className={styles.errorMessage}>
+                    {errors.category.message}
+                  </p>
+                )}
               </div>
             </section>
             <section className={styles.areaSaveButton}>
