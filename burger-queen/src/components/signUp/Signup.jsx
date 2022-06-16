@@ -64,7 +64,6 @@ const Signup = () => {
       });
       navigate("/team");
     } catch (error) {
-      console.log(error.code);
       switch (error.code) {
         case "auth/email-already-in-use":
           setError("email", {

@@ -40,7 +40,6 @@ function Chronometer(props) {
     let M = parseInt(formatZero(((secs % 3600) / 60) | 0));
     let S = parseInt(formatZero(secs % 60 | 0));
     let MS = parseInt(secs * 1000 - H * 3600 * 1000 - M * 60 * 1000 - S * 1000);
-
     return setTime({ ms: MS, s: S, m: M, h: H });
   };
 
@@ -68,7 +67,8 @@ function Chronometer(props) {
             {/* <span>{time.ms >= 10 ? time.ms : "0" + time.ms}</span> */}
           </div>
         )}
-        {status === 1 ? (
+         </div>
+        {/* {status === 1 ? (
           <div>
             <button className={styles.stopwatch} onClick={stop}>
               Stop
@@ -84,7 +84,7 @@ function Chronometer(props) {
         </button>
       ) : (
         ""
-      )}
+      )} */}
     </>
   );
 }

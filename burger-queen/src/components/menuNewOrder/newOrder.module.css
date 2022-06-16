@@ -1,9 +1,9 @@
 .headerImg {
-    display: flex;
-    background-size: cover;
-    width: 101%;
-    height: 175px;
-    height: 27vh;
+  display: flex;
+  background-size: cover;
+  width: 101%;
+  height: 175px;
+  height: 27vh;
 }
 
 .containerNewOrder {
@@ -12,35 +12,35 @@
 }
 
 .imgRest {
-    width: inherit;
-    height: 177px;
-    position: absolute;
-    left: 0;
-    top: 0;
+  width: inherit;
+  height: 177px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .logOutButton {
-    position: absolute;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin-top: 2px;
-    margin-left: 1215px;
-    background-color: un;
-    background-color: unset;
-    border: solid 4px;
-    border-color: #FBA121;
-    color: #ffff;
-    background-color: brown;
-    font-weight: bold;
-    font-size: 1em;
-    width: 106px;
-    height: 58px;
-    border-radius: 30px;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 2px;
+  margin-left: 1215px;
+  background-color: un;
+  background-color: unset;
+  border: solid 4px;
+  border-color: #fba121;
+  color: #ffff;
+  background-color: brown;
+  font-weight: bold;
+  font-size: 1em;
+  width: 106px;
+  height: 58px;
+  border-radius: 30px;
 }
 
 .iconLogOut {
-    width: 30px;
+  width: 30px;
 }
 
 .newOrderSection {

@@ -66,7 +66,7 @@ export function Popup(props) {
     Swal.fire({
       position: "center",
       icon: "success",
-      title: "Added product",
+      title: "Product added",
       showConfirmButton: false,
       timer: 1500,
     });

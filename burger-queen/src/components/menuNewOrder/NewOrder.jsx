@@ -110,7 +110,6 @@ const NewOrder = () => {
         .then((response) => response.json())
         .then((addedProduct) => {
           console.log(addedProduct);
-
           sendContextOrder([]);
           sendContextAmount(0);
           let selectInput = document.getElementById("inputNumberTable");
@@ -120,7 +119,7 @@ const NewOrder = () => {
     Swal.fire({
       position: "center",
       icon: "success",
-      title: "Order send",
+      title: "Order sent",
       showConfirmButton: false,
       timer: 1500,
     });

@@ -14,9 +14,9 @@ const Home = () => {
   const { logOut } = useContext(UserContext);
   const navigate = useNavigate();
 
-  fetch("http://localhost:3004/ComidaCena")
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+  // fetch("http://localhost:3004/ComidaCena")
+  //   .then((response) => response.json())
+  //   .then((data) => console.log(data));
 
   const handleClickLogout = async () => {
     try {

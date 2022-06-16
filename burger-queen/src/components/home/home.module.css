@@ -15,18 +15,18 @@
 }
 
 .welcomeContainer {
-    display: flex;
-    justify-content: center;
-    width: 99vw;
-    height: 68vh;
-    margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  width: 99vw;
+  height: 68vh;
+  margin-top: 60px;
 }
 
 .welcomeSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1000px;
 }
 
 .buttonsArea {
@@ -41,43 +41,43 @@
 }
 
 .welcomeButtons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-    border-radius: 20px;
-    background-color: #7ED090;
-    font-size: 35px;
-    font-family: revert;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  border-radius: 20px;
+  background-color: #7ed090;
+  font-size: 35px;
+  font-family: revert;
+  cursor: pointer;
 }
 
 .welcomeButtons:hover {
-    background-color: #6DAE7B;
+  background-color: #6dae7b;
 }
 
 .iconsButtons {
-    width: 45px;
+  width: 45px;
 }
 
 .logOutButton {
-    position: absolute;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
-    margin-left: 85%;
-    border: solid 4px;
-    border-color: #FBA121;
-    color: #ffff;
-    background-color: brown;
-    font-weight: bold;
-    font-size: 1em;
-    width: 60px;
-    height: 45px;
-    border-radius: 30px;
-    cursor: pointer;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  margin-left: 85%;
+  border: solid 4px;
+  border-color: #fba121;
+  color: #ffff;
+  background-color: brown;
+  font-weight: bold;
+  font-size: 1em;
+  width: 60px;
+  height: 45px;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
 .iconLogOut {

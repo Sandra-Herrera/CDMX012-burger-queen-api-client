@@ -273,10 +273,19 @@
     overflow-y: auto;
   }
 
-  .containerItems {
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
-  }
+.titleTable {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  font-size: 2.1em;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 4px;
+  border-color: coral;
+}
 
   .fadeOut {
     animation: 3s both diminish;
