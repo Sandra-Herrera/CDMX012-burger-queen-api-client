@@ -15,7 +15,6 @@ import ViewMenuNewOrder from "./components/menuNewOrder/ViewMenuNewOrder";
 import OrdersReady from "./components/ordersready/OrdersReady";
 
 function App() {
-  // const { user, setContextUser } = useContext(UserContext);
   const { user } = useContext(UserContext);
   let userRole = null;
   if (user?.photoURL) {
@@ -23,11 +22,6 @@ function App() {
   }
   console.log(user)
 
-  //revisar el local storage en el key 'userLocalStorage'
-  //if(valor de local storage)
-    //entonces enviarlo por medio del context el usuario
-    //setContextUser('valor que encontraste en el local storage');
-  //si no existe no se asigna
 
   return (
     <Routes>

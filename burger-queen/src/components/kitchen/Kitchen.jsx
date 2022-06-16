@@ -6,12 +6,12 @@ import { UserContext } from "../../database/UserProvider";
 import logOutIcon from "../../img/logOutIcon.png";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
 import Chronometer from "../chronometer/Chronometer";
+import headerMediaQ from "../../img/headerMediaQ.jpg";
 
 const Kitchen = () => {
   const navigate = useNavigate();
   const [chosenProduct, setChosenProduct] = useState([]);
   const [check, setCheck] = useState(false);
-  // const [deliveredOrders, setDeliveredOrders] = useState([]);
   const [isDelivered, setIsDelivered] = useState(false);
   const { logOut } = useContext(UserContext);
 
@@ -38,21 +38,10 @@ const Kitchen = () => {
     fetch("http://localhost:3004/chosenProduct")
       .then((response) => response.json())
       .then((chosenProduct) => {
-        // let checkStates = chosenProduct.map((choseProd) => {
-        //   if (choseProd.dateDone !== "") {
-        //     return true;
-        //   } else {
-        //     return false;
-        //   }
-        // });
-        // console.log(checkStates);
-        // setCheck(checkStates);
         let filteredOrdersReady = chosenProduct.filter(
           (ordersReady) => ordersReady.dateDone === ""
         );
         setChosenProduct(filteredOrdersReady);
-
-        // setChosenProduct(chosenProduct);
         setCheck(filteredOrdersReady.map(() => false));
       })
       .catch((error) => console.log(error));
@@ -74,12 +63,11 @@ const Kitchen = () => {
       }),
     })
       .then((response) => {
-        // console.log(response.status);
         return response.json();
       })
       .then((data) => {
         setIsDelivered(true);
-        console.log(data)
+        console.log(data);
       });
   };
 
@@ -93,17 +81,24 @@ const Kitchen = () => {
     });
     console.log(updatedCheckedState);
     setCheck(updatedCheckedState);
-    //stopTimer
   };
 
   return (
     <>
       <div className={styles.headerImg}>
-        <img
-          alt="imagen header"
-          className={styles.imgRest}
-          src={imgHeaderInto}
-        />
+        <picture>
+          <source
+            className={styles.imgRest}
+            srcSet={imgHeaderInto}
+            media="(min-width: 415px)"
+            alt="imagen header"
+          />
+          <img
+            className={styles.imgRest}
+            src={headerMediaQ}
+            alt="imagen header"
+          />
+        </picture>
         <button className={styles.backButton} onClick={redirectHome}>
           <img alt="iconBack" className={styles.imgBack} src={backIcon} />
         </button>

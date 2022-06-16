@@ -58,7 +58,6 @@ const NewOrder = () => {
 
   const deleteProducts = (product) => (e) => {
     e.preventDefault();
-    //preguntar si desea eliminar
     if (product.qty > 0) {
       sendContextAmount(
         parseFloat(amount) - parseFloat(product.price) * parseInt(product.qty)
@@ -174,7 +173,6 @@ const NewOrder = () => {
             </section>
             <hr></hr>
           </div>
-          {/* {status === 0 ? ( */}
           <section className={styles.containerOrder}>
             {order.map((product) => {
               return (
@@ -228,9 +226,6 @@ const NewOrder = () => {
               );
             })}
           </section>
-          {/* ) : (
-            ""
-         )} */}
           <section className={styles.bottonAreabtn}>
             <button
               className={styles.bottonButtons}

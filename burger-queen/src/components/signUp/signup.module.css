@@ -6,7 +6,7 @@
 }
 
 .imgRest {
-    width: inherit;
+    width: 100%;
     height: 100px;
     position: absolute;
     left: 0;
@@ -37,7 +37,7 @@
     width: 25px;
 }
 
-.formContainer{
+.formContainer {
     display: grid;
     row-gap: 6px;
     width: 110%;
@@ -65,7 +65,7 @@
     margin-bottom: unset;
 }
 
-.inputContainer{
+.inputContainer {
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-gap: 1em;
@@ -81,15 +81,15 @@
     width: 250px;
 }
 
-.inputSignUp:hover{
-border-color: #FBA121;
+.inputSignUp:hover {
+    border-color: #FBA121;
 }
 
-.inputSignUp:focus{
+.inputSignUp:focus {
     background-color: rgb(222, 218, 218);
-    }
+}
 
-.rol{
+.rol {
     justify-content: center;
     border-radius: 8px;
     border: solid 2px;
@@ -102,15 +102,15 @@ border-color: #FBA121;
     cursor: pointer;
 }
 
-.rol:hover{
+.rol:hover {
     border-color: #FBA121;
 }
 
-.rol:focus{
+.rol:focus {
     border-color: #FBA121;
 }
 
-.continueBtn{
+.continueBtn {
     width: 20%;
     margin-left: 39%;
     cursor: pointer;
@@ -126,11 +126,11 @@ border-color: #FBA121;
     cursor: pointer;
 }
 
-.continueBtn:hover{
+.continueBtn:hover {
     background-color: #4b8d59;
 }
 
-.errorMessage{
+.errorMessage {
     display: flex;
     color: red;
     justify-content: center;
@@ -146,15 +146,15 @@ border-color: #FBA121;
         width: 100%;
         height: 15vh;
     }
-    
+
     .imgRest {
-        width: inherit;
+        width: 100%;
         height: 100px;
         position: absolute;
         left: 0;
         top: 0;
     }
-    
+
     .backButton {
         position: absolute;
         display: flex;
@@ -174,46 +174,47 @@ border-color: #FBA121;
         color: #97617A;
         cursor: pointer;
     }
-    
+
     .imgBack {
         width: 25px;
     }
-    
-    .formContainer{
+
+    .formContainer {
         display: grid;
         row-gap: 6px;
-        width: 110%;
+        width: 80%;
         background-color: #EDD479;
         justify-content: center;
         border-radius: 12px;
         border: solid 1px;
         padding: 10px;
     }
-    
+
     .containerSignUpArea {
         display: grid;
         justify-content: center;
         width: 100%;
         margin-top: 55px;
+        margin-left: 12px;
     }
-    
+
     .signUpTitle {
         display: flex;
         justify-content: center;
-        font-size: 45px;
+        font-size: 25px;
         font-family: sans-serif;
         color: brown;
         margin-top: unset;
         margin-bottom: unset;
     }
-    
-    .inputContainer{
+
+    .inputContainer {
         display: grid;
-        grid-template-columns: 2fr 2fr;
-        grid-gap: 1em;
+        grid-template-columns: 2fr;
+        grid-gap: 1.2em;
         justify-content: center;
     }
-    
+
     .inputSignUp {
         border-radius: 8px;
         border: solid 2px;
@@ -222,38 +223,38 @@ border-color: #FBA121;
         height: 35px;
         width: 250px;
     }
-    
-    .inputSignUp:hover{
-    border-color: #FBA121;
+
+    .inputSignUp:hover {
+        border-color: #FBA121;
     }
-    
-    .inputSignUp:focus{
+
+    .inputSignUp:focus {
         background-color: rgb(222, 218, 218);
-        }
-    
-    .rol{
+    }
+
+    .rol {
         justify-content: center;
         border-radius: 8px;
         border: solid 2px;
         font-size: 15px;
         font-family: revert;
-        width: 250px;
+        width: 258px;
         height: 35px;
-        margin-left: 25%;
+        margin-left: 0%;
         margin-top: 3%;
         cursor: pointer;
     }
-    
-    .rol:hover{
+
+    .rol:hover {
         border-color: #FBA121;
     }
-    
-    .rol:focus{
+
+    .rol:focus {
         border-color: #FBA121;
     }
-    
-    .continueBtn{
-        width: 20%;
+
+    .continueBtn {
+        width: 40%;
         margin-left: 39%;
         cursor: pointer;
         display: flex;
@@ -263,16 +264,18 @@ border-color: #FBA121;
         background-color: #7ED090;
         height: 100%;
         max-width: 180px;
+        margin-left: 78px;
+        margin-top: 6px;
         font-size: 20px;
         font-family: sans-serif;
         cursor: pointer;
     }
-    
-    .continueBtn:hover{
+
+    .continueBtn:hover {
         background-color: #4b8d59;
     }
-    
-    .errorMessage{
+
+    .errorMessage {
         display: flex;
         color: red;
         justify-content: center;

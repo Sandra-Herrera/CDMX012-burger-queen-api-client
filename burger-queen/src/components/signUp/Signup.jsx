@@ -1,17 +1,16 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-// import { useContext } from "react";
 import { UserContext } from "../../database/UserProvider";
 import { updateProfile } from "firebase/auth";
 import { auth } from "../../database/firebase-config";
 import { useNavigate } from "react-router-dom";
 import styles from "./signup.module.css";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
+import headerMediaQ from "../../img/headerMediaQ.jpg";
 import backIcon from "../../img/backIcon.png";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const Signup = () => {
-  // const [team, setTeam] = useState({});
   const { createUser } = useContext(UserContext);
   const navigate = useNavigate();
 
@@ -22,31 +21,6 @@ const Signup = () => {
     getValues,
     setError,
   } = useForm();
-
-  // const onSubmit = async (data) => {
-  //   // setTeam(data)
-  //   try {
-  //     await createUser(data.email, data.password, data.username, data.rol);
-
-  //     updateProfile(auth.currentUser, {
-  //       displayName: data.username,
-  //       photoURL: data.rol,
-  //     });
-  //     saveEmployee(data)
-  //   } catch (error) {
-  //     console.log(error.code);
-  //     switch (error.code) {
-  //       case "auth/email-already-in-use":
-  //         setError("email", {
-  //           message: "email already in use",
-  //         });
-  //         break;
-  //       default:
-  //         console.log("Ocurrió un error");
-  //     }
-  //   }
-  // };
-  // console.log(team)
 
   const redirectTeam = () => {
     navigate("/team");
@@ -69,7 +43,7 @@ const Signup = () => {
           password: data.password,
         }
       );
-      
+
       fetch("http://localhost:3004/team", {
         method: "POST",
         headers: {
@@ -81,13 +55,13 @@ const Signup = () => {
         .then((addedEmployee) => {
           console.log(addedEmployee);
         });
-        Swal.fire({
-          position: 'center',
-          icon: 'success',
-          title: 'Added employee',
-          showConfirmButton: false,
-          timer: 1500
-        })
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Added employee",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       navigate("/team");
     } catch (error) {
       console.log(error.code);
@@ -103,69 +77,22 @@ const Signup = () => {
     }
   };
 
-  // const saveEmployee = (dataTeam) => {
-  //   const user = auth.currentUser;
-  //   if (user !== null) {
-  //     const displayName = dataTeam.username;
-  //     const email = user.email;
-  //     const role = dataTeam.rol;
-  //     const uid = user.uid;
-
-  //     let employee = Object.assign(
-  //       {},
-  //       {
-  //         email: email,
-  //         name: displayName,
-  //         role: role,
-  //         password: dataTeam.password,
-  //         uidFirebase: uid,
-  //       }
-  //     );
-  //     fetch("http://localhost:3004/team", {
-  //       method: "POST",
-  //       headers: {
-  //         "content-type": "application/json",
-  //       },
-  //       body: JSON.stringify(employee),
-  //     })
-  //       .then((response) => response.json())
-  //       .then((addedEmployee) => {
-  //         console.log(addedEmployee);
-  //       });
-  //   }
-  // };
-
-  // const saveEmployee = (dataTeam) => {
-  //  let employee =  Object.assign(
-  //     {},
-  //     {
-  //       email: dataTeam.email,
-  //       name: dataTeam.username,
-  //       role: dataTeam.rol,
-  //       password: dataTeam.password,
-  //     }
-  //   )
-  //   fetch("http://localhost:3004/team", {
-  //     method: "POST",
-  //     headers: {
-  //       "content-type": "application/json",
-  //     },
-  //     body: JSON.stringify(employee),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((addedEmployee) => {
-  //       console.log(addedEmployee);
-  //     });
-  // };
-
   return (
     <>
       <div className={styles.headerImg}>
-        <img
-          alt="imagen header"
-          className={styles.imgRest}
-          src={imgHeaderInto}
-        />
+        <picture>
+          <source
+            className={styles.imgRest}
+            srcSet={imgHeaderInto}
+            media="(min-width: 415px)"
+            alt="imagen header"
+          />
+          <img
+            className={styles.imgRest}
+            src={headerMediaQ}
+            alt="imagen header"
+          />
+        </picture>
         <button className={styles.backButton} onClick={redirectTeam}>
           <img alt="iconBack" className={styles.imgBack} src={backIcon} />
         </button>

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import styles from "./login.module.css";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
+import headerMediaQ from "../../img/headerMediaQ.jpg";
 
 const Login = () => {
   const {
@@ -39,13 +40,27 @@ const Login = () => {
   return (
     <>
       <div className={styles.headerImg}>
-        <img alt="imagen header" className={styles.imgRest} src={imgHeaderInto}/>
+        <picture>
+          <source
+            className={styles.imgRest}
+            srcSet={imgHeaderInto}
+            media="(min-width: 415px)"
+            alt="imagen header"
+          />
+          <img
+            className={styles.imgRest}
+            src={headerMediaQ}
+            alt="imagen header"
+          />
+        </picture>
       </div>
       <section className={styles.containerLoginArea}>
-        {/* <section className={styles.loginArea}> */}
-          <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)}>
-            <h1 className={styles.loginTitle}>Login</h1>
-            <div>
+        <form
+          className={styles.formContainer}
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <h1 className={styles.loginTitle}>Login</h1>
+          <div>
             <input
               type={"email"}
               placeholder="E-mail"
@@ -60,9 +75,11 @@ const Login = () => {
                 },
               })}
             />
-            {errors.email && <p className={styles.errorMessage}>{errors.email.message}</p>}
-            </div>
-            <div>
+            {errors.email && (
+              <p className={styles.errorMessage}>{errors.email.message}</p>
+            )}
+          </div>
+          <div>
             <input
               type={"password"}
               placeholder="Password"
@@ -83,17 +100,18 @@ const Login = () => {
                 },
               })}
             />
-            {errors.password && <p className={styles.errorMessage}>{errors.password.message}</p>}
-            </div>
-            <button
-              type="submit"
-              className={styles.loginButton}
-              id="buttonContinue"
-            >
-              Login
-            </button>
-          </form>
-        {/* </section> */}
+            {errors.password && (
+              <p className={styles.errorMessage}>{errors.password.message}</p>
+            )}
+          </div>
+          <button
+            type="submit"
+            className={styles.loginButton}
+            id="buttonContinue"
+          >
+            Login
+          </button>
+        </form>
       </section>
     </>
   );

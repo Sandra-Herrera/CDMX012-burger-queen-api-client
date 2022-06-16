@@ -51,7 +51,7 @@
   background-color: coral;
 }
 
-.scrollProduct{
+.scrollProduct {
   height: 70vh;
   overflow-y: auto;
 }
@@ -192,6 +192,7 @@
   padding: 6%;
   font-size: 95%;
 }
+
 /* Aquí terminó el modal de borrar producto */
 
 /* Inicia responsive mobile */
@@ -205,7 +206,7 @@
     background-color: antiquewhite;
     box-shadow: 0 0 15px #333;
   }
-  
+
   .titleTable {
     grid-column-start: 1;
     grid-column-end: 6;
@@ -219,7 +220,7 @@
     border: solid 4px;
     border-color: coral;
   }
-  
+
   .addButton {
     background: none;
     border: none;
@@ -227,39 +228,39 @@
     margin-top: 2px;
     cursor: pointer;
   }
-  
+
   .iconAdd {
     width: 32px;
   }
-  
+
   .mainHeaderTable {
     display: grid;
     grid-template-columns: repeat(5, 20%);
   }
-  
+
   .headerTable {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
     color: #453006;
     border: solid 2px;
     border-color: coral;
     background-color: coral;
   }
-  
-  .scrollProduct{
+
+  .scrollProduct {
     height: 70vh;
     overflow-y: auto;
   }
-  
+
   .containerItems {
     display: grid;
     grid-template-columns: repeat(5, 20%);
   }
-  
+
   .itemAlignStart {
     display: flex;
     justify-content: start;
@@ -270,7 +271,7 @@
     border: solid 1px;
     border-color: coral;
   }
-  
+
   .itemTable {
     display: flex;
     justify-content: center;
@@ -281,21 +282,21 @@
     border: solid 1px;
     border-color: coral;
   }
-  
+
   .btnEditAndDelete {
     border: none;
     background: none;
     cursor: pointer;
   }
-  
+
   .imgEdit {
     width: 35px;
   }
-  
+
   .imgDelete {
     width: 20px;
   }
-  
+
   .logOutButton {
     position: absolute;
     display: flex;
@@ -315,15 +316,15 @@
     height: 58px;
     border-radius: 30px;
   }
-  
+
   .logOutButton:hover {
     border-color: rgb(163, 69, 69);
   }
-  
+
   .iconLogOut {
     width: 30px;
   }
-  
+
   /* MODAL DE BORRAR PRODUCTO */
   .modalDelete,
   .overlayDelete {
@@ -335,11 +336,11 @@
     bottom: 0;
     position: fixed;
   }
-  
+
   .overlayDelete {
     background: rgba(49, 49, 49, 0.496);
   }
-  
+
   .modalContentDelete {
     display: flex;
     justify-content: center;
@@ -359,19 +360,19 @@
     max-width: 600px;
     min-width: 300px;
   }
-  
+
   .deleteOrCancel {
     font-size: 120%;
     font-family: sans-serif;
   }
-  
+
   .deleteAndCancel {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 6%;
   }
-  
+
   .deleteYes {
     margin-left: 18%;
     background-color: #fc7117;
@@ -381,7 +382,7 @@
     padding: 6%;
     font-size: 95%;
   }
-  
+
   .cancel {
     margin-left: 40%;
     background-color: #7ed090;

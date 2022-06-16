@@ -1,14 +1,8 @@
 import React, { useState } from "react";
-// import {
-//   createUserWithEmailAndPassword,
-//   signInWithEmailAndPassword,
-//   onAuthStateChanged,
-//   signOut,
-// } from "firebase/auth";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut
+  signOut,
 } from "firebase/auth";
 import { auth } from "./firebase-config";
 import { createContext } from "react";
@@ -19,37 +13,19 @@ export const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState();
 
-  const createUser = (email, password, displayName) =>(
-    createUserWithEmailAndPassword(auth, email, password, displayName)
-  )
+  const createUser = (email, password, displayName) =>
+    createUserWithEmailAndPassword(auth, email, password, displayName);
 
-  const loginUser = (email, password) =>{
-    signInWithEmailAndPassword(auth, email, password).then(()=>{setUser(auth.currentUser)})
-  }
-
-  // const setContextUser = (localStorageUser) =>{
-  //   setUser(localStorageUser);
-  // }
-  // console.log({user})
-
-  // useEffect(() => {
-  //   const userData = onAuthStateChanged(auth, (userId) => {
-  //     console.log({userId});
-  //     // setUser(userId);
-  //   });
-  //   return () => userData();
-  // }, []);
-
-  // useEffect(()=>{
-  //   console.log(auth.currentUser, user)
-  // },[])
+  const loginUser = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password).then(() => {
+      setUser(auth.currentUser);
+    });
+  };
 
   const logOut = () => signOut(auth);
-  // const logOut = () => signOut(auth).then(()=>{console.log("cerrado")});
 
   return (
-    // <UserContext.Provider value={{ createUser, loginUser, user, logOut, setContextUser }}>
-    <UserContext.Provider value={{ createUser, loginUser, user, logOut }}>  
+    <UserContext.Provider value={{ createUser, loginUser, user, logOut }}>
       {children}
     </UserContext.Provider>
   );

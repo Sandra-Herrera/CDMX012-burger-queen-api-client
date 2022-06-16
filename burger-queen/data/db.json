@@ -227,7 +227,8 @@
         "s": 15,
         "m": 7,
         "h": 0
-      }
+      },
+      "delivered": true
     },
     {
       "product": "Frapuchino coffee",
@@ -269,7 +270,8 @@
         "s": 17,
         "m": 7,
         "h": 1
-      }
+      },
+      "delivered": true
     },
     {
       "product": "Scrambled eggs",
@@ -283,7 +285,8 @@
         "s": 3,
         "m": 37,
         "h": 1
-      }
+      },
+      "delivered": true
     },
     {
       "product": "American coffee",
@@ -361,24 +364,42 @@
       "qty": 1,
       "table": "2",
       "dateCreated": "2022-06-15T15:28:35.508Z",
-      "dateDone": "",
-      "id": "FJ2VgWM"
+      "dateDone": "2022-06-16T14:26:11.472Z",
+      "id": "FJ2VgWM",
+      "time": {
+        "ms": 945,
+        "s": 35,
+        "m": 57,
+        "h": 22
+      }
     },
     {
       "product": "Pasta bolognese",
       "qty": 1,
       "table": "2",
       "dateCreated": "2022-06-15T15:28:35.508Z",
-      "dateDone": "",
-      "id": "bi0fKQQ"
+      "dateDone": "2022-06-16T17:31:41.737Z",
+      "id": "bi0fKQQ",
+      "time": {
+        "ms": 213,
+        "s": 6,
+        "m": 3,
+        "h": 26
+      }
     },
     {
       "product": "Red velvet cake",
       "qty": 1,
       "table": "2",
       "dateCreated": "2022-06-15T15:28:35.508Z",
-      "dateDone": "",
-      "id": "47aIjxP"
+      "dateDone": "2022-06-16T18:33:06.478Z",
+      "id": "47aIjxP",
+      "time": {
+        "ms": 960,
+        "s": 30,
+        "m": 4,
+        "h": 27
+      }
     },
     {
       "product": "Pasta bolognese",
@@ -439,8 +460,15 @@
       "qty": 2,
       "table": "1",
       "dateCreated": "2022-06-16T06:31:09.569Z",
-      "dateDone": "",
-      "id": "q2leKer"
+      "dateDone": "2022-06-16T19:07:08.126Z",
+      "id": "q2leKer",
+      "time": {
+        "ms": 549,
+        "s": 58,
+        "m": 35,
+        "h": 12
+      },
+      "delivered": true
     },
     {
       "product": "Pepperoni pizza",
@@ -457,12 +485,59 @@
       "dateCreated": "2022-06-16T07:55:12.371Z",
       "dateDone": "",
       "id": "XbCtpNx"
+    },
+    {
+      "product": "Red velvet cake",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-16T14:27:17.320Z",
+      "dateDone": "",
+      "id": "B2-0wLC"
+    },
+    {
+      "product": "Cheesecake",
+      "qty": 4,
+      "table": "3",
+      "dateCreated": "2022-06-16T17:32:05.935Z",
+      "dateDone": "",
+      "id": "M7p0V1G"
+    },
+    {
+      "product": "Soda 500 mL",
+      "qty": 3,
+      "table": "2",
+      "dateCreated": "2022-06-16T18:35:11.858Z",
+      "dateDone": "2022-06-16T18:40:56.655Z",
+      "id": "rOsEJHs",
+      "time": {
+        "ms": 791,
+        "s": 44,
+        "m": 5,
+        "h": 0
+      },
+      "delivered": true
+    },
+    {
+      "product": "Chicken baguette",
+      "qty": 3,
+      "table": "1",
+      "dateCreated": "2022-06-16T18:42:38.422Z",
+      "dateDone": "",
+      "id": "yKo3P4J"
+    },
+    {
+      "product": "Scrambled eggs",
+      "qty": 4,
+      "table": "1",
+      "dateCreated": "2022-06-16T19:07:54.014Z",
+      "dateDone": "",
+      "id": "wVf392s"
     }
   ],
   "team": [
     {
       "email": "sandy@gmail.com",
-      "name": "sandy",
+      "name": "Sandy H",
       "role": "administrator",
       "password": "123456",
       "uidFirebase": "lyE6YFq6MogpLlNiSLZTIPLaQv22",

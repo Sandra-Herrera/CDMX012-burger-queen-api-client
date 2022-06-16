@@ -8,7 +8,7 @@ import orderIcon from "../../img/orderIcon.png";
 import productsIcon from "../../img/productsIcon.png";
 import teamIcon from "../../img/teamIcon.png";
 import logOutIcon from "../../img/logOutIcon.png";
-import imgHeaderIntoSmall from "../../img/imgMediaQ.png";
+import headerMediaQ from "../../img/headerMediaQ.jpg";
 
 const Home = () => {
   const { logOut } = useContext(UserContext);
@@ -47,14 +47,18 @@ const Home = () => {
   return (
     <>
       <div className={styles.headerImg}>
-        {/* <img
-          alt="imagen header"
-          className={styles.imgRest}
-          src={imgHeaderInto}
-        /> */}
-        <picture >
-          <source className={styles.imgRest} srcSet={imgHeaderInto} media="(min-width: 415px)" alt="imagen header"/>
-          <img className={styles.imgRest} src={imgHeaderIntoSmall} alt="imagen header"/>
+        <picture>
+          <source
+            className={styles.imgRest}
+            srcSet={imgHeaderInto}
+            media="(min-width: 415px)"
+            alt="imagen header"
+          />
+          <img
+            className={styles.imgRest}
+            src={headerMediaQ}
+            alt="imagen header"
+          />
         </picture>
         <button className={styles.logOutButton} onClick={handleClickLogout}>
           <img
@@ -66,7 +70,6 @@ const Home = () => {
       </div>
       <section className={styles.welcomeContainer}>
         <section className={styles.welcomeSection}>
-          {/* <h1 className={styles.welcomeTitle}>Welcome</h1> */}
           <section className={styles.buttonsArea}>
             <button className={styles.welcomeButtons} onClick={redirectKitchen}>
               Kitchen
