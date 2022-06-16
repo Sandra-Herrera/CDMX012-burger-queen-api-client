@@ -111,7 +111,6 @@ const NewOrder = () => {
         .then((response) => response.json())
         .then((addedProduct) => {
           console.log(addedProduct);
-
           sendContextOrder([]);
           sendContextAmount(0);
           let selectInput = document.getElementById("inputNumberTable");
@@ -174,7 +173,6 @@ const NewOrder = () => {
             </section>
             <hr></hr>
           </div>
-          {/* {status === 0 ? ( */}
           <section className={styles.containerOrder}>
             {order.map((product) => {
               return (
@@ -228,9 +226,6 @@ const NewOrder = () => {
               );
             })}
           </section>
-          {/* ) : (
-            ""
-         )} */}
           <section className={styles.bottonAreabtn}>
             <button
               className={styles.bottonButtons}

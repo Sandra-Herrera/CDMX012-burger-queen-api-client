@@ -1,15 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import styles from "./menu.module.css";
-// import line from "../../img/line.png";
 import OrderContext from "../context/OrderContext";
-
 
 const Menu = () => {
   const [products, setProducts] = useState([]);
   const [breakfastMenu, setBreakfastMenu] = useState([]);
   const [lunchMenu, setLunchMenu] = useState([]);
 
-  const { order, sendContextOrder, amount, sendContextAmount } = useContext(OrderContext);
+  const { order, sendContextOrder, amount, sendContextAmount } =
+    useContext(OrderContext);
 
   const getAllProduct = () => {
     fetch("http://localhost:3004/Products")
@@ -41,9 +40,12 @@ const Menu = () => {
     sendContextAmount(parseFloat(amount) + parseFloat(product.price));
     if (productExist) {
       product = { ...productExist, qty: productExist.qty + 1 };
-      sendContextOrder(order.map(item => (item.id === product.id ? {...item, qty:product.qty} : item)));
-    }
-    else{
+      sendContextOrder(
+        order.map((item) =>
+          item.id === product.id ? { ...item, qty: product.qty } : item
+        )
+      );
+    } else {
       sendContextOrder([...order, product]);
     }
   };
@@ -67,9 +69,6 @@ const Menu = () => {
           </button>
         </section>
         <hr></hr>
-        {/* <section className={styles.line}>
-          <img alt="line" className={styles.imgLine} src={line} />
-        </section> */}
         <section className={styles.scrollMenu}>
           <section className={styles.allMenu}>
             {breakfastMenu.map((product) => {

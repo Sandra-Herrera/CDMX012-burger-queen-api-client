@@ -1,197 +1,189 @@
 .headerImg {
-    display: flex;
-    background-size: cover;
-    width: 101%;
-    height: 175px;
-    height: 27vh;
+  display: flex;
+  background-size: cover;
+  width: 101%;
+  height: 175px;
+  height: 27vh;
 }
-.containerNewOrder{
-    width: 49vw;
-    height: 100%;
+.containerNewOrder {
+  width: 49vw;
+  height: 100%;
 }
 
 .imgRest {
-    width: inherit;
-    height: 177px;
-    position: absolute;
-    left: 0;
-    top: 0;
+  width: inherit;
+  height: 177px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .logOutButton {
-    position: absolute;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin-top: 2px;
-    margin-left: 1215px;
-    background-color: un;
-    background-color: unset;
-    border: solid 4px;
-    border-color: #FBA121;
-    color: #ffff;
-    background-color: brown;
-    font-weight: bold;
-    font-size: 1em;
-    width: 106px;
-    height: 58px;
-    border-radius: 30px;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 2px;
+  margin-left: 1215px;
+  background-color: un;
+  background-color: unset;
+  border: solid 4px;
+  border-color: #fba121;
+  color: #ffff;
+  background-color: brown;
+  font-weight: bold;
+  font-size: 1em;
+  width: 106px;
+  height: 58px;
+  border-radius: 30px;
 }
 
 .iconLogOut {
-    width: 30px;
+  width: 30px;
 }
 
-.newOrderSection{
-    background-color: #EDD479;
-    height: 100%;
-    display: flex;
-    flex-flow: column;
+.newOrderSection {
+  background-color: #edd479;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
 }
 
-.titleNewOrder{
-    grid-column-start: 1;
-    grid-column-end: 6;
-    font-size: 2.5em;
-    margin-top: 2%;
-    font-weight: bold;
-    font-family: sans-serif;
-    color: brown;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.titleNewOrder {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  font-size: 2.5em;
+  margin-top: 2%;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.inputsOrder{
-    display:flex;
-    justify-content: start;
-    
-
+.inputsOrder {
+  display: flex;
+  justify-content: start;
 }
 
-.titleTable{
-    display: flex;
-    margin-left: 20px 20px 20px 20px;
-    margin: 19px;
-    font-family: sans-serif;
-    font-size: 25px;
-    align-items: center;
+.titleTable {
+  display: flex;
+  margin-left: 20px 20px 20px 20px;
+  margin: 19px;
+  font-family: sans-serif;
+  font-size: 25px;
+  align-items: center;
 }
 
-.numTable{
-    width: 45px;
-    height: 45px;
-    display: flex;
-    margin-left: 20px;
-    border: solid 2px;
-    font-size: 27px;
-    text-align: center;
+.numTable {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  margin-left: 20px;
+  border: solid 2px;
+  font-size: 27px;
+  text-align: center;
 }
 
-.titleAccount{
-    display: flex;
-    margin-left: 20px 20px 20px 20px;
-    margin: 19px;
-    font-family: sans-serif;
-    font-size: 25px;
-    align-items: center;
+.titleAccount {
+  display: flex;
+  margin-left: 20px 20px 20px 20px;
+  margin: 19px;
+  font-family: sans-serif;
+  font-size: 25px;
+  align-items: center;
 }
 
-.account{
-    display: flex;
-    /* width: 110px; */
-    width: 100%;
-    max-width: 90px;
-    height: 45px;
-    display: flex;
-    margin-left: 20px;
-    border: solid 2px;
-    font-size: 27px;
-    text-align: center;
+.account {
+  display: flex;
+  width: 100%;
+  max-width: 90px;
+  height: 45px;
+  display: flex;
+  margin-left: 20px;
+  border: solid 2px;
+  font-size: 27px;
+  text-align: center;
 }
 
-.containerOrder{
-    height: 60vh;
-    overflow-y: scroll;
-    margin-left: 8px;
-
+.containerOrder {
+  height: 60vh;
+  overflow-y: scroll;
+  margin-left: 8px;
 }
 
-hr{
-    background-color: #000000;
+hr {
+  background-color: #000000;
 }
 
-.productRow{
-    display: grid;
-    grid-template-columns: repeat(1,40%) repeat(4,15%);
-    font-family: sans-serif;
-    font-size: 22px;
-    align-items: center;
+.productRow {
+  display: grid;
+  grid-template-columns: repeat(1, 40%) repeat(4, 15%);
+  font-family: sans-serif;
+  font-size: 22px;
+  align-items: center;
 }
 
-.itemTable{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    font-size: 1.5em;
-    padding: 10px;
-
+.itemTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  padding: 10px;
 }
 
-.inputCounter{
-    width: 30px;
-    height: 30px;
-    display: flex;
-    text-align: center;
-    font-size: 20px;
+.inputCounter {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  text-align: center;
+  font-size: 20px;
 }
 
-.btnIcons{
-    border: none;
-    background: none;
-    cursor: pointer;
+.btnIcons {
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-.imgIcon{
-    width: 35px;
-    height: 35px;
+.imgIcon {
+  width: 35px;
+  height: 35px;
 }
 
-.bottonAreabtn{
-    display: flex;
-    justify-content: space-around;
-    height: 50px;
-    align-items: center;
-    margin: 10px 5px;
-    position: sticky;
+.bottonAreabtn {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  margin: 10px 5px;
+  position: sticky;
 }
 
-.bottonButtons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    background-color: #7ED090;
-    width: 35%;
-    height: 100%;
-    max-width: 180px;
-    /* width: 180px;
-    height: 50px; */
-    font-size: 20px;
-    font-family: sans-serif;
-    /* margin-left: 115px; */
-    cursor: pointer;
+.bottonButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #7ed090;
+  width: 35%;
+  height: 100%;
+  max-width: 180px;
+  font-size: 20px;
+  font-family: sans-serif;
+  cursor: pointer;
 }
 
-.bottonButtons:hover{
-    background-color: #4b8d59;
+.bottonButtons:hover {
+  background-color: #4b8d59;
 }
 
-.errorMessage{
-    display: flex;
-    color: red;
-    justify-content: center;
-    font-family: sans-serif;
-    font-size: 20px;
+.errorMessage {
+  display: flex;
+  color: red;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 20px;
 }

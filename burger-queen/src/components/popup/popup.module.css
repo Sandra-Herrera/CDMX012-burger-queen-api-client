@@ -45,7 +45,6 @@
 
 .titleModal {
   display: flex;
-  /* font-family: revert; */
   font-family: sans-serif;
   font-size: 45px;
   justify-content: center;
@@ -94,15 +93,15 @@
   font-size: 20px;
 }
 
-.inputModal:focus{
+.inputModal:focus {
   border-color: #fc7117;
 }
 
-.inputModal:hover{
+.inputModal:hover {
   border-color: #fc7117;
 }
 
-.selectModal{
+.selectModal {
   display: flex;
   margin-top: 2%;
   width: 100%;
@@ -117,11 +116,11 @@
   cursor: pointer;
 }
 
-.selectModal:focus{
+.selectModal:focus {
   border-color: #fc7117;
 }
 
-.selectModal:hover{
+.selectModal:hover {
   border-color: #fc7117;
 }
 

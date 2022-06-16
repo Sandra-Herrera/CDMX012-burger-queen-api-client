@@ -18,7 +18,6 @@ const Login = () => {
   const { loginUser } = useContext(UserContext);
 
   const onSubmit = async (data) => {
-    console.log(data);
     try {
       await loginUser(data.email, data.password);
       navigate("/home");
@@ -39,13 +38,19 @@ const Login = () => {
   return (
     <>
       <div className={styles.headerImg}>
-        <img alt="imagen header" className={styles.imgRest} src={imgHeaderInto}/>
+        <img
+          alt="imagen header"
+          className={styles.imgRest}
+          src={imgHeaderInto}
+        />
       </div>
       <section className={styles.containerLoginArea}>
-        {/* <section className={styles.loginArea}> */}
-          <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)}>
-            <h1 className={styles.loginTitle}>Login</h1>
-            <div>
+        <form
+          className={styles.formContainer}
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <h1 className={styles.loginTitle}>Login</h1>
+          <div>
             <input
               type={"email"}
               placeholder="E-mail"
@@ -60,9 +65,11 @@ const Login = () => {
                 },
               })}
             />
-            {errors.email && <p className={styles.errorMessage}>{errors.email.message}</p>}
-            </div>
-            <div>
+            {errors.email && (
+              <p className={styles.errorMessage}>{errors.email.message}</p>
+            )}
+          </div>
+          <div>
             <input
               type={"password"}
               placeholder="Password"
@@ -83,17 +90,18 @@ const Login = () => {
                 },
               })}
             />
-            {errors.password && <p className={styles.errorMessage}>{errors.password.message}</p>}
-            </div>
-            <button
-              type="submit"
-              className={styles.loginButton}
-              id="buttonContinue"
-            >
-              Login
-            </button>
-          </form>
-        {/* </section> */}
+            {errors.password && (
+              <p className={styles.errorMessage}>{errors.password.message}</p>
+            )}
+          </div>
+          <button
+            type="submit"
+            className={styles.loginButton}
+            id="buttonContinue"
+          >
+            Login
+          </button>
+        </form>
       </section>
     </>
   );

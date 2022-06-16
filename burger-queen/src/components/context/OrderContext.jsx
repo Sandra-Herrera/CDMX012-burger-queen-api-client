@@ -15,7 +15,9 @@ export const OrderContextProvider = (props) => {
   };
 
   return (
-    <OrderContext.Provider value={{ order, sendContextOrder, amount, sendContextAmount}}>
+    <OrderContext.Provider
+      value={{ order, sendContextOrder, amount, sendContextAmount }}
+    >
       {props.children}
     </OrderContext.Provider>
   );
