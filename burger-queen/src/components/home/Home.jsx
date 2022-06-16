@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../database/UserProvider";
 import styles from "./home.module.css";
-// import imgRestaurant from "../../img/imgRestaurant.png";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
 import chefIcon from "../../img/chefIcon.png";
 import orderIcon from "../../img/orderIcon.png";
 import productsIcon from "../../img/productsIcon.png";
 import teamIcon from "../../img/teamIcon.png";
 import logOutIcon from "../../img/logOutIcon.png";
+import imgHeaderIntoSmall from "../../img/imgMediaQ.png";
 
 const Home = () => {
   const { logOut } = useContext(UserContext);
@@ -47,11 +47,15 @@ const Home = () => {
   return (
     <>
       <div className={styles.headerImg}>
-        <img
+        {/* <img
           alt="imagen header"
           className={styles.imgRest}
           src={imgHeaderInto}
-        />
+        /> */}
+        <picture >
+          <source className={styles.imgRest} srcSet={imgHeaderInto} media="(min-width: 415px)" alt="imagen header"/>
+          <img className={styles.imgRest} src={imgHeaderIntoSmall} alt="imagen header"/>
+        </picture>
         <button className={styles.logOutButton} onClick={handleClickLogout}>
           <img
             alt="imageLogOut"

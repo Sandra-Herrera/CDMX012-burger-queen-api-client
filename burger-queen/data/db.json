@@ -182,7 +182,8 @@
         "s": 56,
         "m": 59,
         "h": 0
-      }
+      },
+      "delivered": true
     },
     {
       "product": "Frapuchino coffee",
@@ -196,7 +197,8 @@
         "s": 23,
         "m": 59,
         "h": 0
-      }
+      },
+      "delivered": true
     },
     {
       "product": "Scrambled eggs",
@@ -210,7 +212,8 @@
         "s": 5,
         "m": 7,
         "h": 0
-      }
+      },
+      "delivered": true
     },
     {
       "product": "American coffee",
@@ -308,31 +311,50 @@
         "s": 13,
         "m": 37,
         "h": 1
-      }
+      },
+      "delivered": true
     },
     {
       "product": "Cheesecake",
       "qty": 3,
       "table": "3",
       "dateCreated": "2022-06-15T15:23:54.131Z",
-      "dateDone": "",
-      "id": "0LQIA0J"
+      "dateDone": "2022-06-16T06:33:41.367Z",
+      "id": "0LQIA0J",
+      "time": {
+        "ms": 225,
+        "s": 47,
+        "m": 9,
+        "h": 15
+      }
     },
     {
       "product": "Chicken baguette",
       "qty": 2,
       "table": "2",
       "dateCreated": "2022-06-15T15:28:35.508Z",
-      "dateDone": "",
-      "id": "1TPgXQy"
+      "dateDone": "2022-06-16T07:42:00.468Z",
+      "id": "1TPgXQy",
+      "time": {
+        "ms": 947,
+        "s": 24,
+        "m": 13,
+        "h": 16
+      }
     },
     {
       "product": "Cheesecake",
       "qty": 1,
       "table": "2",
       "dateCreated": "2022-06-15T15:28:35.508Z",
-      "dateDone": "",
-      "id": "jy8VpVb"
+      "dateDone": "2022-06-16T07:54:50.432Z",
+      "id": "jy8VpVb",
+      "time": {
+        "ms": 905,
+        "s": 14,
+        "m": 26,
+        "h": 16
+      }
     },
     {
       "product": "Pepperoni pizza",
@@ -387,8 +409,54 @@
       "qty": 1,
       "table": "3",
       "dateCreated": "2022-06-15T16:12:06.089Z",
+      "dateDone": "2022-06-16T07:47:13.280Z",
+      "id": "BMGzHH7",
+      "time": {
+        "ms": 176,
+        "s": 7,
+        "m": 35,
+        "h": 15
+      }
+    },
+    {
+      "product": "American coffee",
+      "qty": 4,
+      "table": "1",
+      "dateCreated": "2022-06-16T06:14:36.432Z",
       "dateDone": "",
-      "id": "BMGzHH7"
+      "id": "iHVUG-a"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-16T06:25:44.770Z",
+      "dateDone": "",
+      "id": "4K3I7s0"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 2,
+      "table": "1",
+      "dateCreated": "2022-06-16T06:31:09.569Z",
+      "dateDone": "",
+      "id": "q2leKer"
+    },
+    {
+      "product": "Pepperoni pizza",
+      "qty": 2,
+      "table": "4",
+      "dateCreated": "2022-06-16T07:55:12.371Z",
+      "dateDone": "",
+      "id": "R0rH9aZ"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 1,
+      "table": "4",
+      "dateCreated": "2022-06-16T07:55:12.371Z",
+      "dateDone": "",
+      "id": "XbCtpNx"
     }
   ],
   "team": [

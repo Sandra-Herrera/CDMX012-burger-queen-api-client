@@ -1,3 +1,4 @@
+
 .headerImg {
     display: flex;
     background-size: cover;
@@ -6,25 +7,12 @@
     height: 15vh;
   }
 
-/* .headerImg {
-    display: flex;
-    background-size: cover;
-    width: 101%;
-    height: 175px;
-    height: 27vh;
-} */
-
 .imgRest {
-    width: inherit;
+    width: 100%;
     height: 100px;
     position: absolute;
     left: 0;
     top: 0;
-    /* width: inherit;
-    height: 177px;
-    position: absolute;
-    left: 0;
-    top: 0; */
 }
 
 .welcomeContainer {
@@ -50,7 +38,6 @@
     justify-content: center;
     width: 70%;
     height: 100%;
-    /* margin-top: 30px; */
     margin-bottom: 60px;
 }
 
@@ -97,3 +84,95 @@
 .iconLogOut {
     width: 30px;
 }
+
+
+/* Inicia responsive mobile */
+
+@media (max-width: 850px) {
+    .headerImg {
+        display: flex;
+        background-size: cover;
+        /* background-image:  url(../../img/imgMediaQ.png); */
+        width: 100%;
+        height: 100%;
+        height: 15vh;
+      }
+    
+    .imgRest {
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    .welcomeContainer {
+        display: flex;
+        justify-content: center;
+        width: 99vw;
+        height: 68vh;
+        margin-top: 60px;
+    }
+    
+    .welcomeSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 1000px;
+    }
+    
+    .buttonsArea {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        column-gap: 5rem;
+        row-gap: 2rem;
+        justify-content: center;
+        width: 70%;
+        height: 100%;
+        margin-bottom: 60px;
+    }
+    
+    .welcomeButtons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        border-radius: 20px;
+        background-color: #7ED090;
+        font-size: 35px;
+        font-family: revert;
+        cursor: pointer;
+    }
+    
+    .welcomeButtons:hover {
+        background-color: #6DAE7B;
+    }
+    
+    .iconsButtons {
+        width: 45px;
+    }
+    
+    .logOutButton {
+        position: absolute;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+        margin-left: 85%;
+        border: solid 4px;
+        border-color: #FBA121;
+        color: #ffff;
+        background-color: brown;
+        font-weight: bold;
+        font-size: 1em;
+        width: 60px;
+        height: 45px;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    
+    .iconLogOut {
+        width: 30px;
+    }
+  }

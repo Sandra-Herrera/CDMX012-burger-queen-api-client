@@ -1,10 +1,10 @@
-.menuContainerDad{
+.menuContainerDad {
     display: flex;
     justify-content: center;
     width: 49vw;
 }
 
-.menuContainer{
+.menuContainer {
     align-items: center;
     flex-direction: column;
     background-color: #EDD479;
@@ -12,7 +12,7 @@
     height: 100%;
 }
 
-.textMenu{
+.textMenu {
     grid-column-start: 1;
     grid-column-end: 6;
     font-size: 2.5em;
@@ -25,14 +25,14 @@
     margin: 2%;
 }
 
-.buttonsMenu{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   margin: 15px;
+.buttonsMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 15px;
 }
 
-.menuOne{
+.menuOne {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,12 +45,12 @@
     cursor: pointer;
 }
 
-.menuOne:focus{
+.menuOne:focus {
     border: 4px solid #FC814D;
     font-weight: bold;
 }
 
-.menuTwo{
+.menuTwo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,27 +63,27 @@
     cursor: pointer;
 }
 
-.menuTwo:focus{
+.menuTwo:focus {
     border: 4px solid #FC7117;
     font-weight: bold;
 }
 
-.line{
+.line {
     display: flex;
     justify-content: center;
-    margin-top: 3%; 
+    margin-top: 3%;
 }
 
-.imgLine{
-    width: 90%; 
+.imgLine {
+    width: 90%;
 }
 
-.scrollMenu{
+.scrollMenu {
     height: 57vh;
     overflow-y: scroll;
 }
 
-.allMenu{
+.allMenu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     column-gap: 1.2rem;
@@ -91,12 +91,12 @@
     justify-content: center;
 }
 
-.breakfastAndLunch{
+.breakfastAndLunch {
     display: flex;
     justify-content: center;
 }
 
-.buttonBreakfast{
+.buttonBreakfast {
     background-color: #FC814D;
     border: none;
     border-radius: 13px;
@@ -108,11 +108,11 @@
     cursor: pointer;
 }
 
-.buttonBreakfast:hover{
+.buttonBreakfast:hover {
     background-color: #db6c3d;
 }
 
-.buttonLunch{
+.buttonLunch {
     background-color: #FC7117;
     border: none;
     border-radius: 13px;
@@ -124,6 +124,144 @@
     cursor: pointer;
 }
 
-.buttonLunch:hover{
+.buttonLunch:hover {
     background-color: #da6619;
+}
+
+/* Inicia responsive mobile */
+
+@media (max-width: 850px) {
+    .menuContainerDad {
+        display: flex;
+        justify-content: center;
+        width: 49vw;
+    }
+
+    .menuContainer {
+        align-items: center;
+        flex-direction: column;
+        background-color: #EDD479;
+        width: 95%;
+        height: 100%;
+    }
+
+    .textMenu {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        font-size: 1.5em;
+        font-weight: bold;
+        font-family: sans-serif;
+        color: brown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2%;
+    }
+
+    .buttonsMenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 4px;
+    }
+
+    .menuOne {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 60px;
+        font-size: 13px;
+        border-radius: 15px;
+        background-color: #B0BD17;
+        border: solid 1px;
+        border-color: black;
+        cursor: pointer;
+    }
+
+    .menuOne:focus {
+        border: 4px solid #FC814D;
+        font-weight: bold;
+    }
+
+    .menuTwo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 60px;
+        font-size: 13px;
+        border-radius: 15px;
+        background-color: #B0BD17;
+        border: solid 1px;
+        border-color: black;
+        cursor: pointer;
+    }
+
+    .menuTwo:focus {
+        border: 4px solid #FC7117;
+        font-weight: bold;
+    }
+
+    .line {
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+    }
+
+    .imgLine {
+        width: 90%;
+    }
+
+    .scrollMenu {
+        height: 57vh;
+        overflow-y: scroll;
+    }
+
+    .allMenu {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        column-gap: 1.2rem;
+        row-gap: 1.2rem;
+        justify-content: center;
+    }
+
+    .breakfastAndLunch {
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttonBreakfast {
+        background-color: #FC814D;
+        border: none;
+        border-radius: 13px;
+        width: 65%;
+        height: 100%;
+        min-height: 100px;
+        max-height: 150px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .buttonBreakfast:hover {
+        background-color: #db6c3d;
+    }
+
+    .buttonLunch {
+        background-color: #FC7117;
+        border: none;
+        border-radius: 13px;
+        width: 65%;
+        height: 100%;
+        min-height: 100px;
+        max-height: 150px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .buttonLunch:hover {
+        background-color: #da6619;
+    }
+
+
 }
