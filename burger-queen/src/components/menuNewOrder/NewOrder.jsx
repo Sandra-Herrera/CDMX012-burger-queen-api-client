@@ -120,7 +120,7 @@ const NewOrder = () => {
     Swal.fire({
       position: "center",
       icon: "success",
-      title: "Order send",
+      title: "Order sent",
       showConfirmButton: false,
       timer: 1500,
     });
