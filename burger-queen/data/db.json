@@ -242,7 +242,8 @@
         "s": 17,
         "m": 59,
         "h": 0
-      }
+      },
+      "delivered": true
     },
     {
       "product": "Orange juice",
@@ -475,8 +476,14 @@
       "qty": 2,
       "table": "4",
       "dateCreated": "2022-06-16T07:55:12.371Z",
-      "dateDone": "",
-      "id": "R0rH9aZ"
+      "dateDone": "2022-06-16T23:21:22.036Z",
+      "id": "R0rH9aZ",
+      "time": {
+        "ms": 654,
+        "s": 9,
+        "m": 26,
+        "h": 15
+      }
     },
     {
       "product": "Pasta bolognese",
@@ -532,6 +539,14 @@
       "dateCreated": "2022-06-16T19:07:54.014Z",
       "dateDone": "",
       "id": "wVf392s"
+    },
+    {
+      "product": "Cheesecake",
+      "qty": 3,
+      "table": "3",
+      "dateCreated": "2022-06-16T23:21:43.339Z",
+      "dateDone": "",
+      "id": "0Sd9MYF"
     }
   ],
   "team": [

@@ -19,12 +19,10 @@ const Login = () => {
   const { loginUser } = useContext(UserContext);
 
   const onSubmit = async (data) => {
-    console.log(data);
     try {
       await loginUser(data.email, data.password);
       navigate("/home");
     } catch (error) {
-      console.log(error.code);
       switch (error.code) {
         case "auth/user-not-found":
           setError("email", {
@@ -32,7 +30,6 @@ const Login = () => {
           });
           break;
         default:
-          console.log("Ocurrió un error");
       }
     }
   };

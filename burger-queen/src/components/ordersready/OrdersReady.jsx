@@ -42,7 +42,6 @@ const OrdersReady = () => {
     const updatedCheckedState = check.map((item, index) => {
       return index === position ? !item : item;
     });
-    console.log(updatedCheckedState);
     setCheck(updatedCheckedState);
     saveDelivery(chosenProd);
   };

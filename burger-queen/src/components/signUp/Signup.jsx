@@ -72,7 +72,6 @@ const Signup = () => {
           });
           break;
         default:
-          console.log("Ocurrió un error");
       }
     }
   };

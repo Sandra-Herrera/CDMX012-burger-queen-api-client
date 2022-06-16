@@ -18,7 +18,6 @@ const Kitchen = () => {
   const handleClickLogout = async () => {
     try {
       await logOut();
-      console.log("cerró sesión");
       navigate("/");
     } catch (error) {
       console.log(error);
@@ -79,7 +78,6 @@ const Kitchen = () => {
     const updatedCheckedState = check.map((item, index) => {
       return index === position ? !item : item;
     });
-    console.log(updatedCheckedState);
     setCheck(updatedCheckedState);
   };
 
