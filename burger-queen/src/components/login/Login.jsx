@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import styles from "./login.module.css";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
+import headerMediaQ from "../../img/headerMediaQ.jpg";
 
 const Login = () => {
   const {
@@ -22,7 +23,6 @@ const Login = () => {
       await loginUser(data.email, data.password);
       navigate("/home");
     } catch (error) {
-      console.log(error.code);
       switch (error.code) {
         case "auth/user-not-found":
           setError("email", {
@@ -30,7 +30,6 @@ const Login = () => {
           });
           break;
         default:
-          console.log("Ocurrió un error");
       }
     }
   };
@@ -38,11 +37,19 @@ const Login = () => {
   return (
     <>
       <div className={styles.headerImg}>
-        <img
-          alt="imagen header"
-          className={styles.imgRest}
-          src={imgHeaderInto}
-        />
+        <picture>
+          <source
+            className={styles.imgRest}
+            srcSet={imgHeaderInto}
+            media="(min-width: 415px)"
+            alt="imagen header"
+          />
+          <img
+            className={styles.imgRest}
+            src={headerMediaQ}
+            alt="imagen header"
+          />
+        </picture>
       </div>
       <section className={styles.containerLoginArea}>
         <form

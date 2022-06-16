@@ -31,9 +31,7 @@ export const EditEmployee = (props) => {
 
   const saveDataEmployee = (employee) => {
     if (employee && employee.id) {
-      // Hacer PUT
       fetch(`http://localhost:3004/team/${employee.id}`, {
-        //actualizar todos y cada uno de los elementos
         method: "PUT",
         headers: {
           "content-type": "application/json",
@@ -143,7 +141,6 @@ export const EditEmployee = (props) => {
     </>
   ) : null;
 };
-// }
 
 EditEmployee.propTypes = {
   attrProduct: PropTypes.object,

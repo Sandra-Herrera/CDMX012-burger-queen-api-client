@@ -6,6 +6,7 @@ import { auth } from "../../database/firebase-config";
 import { useNavigate } from "react-router-dom";
 import styles from "./signup.module.css";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
+import headerMediaQ from "../../img/headerMediaQ.jpg";
 import backIcon from "../../img/backIcon.png";
 import Swal from "sweetalert2";
 
@@ -70,7 +71,6 @@ const Signup = () => {
           });
           break;
         default:
-          console.log("Ocurrió un error");
       }
     }
   };
@@ -78,11 +78,19 @@ const Signup = () => {
   return (
     <>
       <div className={styles.headerImg}>
-        <img
-          alt="imagen header"
-          className={styles.imgRest}
-          src={imgHeaderInto}
-        />
+        <picture>
+          <source
+            className={styles.imgRest}
+            srcSet={imgHeaderInto}
+            media="(min-width: 415px)"
+            alt="imagen header"
+          />
+          <img
+            className={styles.imgRest}
+            src={headerMediaQ}
+            alt="imagen header"
+          />
+        </picture>
         <button className={styles.backButton} onClick={redirectTeam}>
           <img alt="iconBack" className={styles.imgBack} src={backIcon} />
         </button>

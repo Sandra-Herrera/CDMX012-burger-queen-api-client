@@ -84,7 +84,7 @@ const Team = () => {
           </div>
           <div className={styles.mainHeaderTable}>
             <div className={styles.headerTable}>E-mail</div>
-            <div className={styles.headerTable}>Full name</div>
+            <div className={styles.headerTable}>Name</div>
             <div className={styles.headerTable}>Role</div>
             <div className={styles.headerTable}>Password</div>
             <div className={styles.headerTable}>Edit</div>

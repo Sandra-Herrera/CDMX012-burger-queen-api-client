@@ -37,9 +37,7 @@ export function Popup(props) {
 
   const saveProduct = (product) => {
     if (product && product.id) {
-      // Hacer PUT
       fetch(`http://localhost:3004/Products/${product.id}`, {
-        //actualizar todos y cada uno de los elementos
         method: "PUT",
         headers: {
           "content-type": "application/json",
@@ -52,7 +50,6 @@ export function Popup(props) {
           props.onClickCloseModal();
         });
     } else {
-      // Hacer POST
       fetch("http://localhost:3004/Products", {
         method: "POST",
         headers: {

@@ -5,79 +5,81 @@
   height: 100%;
   height: 15vh;
 }
+
 .imgRest {
-  width: inherit;
-  height: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .containerLoginArea {
-  display: grid;
-  justify-content: center;
-  width: 100%;
-  margin-top: 95px;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    margin-top: 95px;
 }
 
 .formContainer {
-  display: grid;
-  row-gap: 6px;
-  justify-content: center;
-  width: 110%;
-  background-color: #edd479;
-  display: grid;
-  row-gap: 6px;
-  justify-content: center;
-  border-radius: 12px;
-  border: solid 1px;
-  padding: 10px;
+    display: grid;
+    row-gap: 6px;
+    justify-content: center;
+    width: 110%;
+    background-color: #EDD479;
+    display: grid;
+    row-gap: 6px;
+    justify-content: center;
+    border-radius: 12px;
+    border: solid 1px;
+    padding: 10px;
 }
 
 .loginTitle {
-  display: flex;
-  justify-content: center;
-  font-size: 45px;
-  font-family: sans-serif;
-  color: brown;
-  margin-top: unset;
-  margin-bottom: unset;
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    font-family: sans-serif;
+    color: brown;
+    margin-top: unset;
+    margin-bottom: unset;
 }
 
 .inputLogin {
-  display: flex;
-  border-radius: 8px;
-  border: solid 2px;
-  font-size: 20px;
-  font-family: revert;
-  width: 320px;
-  height: 45px;
-  margin: 15px;
+    display: flex;
+    border-radius: 8px;
+    border: solid 2px;
+    font-size: 20px;
+    font-family: revert;
+    width: 320px;
+    height: 45px;
+    margin: 15px;
 }
 
 .inputLogin:focus {
-  background-color: rgb(222, 218, 218);
+    background-color: rgb(222, 218, 218);
 }
 
 .errorMessage {
-  display: flex;
-  color: red;
-  justify-content: center;
-  font-weight: bold;
+    display: flex;
+    color: red;
+    justify-content: center;
+    font-weight: bold;
 }
 
 .loginButton {
-  border-radius: 20px;
-  background-color: #7ed090;
-  width: 97px;
-  height: 35px;
-  font-size: 20px;
-  font-family: sans-serif;
-  margin-left: 115px;
-  cursor: pointer;
-  margin-top: 15px;
+    border-radius: 20px;
+    background-color: #7ED090;
+    width: 97px;
+    height: 35px;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-left: 115px;
+    cursor: pointer;
+    margin-top: 15px;
 }
 
 .loginButton:hover {
-  background-color: #33bc50;
+    background-color: #33bc50;
 }

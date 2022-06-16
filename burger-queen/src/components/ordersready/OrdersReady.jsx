@@ -3,6 +3,7 @@ import styles from "./ordersReady.module.css";
 import { useNavigate } from "react-router-dom";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
 import backIcon from "../../img/backIcon.png";
+import headerMediaQ from "../../img/headerMediaQ.jpg";
 
 const OrdersReady = () => {
   const navigate = useNavigate();
@@ -75,11 +76,19 @@ const OrdersReady = () => {
   return (
     <>
       <div className={styles.headerImg}>
-        <img
-          alt="imagen header"
-          className={styles.imgRest}
-          src={imgHeaderInto}
-        />
+        <picture>
+          <source
+            className={styles.imgRest}
+            srcSet={imgHeaderInto}
+            media="(min-width: 415px)"
+            alt="imagen header"
+          />
+          <img
+            className={styles.imgRest}
+            src={headerMediaQ}
+            alt="imagen header"
+          />
+        </picture>
         <button className={styles.backButton} onClick={redirectHome}>
           <img alt="iconBack" className={styles.imgBack} src={backIcon} />
         </button>

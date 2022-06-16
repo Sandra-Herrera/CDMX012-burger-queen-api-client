@@ -7,7 +7,7 @@
 }
 
 .imgRest {
-  width: inherit;
+  width: 100%;
   height: 100px;
   position: absolute;
   left: 0;
@@ -47,7 +47,7 @@
   margin-top: 2px;
   margin-left: 85%;
   border: solid 4px;
-  border-color: #fba121;
+  border-color: #FBA121;
   color: #ffff;
   background-color: brown;
   font-weight: bold;
@@ -122,6 +122,7 @@
     width: 100%;
     opacity: 1;
   }
+
   to {
     width: 0%;
     opacity: 0;
@@ -157,4 +158,180 @@
   width: 25px;
   height: 25px;
   background-color: #97617a;
+}
+
+/* Inicia responsive mobile */
+
+@media (max-width: 850px) {
+  .headerImg {
+    display: flex;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    height: 15vh;
+  }
+
+  .imgRest {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .backButton {
+    position: absolute;
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    margin-left: 2%;
+    border: solid 4px;
+    border-color: #fba121;
+    background-color: #edd479;
+    font-weight: bold;
+    font-size: 1em;
+    width: 40px;
+    height: 35px;
+    border-radius: 30px;
+    color: #97617a;
+    cursor: pointer;
+  }
+
+  .imgBack {
+    width: 25px;
+  }
+
+  .logOutButton {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    margin-left: 80%;
+    border: solid 4px;
+    border-color: #FBA121;
+    color: #ffff;
+    background-color: brown;
+    font-weight: bold;
+    font-size: 1em;
+    width: 60px;
+    height: 45px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  .iconLogOut {
+    width: 30px;
+  }
+
+  .productsTable {
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    margin: auto;
+    background-color: antiquewhite;
+    box-shadow: 0 0 15px #333;
+  }
+
+  .titleTable {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 4px;
+    border-color: coral;
+  }
+
+  .mainHeaderTable {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+  }
+
+  .headerTable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #453006;
+    border: solid 2px;
+    border-color: coral;
+    background-color: coral;
+  }
+
+  .scrollKitchen {
+    height: 70vh;
+    overflow-y: auto;
+  }
+
+.titleTable {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  font-size: 2.1em;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 4px;
+  border-color: coral;
+}
+
+  .fadeOut {
+    animation: 3s both diminish;
+  }
+
+  @keyframes diminish {
+    from {
+      width: 100%;
+      opacity: 1;
+    }
+
+    to {
+      width: 0%;
+      opacity: 0;
+    }
+  }
+
+  .itemTable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 0.8em;
+    padding: 10px;
+    border: solid 1px;
+    border-color: coral;
+  }
+
+  .itemAlignStart {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    padding: 10px;
+    border: solid 1px;
+    border-color: coral;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .checkbox {
+    width: 25px;
+    height: 25px;
+    background-color: #97617a;
+  }
+
 }

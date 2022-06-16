@@ -2,7 +2,7 @@
   "Products": [
     {
       "name": "Scrambled eggs",
-      "price": "22",
+      "price": "25",
       "category": "Breakfast",
       "id": "1"
     },
@@ -68,7 +68,7 @@
     },
     {
       "name": "Natural water 100 mL",
-      "price": "20",
+      "price": "25",
       "category": "Breakfast",
       "id": "t1Ov93y"
     },
@@ -472,7 +472,7 @@
   "team": [
     {
       "email": "sandy@gmail.com",
-      "name": "sandy",
+      "name": "Sandy H",
       "role": "administrator",
       "password": "123456",
       "uidFirebase": "lyE6YFq6MogpLlNiSLZTIPLaQv22",
@@ -488,7 +488,7 @@
     {
       "email": "enrique@gmail.com",
       "name": "Enrique Mesas",
-      "role": "waiter",
+      "role": "kitchen",
       "password": "123456",
       "id": "e3H7Wg8"
     },

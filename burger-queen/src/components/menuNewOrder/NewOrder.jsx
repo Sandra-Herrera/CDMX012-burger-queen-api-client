@@ -58,7 +58,6 @@ const NewOrder = () => {
 
   const deleteProducts = (product) => (e) => {
     e.preventDefault();
-    //preguntar si desea eliminar
     if (product.qty > 0) {
       sendContextAmount(
         parseFloat(amount) - parseFloat(product.price) * parseInt(product.qty)

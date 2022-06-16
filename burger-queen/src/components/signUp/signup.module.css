@@ -6,11 +6,11 @@
 }
 
 .imgRest {
-  width: inherit;
-  height: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .backButton {
@@ -38,14 +38,14 @@
 }
 
 .formContainer {
-  display: grid;
-  row-gap: 6px;
-  width: 110%;
-  background-color: #edd479;
-  justify-content: center;
-  border-radius: 12px;
-  border: solid 1px;
-  padding: 10px;
+    display: grid;
+    row-gap: 6px;
+    width: 110%;
+    background-color: #EDD479;
+    justify-content: center;
+    border-radius: 12px;
+    border: solid 1px;
+    padding: 10px;
 }
 
 .containerSignUpArea {
@@ -66,73 +66,220 @@
 }
 
 .inputContainer {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  grid-gap: 1em;
-  justify-content: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 1em;
+    justify-content: center;
 }
 
 .inputSignUp {
-  border-radius: 8px;
-  border: solid 2px;
-  font-size: 15px;
-  font-family: revert;
-  height: 35px;
-  width: 250px;
+    border-radius: 8px;
+    border: solid 2px;
+    font-size: 15px;
+    font-family: revert;
+    height: 35px;
+    width: 250px;
 }
 
 .inputSignUp:hover {
-  border-color: #fba121;
+    border-color: #FBA121;
 }
 
 .inputSignUp:focus {
-  background-color: rgb(222, 218, 218);
+    background-color: rgb(222, 218, 218);
 }
 
 .rol {
-  justify-content: center;
-  border-radius: 8px;
-  border: solid 2px;
-  font-size: 15px;
-  font-family: revert;
-  width: 250px;
-  height: 35px;
-  margin-left: 25%;
-  margin-top: 3%;
-  cursor: pointer;
+    justify-content: center;
+    border-radius: 8px;
+    border: solid 2px;
+    font-size: 15px;
+    font-family: revert;
+    width: 250px;
+    height: 35px;
+    margin-left: 25%;
+    margin-top: 3%;
+    cursor: pointer;
 }
 
 .rol:hover {
-  border-color: #fba121;
+    border-color: #FBA121;
 }
 
 .rol:focus {
-  border-color: #fba121;
+    border-color: #FBA121;
 }
 
 .continueBtn {
-  width: 20%;
-  margin-left: 39%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  background-color: #7ed090;
-  height: 100%;
-  max-width: 180px;
-  font-size: 20px;
-  font-family: sans-serif;
-  cursor: pointer;
+    width: 20%;
+    margin-left: 39%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #7ED090;
+    height: 100%;
+    max-width: 180px;
+    font-size: 20px;
+    font-family: sans-serif;
+    cursor: pointer;
 }
 
 .continueBtn:hover {
-  background-color: #4b8d59;
+    background-color: #4b8d59;
 }
 
 .errorMessage {
-  display: flex;
-  color: red;
-  justify-content: center;
-  font-weight: bold;
+    display: flex;
+    color: red;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Inicia responsive mobile */
+
+@media (max-width: 850px) {
+    .headerImg {
+        display: flex;
+        background-size: cover;
+        width: 100%;
+        height: 15vh;
+    }
+
+    .imgRest {
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .backButton {
+        position: absolute;
+        display: flex;
+        flex-flow: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+        margin-left: 2%;
+        border: solid 4px;
+        border-color: #FBA121;
+        background-color: #EDD479;
+        font-weight: bold;
+        font-size: 1em;
+        width: 40px;
+        height: 35px;
+        border-radius: 30px;
+        color: #97617A;
+        cursor: pointer;
+    }
+
+    .imgBack {
+        width: 25px;
+    }
+
+    .formContainer {
+        display: grid;
+        row-gap: 6px;
+        width: 80%;
+        background-color: #EDD479;
+        justify-content: center;
+        border-radius: 12px;
+        border: solid 1px;
+        padding: 10px;
+    }
+
+    .containerSignUpArea {
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        margin-top: 55px;
+        margin-left: 12px;
+    }
+
+    .signUpTitle {
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        font-family: sans-serif;
+        color: brown;
+        margin-top: unset;
+        margin-bottom: unset;
+    }
+
+    .inputContainer {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-gap: 1.2em;
+        justify-content: center;
+    }
+
+    .inputSignUp {
+        border-radius: 8px;
+        border: solid 2px;
+        font-size: 15px;
+        font-family: revert;
+        height: 35px;
+        width: 250px;
+    }
+
+    .inputSignUp:hover {
+        border-color: #FBA121;
+    }
+
+    .inputSignUp:focus {
+        background-color: rgb(222, 218, 218);
+    }
+
+    .rol {
+        justify-content: center;
+        border-radius: 8px;
+        border: solid 2px;
+        font-size: 15px;
+        font-family: revert;
+        width: 258px;
+        height: 35px;
+        margin-left: 0%;
+        margin-top: 3%;
+        cursor: pointer;
+    }
+
+    .rol:hover {
+        border-color: #FBA121;
+    }
+
+    .rol:focus {
+        border-color: #FBA121;
+    }
+
+    .continueBtn {
+        width: 40%;
+        margin-left: 39%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        background-color: #7ED090;
+        height: 100%;
+        max-width: 180px;
+        margin-left: 78px;
+        margin-top: 6px;
+        font-size: 20px;
+        font-family: sans-serif;
+        cursor: pointer;
+    }
+
+    .continueBtn:hover {
+        background-color: #4b8d59;
+    }
+
+    .errorMessage {
+        display: flex;
+        color: red;
+        justify-content: center;
+        font-weight: bold;
+    }
+
 }

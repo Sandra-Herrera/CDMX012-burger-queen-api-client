@@ -6,6 +6,7 @@ import { UserContext } from "../../database/UserProvider";
 import logOutIcon from "../../img/logOutIcon.png";
 import imgHeaderInto from "../../img/imgHeaderInto.png";
 import Chronometer from "../chronometer/Chronometer";
+import headerMediaQ from "../../img/headerMediaQ.jpg";
 
 const Kitchen = () => {
   const navigate = useNavigate();
@@ -83,11 +84,19 @@ const Kitchen = () => {
   return (
     <>
       <div className={styles.headerImg}>
-        <img
-          alt="imagen header"
-          className={styles.imgRest}
-          src={imgHeaderInto}
-        />
+        <picture>
+          <source
+            className={styles.imgRest}
+            srcSet={imgHeaderInto}
+            media="(min-width: 415px)"
+            alt="imagen header"
+          />
+          <img
+            className={styles.imgRest}
+            src={headerMediaQ}
+            alt="imagen header"
+          />
+        </picture>
         <button className={styles.backButton} onClick={redirectHome}>
           <img alt="iconBack" className={styles.imgBack} src={backIcon} />
         </button>
