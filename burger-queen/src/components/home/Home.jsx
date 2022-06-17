@@ -70,12 +70,12 @@ const Home = () => {
       <section className={styles.welcomeContainer}>
         <section className={styles.welcomeSection}>
           <section className={styles.buttonsArea}>
-            <button className={styles.welcomeButtons} onClick={redirectKitchen}>
-              Kitchen
+            <button className={styles.welcomeButtons} onClick={redirectProduct}>
+              Product
               <img
-                alt="imageChef"
+                alt="imageProduct"
                 className={styles.iconsButtons}
-                src={chefIcon}
+                src={productsIcon}
               />
             </button>
             <button className={styles.welcomeButtons} onClick={redirectOrder}>
@@ -86,12 +86,12 @@ const Home = () => {
                 src={orderIcon}
               />
             </button>
-            <button className={styles.welcomeButtons} onClick={redirectProduct}>
-              Product
+            <button className={styles.welcomeButtons} onClick={redirectKitchen}>
+              Kitchen
               <img
-                alt="imageProduct"
+                alt="imageChef"
                 className={styles.iconsButtons}
-                src={productsIcon}
+                src={chefIcon}
               />
             </button>
             <button className={styles.welcomeButtons} onClick={redirectTeam}>
