@@ -252,12 +252,12 @@ Prueba la aplicación y conoce lo que cada uno de los tres roles (administrador,
 Visita nuestra app **aquí**:
 
 * **Administrador:** tiene autorización para ingresar a todas las vistas, pero su rol principal en la app es el de administrar los productos y al equipo, por ende puede agregar nuevos productos y empleados, editarlos y eliminarlos. Si quieres conocer el flujo del proceso de un administradorx en nuestra app, te invitamos a navegar con la siguiente cuenta: 
-- Cuenta: admin@coffetime.com
-- Contraseña: coffetime
+ Cuenta: admin@coffetime.com
+ Contraseña: coffetime
 * **Meseros:** su interfaz se llama **Order**, en ella puede ver filtrado el menú correspondiente a desayuno y cómida, además puede agregar cualquier alimento del menú a la lista de pedidos y enviarlo a cocina, además puede elegir el número de la mesa y ver el total que esa mesa debe pagar. Si quieres conocer el flujo del proceso de unx meserx en nuestra app, te invitamos a navegar con la siguiente cuenta: 
-- Cuenta: mesero@coffetime.com
-- Contraseña: coffetime
+ Cuenta: mesero@coffetime.com
+ Contraseña: coffetime
 * **Jefe de cocina:** su interfaz se llama **Kitchen**, en ella puede ver todas ódenes que el mesero envía y la cantidad que pide por cada óden,
 además cada órden tiene un crónometro que marca el tiempo desde que el mesero la envío hasta que el jefe de cocina la marca como lista, de este modo el jefe de cocina puede saber cuanto tarda su equipo en preparar cada alimento y el administrador puede tener el historico de los alimentos que más tardan en prepararse. Si quieres conocer el flujo del proceso del jefx de cocina en nuestra app, te invitamos a navegar con la siguiente cuenta: 
-- Cuenta: cocina@coffetime.com
-- Contraseña: coffetime
+ Cuenta: cocina@coffetime.com
+ Contraseña: coffetime
