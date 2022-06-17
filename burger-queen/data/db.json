@@ -80,9 +80,15 @@
     },
     {
       "name": "Tuna fish",
-      "price": "15",
+      "price": "14",
       "category": "Lunch/Dinner",
       "id": "t9efBTv"
+    },
+    {
+      "name": "ii",
+      "price": "2",
+      "category": "Breakfast",
+      "id": "h3wGWPy"
     }
   ],
   "chosenProduct": [
@@ -654,7 +660,7 @@
     },
     {
       "email": "luis@gmail.com",
-      "name": "luis",
+      "name": "Luis",
       "role": "waiter",
       "password": "123456",
       "id": "WImzvgs"
@@ -672,6 +678,34 @@
       "role": "waiter",
       "password": "123456",
       "id": "hJ_Kp65"
+    },
+    {
+      "email": "ooo@gmail.com",
+      "name": "ooo",
+      "role": "waiter",
+      "password": "123456",
+      "id": "lbtFfYA"
+    },
+    {
+      "email": "mesero@coffetime.com",
+      "name": "Cuenta de mesero",
+      "role": "waiter",
+      "password": "coffetime",
+      "id": "okfSN3h"
+    },
+    {
+      "email": "cocina@coffetime.com",
+      "name": "Cuenta de cocina",
+      "role": "kitchen",
+      "password": "coffetime",
+      "id": "h6Fir-w"
+    },
+    {
+      "email": "admin@coffetime.com",
+      "name": "Cuenta de administrador",
+      "role": "administrator",
+      "password": "coffetime",
+      "id": "Z6GnjbA"
     }
   ]
 }
