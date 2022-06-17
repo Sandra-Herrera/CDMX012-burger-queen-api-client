@@ -286,8 +286,14 @@
       "qty": 3,
       "table": "1",
       "dateCreated": "2022-06-15T15:23:00.443Z",
-      "dateDone": "",
-      "id": "AOEDLOG"
+      "dateDone": "2022-06-17T01:37:44.854Z",
+      "id": "AOEDLOG",
+      "time": {
+        "ms": 384,
+        "s": 44,
+        "m": 14,
+        "h": 34
+      }
     },
     {
       "product": "Pepperoni pizza",
@@ -302,40 +308,75 @@
       "qty": 1,
       "table": "1",
       "dateCreated": "2022-06-15T15:23:00.443Z",
-      "dateDone": "",
-      "id": "GB0TkZ1"
+      "dateDone": "2022-06-17T01:25:50.275Z",
+      "id": "GB0TkZ1",
+      "time": {
+        "ms": 817,
+        "s": 49,
+        "m": 2,
+        "h": 34
+      },
+      "delivered": true
     },
     {
       "product": "Mineral water 100 mL",
       "qty": 1,
       "table": "1",
       "dateCreated": "2022-06-15T15:23:00.443Z",
-      "dateDone": "",
-      "id": "W4qIoI8"
+      "dateDone": "2022-06-17T01:25:51.138Z",
+      "id": "W4qIoI8",
+      "time": {
+        "ms": 687,
+        "s": 50,
+        "m": 2,
+        "h": 34
+      },
+      "delivered": true
     },
     {
       "product": "Cheesecake",
       "qty": 1,
       "table": "1",
       "dateCreated": "2022-06-15T15:23:00.443Z",
-      "dateDone": "",
-      "id": "Vw5gDrz"
+      "dateDone": "2022-06-17T00:10:19.665Z",
+      "id": "Vw5gDrz",
+      "time": {
+        "ms": 210,
+        "s": 19,
+        "m": 47,
+        "h": 32
+      },
+      "delivered": true
     },
     {
       "product": "Tuna fish",
       "qty": 1,
       "table": "1",
       "dateCreated": "2022-06-15T15:23:00.443Z",
-      "dateDone": "",
-      "id": "h8TEUO7"
+      "dateDone": "2022-06-17T01:25:52.109Z",
+      "id": "h8TEUO7",
+      "time": {
+        "ms": 656,
+        "s": 51,
+        "m": 2,
+        "h": 34
+      },
+      "delivered": true
     },
     {
       "product": "Chicken baguette",
       "qty": 1,
       "table": "1",
       "dateCreated": "2022-06-15T15:23:00.443Z",
-      "dateDone": "",
-      "id": "BdvKD0d"
+      "dateDone": "2022-06-17T01:24:55.913Z",
+      "id": "BdvKD0d",
+      "time": {
+        "ms": 464,
+        "s": 55,
+        "m": 1,
+        "h": 34
+      },
+      "delivered": true
     },
     {
       "product": "Scrambled eggs",
@@ -350,8 +391,15 @@
       "qty": 1,
       "table": "1",
       "dateCreated": "2022-06-15T15:55:04.928Z",
-      "dateDone": "",
-      "id": "D80eqJF"
+      "dateDone": "2022-06-17T01:23:12.198Z",
+      "id": "D80eqJF",
+      "time": {
+        "ms": 263,
+        "s": 7,
+        "m": 28,
+        "h": 33
+      },
+      "delivered": true
     },
     {
       "product": "Pasta bolognese",
@@ -407,7 +455,8 @@
         "s": 8,
         "m": 0,
         "h": 0
-      }
+      },
+      "delivered": true
     },
     {
       "product": "fish",
@@ -421,7 +470,8 @@
         "s": 6,
         "m": 0,
         "h": 0
-      }
+      },
+      "delivered": true
     },
     {
       "product": "Tuna fish",
@@ -443,16 +493,28 @@
       "qty": 1,
       "table": "3",
       "dateCreated": "2022-06-16T22:23:11.710Z",
-      "dateDone": "",
-      "id": "SPk8Pgd"
+      "dateDone": "2022-06-17T01:23:12.806Z",
+      "id": "SPk8Pgd",
+      "time": {
+        "ms": 81,
+        "s": 1,
+        "m": 0,
+        "h": 3
+      }
     },
     {
       "product": "Orange juice",
       "qty": 1,
       "table": "3",
       "dateCreated": "2022-06-16T22:23:11.710Z",
-      "dateDone": "",
-      "id": "hfg6lnV"
+      "dateDone": "2022-06-17T01:23:13.367Z",
+      "id": "hfg6lnV",
+      "time": {
+        "ms": 641,
+        "s": 1,
+        "m": 0,
+        "h": 3
+      }
     },
     {
       "product": "Apple",
@@ -466,7 +528,98 @@
         "s": 11,
         "m": 0,
         "h": 0
+      },
+      "delivered": true
+    },
+    {
+      "product": "Pepperoni pizza",
+      "qty": 5,
+      "table": "2",
+      "dateCreated": "2022-06-17T00:10:49.732Z",
+      "dateDone": "2022-06-17T01:23:41.412Z",
+      "id": "Vtk2P5K",
+      "time": {
+        "ms": 669,
+        "s": 51,
+        "m": 12,
+        "h": 1
       }
+    },
+    {
+      "product": "Mineral water 100 mL",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-17T00:17:55.396Z",
+      "dateDone": "",
+      "id": "jO33MSH"
+    },
+    {
+      "product": "Orange juice",
+      "qty": 4,
+      "table": "2",
+      "dateCreated": "2022-06-17T00:17:55.396Z",
+      "dateDone": "2022-06-17T01:23:40.469Z",
+      "id": "iRcJfi_",
+      "time": {
+        "ms": 64,
+        "s": 45,
+        "m": 5,
+        "h": 1
+      }
+    },
+    {
+      "product": "American coffee",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-17T01:23:53.380Z",
+      "dateDone": "",
+      "id": "PxGFJMl"
+    },
+    {
+      "product": "Pepperoni pizza",
+      "qty": 1,
+      "table": "2",
+      "dateCreated": "2022-06-17T01:23:53.380Z",
+      "dateDone": "2022-06-17T01:28:22.791Z",
+      "id": "Wydh_nH",
+      "time": {
+        "ms": 390,
+        "s": 29,
+        "m": 4,
+        "h": 0
+      }
+    },
+    {
+      "product": "Natural water 100 mL",
+      "qty": 1,
+      "table": "3",
+      "dateCreated": "2022-06-17T01:25:41.058Z",
+      "dateDone": "",
+      "id": "RYf282F"
+    },
+    {
+      "product": "American coffee",
+      "qty": 2,
+      "table": "3",
+      "dateCreated": "2022-06-17T01:25:41.058Z",
+      "dateDone": "",
+      "id": "jMKMMBI"
+    },
+    {
+      "product": "Scrambled eggs",
+      "qty": 2,
+      "table": "3",
+      "dateCreated": "2022-06-17T01:25:41.058Z",
+      "dateDone": "",
+      "id": "Q2SVhMg"
+    },
+    {
+      "product": "Orange juice",
+      "qty": 1,
+      "table": "3",
+      "dateCreated": "2022-06-17T01:25:41.058Z",
+      "dateDone": "",
+      "id": "MD1Rb9n"
     }
   ],
   "team": [
