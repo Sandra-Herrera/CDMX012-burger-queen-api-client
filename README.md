@@ -19,7 +19,7 @@ Desarrollamos una aplicación en React como una single page application para una
 sistema a través del cual puedan tomar pedidos y enviarlos
 a la cocina para que se preparen ordenada y eficientemente.
 
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
+![coffe-time](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-burger-queen-api-client/main/burger-queen/src/img/coffe-time.jpg)
 
 Esta es la información que tenemos dxl clientx:
 
