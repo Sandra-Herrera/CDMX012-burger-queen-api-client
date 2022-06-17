@@ -16,14 +16,13 @@
 ## 1. Coffee Time
 
 Desarrollamos una aplicación en React como una single page application para una pequeña cafetería, que está creciendo y necesita un
-sistema a través del cual puedan tomar pedidos y enviarlos
-a la cocina para que se preparen ordenada y eficientemente.
+sistema a través del cual puedan tomar pedidos y enviarlos a la cocina para que se preparen ordenada y eficientemente.
 
 ![coffe-time](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-burger-queen-api-client/main/burger-queen/src/img/coffe-time.jpg)
 
 Esta es la información que tenemos dxl clientx:
 
-> Somos **Coffee Time**, una cafetería que ofrece servicios para el desayuno y la cómida.
+> Somos **Coffee Time**, una cafetería que ofrece servicios para el desayuno y la cómida/cena.
 >
 > Nuestra propuesta de servicio ha tenido muy buena acogida y, para
 > seguir creciendo, necesitamos un sistema que nos ayude a tomar los pedidos de
