@@ -246,6 +246,7 @@ Todo lo anterior dio como resultado nuestra interfaz en desktop, tablet y en mó
 ![interfaz-5](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-burger-queen-api-client/develop_sandy/burger-queen/src/imgs/tabletMobile.jpg)
 
 ## 8. Conoce la app
+
 Prueba la aplicación y conoce lo que cada uno de los tres roles (administrador, mesero y jefe de cocina) puede hacer ella, para que tengas una mejor experiencia, te contamos más acerca de cada uno de estos roles.
 
 Visita nuestra app **aquí**:

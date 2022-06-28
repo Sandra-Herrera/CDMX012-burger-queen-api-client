@@ -1,0 +1,56 @@
+.chronometer {
+  background-color: darksalmon;
+  border-color: rgb(230, 127, 93);
+  border-radius: 5px;
+}
+
+.chronometer:hover {
+  background-color: coral;
+}
+
+.timeAndStop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time {
+  font-weight: bold;
+}
+
+.stopwatch {
+  background-color: rgb(163, 62, 62);
+  border-color: brown;
+  border-radius: 5px;
+}
+
+/* Inicia responsive mobile */
+
+@media (max-width: 850px) {
+  .chronometer {
+    background-color: darksalmon;
+    border-color: rgb(230, 127, 93);
+    border-radius: 5px;
+  }
+
+  .chronometer:hover {
+    background-color: coral;
+  }
+
+  .timeAndStop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .time {
+    font-weight: bold;
+    font-size: 11px;
+  }
+
+  .stopwatch {
+    background-color: rgb(163, 62, 62);
+    border-color: brown;
+    border-radius: 5px;
+  }
+}

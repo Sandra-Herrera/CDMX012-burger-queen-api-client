@@ -1,0 +1,173 @@
+import React, { useState, useEffect, useContext } from "react";
+import styles from "./kitchen.module.css";
+import backIcon from "../../img/backIcon.png";
+import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../database/UserProvider";
+import logOutIcon from "../../img/logOutIcon.png";
+import imgHeaderInto from "../../img/imgHeaderInto.png";
+import Chronometer from "../chronometer/Chronometer";
+import headerMediaQ from "../../img/headerMediaQ.jpg";
+
+const Kitchen = () => {
+  const navigate = useNavigate();
+  const [chosenProduct, setChosenProduct] = useState([]);
+  const [check, setCheck] = useState(false);
+  const [isDelivered, setIsDelivered] = useState(false);
+  const { logOut } = useContext(UserContext);
+
+  const handleClickLogout = async () => {
+    try {
+      await logOut();
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (isDelivered) {
+      setTimeout(() => {
+        getAllProduct();
+        setIsDelivered(false);
+      }, 3000);
+    }
+  }, [isDelivered]);
+
+  const getAllProduct = () => {
+    fetch("http://localhost:3004/chosenProduct")
+      .then((response) => response.json())
+      .then((chosenProduct) => {
+        let filteredOrdersReady = chosenProduct.filter(
+          (ordersReady) => ordersReady.dateDone === ""
+        );
+        setChosenProduct(filteredOrdersReady);
+        setCheck(filteredOrdersReady.map(() => false));
+      })
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    getAllProduct();
+  }, []);
+
+  const saveDate = (chosenProd) => {
+    fetch(`http://localhost:3004/chosenProduct/${chosenProd.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({
+        dateDone: new Date().toISOString(),
+        time: chosenProd.time,
+      }),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setIsDelivered(true);
+        console.log(data);
+      });
+  };
+
+  const redirectHome = () => {
+    navigate("/home");
+  };
+
+  const handleChange = (position) => async () => {
+    const updatedCheckedState = check.map((item, index) => {
+      return index === position ? !item : item;
+    });
+    setCheck(updatedCheckedState);
+  };
+
+  return (
+    <>
+      <div className={styles.headerImg}>
+        <picture>
+          <source
+            className={styles.imgRest}
+            srcSet={imgHeaderInto}
+            media="(min-width: 415px)"
+            alt="imagen header"
+          />
+          <img
+            className={styles.imgRest}
+            src={headerMediaQ}
+            alt="imagen header"
+          />
+        </picture>
+        <button className={styles.backButton} onClick={redirectHome}>
+          <img alt="iconBack" className={styles.imgBack} src={backIcon} />
+        </button>
+        <button className={styles.logOutButton} onClick={handleClickLogout}>
+          <img
+            alt="imageLogOut"
+            className={styles.iconLogOut}
+            src={logOutIcon}
+          />
+        </button>
+      </div>
+
+      <section>
+        <div className={styles.productsTable}>
+          <div>
+            <div className={styles.titleTable}>NEW ORDERS</div>
+          </div>
+          <div className={styles.mainHeaderTable}>
+            <div className={styles.headerTable}>Product</div>
+            <div className={styles.headerTable}>Quantity</div>
+            <div className={styles.headerTable}>Table</div>
+            <div className={styles.headerTable}>Timer</div>
+            <div className={styles.headerTable}>Order check</div>
+          </div>
+          <div className={styles.scrollKitchen}>
+            {chosenProduct.map((chosenProd, index) => {
+              return (
+                <div
+                  key={chosenProd.id}
+                  className={`${styles.containerItems}  ${
+                    check[index] ? styles.fadeOut : ""
+                  }`}
+                >
+                  <div className={styles.itemAlignStart}>
+                    {chosenProd.product}
+                  </div>
+                  <div className={styles.itemTable}>{chosenProd.qty}</div>
+                  <div className={styles.itemTable}>{chosenProd.table}</div>
+                  <div className={styles.itemTable}>
+                    {
+                      <Chronometer
+                        timeFromChosenProd={{
+                          ms: chosenProd?.time?.ms,
+                          s: chosenProd?.time?.s,
+                          m: chosenProd?.time?.m,
+                          h: chosenProd?.time?.h,
+                        }}
+                        isStopped={check[index]}
+                        saveDate={saveDate}
+                        chosenProd={chosenProd}
+                      />
+                    }
+                  </div>
+                  <div className={styles.itemTable}>
+                    <input
+                      type="checkbox"
+                      value="check"
+                      onChange={handleChange(index, chosenProd)}
+                      checked={check[index]}
+                      className={styles.checkbox}
+                      disabled={check[index]}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Kitchen;
