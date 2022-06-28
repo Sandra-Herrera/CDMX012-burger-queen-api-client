@@ -10,8 +10,8 @@ Popup.propTypes = {
   visible: PropTypes.bool.isRequired,
 };
 
-export function Popup(props) {
-  const { attrProduct } = props;
+export function Popup({attrProduct, onClickCloseModal, visible}) {
+  // const { attrProduct } = props;
 
   const {
     register,
@@ -47,7 +47,7 @@ export function Popup(props) {
         .then((response) => response.json())
         .then((addedProduct) => {
           console.log(addedProduct);
-          props.onClickCloseModal();
+          onClickCloseModal();
         });
     } else {
       fetch("http://localhost:3004/Products", {
@@ -60,7 +60,7 @@ export function Popup(props) {
         .then((response) => response.json())
         .then((addedProduct) => {
           console.log(addedProduct);
-          props.onClickCloseModal();
+          onClickCloseModal();
         });
     }
     Swal.fire({
@@ -72,11 +72,11 @@ export function Popup(props) {
     });
   };
 
-  return props.visible ? (
+  return visible ? (
     <>
       <div id="myModal" className={styles.modal}>
         <div className={styles.modalContent}>
-          <span className={styles.close} onClick={props.onClickCloseModal}>
+          <span className={styles.close} onClick={onClickCloseModal}>
             &times;
           </span>
           <section className={styles.titleModal}>Product</section>
@@ -108,7 +108,7 @@ export function Popup(props) {
                   id="price"
                   placeholder="Price"
                   {...register("price", {
-                    defaultValue: props.attrProduct?.name,
+                    defaultValue: attrProduct?.name,
                     required: {
                       value: true,
                       message: "Required",

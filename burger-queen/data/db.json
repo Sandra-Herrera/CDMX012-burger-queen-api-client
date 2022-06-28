@@ -76,19 +76,7 @@
       "name": "Apple",
       "price": "10",
       "category": "Breakfast",
-      "id": "hISkNuV"
-    },
-    {
-      "name": "Tuna fish",
-      "price": "14",
-      "category": "Lunch/Dinner",
-      "id": "t9efBTv"
-    },
-    {
-      "name": "ii",
-      "price": "2",
-      "category": "Breakfast",
-      "id": "h3wGWPy"
+      "id": "2v_D6Ay"
     }
   ],
   "chosenProduct": [
@@ -299,15 +287,23 @@
         "s": 44,
         "m": 14,
         "h": 34
-      }
+      },
+      "delivered": true
     },
     {
       "product": "Pepperoni pizza",
       "qty": 1,
       "table": "1",
       "dateCreated": "2022-06-15T15:23:00.443Z",
-      "dateDone": "",
-      "id": "RteGawk"
+      "dateDone": "2022-06-20T15:35:44.602Z",
+      "id": "RteGawk",
+      "time": {
+        "ms": 148,
+        "s": 44,
+        "m": 12,
+        "h": 120
+      },
+      "delivered": true
     },
     {
       "product": "Red velvet cake",
@@ -389,8 +385,15 @@
       "qty": 1,
       "table": "1",
       "dateCreated": "2022-06-15T15:55:04.928Z",
-      "dateDone": "",
-      "id": "2GeZ3Jo"
+      "dateDone": "2022-06-20T17:20:48.136Z",
+      "id": "2GeZ3Jo",
+      "time": {
+        "ms": 194,
+        "s": 43,
+        "m": 25,
+        "h": 121
+      },
+      "delivered": true
     },
     {
       "product": "American coffee",
@@ -419,7 +422,8 @@
         "s": 7,
         "m": 0,
         "h": 0
-      }
+      },
+      "delivered": true
     },
     {
       "product": "Pasta bolognese",
@@ -433,7 +437,8 @@
         "s": 7,
         "m": 0,
         "h": 0
-      }
+      },
+      "delivered": true
     },
     {
       "product": "Pepperoni pizza",
@@ -556,8 +561,14 @@
       "qty": 1,
       "table": "2",
       "dateCreated": "2022-06-17T00:17:55.396Z",
-      "dateDone": "",
-      "id": "jO33MSH"
+      "dateDone": "2022-06-20T17:21:47.702Z",
+      "id": "jO33MSH",
+      "time": {
+        "ms": 296,
+        "s": 52,
+        "m": 3,
+        "h": 89
+      }
     },
     {
       "product": "Orange juice",
@@ -578,8 +589,14 @@
       "qty": 1,
       "table": "2",
       "dateCreated": "2022-06-17T01:23:53.380Z",
-      "dateDone": "",
-      "id": "PxGFJMl"
+      "dateDone": "2022-06-27T19:47:27.324Z",
+      "id": "PxGFJMl",
+      "time": {
+        "ms": 931,
+        "s": 33,
+        "m": 23,
+        "h": 258
+      }
     },
     {
       "product": "Pepperoni pizza",
@@ -593,23 +610,36 @@
         "s": 29,
         "m": 4,
         "h": 0
-      }
+      },
+      "delivered": true
     },
     {
       "product": "Natural water 100 mL",
       "qty": 1,
       "table": "3",
       "dateCreated": "2022-06-17T01:25:41.058Z",
-      "dateDone": "",
-      "id": "RYf282F"
+      "dateDone": "2022-06-27T19:48:18.912Z",
+      "id": "RYf282F",
+      "time": {
+        "ms": 843,
+        "s": 37,
+        "m": 22,
+        "h": 258
+      }
     },
     {
       "product": "American coffee",
       "qty": 2,
       "table": "3",
       "dateCreated": "2022-06-17T01:25:41.058Z",
-      "dateDone": "",
-      "id": "jMKMMBI"
+      "dateDone": "2022-06-20T17:24:57.189Z",
+      "id": "jMKMMBI",
+      "time": {
+        "ms": 120,
+        "s": 16,
+        "m": 59,
+        "h": 87
+      }
     },
     {
       "product": "Scrambled eggs",
@@ -626,6 +656,58 @@
       "dateCreated": "2022-06-17T01:25:41.058Z",
       "dateDone": "",
       "id": "MD1Rb9n"
+    },
+    {
+      "product": "Orange juice",
+      "qty": 2,
+      "table": "2",
+      "dateCreated": "2022-06-20T15:34:20.776Z",
+      "dateDone": "",
+      "id": "Nc2qv98"
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 2,
+      "table": "2",
+      "dateCreated": "2022-06-20T17:19:56.846Z",
+      "dateDone": "",
+      "id": "v-RHnS8"
+    },
+    {
+      "product": "Rice",
+      "qty": 1,
+      "table": "1",
+      "dateCreated": "2022-06-22T16:04:28.154Z",
+      "dateDone": "2022-06-22T16:05:04.573Z",
+      "id": "H_Oc9Zl",
+      "time": {
+        "ms": 407,
+        "s": 36,
+        "m": 0,
+        "h": 0
+      }
+    },
+    {
+      "product": "Pasta bolognese",
+      "qty": 2,
+      "table": "2",
+      "dateCreated": "2022-06-27T19:43:58.578Z",
+      "dateDone": "2022-06-27T19:44:26.806Z",
+      "id": "Cj-ekOZ",
+      "time": {
+        "ms": 193,
+        "s": 28,
+        "m": 0,
+        "h": 0
+      }
+    },
+    {
+      "product": "American coffee",
+      "qty": 2,
+      "table": "2",
+      "dateCreated": "2022-06-27T19:47:10.515Z",
+      "dateDone": "",
+      "id": "gztDpCB"
     }
   ],
   "team": [
@@ -659,32 +741,11 @@
       "id": "UjKw2gl"
     },
     {
-      "email": "luis@gmail.com",
-      "name": "Luis",
-      "role": "waiter",
-      "password": "123456",
-      "id": "WImzvgs"
-    },
-    {
       "email": "juan@gmail.com",
       "name": "Juan Perez",
-      "role": "waiter",
+      "role": "kitchen",
       "password": "123456",
       "id": "7YqA1Ch"
-    },
-    {
-      "email": "pepito@g.com",
-      "name": "pepito",
-      "role": "waiter",
-      "password": "123456",
-      "id": "hJ_Kp65"
-    },
-    {
-      "email": "ooo@gmail.com",
-      "name": "ooo",
-      "role": "waiter",
-      "password": "123456",
-      "id": "lbtFfYA"
     },
     {
       "email": "mesero@coffetime.com",
@@ -706,6 +767,13 @@
       "role": "administrator",
       "password": "coffetime",
       "id": "Z6GnjbA"
+    },
+    {
+      "email": "luisJimenez@gmail.com",
+      "name": "Luis Jimenez",
+      "role": "waiter",
+      "password": "123456",
+      "id": "bjXmgVc"
     }
   ]
 }

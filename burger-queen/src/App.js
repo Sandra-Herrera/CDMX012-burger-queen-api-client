@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+// import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { UserContext } from "./database/UserProvider";
 import Login from "./components/login/Login";
@@ -20,6 +21,7 @@ function App() {
   if (setContextUser) {
     setContextUser(window.localStorage.getItem("user"));
   }
+  // const user = window.localStorage.getItem("user");
 
   let userRole = null;
   // useEffect(() => {
@@ -31,6 +33,14 @@ function App() {
     }
   }
   // },[user])
+
+  // if (user) {
+  //   const data = JSON.parse(user);
+  //   if (data?.photoURL) {
+  //     console.log(data);
+  //     userRole = data.photoURL;
+  //   }
+  // }
 
   return (
     <Routes>

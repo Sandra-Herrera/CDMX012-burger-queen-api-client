@@ -246,17 +246,11 @@ Todo lo anterior dio como resultado nuestra interfaz en desktop, tablet y en mó
 ![interfaz-5](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-burger-queen-api-client/develop_sandy/burger-queen/src/imgs/tabletMobile.jpg)
 
 ## 8. Conoce la app
-Prueba la aplicación y conoce lo que cada uno de los tres roles (administrador, mesero y jefe de cocina) puede hacer ella, para que tengas una mejor experiencia, te contamos más acerca de cada uno de estos roles.
+Conoce la aplicación y mira lo que cada uno de los tres roles (administrador, mesero y jefe de cocina) puede hacer ella, para que tengas una mejor experiencia, te contamos más acerca de cada uno de estos roles.
 
-Visita nuestra app **aquí**:
+Conoce nuestra app [aquí](https://www.loom.com/share/5bcc0fd44b3749a28fdac08f95417813)
 
-* **Administrador:** tiene autorización para ingresar a todas las vistas, pero su rol principal en la app es el de administrar los productos y al equipo, por ende puede agregar nuevos productos y empleados, editarlos y eliminarlos. Si quieres conocer el flujo del proceso de un administradorx en nuestra app, te invitamos a navegar con la siguiente cuenta: 
- Cuenta: admin@coffetime.com
- Contraseña: coffetime
-* **Meseros:** su interfaz se llama **Order**, en ella puede ver filtrado el menú correspondiente a desayuno y cómida, además puede agregar cualquier alimento del menú a la lista de pedidos y enviarlo a cocina, además puede elegir el número de la mesa y ver el total que esa mesa debe pagar. Si quieres conocer el flujo del proceso de unx meserx en nuestra app, te invitamos a navegar con la siguiente cuenta: 
- Cuenta: mesero@coffetime.com
- Contraseña: coffetime
+* **Administrador:** tiene autorización para ingresar a todas las vistas, pero su rol principal en la app es el de administrar los productos y al equipo, por ende puede agregar nuevos productos y empleados, editarlos y eliminarlos.
+* **Meseros:** su interfaz se llama **Order**, en ella puede ver filtrado el menú correspondiente a desayuno y cómida, además puede agregar cualquier alimento del menú a la lista de pedidos y enviarlo a cocina, además puede elegir el número de la mesa y ver el total que esa mesa debe pagar.
 * **Jefe de cocina:** su interfaz se llama **Kitchen**, en ella puede ver todas ódenes que el mesero envía y la cantidad que pide por cada óden,
-además cada órden tiene un crónometro que marca el tiempo desde que el mesero la envío hasta que el jefe de cocina la marca como lista, de este modo el jefe de cocina puede saber cuanto tarda su equipo en preparar cada alimento y el administrador puede tener el historico de los alimentos que más tardan en prepararse. Si quieres conocer el flujo del proceso del jefx de cocina en nuestra app, te invitamos a navegar con la siguiente cuenta: 
- Cuenta: cocina@coffetime.com
- Contraseña: coffetime
+además cada órden tiene un crónometro que marca el tiempo desde que el mesero la envío hasta que el jefe de cocina la marca como lista, de este modo el jefe de cocina puede saber cuanto tarda su equipo en preparar cada alimento y el administrador puede tener el historico de los alimentos que más tardan en prepararse.
