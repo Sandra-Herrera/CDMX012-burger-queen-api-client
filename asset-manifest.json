@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/CDMX012-burger-queen-api-client/static/css/main.6e795240.css",
-    "main.js": "/CDMX012-burger-queen-api-client/static/js/main.2ba26e12.js",
+    "main.js": "/CDMX012-burger-queen-api-client/static/js/main.194bbb57.js",
     "static/media/imgHeaderInto.png": "/CDMX012-burger-queen-api-client/static/media/imgHeaderInto.9054d6bd99608f30f49f.png",
     "static/media/coffeeCup.png": "/CDMX012-burger-queen-api-client/static/media/coffeeCup.8fed4819021ae2534073.png",
     "static/media/headerMediaQ.jpg": "/CDMX012-burger-queen-api-client/static/media/headerMediaQ.e6c016c4f204fc7ad8be.jpg",
     "index.html": "/CDMX012-burger-queen-api-client/index.html",
     "main.6e795240.css.map": "/CDMX012-burger-queen-api-client/static/css/main.6e795240.css.map",
-    "main.2ba26e12.js.map": "/CDMX012-burger-queen-api-client/static/js/main.2ba26e12.js.map"
+    "main.194bbb57.js.map": "/CDMX012-burger-queen-api-client/static/js/main.194bbb57.js.map"
   },
   "entrypoints": [
     "static/css/main.6e795240.css",
-    "static/js/main.2ba26e12.js"
+    "static/js/main.194bbb57.js"
   ]
 }
